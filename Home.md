@@ -1,1 +1,1 @@
-Welcome to the TShock wiki!
+Welcome to the Terraria Shock modification wiki.
