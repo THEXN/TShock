@@ -2,6 +2,7 @@ Hello! Thanks for choosing TShock. As you walk through the installation procedur
 
 ## Preparation
 Start off by downloading the packages needed for your server installation.
+
 * [TerrariaServerAPI.dll](https://github.com/TShock/TShock/blob/master/TShockAPI/TerrariaServerAPI.dll?raw=true)
 * [TerrariaServer.exe](https://github.com/TShock/TShock/blob/master/TShockAPI/TerrariaServer.exe?raw=true)
 
