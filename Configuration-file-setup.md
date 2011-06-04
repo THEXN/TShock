@@ -1,19 +1,25 @@
 The configuration is stored in config.json, and is pretty much self explanatory. Located inside the 'tshock' folder, you can edit config.json to your preferences.
 
 
-    {
-      "InvasionMultiplier": 50,
-      "DefaultMaximumSpawns": 4,
-      "DefaultSpawnRate": 700,
-      "ServerPort": 7777,
-      "EnableWhitelist": false,
-      "InfiniteInvasion": false,
-      "AlwaysPvP": true,
-      "KickSaveEditors": false,
-      "BanSaveEditors": false,
-      "BanKillTileAbusers": true,
-      "KickKillTileAbusers": true
-    }
+	{
+	  "InvasionMultiplier": 50,
+	  "DefaultMaximumSpawns": 4,
+	  "DefaultSpawnRate": 700,
+	  "ServerPort": 7777,
+	  "EnableWhitelist": false,
+	  "InfiniteInvasion": false,
+	  "AlwaysPvP": false,
+	  "KickCheaters": true,
+	  "BanCheaters": true,
+	  "KickGriefers": true,
+	  "BanGriefers": true,
+	  "BanKillTileAbusers": true,
+	  "KickKillTileAbusers": true,
+	  "BanExplosives": true,
+	  "KickExplosives": true,
+	  "SpawnProtection": true,
+	  "SpawnProtectionRadius": 5
+	}
 
 
 _InvasionMultiplier_: The equation for calculating invasion size is 100 + (multiplier * (number of active players with greater than 200 health))
@@ -37,5 +43,13 @@ _BanSaveEditors_: Writes players who edit save files to the cheaters.txt file, a
 _BanKillTileAbusers_: Bans players who attempt to kill tiles using TNT or exploits. Requires kick to be enabled.
 
 _KickKillTileAbuesrs_: Kicks players who attempt to kill tiles using TNT or exploits.
+
+_BanExplosives_: Bans players who attempt to throw a bomb or dynamite.
+
+_KickExplosives_: Kicks players who attempt to throw a bomb or dynamite.
+
+_SpawnProtection_: Prevents tiles from being placed within _SpawnProtectionRadius_ of the default spawn.
+
+_SpawnProtectionRadius_: Radius from spawn tile for _SpawnProtection_.
 
 The [[Cheating and Griefing Checks]], and what is classified as cheating and griefing is located on it's respective page.
