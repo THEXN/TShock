@@ -6,7 +6,7 @@ Here are the checks TShock performs if you enable kick/ban cheaters/griefers.
 * Inventory check. If item's stack is > max stack(for example, having more than 250 stone), take action. - **Is currently disabled**
 * Health increase check. If Max HP is increased by more than 20, take action.
 * Mana increase check. If Max Mana is increased by more than 20, take action.
-* KillMe check. If a player attempts to kill another player via code, take action.
+* Chat origin check. If player attempts to send text as some one else, take action.
 
 # Griefers
 * Kill Tile abuse. If player destroys more than 20 blocks in one update (1/60th second), take action. - **May cause false positives with large amounts of lag**
