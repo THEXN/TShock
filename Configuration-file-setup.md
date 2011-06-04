@@ -52,4 +52,6 @@ _SpawnProtection_: Prevents tiles from being placed within _SpawnProtectionRadiu
 
 _SpawnProtectionRadius_: Radius from spawn tile for _SpawnProtection_.
 
+If you do not see some of the values here, please delete config.json and run TShock again. It should regenerate.
+
 The [[Cheating and Griefing Checks]], and what is classified as cheating and griefing is located on it's respective page.
