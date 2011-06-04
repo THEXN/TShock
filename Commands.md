@@ -17,13 +17,15 @@ TShock requires you to be an administrator to run most commands. Most of these c
 * /spawn - Teleports you to your spawnpoint
 * /tp [player] - Teleports you to [player]
 * /tphere [player] - Drags [player] to you with a chain
-* /spawnmob [npc-id] [amount]- Spawns an NPC from the NPC list
-* /item [id or name] - Gives you [id or name]
+* /spawnmob [npc-id or name] [amount]- Spawns an NPC from the NPC list - Use "" for mob names with spacing.
+* /item [id or name] - Gives you [id or name] - Use "" for item names with spacing.
 * /give [id or name] [player] - Gives [player] item [id or name]
 * /heal [player] - Heals you, or if defined, [player]
 * /butcher - Slays all non-town NPCs
 * /maxspawns [amount] - Changes the maximum spawns per wave. Higher numbers results in more mobs per spawn wave.
 * /spawnrate [amount] - Changes the rate at which monsters spawn. Lower results in faster spawn rates.
-* /slap [player] - Slaps [player]
+* /slap [player] <damage> - Slaps [player], defaults to 5 damage if not provided.
 * /kill [player] - If provided, kills [player], or else suicides.
 * /help [page] - Provides a list of commands.
+* /off-nosave - Kills the server without saving.
+* /protectspawn - Toggles spawn protection.
