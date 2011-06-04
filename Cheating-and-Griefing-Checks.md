@@ -1,11 +1,11 @@
-Here are the checks TShock performs if you enable kick/ban cheaters/griefers.
+Here are the checks TShock performs if you enable kick/ban cheaters/griefers. (This is kept up-to-date with release builds)
 
 # Cheaters
 * Health check. If HP/Max HP is > 400, take action.
 * Mana check. If Mana/Max Mana is > 200, take action.
 * Inventory check. If item's stack is > max stack(for example, having more than 250 stone), take action. - **Is currently disabled**
-* Health increase check. If Max HP is increased by more than 20, take action.
-* Mana increase check. If Max Mana is increased by more than 20, take action.
+* Health increase check. If Max HP is increased by more than 20, take action. - **Glitched. If player joins with > 100 HP, take action**
+* Mana increase check. If Max Mana is increased by more than 20, take action. - **Glitched. If player joins with > 100 MP, take action**
 * Chat origin check. If player attempts to send text as some one else, take action.
 
 # Griefers
