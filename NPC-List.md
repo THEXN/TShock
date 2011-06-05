@@ -43,3 +43,5 @@ For use with /spawnmob. The first number is the id, second is the in game name.
 * 41 : Bone Serpent Tail
 * 42 : Hornet
 * 43 : Man Eater
+* 44 : Dead Miner
+* 45 : Tim
