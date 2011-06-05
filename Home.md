@@ -4,3 +4,5 @@ Welcome to the Terraria Shock modification wiki.
 ### [[Commands]]
 ### [[MOTD Documentation]]
 ### [[Configuration File Setup]]
+### [[NPC List]]
+### [[Item List]]
