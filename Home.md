@@ -6,3 +6,4 @@ Welcome to the Terraria Shock modification wiki.
 ### [[Configuration File Setup]]
 ### [[NPC List]]
 ### [[Item List]]
+### [[Permissions]]
