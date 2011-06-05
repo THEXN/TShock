@@ -13,3 +13,71 @@
 * immunetoban, immunetokick - makes it impossible to kick/ban you
 * editspawn - allows editing of spawn if it is protected, and allows protecting of spawn
 * ignoregriefdetection - Ignores greif detection
+
+Commands the permissions enable:
+
+kick:
+
+* /kick
+
+ban:
+
+* /ban
+
+maintenance:
+
+* /off
+* /off-nosave
+
+cfg:
+
+* /reload
+* /hardcore
+* /password
+* /save
+* /maxspawns
+* /spawnrate
+* /time
+* /debug-config
+
+causeevents:
+
+* /dropmeteor
+* /star
+* /bloodmoon
+* /invade
+
+spawnboss:
+
+* /eater
+* /eye
+
+tp:
+
+* /spawn
+* /tp
+* /tphere
+
+spawnmob:
+
+* /spawnmob
+
+cheat:
+
+* /item
+* /give
+* /heal
+
+kill:
+
+* /kill
+
+pvpfun:
+
+* /slap
+
+editspawn:
+
+* /protectspawn
+
+
