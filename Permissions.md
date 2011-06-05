@@ -14,7 +14,7 @@
 * editspawn - allows editing of spawn if it is protected, and allows protecting of spawn
 * ignoregriefdetection - Ignores greif detection
 
-Commands the permissions enable:
+[[Commands]] the permissions enable:
 
 kick:
 
