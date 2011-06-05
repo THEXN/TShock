@@ -13,6 +13,7 @@
 * immunetoban, immunetokick - makes it impossible to kick/ban you
 * editspawn - allows editing of spawn if it is protected, and allows protecting of spawn
 * ignoregriefdetection - Ignores greif detection
+* reservedslot - allows a player to join even if the server is full.
 
 [[Commands]] the permissions enable:
 
