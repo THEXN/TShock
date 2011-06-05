@@ -11,10 +11,7 @@ Place those two files anywhere you would like to run your server from, and doubl
 ## Installing TShock
 Download TShock from GitHub. Click on the source tab at the top, and click the big downloads button on the right hand side. You want the download labeled latest. Once downloaded, use [7Zip](http://7zip.org/) or another archiving program to extract the files.
 
-Place TShockAPI.dll inside the 'serverplugins' folder. Place Newtonsoft.Json.Dll in the same folder as the server. Once again, start the server and verify that everything is running okay. Connect to your server by using the IP address 'localhost' and port 7777. Take note of the IP address you're connecting from (Example: 127.0.0.1, *not with anything after the four octets*), you'll need it in a later step.
-
-## Make an admin or two
-Now that you have run the server once, a new folder called 'tshock' exists. Open that folder, and edit admins.txt so that the first line has your IP from the previous step in it. (Not an IPv6 IP, or an IP with a : at the end)
+Place TShockAPI.dll inside the 'serverplugins' folder. Place Newtonsoft.Json.Dll in the same folder as the server. Once again, start the server and verify that everything is running okay. Connect to your server by using the IP address 'localhost' and port 7777. *Important:* Take note of the auth code mentioned on the first startup. When you join, you need to become admin by typing /auth <code>. This code is displayed once, and as soon as the server is restarted you will lose the ability to run the command. You can edit users.txt in the future to add more admins, or you can remove the auth.lck file and restart the server to get another auth code to use.
 
 ## Finishing
 Your server should now successfully start and run TShock. Familiarize yourself with the [[Commands]], and have a fun time administrating your new server.
