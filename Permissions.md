@@ -81,5 +81,5 @@ editspawn:
 
 * /protectspawn
 
-1
+
 
