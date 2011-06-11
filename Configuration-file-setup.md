@@ -18,7 +18,8 @@ The configuration is stored in config.json, and is pretty much self explanatory.
 	  "BanExplosives": true,
 	  "KickExplosives": true,
 	  "SpawnProtection": true,
-	  "SpawnProtectionRadius": 5
+	  "SpawnProtectionRadius": 5,
+          "RangeChecks": true
 	}
 
 
@@ -51,6 +52,8 @@ _KickExplosives_: Kicks players who attempt to throw a bomb or dynamite.
 _SpawnProtection_: Prevents tiles from being placed within _SpawnProtectionRadius_ of the default spawn.
 
 _SpawnProtectionRadius_: Radius from spawn tile for _SpawnProtection_.
+
+_RangeChecks_: Global protection agent for any block distance based anti-grief check.
 
 If you do not see some of the values here, please delete config.json and run TShock again. It should regenerate.
 
