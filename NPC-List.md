@@ -45,3 +45,16 @@ For use with /spawnmob. The first number is the id, second is the in game name.
 * 43 : Man Eater
 * 44 : Dead Miner
 * 45 : Tim
+* 46 : Bunny
+* 47 : Corrupt Bunny
+* 48 : Harpey
+* 49 : Cave Bat
+* 50 : King Slime
+* 51 : Jungle Bat
+* 52 : Doctor Bones
+* 53 : The Groom
+* 54 : Clothier
+* 55 : Goldfish
+* 56 : Snatcher
+* 57 : Corrupt Goldfish
+* 58 : Piranha
