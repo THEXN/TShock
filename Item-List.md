@@ -238,3 +238,29 @@ ID - Name - Max Stack - Rarity
 * 236 - Black Lens - 99 - 0
 * 237 - Sunglasses - 1 - 2
 * 238 - Wizard Hat - 1 - 2
+* 239 - Top Hat - 1 - 0
+* 240 - Tuxedo Shirt - 1 - 0 
+* 241 - Tuxedo Pants - 1 - 0
+* 242 - Summer Hat - 1 - 0
+* 243 - Bunny Hood - 1 - 0
+* 244 - Plumber's Hat - 1 - 0
+* 245 - Plumber's Shirt - 1 - 0
+* 246 - Plumber's Pants - 1 - 0
+* 247 - Hero's Hat - 1 - 0
+* 248 - Hero's Shirt - 1 - 0
+* 249 - Hero's Pants - 1 - 0
+* 250 - Fish Bowl - 1 - 0
+* 251 - Archaeologist's Hat - 1 - 0
+* 252 - Archaeologist's Jacket - 1 - 0
+* 253 - Archaeologist's Pants - 1 - 0
+* 254 - Black Dye - 99 -0
+* 255 - Green Dye - 99 - 0
+* 256 - Ninja Hood - 1 - 0
+* 257 - Ninja Shirt - 1 - 0
+* 258 - Ninja Pants - 1 - 0
+* 259 - Leather - 99 - 0
+* 260 - Red Hat - 1 - 0
+* 261 - Goldfish - 99 - 0
+* 262 - Robe - 1 - 0
+* 263 - Robot Hat - 1 - 0
+* 264 - Gold Crown - 1 - 0
