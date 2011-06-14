@@ -6,7 +6,7 @@ Start off by downloading the packages needed for your server installation.
 * [TerrariaServerAPI.dll](https://github.com/TShock/TShock/blob/master/TShockAPI/TerrariaServerAPI.dll?raw=true)
 * [TerrariaServer.exe](https://github.com/TShock/TShock/blob/master/TShockAPI/TerrariaServer.exe?raw=true)
 
-Place those two files anywhere you would like to run your server from, and double click the server file. When the server opens, allow it to create the folder 'serverplugins' and start it. Choose a world, type monkeybuisness for a password, use the default port, and let it launch. Type exit.
+Place those two files anywhere you would like to run your server from, and double click the server file. When the server opens, allow it to create the folder 'serverplugins' and start it. Choose a world, type monkeybuisness (if you've been following this guide literally) for a password, use the default port, and let it launch. Type exit.
 
 ## Installing TShock
 Download TShock from GitHub. Click on the source tab at the top, and click the big downloads button on the right hand side. You want the download labeled latest. Once downloaded, use [7Zip](http://7zip.org/) or another archiving program to extract the files.
