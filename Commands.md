@@ -1,10 +1,10 @@
 TShock requires you to be an administrator to run most commands. Most of these commands alter gameplay significantly, and therefore no current Minecraft style Permissions plugin is provided.
 
 ### Complete command list:
-* /kick [player] [reason]- Use "" for item/player names with spacing.
-* /ban [player] [reason]- Use "" for item/player names with spacing.
+* /kick [player] [reason]- Use "" for player names with spacing.
+* /ban [player] [reason]- Use "" for player names with spacing.
 * /ban [ip] [reason]
-* /unban [player] - Use "" for item/player names with spacing.
+* /unban [player] - Use "" for player names with spacing.
 * /unbanip [ip]
 * /off - Turns off the server after saving.
 * /off-nosave - Kills the server without saving.
