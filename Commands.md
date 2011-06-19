@@ -17,7 +17,7 @@ TShock requires you to be an administrator to run most commands. Most of these c
 * /eye - Summons the Eye of Cthulhu.
 * /skeletron - Summons Skeletron.
 * /king - Summons the Slime King.
-* /hardcore - Summons Eater of Worlds, Eye of Cthulhu and Skeletron.
+* /hardcore - Summons Eater of Worlds, Eye of Cthulhu , Slime King, and Skeletron.
 * /spawnmob [npc-id or name] [amount]- Spawns an NPC from the [[NPC list]] - Use "" for mob names with spacing.
 * /reload - Reloads the configuration file.
 * /password - Remotely changes the server's password.
