@@ -14,6 +14,8 @@
 * editspawn - allows editing of spawn if it is protected, and allows protecting of spawn
 * ignoregriefdetection - Ignores greif detection
 * reservedslot - allows a player to join even if the server is full.
+* warp - allows a player to warp
+* managewarp - allows a player to set and delete warps
 
 [[Commands]] the permissions enable:
 
@@ -80,6 +82,16 @@ pvpfun:
 editspawn:
 
 * /protectspawn
+* /region
+
+warp:
+
+* /warp [name]
+
+managewarp:
+
+* /setwarp [name]
+* /delwarp [name]
 
 
 
