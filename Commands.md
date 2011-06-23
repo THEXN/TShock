@@ -37,3 +37,12 @@ TShock requires you to be an administrator to run most commands. Most of these c
 * /me - Third person chat.
 * /p - Team chat.
 * /rules - Prints server rules.
+* /region set [1/2] - Sets temporary region points
+* /region define [name] - Adds temporary region points into the region list
+* /region delete [name] - Deletes the specified region
+* /region allow [name] [regionname] - Allows a player to build in specified region
+* /region help - Lists region help
+* /warp [name] - Teleports you to specified warp
+* /setwarp [name] - Sets a warp at your position with given name
+* /delwarp [name] - Deletes specified warp
+* /warp list - Lists all available warps
