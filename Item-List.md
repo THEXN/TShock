@@ -265,67 +265,67 @@ ID - Name - Max Stack - Rarity
 * 263 - Robot Hat - 1 - 0
 * 264 - Gold Crown - 1 - 0
 
-Items added in v1.0.5 (Needs max stack added and rarity)
+Items added in v1.0.5
 
-* 265 - Hellfire Arrow
-* 266 - Sandgun
-* 267 - Guide Voodoo Doll
-* 268 - Diving Helmet
-* 269 - Familiar Shirt
-* 270 - Familiar Pants
-* 271 - Familiar Wig
-* 272 - Demon Scythe
-* 273 - Night's Edge
-* 274 - Dark Lance
-* 275 - Coral
-* 276 - Cactus
-* 277 - Trident
-* 278 - Silver Bullet
-* 279 - Throwing Knife
-* 280 - Spear
-* 281 - Blowpipe
-* 282 - Glowstick
-* 283 - Seed
-* 284 - Wooden Boomerang
-* 285 - Aglet
-* 286 - Sticky Glowstick
-* 287 - Poisoned Knife
-* 288 - Obsidian Skin Potion
-* 289 - Regeneration Potion
-* 290 - Swiftness Potion
-* 291 - Gills Potion
-* 292 - Ironskin Potion
-* 293 - Mana Regeneration Potion
-* 294 - Magic Power Potion
-* 295 - Featherfall Potion
-* 296 - Spelunker Potion
-* 297 - Invisibility Potion
-* 298 - Shine Potion
-* 299 - Night Owl Potion
-* 300 - Battle Potion
-* 301 - Thorns Potion
-* 302 - Water Walking Potion
-* 303 - Archery Potion
-* 304 - Hunter Potion
-* 305 - Gravitation Potion
-* 306 - Gold Chest
-* 307 - Daybloom Seeds
-* 308 - Moonglow Seeds
-* 309 - Blinkroot Seeds
-* 310 - Deathweed Seeds
-* 311 - Waterleaf Seeds
-* 312 - Fireblossom Seeds
-* 313 - Daybloom
-* 314 - Moonglow
-* 315 - Blinkroot
-* 316 - Deathweed
-* 317 - Waterleaf
-* 318 - Fireblossom
-* 319 - Shark Fin
-* 320 - Feather
-* 321 - Tombstone
-* 322 - Mime Mask
-* 323 - Antlion Mandible
-* 324 - Illegal Gun Parts
-* 325 - The Doctor's Shirt
-* 326 - The Doctor's Pants
+* 265 - Hellfire Arrow - 250  - 2
+* 266 - Sandgun - 1 - 2
+* 267 - Guide Voodoo Doll - 1 - 0
+* 268 - Diving Helmet - 1 - 2
+* 269 - Familiar Shirt - 1 - 0
+* 270 - Familiar Pants - 1 - 0
+* 271 - Familiar Wig - 1 - 0
+* 272 - Demon Scythe - 1 - 3
+* 273 - Night's Edge - 1 - 3
+* 274 - Dark Lance - 1 - 3
+* 275 - Coral - 250 - 0
+* 276 - Cactus - 250 - 0
+* 277 - Trident - 1 - 1
+* 278 - Silver Bullet - 250 - 0
+* 279 - Throwing Knife - 250 - 0
+* 280 - Spear - 1 - 0
+* 281 - Blowgun - 1 - 0
+* 282 - Glowstick - 99 - 0
+* 283 - Seed - 250 - 0
+* 284 - Wooden Boomarang - 1 - 0
+* 285 - Aglet - 1 - 0
+* 286 - Sticky Glowstick - 99 - 0
+* 287 - Poisoned Knife - 250 - 0
+* 288 - Obsidian Skin Potion - 30 - 1
+* 289 - Regenration Potion - 30 - 1
+* 290 - Swiftness Potion - 30 - 1
+* 291 - Gills Potion - 30 - 1
+* 292 - Ironskin Potion - 30 - 1
+* 293 - Mana Regeneration Potion - 30 - 1
+* 294 - Magic Power Potion - 30 - 1
+* 295 - Featherfall Potion - 30 - 1
+* 296 - Spelunker Potion - 30 -1
+* 297 - Invisibility Potion - 30
+* 298 - Shine Potion - 30 - 1
+* 299 - Night Owl Potion - 30 - 1
+* 300 - Battle Potion - 30 - 1
+* 301 - Thorns Potion - 30 - 1
+* 302 - Water Walking Potion - 30 - 1
+* 303 - Archery Potion - 30 - 1
+* 304 - Hunter Potion - 30 - 1
+* 305 - Gravitation Potion - 30 - 1
+* 306 - Gold Chest - 99 - 0
+* 307 - Daybloom Seeds - 99 - 0
+* 308 - Moonglow Seeds - 99 - 0
+* 309 - Blinkroot Seeds - 99 - 0
+* 310 - Deathweed Seeds - 99 - 0
+* 311 - Waterleaf seeds - 99 - 0
+* 312 - Fireblossom Seeds - 99 - 0
+* 313 - Daybloom - 99 - 0
+* 314 - Moonglow - 99 - 0
+* 315 - Blinkroot - 99 - 0
+* 316 - Deathweed - 99 - 0
+* 317 - Waterleaf - 99 - 0
+* 318 - Fireblossom - 99 - 0
+* 319 - Sharkfin - 99 - 0
+* 320 - Feather - 99 - 0
+* 321 - Tombstone - 99 - 0
+* 322 - Mime Mask - 1 - 0
+* 323 - Antlion Mandible - 99 - 0
+* 324 - Illegal Gun Parts - 99 - 0
+* 325 - The Doctor's Shirt - 1 - 0
+* 326 - The Doctor's Pants - 1 - 0
