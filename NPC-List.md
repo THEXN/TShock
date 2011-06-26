@@ -66,6 +66,6 @@ For use with /spawnmob. The first number is the id, second is the in game name.
 * 64 :Pink Jellyfish
 * 65 :Shark
 * 66 :Voodoo Demon
-* 67 :Crap
+* 67 :Crab
 * 68 :Dungeon Guardian
 * 69 :Antlion
