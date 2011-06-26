@@ -11,8 +11,8 @@ You should have gotten a TerrariaServerAPI.exe as a result. Double click on it. 
 ### Pre-Patcher
 Start off by downloading the packages needed for your server installation.
 
-* [TerrariaServerAPI.dll](https://github.com/TShock/TShock/blob/master/TShockAPI/TerrariaServerAPI.dll?raw=true)
-* [TerrariaServer.exe](https://github.com/TShock/TShock/blob/master/TShockAPI/TerrariaServer.exe?raw=true)
+* [TerrariaServerAPI.dll](https://github.com/TShock/TShock/blob/master/TShockAPI/TerrariaServerBins/TerrariaServerAPI.dll?raw=true)
+* [TerrariaServer.exe](https://github.com/TShock/TShock/blob/master/TShockAPI/TerrariaServerBins/TerrariaServer.exe?raw=true)
 
 Place those two files anywhere you would like to run your server from, and double click the server file. When the server opens, allow it to create the folder 'serverplugins' and start it. Choose a world, type monkeybuisness (if you've been following this guide literally) for a password, use the default port, and let it launch. Type exit.
 
