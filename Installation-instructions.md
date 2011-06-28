@@ -3,23 +3,21 @@ Hello! Thanks for choosing TShock. As you walk through the installation procedur
 ## Downloading TShock
 Click on the source tab at the top, and click the big downloads button on the right hand side. You want the download labeled latest.
 
-## Preparation
-### Patcher
-Extract TerrariaServerPatcher.exe and TerrariaServerAPI.dll into where TerrariaServer.exe is located. Make sure TerrariaServer.exe is the original file, go into Steam and Validate Local Cache. Run TerrariaServerPatcher.exe as an admin and wait for the patching to complete.
+## Installling
+### Extract
+Extract the entire downloaded folder to a new folder with an appropriate name
 
-You should have gotten a TerrariaServerAPI.exe as a result. Double click on it. When the server opens, allow it to create the folder 'serverplugins' and start it. Choose a world, type monkeybuisness (if you've been following this guide literally) for a password, use the default port, and let it launch. Type exit.
-### Pre-Patcher
-Start off by downloading the packages needed for your server installation.
+### Install
+In the new folder you have made, run TerrariaServer.exe, It will automatically create a ServerPlugins folder on startup.
+CLOSE the program
 
-* [TerrariaServerAPI.dll](https://github.com/TShock/TShock/blob/master/TShockAPI/TerrariaServerBins/TerrariaServerAPI.dll?raw=true)
-* [TerrariaServer.exe](https://github.com/TShock/TShock/blob/master/TShockAPI/TerrariaServerBins/TerrariaServer.exe?raw=true)
+Move the TShockAPI.dll to the ServerPlugins folder and run the TerrariaServer.exe again
 
-Place those two files anywhere you would like to run your server from, and double click the server file. When the server opens, allow it to create the folder 'serverplugins' and start it. Choose a world, type monkeybuisness (if you've been following this guide literally) for a password, use the default port, and let it launch. Type exit.
+### Become an Admin
 
-## Installing TShock
-Use [7Zip](http://7zip.org/) or another archiving program to extract the files downloaded in **Downloading TShock**.
+Once the server starts the console window will give an auth code. Note this down somewhere.
 
-Place TShockAPI.dll inside the 'serverplugins' folder. Place Newtonsoft.Json.Dll in the same folder as the server. Once again, start the server and verify that everything is running okay. Connect to your server by using the IP address 'localhost' and port 7777. *Important:* Take note of the auth code mentioned on the first startup. When you join, you need to become admin by typing /auth [code]. This code is displayed once, and as soon as the server is restarted you will lose the ability to run the command. You can edit users.txt in the future to add more admins, or you can remove the auth.lck file and restart the server to get another auth code to use.
+Join the server and enter /auth [authcode]. This will make you a superadmin on the server, giving you access to all commands. Quit the server and rejoin to complete the process.
 
 ## Finishing
-Your server should now successfully start and run TShock. Familiarize yourself with the [[Commands]], and have a fun time administrating your new server.
+Your server should now be successfully running TShock. Familiarize yourself with the [[Commands]], and have a fun time administrating your new server.
