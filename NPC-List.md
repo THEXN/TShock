@@ -58,14 +58,14 @@ For use with /spawnmob. The first number is the id, second is the in game name.
 * 56 : Snatcher
 * 57 : Corrupt Goldfish
 * 58 : Piranha
-* 59 :Lava Slime
-* 60 :Hellbat
-* 61 :Vulture
-* 62 :Demon
-* 63 :Blue Jellyfish
-* 64 :Pink Jellyfish
-* 65 :Shark
-* 66 :Voodoo Demon
-* 67 :Crab
-* 68 :Dungeon Guardian
-* 69 :Antlion
+* 59 : Lava Slime
+* 60 : Hellbat
+* 61 : Vulture
+* 62 : Demon
+* 63 : Blue Jellyfish
+* 64 : Pink Jellyfish
+* 65 : Shark
+* 66 : Voodoo Demon
+* 67 : Crab
+* 68 : Dungeon Guardian
+* 69 : Antlion
