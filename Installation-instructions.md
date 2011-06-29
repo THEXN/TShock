@@ -5,13 +5,13 @@ Click on the source tab at the top, and click the big downloads button on the ri
 
 ## Installling
 ### Extract
-Extract the entire downloaded folder to a new folder with an appropriate name
+Extract the entire downloaded folder to a new folder with an appropriate name.
 
 ### Install
 In the new folder you have made, run TerrariaServer.exe, It will automatically create a ServerPlugins folder on startup.
 CLOSE the program
 
-Move the TShockAPI.dll to the ServerPlugins folder and run the TerrariaServer.exe again
+Move the TShockAPI.dll and the Newtonsoft.Json.dll to the ServerPlugins folder and run the TerrariaServer.exe again
 
 ### Become an Admin
 
