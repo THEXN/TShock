@@ -17,6 +17,7 @@
 * butcher - kills all monsters.
 * warp - allows a player to warp
 * managewarp - allows a player to set and delete warps
+* logs - allows user to see what commands are executed
 
 [[Commands]] the permissions enable:
 
