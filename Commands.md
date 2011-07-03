@@ -46,3 +46,4 @@ TShock requires you to be an administrator to run most commands. Most of these c
 * /setwarp [name] - Sets a warp at your position with given name
 * /delwarp [name] - Deletes specified warp
 * /warp list - Lists all available warps
+* test
