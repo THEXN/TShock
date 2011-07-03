@@ -5,19 +5,32 @@ Click on the source tab at the top, and click the big downloads button on the ri
 
 ## Installling
 ### Extract
-Extract the entire downloaded folder to a new folder with an appropriate name.
+Extract the all the contents into a folder.  This will be your server folder.  Everything is already included.
 
 ### Install
-In the new folder you have made, run TerrariaServer.exe, It will automatically create a ServerPlugins folder on startup.
-CLOSE the program
+In the new folder you have made, run TerrariaServer.exe, It will automatically create all the necessary files/folders on startup.
 
-Move the TShockAPI.dll and the Newtonsoft.Json.dll to the ServerPlugins folder and run the TerrariaServer.exe again
+Now close the TerrariaServer.exe , you've just generated the necessary files and folders.
+
+Move the **TShockAPI.dll**, **XNAHelpers.dll** and **Newtonsoft.Json.dll** to the ServerPlugins folder and run the TerrariaServer.exe again.
 
 ### Become an Admin
 
 Once the server starts the console window will give an auth code. Note this down somewhere.
 
 Join the server and enter /auth [authcode]. This will make you a superadmin on the server, giving you access to all commands. Quit the server and rejoin to complete the process.
+
+**OR**
+
+You could add yourself on the Users.txt, in the tshock folder.
+Simply put your IP address [Check External IP](http://www.whatismyip.com)
+followed by 'superadmin' beside it.
+eg.
+
+`#start of users.txt`
+
+`182.158.12.5 superadmin`
+
 
 ## Finishing
 Your server should now be successfully running TShock. Familiarize yourself with the [[Commands]], and have a fun time administrating your new server.
