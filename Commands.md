@@ -1,6 +1,8 @@
 TShock requires you to be an administrator to run most commands. Most of these commands alter gameplay significantly, and therefore no current Minecraft style Permissions plugin is provided.
 
-### Complete command list:
+**Type /help 1-4 in-game as an superadmin to view the rest of the commands.**
+
+### *Now **In-**Complete command list:
 * /kick [player] [reason]- Use "" for player names with spacing.
 * /ban [player] [reason]- Use "" for player names with spacing.
 * /ban [ip] [reason]
