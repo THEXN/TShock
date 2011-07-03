@@ -1,7 +1,7 @@
 The configuration is stored in config.json, and is pretty much self explanatory. Located inside the 'tshock' folder, you can edit config.json to your preferences.
 
 
-NOTE: ALL ASTERISKS "*" BEFORE A DESCRIPTION FOR THE SETTING IS A GUESS, OR A 'PRETTY SURE', THIS WAS EDITED BY A USER.
+**NOTE: ALL ASTERISKS "*" BEFORE A DESCRIPTION FOR THE SETTING IS A GUESS, OR A 'PRETTY SURE', THIS WAS EDITED BY A USER.**
 
 	{
 	  "InvasionMultiplier": 50,
