@@ -1,97 +1,47 @@
 * kick - Allows kicking of players	 	
 * ban - Allows banning of players	 	
 * ignorecheatdetection - Ignores cheat detection	 	
-* maintenance - Allows you to shutdown the server, update reminders are sent to players with this permission
-5	 	
--* cfg - Allows changing of some configurations
-6	 	
--* causeevents - Allows causing events, such as the blood moon
-7	 	
--* spawnboss - Allows spawning bosses, such as the eye of cthulu
-8	 	
--* tp - Enables teleportation commands
-9	 	
--* spawnmob - Allows spawning of monsters
-10	 	
--* cheat - Enables cheating commands
-11	 	
--* kill - Enables /kill
-12	 	
--* pvpfun - Enables fun commands related to pvp
-13	 	
--* immunetoban, immunetokick - makes it impossible to kick/ban you
-14	 	
--* editspawn - allows editing of spawn if it is protected, and allows protecting of spawn
-15	 	
--* ignoregriefdetection - Ignores greif detection
-16	 	
--* reservedslot - allows a player to join even if the server is full.
-17	 	
--* butcher - kills all monsters.
-18	 	
--* warp - allows a player to warp
-19	 	
--* managewarp - allows a player to set and delete warps
-20	 	
--
-21	 	
--[[Commands]] the permissions enable:
-22	 	
--
- 	1	
-+kick - Allows kicking of players
- 	2	
-+ban - Allows banning of players
- 	3	
-+ignorecheatdetection - Ignores cheat detection
- 	4	
-+maintenance - Allows you to shutdown the server, update reminders are sent to players with this permission
- 	5	
-+cfg - Allows changing of some configurations
- 	6	
-+causeevents - Allows causing events, such as the blood moon
- 	7	
-+spawnboss - Allows spawning bosses, such as the eye of cthulu
- 	8	
-+tp - Enables teleportation commands
- 	9	
-+spawnmob - Allows spawning of monsters
- 	10	
-+cheat - Enables cheating commands
- 	11	
-+kill - Enables /kill
- 	12	
-+pvpfun - Enables fun commands related to pvp
- 	13	
-+immunetoban, immunetokick - makes it impossible to kick/ban you
- 	14	
-+editspawn - allows editing of spawn if it is protected, and allows protecting of spawn
- 	15	
-+ignoregriefdetection - Ignores greif detection
- 	16	
-+reservedslot - allows a player to join even if the server is full.
- 	17	
-+Commands the permissions enable:
-23	18	
- kick:
-24	 	
--
-25	 	
--* /kick
-26	 	
--
- 	19	
-+/kick
-27	20	
- ban:
-28	 	
--
-29	 	
--* /ban
-30	 	
--
- 	21	
-+/ban
+* maintenance - Allows you to shutdown the server, update reminders are sent to players with this permission	 	
+* cfg - Allows changing of some configurations
+* causeevents - Allows causing events, such as the blood moon
+* spawnboss - Allows spawning bosses, such as the eye of cthulu
+* tp - Enables teleportation commands
+* spawnmob - Allows spawning of monsters
+* cheat - Enables cheating commands
+* kill - Enables /kill
+* pvpfun - Enables fun commands related to pvp
+* immunetoban, immunetokick - makes it impossible to kick/ban you
+* editspawn - allows editing of spawn if it is protected, and allows protecting of spawn
+* ignoregriefdetection - Ignores greif detection
+* reservedslot - allows a player to join even if the server is full.
+* butcher - kills all monsters.
+* warp - allows a player to warp
+* managewarp - allows a player to set and delete warps	 	
+[[Commands]] the permissions enable:	
+kick - Allows kicking of players
+
+ban - Allows banning of players	
+ignorecheatdetection - Ignores cheat detection	
+maintenance - Allows you to shutdown the server, update reminders are sent to players with this permission	
+cfg - Allows changing of some configurations	
+causeevents - Allows causing events, such as the blood moon	
+spawnboss - Allows spawning bosses, such as the eye of cthulu	
+tp - Enables teleportation commands	
+spawnmob - Allows spawning of monsters	
+cheat - Enables cheating commands	
+kill - Enables /kill	
+pvpfun - Enables fun commands related to pvp	
+immunetoban, immunetokick - makes it impossible to kick/ban you	
+editspawn - allows editing of spawn if it is protected, and allows protecting of spawn
+ignoregriefdetection - Ignores greif detection	
+reservedslot - allows a player to join even if the server is full.
+Commands the permissions enable:	
+kick:
+* /kick
+/kick
+ban:
+* /ban
+/ban
 31	22	
  maintenance:
 32	 	
