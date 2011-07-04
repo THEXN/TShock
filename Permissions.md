@@ -1,10 +1,7 @@
--* kick - Allows kicking of players
-2	 	
--* ban - Allows banning of players
-3	 	
--* ignorecheatdetection - Ignores cheat detection
-4	 	
--* maintenance - Allows you to shutdown the server, update reminders are sent to players with this permission
+* kick - Allows kicking of players	 	
+* ban - Allows banning of players	 	
+* ignorecheatdetection - Ignores cheat detection	 	
+* maintenance - Allows you to shutdown the server, update reminders are sent to players with this permission
 5	 	
 -* cfg - Allows changing of some configurations
 6	 	
@@ -288,8 +285,6 @@
 101	 	
 -
 102	 	
--
- 	57	
-+/protectspawn
-103	58	
+-	
++/protectspawn	
 \ No newline at end of file
