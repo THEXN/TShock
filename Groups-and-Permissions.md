@@ -1,3 +1,5 @@
+##groups.txt file:    
+     
 > Format  
 > name parent permisson1 permission2 permissionN  
 > if there is no parent, put null instead  
