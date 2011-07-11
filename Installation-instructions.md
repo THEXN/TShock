@@ -34,3 +34,6 @@ eg.
 
 ## Finishing
 Your server should now be successfully running TShock. Familiarize yourself with the [[Commands]], and have a fun time administrating your new server.
+
+Here is a video explaining how to install and setup TShock!
+<iframe width="560" height="349" src="http://www.youtube.com/embed/MpKexsNmefs" frameborder="0" allowfullscreen></iframe>
