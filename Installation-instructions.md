@@ -1,5 +1,7 @@
 Hello! Thanks for choosing TShock. As you walk through the installation procedure, note the 'Issues' tab at the top. If you have any problems at all, we can handle them there. If the problem is something you'd rather not share, or you don't want to create a [Github](http://github.com/) account, you can email your suggestions to _shank [at] shankshock [dot] com_.
 
+[Click here for a YouTube tutorial on how to install TShock.](http://www.youtube.com/watch?v=MpKexsNmefs)
+
 ## Downloading TShock
 Click on the source tab at the top, and click the big downloads button on the right hand side. You want the download labeled latest.
 
@@ -35,5 +37,3 @@ eg.
 ## Finishing
 Your server should now be successfully running TShock. Familiarize yourself with the [[Commands]], and have a fun time administrating your new server.
 
-Here is a video explaining how to install and setup TShock!
-<object width="560" height="349"><param name="movie" value="http://www.youtube.com/v/MpKexsNmefs?version=3&amp;hl=en_GB"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/MpKexsNmefs?version=3&amp;hl=en_GB" type="application/x-shockwave-flash" width="560" height="349" allowscriptaccess="always" allowfullscreen="true"></embed></object>
