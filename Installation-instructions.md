@@ -36,4 +36,4 @@ eg.
 Your server should now be successfully running TShock. Familiarize yourself with the [[Commands]], and have a fun time administrating your new server.
 
 Here is a video explaining how to install and setup TShock!
-<iframe width="560" height="349" src="http://www.youtube.com/embed/MpKexsNmefs" frameborder="0" allowfullscreen></iframe>
+<object width="560" height="349"><param name="movie" value="http://www.youtube.com/v/MpKexsNmefs?version=3&amp;hl=en_GB"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/MpKexsNmefs?version=3&amp;hl=en_GB" type="application/x-shockwave-flash" width="560" height="349" allowscriptaccess="always" allowfullscreen="true"></embed></object>
