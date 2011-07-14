@@ -9,3 +9,5 @@ Welcome to the Terraria Shock modification wiki.
 ### [[Permissions]]
 ### [[Donations]]
 ### [[Users.txt, Whitelist.txt, itembans.txt, bans.txt and How to Configure]]
+
+### [[Русская версия]]
