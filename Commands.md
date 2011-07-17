@@ -31,8 +31,8 @@ TShock requires you to be an administrator to run most commands. Most of these c
 * /antibuild - Toggles build protection.
 * /kill [player] - Kills provided [player] - Use "" for item/player names with spacing.
 * /butcher - Slays all non-town NPCs.
-* /item [id or name] or /i [id or name]- Gives you [id or name] - Use "" for item names with spacing.
-* /give [id or name] [player] - Gives [player] item [id or name] - Use "" for item/player names with spacing.
+* /item [id or name] <amount> or /i [id or name] <amount>- Gives you [id or name] - ***IMPORTANT** Use " " for item names with spacing.
+* /give [id or name] [player] <amount> - Gives [player] item [id or name] - ***IMPORTANT** Use "" for item/player names with spacing.
 * /heal [player] - Heals you, or if defined, [player] - Use "" for player names with spacing.
 * /help [page] - Provides a list of commands.
 * /playing or /who or /online - List of players on the server.
