@@ -4,8 +4,19 @@ TShock requires you to be an administrator to run most commands. Most of these c
 
 ### *Now **In-**Complete command list:
 
+## Commands available to everyone
 * /register [username] [password] - Register a user account
 * /login [username] [password] - Log in to a user account
+* /help [page] - Provides a list of commands.
+* /playing or /who or /online - List of players on the server.
+* /me - Third person chat.
+* /p - Team chat.
+* /rules - Prints server rules.
+
+## Commands available to logged in users
+* /password [oldpassword] [newpassword] - Change your password
+
+## Commands available to administrative users
 * /kick [player] [reason] - Use "" for player names with spacing.
 * /ban [player] [reason] - Use "" for player names with spacing.
 * /ban [ip] [reason]
@@ -38,11 +49,6 @@ TShock requires you to be an administrator to run most commands. Most of these c
 * /item [id or name] <amount> or /i [id or name] <amount>- Gives you [id or name] - ***IMPORTANT** Use " " for item names with spacing.
 * /give [id or name] [player] <amount> - Gives [player] item [id or name] - ***IMPORTANT** Use "" for item/player names with spacing.
 * /heal [player] - Heals you, or if defined, [player] - Use "" for player names with spacing.
-* /help [page] - Provides a list of commands.
-* /playing or /who or /online - List of players on the server.
-* /me - Third person chat.
-* /p - Team chat.
-* /rules - Prints server rules.
 * /region set [1/2] - Sets temporary region points
 * /region define [name] - Adds temporary region points into the region list
 * /region delete [name] - Deletes the specified region
