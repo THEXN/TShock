@@ -7,6 +7,7 @@ Welcome to the Terraria Shock modification wiki.
 ### [[NPC List]]
 ### [[Item List]]
 ### [[Permissions]]
+### [[SQLite Manager Edit]]
 ### [[Donations]]
 ### [[Users.txt, Whitelist.txt, itembans.txt, bans.txt and How to Configure]]
 
