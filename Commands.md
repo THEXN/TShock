@@ -3,6 +3,7 @@ TShock requires you to be an administrator to run most commands. Most of these c
 **Type /help 1-4 in-game as an superadmin to view the rest of the commands.**
 
 ### *Now **In-**Complete command list:
+
 * /kick [player] [reason]- Use "" for player names with spacing.
 * /ban [player] [reason]- Use "" for player names with spacing.
 * /ban [ip] [reason]
@@ -21,6 +22,7 @@ TShock requires you to be an administrator to run most commands. Most of these c
 * /king - Summons the Slime King.
 * /hardcore - Summons Eater of Worlds, Eye of Cthulhu , Slime King, and Skeletron.
 * /spawnmob [npc-id or name] [amount]- Spawns an NPC from the [[NPC list]] - Use "" for mob names with spacing.
+* /showconfig - Shows the current configuration settings.
 * /reload - Reloads the configuration file.
 * /password - Remotely changes the server's password.
 * /save - Saves the server.
