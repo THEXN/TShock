@@ -1,4 +1,5 @@
-Tables Edit Guide *Not finished
+### _**Tables Edit Guide**_ 
+*Not finished, feel free to edit if you can contribute some info/details
 
 ***
 
