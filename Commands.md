@@ -4,8 +4,10 @@ TShock requires you to be an administrator to run most commands. Most of these c
 
 ### *Now **In-**Complete command list:
 
-* /kick [player] [reason]- Use "" for player names with spacing.
-* /ban [player] [reason]- Use "" for player names with spacing.
+* /register [username] [password] - Register a user account
+* /login [username] [password] - Log in to a user account
+* /kick [player] [reason] - Use "" for player names with spacing.
+* /ban [player] [reason] - Use "" for player names with spacing.
 * /ban [ip] [reason]
 * /unban [player] - Use "" for player names with spacing.
 * /unbanip [ip]
