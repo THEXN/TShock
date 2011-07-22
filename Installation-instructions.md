@@ -29,8 +29,10 @@ A database editor is forthcoming; but for now, [SQLite Manager for Firefox](http
 
 Installation: [Firefox Extension](https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/)
 
-Open Firefox, go to the Web Development Menu, and open SQLite Manager. 
+Open Firefox, go to the Web Development Menu, and open SQLite Manager.
+
 "Connect" to the SQLite database by locating and opening the tshock.sqlite file within your TShock configuration folder.
 
 You may now click on sections in the left panel, and double click on a database record in the Browse & Search tab to edit it. 
+
 Be careful you do not press enter in a field; you will create a multiline entry that will not work.
