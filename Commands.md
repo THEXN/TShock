@@ -19,7 +19,7 @@ Most of these commands can alter gameplay significantly
 
 ## Commands available to administrative users
 
-# Permissions Required: Logged in as an Account in 'superadmin' group
+**Permissions Required: Logged in as an Account in 'superadmin' group**
 * /user add [accountname:password] [group] - Adds a user account and assigns them a group.
 * /user add [IP.add.re.ss] [group] - Adds a user IP address  and assigns them a group.
 * /user del [accountname] - Removes a user account
@@ -28,51 +28,51 @@ Most of these commands can alter gameplay significantly
 * /user password [accountname] [password] - Assigns a new password to a user
 * /auth-verify [CODE] - Verifies initial superadmin account(s). [CODE] is displayed in server console.
 
-# Permissions Required: kick, ban, unban
+**Permissions Required: kick, ban, unban**
 * /kick [player] [reason] - Use "" for player names with spacing.
 * /ban [player] [reason] - Use "" for player names with spacing.
 * /ban [ip] [reason]
 * /unban [player] - Use "" for player names with spacing.
 * /unbanip [ip]
 
-# Permissions Required: maintenance
+**Permissions Required: maintenance**
 * /off - Turns off the server after saving.
 * /off-nosave - Kills the server without saving.
 * /checkupdates - Checks for TShock updates.
 
-# Permissions Required: causeevents
+**Permissions Required: causeevents**
 * /dropmeteor - Drops a meteor on the map.
 * /star - Attempts to bring a star to your location (required night time).
 * /bloodmoon - Starts a blood moon event.
 * /invade - Toggles a goblin invasion.
 
-# Permissions Required: spawnboss
+**Permissions Required: spawnboss**
 * /eater - Summons the Eater of Worlds.
 * /eye - Summons the Eye of Cthulhu.
 * /skeletron - Summons Skeletron.
 * /king - Summons the Slime King.
 * /hardcore - Summons Eater of Worlds, Eye of Cthulhu , Slime King, and Skeletron.
 
-# Permissions Required: spawnmob
+**Permissions Required: spawnmob**
 * /spawnmob [npc-id or name] [amount]- Spawns an NPC from the [[NPC list]] - Use "" for mob names with spacing.
 
-# Permissions Required: tp
+**Permissions Required: tp**
 * /tp [player] - Teleport to the requested player.
 * /tp home - Teleport to home. (Bed, or spawn)
 * /tp spawn - Teleport to current map's spawn.
 
-# Permissions Required: tphere
+**Permissions Required: tphere**
 * /tphere [player] - Teleports the requested player to you.
 
-# Permissions Required: warp
+**Permissions Required: warp**
 * /warp list - Lists the available warp destinations.
 * /warp [destination] - Warps to the named destination.
 
-# Permissions Required: managewarp
+**Permissions Required: managewarp**
 * /setwarp [destination] - Sets a named warp at your current position.
 * /delwarp [destination] - Removes a named warp.
 
-# Permissions Required: cfg
+**Permissions Required: cfg**
 * /setspawn - Sets the map's spawn point at your current position.
 * /reload - Reloads the configuration file.
 * /showconfig - Shows the current configuration settings.
@@ -82,13 +82,13 @@ Most of these commands can alter gameplay significantly
 * /spawnrate [amount] - Changes the rate at which monsters spawn. Lower results in faster spawn rates.
 * /broadcast [message] - Broadcasts a message from the <Server> playername.
 
-# Permissions Required: time
+**Permissions Required: time**
 * /time [day|night|dusk|noon|midnight] - Sets a specific world time.
 
-# Permissions Required: pvpfun
+**Permissions Required: pvpfun**
 * /slap [player] <damage> - Slaps [player], defaults to 5 damage if not provided - Use "" for item/player names with spacing.
 
-# Permissions Required: editspawn
+**Permissions Required: editspawn**
 * /antibuild - Toggles build protection.
 * /protectspawn - Toggles spawn protection.
 * /region set [1/2] - Sets temporary region points
@@ -98,17 +98,17 @@ Most of these commands can alter gameplay significantly
 * /region help - Lists region help
 * /debugreg - Lists known regions (Will scroll if you have many!)
 
-# Permissions Required: logs
+**Permissions Required: logs**
 * /displaylogs - Turns on and off Server Console messages.
 
-# Permissions Required: whisper
+**Permissions Required: whisper**
 * /whisper [player] [message] - Sends a private whisper to another player
 * /w [player] [message] - Sends a private whisper to another player
 * /tell [player] [message] - Sends a private whisper to another player
 * /reply [message] - Whisper replies to the last person to send you a whisper.
 * /r [message] - Whisper replies to the last person to send you a whisper.
 
-# Permissions Required: kill, butcher, item, heal
+**Permissions Required: kill, butcher, item, heal**
 * /kill [player] - Kills provided [player] - Use "" for item/player names with spacing.
 * /butcher - Slays all non-town NPCs.
 * /item [id or name] <amount> or /i [id or name] <amount>- Gives you [id or name] - ***IMPORTANT** Use " " for item names with spacing.
