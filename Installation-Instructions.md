@@ -1,0 +1,53 @@
+Hello! Thanks for choosing TShock. 
+
+If you have any problems with this installation, post an issue on our [Issue Tracker](http://ci.tshock.co:8080/secure/IssueNavigator.jspa?mode=hide&requestId=10001). You can also email your issue to _shank [at] shankshock [dot] com_.
+
+## Download and Extract
+1. Download the latest package of TShock from the [TShock Downloads](https://github.com/TShock/TShock/archives/master).
+2. Download the [TShock API](http://dl.dropbox.com/u/29760911/TerrariaServerAPI.rar).
+3. Extract all files from both archives into the same folder. In this example, we'll use **C:\TShock**.
+4. Copy an existing version of TerrariaServer.exe (1.0.5) into C:\TShock.
+
+## Install
+1. In C:\TShock, run TerrariaServerPatcher.exe as an Administrator (Right click -> Select "Run as Administrator")
+ * Note: a "TerrariaServer hash not found" error can be solved by retrieving a fresh TerrariaServer.exe from Step #4.
+2. Wait until the program reports "Success", then close the program.
+
+## Become an Admin
+1. Run TerrariaServerAPI.exe. 
+2. Select the world you want to use or create a new one.
+3. After selecting your world, you will be asked for input on 3 settings: Max players, Server port, and Server password.
+ * You may hit your ENTER key at each input to select the default setting in parenthesis ().
+ * Default settings are: Max players (8), Server port (7777), and Server password (none).
+4. Once the server starts the console window will have the following message: **To become superadmin, join the game and type /auth [authcode]**
+5. Run Terraria.exe, join your server, and enter: **/auth [authcode]**. This will give you the ability to create a user account on the server, giving you access to all commands. 
+ * Note: In order to join your own server, you can enter: **localhost** or **127.0.0.1** (which are the same thing - assuming the server is being run on the same machine that you run Terraria), or you can use your own External IP address, which can be found simply by going to a website such as [WhatIsMyIP.com](http://www.whatismyip.com/).
+6. Next, enter: **/user add [username]:[password] superadmin**
+ * Example: **/user add john:qwerty superadmin**
+ * Remember to include the colon "**:**" between the username and password.
+7. Log in with the superadmin user you just created by entering: **/login [username] [password]** (without a colon)
+ * Example: **/login john qwerty**
+8. Finally, to remove the "auth" message on server startup, enter: **/auth-verify**
+
+## Adding Users/Admins
+To add a new user or admin, enter the following: **/user add [username]:[password] [group]**
+
+* Example #1 (Add a VIP user): **/user add sarah:connor vip**
+* Example #2 (Add another Admin): **/user add sarah:connor newadmin**
+
+Alternatively, if the user you wish to add has already registered (using /register [username] [password]) you may also edit that user's Usergroup in the **C:\TShock\tshock\tshock.sqlite** file (Users.Usergroup - see below). _Users who have their access added or changed need only re-join the server for their permissions to take effect._
+
+## Finishing Up
+Your server should now be successfully running TShock. Here are a few things you may like to do:
+
+* Familiarize yourself with the [[Commands]].
+* Configure whatever options you choose in the **C:\TShock\tshock\config.json** file.
+ * Note: you can open the config.json file with Notepad, or its superior, [Notepad++](http://notepad-plus-plus.org/)
+* Make your server noticeable! With your External IP address ([WhatIsMyIP.com](http://www.whatismyip.com/)), you can sign up to have your server listed on [TerrariaNet](http://terrarianet.com/), and you can have your own sub-forum (moderated by you) with [TerrariaZone](http://www.terrariazone.com/threads/apply-for-server-list-and-sub-forum.199/).
+* Get yourself acquainted with TShock's data storage within the **C:\TShock\tshock\tshock.sqlite** file. All users, regions, permissions, and other data is kept here. [SQLite Manager for Firefox](https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/) works well for this purpose.
+ 1. Open Firefox, go to the Web Development Menu, and open SQLite Manager.
+ 2. In the menu at the top, select **Database** -> **Connect Database**
+ 3. Browse to **C:\TShock\tshock** and open **tshock.sqlite**. You may now click on **Tables** in the left panel, and double click on a database record in the **Browse & Search** tab to edit it.
+**WARNING: Edit data with caution! Making mistakes inside this file can easily result in a corrupted database, which will prevent your server from functioning properly. Edit data at your own risk! It is highly recommended to make frequent backups of this file!**
+* Convert your External IP into a DNS: Using a free service like [No-IP.com](http://www.no-ip.com/), you can change your external IP address into a readable DNS name. In other words, instead of forcing your users to connect with 192.9.9.250, they can use "yourserver.no-ip.com".
+ * Protip: Because most user's IPs will likely change once in a while, at some point your players will be unable to connect to you, and you may not even notice. You can download [No-IP's Dynamic DNS Client](http://www.no-ip.com/downloads.php) to keep your IP in sync with the DNS name you make with them.
