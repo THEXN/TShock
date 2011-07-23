@@ -11,6 +11,7 @@ If you have any problems with this installation, post an issue on our [Issue Tra
 ## Install
 1. In C:\TShock, run TerrariaServerPatcher.exe as an Administrator (Right click -> Select "Run as Administrator")
  * Note: a "TerrariaServer hash not found" error can be solved by retrieving a fresh TerrariaServer.exe from Step #4.
+ * If you don't have a working copy of TerrariaServer.exe, [download it here](http://www.mediafire.com/file/xrkw1idexcwbuk5/TerrariaServer.zip).
 2. Wait until the program reports "Success", then close the program.
 
 ## Become an Admin
