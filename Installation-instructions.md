@@ -8,7 +8,7 @@ Get the latest package of TShock from the TShock github page, located at [[https
 
 Next, download the API TShock runs on: [[http://dl.dropbox.com/u/29760911/TerrariaServerAPI.rar]]
 
-Once downloaded, copy an existing version of TerrariaServer (1.0.5) into the folder, along with the patcher. Run the patcher, and proceed to the next step.
+Once downloaded, copy an existing version of TerrariaServer (1.0.5) into the folder, along with the patcher. Run the patcher as an Administrator (Right click then Run as Administrator), and proceed to the next step.
 
 ## Install
 In the new folder you have made, run TerrariaServer.exe, It will automatically create all the necessary files/folders on startup.
