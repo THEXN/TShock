@@ -1,7 +1,7 @@
 Welcome to the Terraria Shock modification wiki.
 
 ### [[Installation Instructions]]
-### [[Commands]]
+### [[Commands & Permissions]]
 ### [[MOTD Documentation]]
 ### [[Configuration File Setup]]
 ### [[NPC List]]
