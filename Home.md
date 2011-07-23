@@ -1,6 +1,6 @@
 * **[[Installation Instructions]]**
 * **[[Commands & Permissions]]**
-* **[[MOTD Documentation]]**
+* **[[Message Of The Day (MOTD) Config]]**
 * **[[Configuration File Setup]]**
 * **[[NPC List]]**
 * **[[Item List]]**
