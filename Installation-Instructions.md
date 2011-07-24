@@ -41,7 +41,7 @@ Alternatively, if the user you wish to add has already registered (using /regist
 ## Finishing Up
 Your server should now be successfully running TShock. Here are a few things you may like to do:
 
-* Familiarize yourself with the [[Commands]].
+* Familiarize yourself with the [[Commands & Permissions]].
 * Configure whatever options you choose in the **C:\TShock\tshock\config.json** file.
  * Note: you can open the config.json file with Notepad, or its superior, [Notepad++](http://notepad-plus-plus.org/)
 * Make your server noticeable! With your External IP address ([WhatIsMyIP.com](http://www.whatismyip.com/)), you can sign up to have your server listed on [TerrariaNet](http://terrarianet.com/), and you can have your own sub-forum (moderated by you) with [TerrariaZone](http://www.terrariazone.com/threads/apply-for-server-list-and-sub-forum.199/).
