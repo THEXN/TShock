@@ -17,9 +17,9 @@ Most of these commands can alter gameplay significantly
 ## Commands available to logged in users
 * /password [oldpassword] [newpassword] - Change your password
 
-## Commands available to administrative users
+## Commands available to groups ##
 
-###Permissions Required: Logged in as an Account in 'superadmin' group###
+###Permissions Required: Logged in as 'superadmin' group###
 
 * /user add [accountname:password] [group] - Adds a user account and assigns them a group.
 * /user add [IP.add.re.ss] [group] - Adds a user IP address  and assigns them a group.
