@@ -1,7 +1,7 @@
 TShock requires you to be logged into an administrator-level user to run most commands. 
 Most of these commands can alter gameplay significantly
 
-**Type /help 1-5 in-game to view the rest of the commands.**
+###Type /help 1-5 in-game to view the rest of the commands.###
 
 ### Complete command list:
 
@@ -9,9 +9,9 @@ Most of these commands can alter gameplay significantly
 * /register [username] [password] - Register a user account
 * /login [username] [password] - Log in to a user account
 * /help [page] - Provides a list of commands.
-* /playing or /who or /online - List of players on the server.
+* /playing, /who, /online - List of players on the server.
 * /me - Third person chat.
-* /p - Team chat.
+* /p - Party/Team chat.
 * /rules - Prints server rules.
 
 ## Commands available to logged in users
@@ -19,7 +19,7 @@ Most of these commands can alter gameplay significantly
 
 ## Commands available to administrative users
 
-**Permissions Required: Logged in as an Account in 'superadmin' group**
+###Permissions Required: Logged in as an Account in 'superadmin' group###
 
 * /user add [accountname:password] [group] - Adds a user account and assigns them a group.
 * /user add [IP.add.re.ss] [group] - Adds a user IP address  and assigns them a group.
@@ -28,29 +28,31 @@ Most of these commands can alter gameplay significantly
 * /user group [accountname] [newgroup] - Assigns a new group to a user
 * /user password [accountname] [password] - Assigns a new password to a user
 * /auth-verify [CODE] - Verifies initial superadmin account(s). [CODE] is displayed in server console.
+* /ip [player] - Privately print the IP address of a player
 
-**Permissions Required: kick, ban, unban**
+###Permissions Required: kick, ban, unban###
 
-* /kick [player] [reason] - Use "" for player names with spacing.
-* /ban [player] [reason] - Use "" for player names with spacing.
+* /kick [player] [reason] - Use "quotes" for player names with spacing. (Example: /kick "sarah connor" abuse)
+* /ban [player] [reason] - Use "quotes" for player names with spacing.
 * /ban [ip] [reason]
 * /unban [player] - Use "" for player names with spacing.
 * /unbanip [ip]
 
-**Permissions Required: maintenance**
+###Permissions Required: maintenance###
 
 * /off - Turns off the server after saving.
 * /off-nosave - Kills the server without saving.
 * /checkupdates - Checks for TShock updates.
+* /clearbans -1 - Removes all bans
 
-**Permissions Required: causeevents**
+###Permissions Required: causeevents###
 
 * /dropmeteor - Drops a meteor on the map.
 * /star - Attempts to bring a star to your location (required night time).
 * /bloodmoon - Starts a blood moon event.
 * /invade - Toggles a goblin invasion.
 
-**Permissions Required: spawnboss**
+###Permissions Required: spawnboss###
 
 * /eater - Summons the Eater of Worlds.
 * /eye - Summons the Eye of Cthulhu.
@@ -58,31 +60,37 @@ Most of these commands can alter gameplay significantly
 * /king - Summons the Slime King.
 * /hardcore - Summons Eater of Worlds, Eye of Cthulhu , Slime King, and Skeletron.
 
-**Permissions Required: spawnmob**
+###Permissions Required: spawnmob###
 
 * /spawnmob [npc-id or name] [amount]- Spawns an NPC from the [[NPC list]] - Use "" for mob names with spacing.
 
-**Permissions Required: tp**
+###Permissions Required: tp###
 
 * /tp [player] - Teleport to the requested player.
-* /tp home - Teleport to home. (Bed, or spawn)
-* /tp spawn - Teleport to current map's spawn.
+* /spawn, /home - Teleport to home. (Bed, or spawn)
 
-**Permissions Required: tphere**
+###Permissions Required: tphere###
 
 * /tphere [player] - Teleports the requested player to you.
 
-**Permissions Required: warp**
+###Permissions Required: warp###
 
 * /warp list - Lists the available warp destinations.
 * /warp [destination] - Warps to the named destination.
 
-**Permissions Required: managewarp**
+###Permissions Required: managewarp###
 
 * /setwarp [destination] - Sets a named warp at your current position.
 * /delwarp [destination] - Removes a named warp.
 
-**Permissions Required: cfg**
+###Permissions Required: managegroup###
+
+* /addGroup <group name> [optional permissions] - Allows adding of additional group types, other than the default groups (VIP, newadmin, trustedadmin, etc.).
+* /delGroup <group name> - Delete an existing group.
+* /modGroup add|del <group name> <permission to add or remove> - <permission> is the permission required to use a set of commands.
+ * Example: /modGroup add vip managewarp
+
+###Permissions Required: cfg###
 
 * /setspawn - Sets the map's spawn point at your current position.
 * /reload - Reloads the configuration file.
@@ -92,16 +100,17 @@ Most of these commands can alter gameplay significantly
 * /maxspawns [amount] - Changes the maximum spawns per wave. Higher numbers results in more mobs per spawn wave.
 * /spawnrate [amount] - Changes the rate at which monsters spawn. Lower results in faster spawn rates.
 * /broadcast [message] - Broadcasts a message from the <Server> playername.
+* /convert - This command will dump all users from both Regions and Warps and also change all Worlds to reference this WorldID. You must manually fix multi-world configurations.
 
-**Permissions Required: time**
+###Permissions Required: time###
 
 * /time [day|night|dusk|noon|midnight] - Sets a specific world time.
 
-**Permissions Required: pvpfun**
+###Permissions Required: pvpfun###
 
-* /slap [player] <damage> - Slaps [player], defaults to 5 damage if not provided - Use "" for item/player names with spacing.
+* /slap [player] <damage> - Slaps [player], defaults to 5 damage if not provided - Use "quotes" for player names with spacing.
 
-**Permissions Required: editspawn**
+###Permissions Required: editspawn###
 
 * /antibuild - Toggles build protection.
 * /protectspawn - Toggles spawn protection.
@@ -112,11 +121,12 @@ Most of these commands can alter gameplay significantly
 * /region help - Lists region help
 * /debugreg - Lists known regions (Will scroll if you have many!)
 
-**Permissions Required: logs**
+###Permissions Required: logs###
 
 * /displaylogs - Turns on and off Server Console messages.
 
-**Permissions Required: whisper**
+###Permissions Required: whisper###
+_Note: groups with the "logs" permission will be able to see all commands being used, and thus will see whispers._
 
 * /whisper [player] [message] - Sends a private whisper to another player
 * /w [player] [message] - Sends a private whisper to another player
@@ -124,10 +134,31 @@ Most of these commands can alter gameplay significantly
 * /reply [message] - Whisper replies to the last person to send you a whisper.
 * /r [message] - Whisper replies to the last person to send you a whisper.
 
-**Permissions Required: kill, butcher, item, heal**
+###Permissions Requred: annoy###
+
+* /annoy [player] [time in seconds] - Plays the Whoopie Cushion sound on a player for [time in seconds]. Cannot be heard by other players.
+
+###Permissions Required: kill, butcher, item, heal###
 
 * /kill [player] - Kills provided [player] - Use "" for item/player names with spacing.
 * /butcher - Slays all non-town NPCs.
-* /item [id or name] <amount> or /i [id or name] <amount>- Gives you [id or name] - ***IMPORTANT** Use " " for item names with spacing.
-* /give [id or name] [player] <amount> - Gives [player] item [id or name] - ***IMPORTANT** Use "" for item/player names with spacing.
-* /heal [player] - Heals you, or if defined, [player] - Use "" for player names with spacing.
+* /item [id or name] <amount> or /i [id or name] <amount>- Gives you [id or name] (Use "qoutes" for names with spacing)
+ * Example: /i "molten pick"
+* /give [id or name] [player] <amount> - Gives [player] item [id or name] (Use "qoutes" for items/names with spacing)
+ * Example: /give "molten pick" "sarah connor" 1
+* /heal [player] - Heals you, or if defined, [player] (Use "quotes" for player names with spacing)
+
+###Other Permissions###
+
+_Note: These are not in-game commands, but can still be added to a group's permissions._
+
+* canwater - allow this group to use water
+* canlava - allow this group to use lava
+* canspike - allow this group to place spikes
+* canbuild - allow player to build (does not bypass other checks)
+* adminchat - Colors and adds a prefix to the group's chat.
+* immunetokick - group can't be kicked
+* immunetoban - player can't be banned
+* ignorecheatdetection - allow player to cheat (health/mana cheats) 
+* ignoregriefdetection - allow player to grief (use explosives, water, lava even if they dont have premission to)
+* usebanneditem - allows player to use banned items
