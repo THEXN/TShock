@@ -1,6 +1,6 @@
 Hello! Thanks for choosing TShock. 
 
-If you have any problems with this installation, post an issue on our [Issue Tracker](http://ci.tshock.co:8080/secure/IssueNavigator.jspa?mode=hide&requestId=10001). You can also email your issue to _shank [at] shankshock [dot] com_.
+If you have any problems with this installation, post an issue on our [Forums](http://tshock.co/xd/index.php) and if you encounter an unusual error that looks like a bug please post it on our [Issue Tracker](http://ci.tshock.co:8080/secure/IssueNavigator.jspa?mode=hide&requestId=10001). You can also email your issue to _shank [at] shankshock [dot] com_.
 
 ## Download and Extract
 1. Download the latest package of TShock from the [TShock Downloads](https://github.com/TShock/TShock/archives/master).
