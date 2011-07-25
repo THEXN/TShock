@@ -1,4 +1,3 @@
-
 ## _**TShockDBEditor Install and Use Guide**_
 1. Download Database Editor https://github.com/downloads/TShock/TShock/TShockDBEditor%201.0.0.zip
 2. Create a new Folder and name it DB Editor. Place all files from the .rar into DB Editor.
