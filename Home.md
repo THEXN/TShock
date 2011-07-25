@@ -4,7 +4,7 @@
 * **[[Configuration File Setup]]**
 * **[[NPC List]]**
 * **[[Item List]]**
-* **[[Sqlite Manager TShockDBEditor]]**
+* **[[TShockDBEditor]]**
 * **[[Donations]]**
 
 ## Translations:
