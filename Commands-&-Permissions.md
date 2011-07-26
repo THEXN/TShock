@@ -45,6 +45,10 @@ Most of these commands can alter gameplay significantly
 * /checkupdates - Checks for TShock updates.
 * /clearbans -1 - Removes all bans
 
+###Permissions Required: whitelist###
+
+* /whitelist [player] - While "EnableWhitelist: true" in the config.json, only players who are added to the whitelist with this command are able to enter the server. These names are stored in \tshock\whitelist.txt.
+
 ###Permissions Required: causeevents###
 
 * /dropmeteor - Drops a meteor on the map.
@@ -123,17 +127,15 @@ Most of these commands can alter gameplay significantly
 * /debugreg - Lists known regions (Will scroll if you have many!)
 
 ###Permissions Required: logs###
+_Note: By default, groups with this permission will automatically see all server console messages (slash "/" commands)._
 
 * /displaylogs - Turns on and off Server Console messages.
 
 ###Permissions Required: whisper###
-_Note: groups with the "logs" permission will be able to see all commands being used, and thus will see whispers._
+_Note: groups with the "logs" permission (above) will be able to see all /commands being used, and thus will see whispers._
 
-* /whisper [player] [message] - Sends a private whisper to another player
-* /w [player] [message] - Sends a private whisper to another player
-* /tell [player] [message] - Sends a private whisper to another player
-* /reply [message] - Whisper replies to the last person to send you a whisper.
-* /r [message] - Whisper replies to the last person to send you a whisper.
+* /whisper, /w, /tell [player] [message] - Sends a private whisper to another player
+* /reply, /r [message] - Whisper replies to the last person to send you a whisper.
 
 ###Permissions Requred: annoy###
 
@@ -150,16 +152,16 @@ _Note: groups with the "logs" permission will be able to see all commands being 
 * /heal [player] - Heals you, or if defined, [player] (Use "quotes" for player names with spacing)
 
 ###Other Permissions###
-
 _Note: These are not in-game commands, but can still be added to a group's permissions._
 
 * canwater - allow this group to use water
 * canlava - allow this group to use lava
 * canspike - allow this group to place spikes
-* canbuild - allow player to build (does not bypass other checks)
-* adminchat - Colors and adds a prefix to the group's chat.
+* canbuild - allow this group to build (does not bypass other checks, such as protected regions)
+* adminchat - Colors and adds a prefix to the group's chat. This prefix and color is set in \tshock\config.json.
 * immunetokick - group can't be kicked
-* immunetoban - player can't be banned
-* ignorecheatdetection - allow player to cheat (health/mana cheats) 
-* ignoregriefdetection - allow player to grief (use explosives, water, lava even if they dont have premission to)
-* usebanneditem - allows player to use banned items
+* immunetoban - group can't be banned
+* ignorecheatdetection - allow group to cheat (health/mana cheats) 
+* ignoregriefdetection - allow group to grief (use explosives, water, lava even if they dont have premission to)
+* usebanneditem - allows group the use of banned items
+* reservedslot - allow this group to join the server, regardless of whether or not it is full
