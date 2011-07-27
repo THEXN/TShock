@@ -123,8 +123,8 @@ Most of these commands can alter gameplay significantly
 * /region define [name] - Adds temporary region points into the region list
 * /region delete [name] - Deletes the specified region
 * /region allow [name] [regionname] - Allows a player to build in specified region
+* /region list - Shows a named list of all regions for that world
 * /region help - Lists region help
-* /debugreg - Lists known regions (Will scroll if you have many!)
 
 ###Permissions Required: logs###
 _Note: By default, groups with this permission will automatically see all server console messages (slash "/" commands)._
