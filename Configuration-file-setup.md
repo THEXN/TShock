@@ -93,13 +93,13 @@ _AdminChatRGB_: #.#.#. = Red/Blue/Green - RGB Colors for the Admin Chat Color.  
 
 _AdminChatPrefix_: The Chat Prefix before an admin speaks.  eg. *The prefix was set to "(Admin) ", so..
 (Admin) <TerrariaDude>: Hi!
-Note: Always put a space after the prefix, so it won't look like this: (Admin)<TerrariaDude): Hi!
+Note: If you put a space after the prefix, it will look like this: (Admin) <TerrariaDude): Hi!
 
 _PvpThrottle_: *I believe this means if PVP should be toggle-able or not.  If 1, meaning it's always on.
 
-_BackupInterval_: Backup Interval, in a certain amount of time.  *I believe it's in minutes.  So, value 60 = 60 mins.
+_BackupInterval_: Backup frequency in minutes. So, a value of 60 = 60 minutes. Backups are stored in the \tshock\backups folder.
 
-_BackupKeepFor_: How long till backup's be kept.
+_BackupKeepFor_: How long backups are kept in minutes. 2880 = 2 days.
 
 _RememberLeavePos_: Remembers where a player left off.  It works by remembering the IP, NOT the character.  
 eg. When you try to disconnect, and reconnect to be automatically placed at spawn, you'll be at your last location.
