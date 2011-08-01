@@ -3,7 +3,7 @@ Hello! Thanks for choosing TShock.
 If you have any problems with this installation, post an issue on our [Forums](http://tshock.co/xf/index.php) and if you encounter an unusual error that looks like a bug please post it on our [Issue Tracker](http://ci.tshock.co:8080/secure/IssueNavigator.jspa?mode=hide&requestId=10001). You can also email your issue to _shank [at] shankshock [dot] com_.
 
 ## Download and Extract
-1. Download the latest package of TShock from the [TShock Downloads](https://github.com/TShock/TShock/archives/master).
+1. Download the latest package of TShock from the [TShock Downloads](https://github.com/TShock/TShock/downloads).
 2. Download the [TShock API](http://dl.dropbox.com/u/29760911/TerrariaServerAPI.rar).
 3. Extract all files from both archives into the same folder. In this example, we'll use **C:\TShock**.
 4. Copy an existing version of TerrariaServer.exe into C:\TShock. If you don't have a working copy of TerrariaServer.exe, [download it here](http://www.mediafire.com/file/xrkw1idexcwbuk5/TerrariaServer.zip).
