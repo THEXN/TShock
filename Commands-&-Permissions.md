@@ -103,6 +103,8 @@ Most of these commands can alter gameplay significantly
  * Example: /addItem "gold coin"
 * /delItem <item name or id> - Delete an existing item from the ban list.
  * Example: /delItem "gold coin"
+
+
 ###Permissions Required: cfg###
 
 * /setspawn - Sets the map's spawn point at your current position.
