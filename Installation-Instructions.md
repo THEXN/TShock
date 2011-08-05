@@ -1,6 +1,6 @@
 Hello! Thanks for choosing TShock. 
 
-If you have any problems with this installation, post an issue on our [Forums](http://tshock.co/xf/index.php) and if you encounter an unusual error that looks like a bug please post it on our [Issue Tracker](http://ci.tshock.co:8080/secure/IssueNavigator.jspa?mode=hide&requestId=10001). You can also email your issue to _shank [at] shankshock [dot] com_.
+If you have any problems with this installation, post an issue on our [Forums](http://tshock.co/xf/index.php) and if you encounter an unusual error that looks like a bug please post it on our [Issue Tracker](http://ci.tshock.co:8080/secure/IssueNavigator.jspa?mode=hide&requestId=10001).
 
 ## Download and Extract
 1. Download the latest package of TShock from the [TShock Downloads](https://github.com/TShock/TShock/downloads).
@@ -49,3 +49,11 @@ Your server should now be successfully running TShock. Here are a few things you
  2. In the menu at the top, select **Database** -> **Connect Database**
  3. Browse to **C:\TShock\tshock** and open **tshock.sqlite**. You may now click on **Tables** in the left panel, and double click on a database record in the **Browse & Search** tab to edit it.
 **WARNING: Edit data with caution! Making mistakes inside this file can easily result in a corrupted database, which will prevent your server from functioning properly. Edit data at your own risk! It is highly recommended to make frequent backups of this file!**
+
+## Frequently Asked Questions & Problems
+
+* **Q: I get an error about a hash not being found!** A: You're running the patcher on an already patched or out of date version of the server.
+* **Q: The process requires elevation!** A: Run the patcher as administrator or move the patcher and the server files to a folder you have write access to.
+* **Q: Function/class not found!** A: Make sure XNAHelpers.dll is inside the ServerPlugins folder and TerrariaServerAPI.dll is in the same folder as the server itself. Also make sure you aren't intermingling old versions of XNAHelpers and TerrariaServerAPI.
+* **Q: Linux?** A: We don't support it, as we're a mod and we have no desire to re-create the entire XNA libraries. Our biggest suggestion is to virtualize Windows Server 2008 R2 with .NET framework 4 and XNA 4.
+* **Q: Encryption/Hash algorithm not supported on Windows XP.** A: In the configuration file, change the hash algorithm to sha256 or md5.
