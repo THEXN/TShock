@@ -97,6 +97,12 @@ Most of these commands can alter gameplay significantly
 * /modGroup add|del <group name> <permission to add or remove, only one at a time, sorry!> - <permission> is the permission required to use a set of commands.
  * Example: /modGroup add vip managewarp
 
+
+###Permissions Required: manageitem###
+* /addItem <item name or id> - Add an item to the ban list.
+ * Example: /addItem "gold coin"
+* /delItem <item name or id> - Delete an existing item from the ban list.
+ * Example: /delItem "gold coin"
 ###Permissions Required: cfg###
 
 * /setspawn - Sets the map's spawn point at your current position.
