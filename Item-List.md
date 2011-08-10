@@ -329,3 +329,8 @@ Items added in v1.0.5
 * 324 - Illegal Gun Parts - 99 - 0
 * 325 - The Doctor's Shirt - 1 - 0
 * 326 - The Doctor's Pants - 1 - 0
+
+Items added in v1.0.6
+
+* 327 - The Doctor's Pants - 99 - 0
+
