@@ -22,3 +22,5 @@ Using TShock, a more powerful Message Of The Day system is provided than what is
     %255,000,000%Welcome to my server!
     %255,000,000%Current map: %map%
     %000,255,000%Current players: %players%
+
+Перевод статьи: ARTdrakon
