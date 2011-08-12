@@ -130,6 +130,7 @@ Most of these commands can alter gameplay significantly
 * /antibuild - Toggles build protection.
 * /protectspawn - Toggles spawn protection.
 * /region set [1/2] - Sets temporary region points
+* /region name - Shows the name of the region you are in
 * /region define [name] - Adds temporary region points into the region list
 * /region delete [name] - Deletes the specified region
 * /region allow [name] [regionname] - Allows a player to build in specified region
