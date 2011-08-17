@@ -44,74 +44,349 @@ The configuration is stored in config.json, and is pretty much self explanatory.
 	  "AutoSave": true
 	}
 
+## Automatically Generated
 
-_InvasionMultiplier_: The equation for calculating invasion size is 100 + (multiplier * (number of active players with greater than 200 health))
+# InvasionMultiplier  
+**Type:** Int32  
+**Description:** The equation for calculating invasion size is 100 + (multiplier * (number of active players with greater than 200 health))  
+**Default:** "1"  
 
-_DefaultMaximumSpawns_: The default maximum mobs that will spawn per wave. Higher means more mobs in that wave.
+# DefaultMaximumSpawns  
+**Type:** Int32  
+**Description:** The default maximum mobs that will spawn per wave. Higher means more mobs in that wave.  
+**Default:** "4"  
 
-_DefaultSpawnRate_: The delay between waves. Shorter values lead to less mobs.
+# DefaultSpawnRate  
+**Type:** Int32  
+**Description:** The delay between waves. Shorter values lead to less mobs.  
+**Default:** "700"  
 
-_ServerPort_: The port the server runs on.
+# ServerPort  
+**Type:** Int32  
+**Description:** The port the server runs on.  
+**Default:** "7777"  
 
-_EnableWhitelist_: Enable or disable the whitelist based on IP addresses in whitelist.txt
+# EnableWhitelist  
+**Type:** Boolean  
+**Description:** Enable or disable the whitelist based on IP addresses in whitelist.txt  
+**Default:** "False"  
 
-_InfiniteInvasion_: Enable the ability for invaison size to never decrease. Make sure to run /invade, and note that this adds 2 million+ goblins to the spawn que for the map.
+# InfiniteInvasion  
+**Type:** Boolean  
+**Description:** Enable the ability for invaison size to never decrease. Make sure to run /invade, and note that this adds 2 million+ goblins to the spawn que for the map.  
+**Default:** "False"  
 
-_AlwaysPvP_: Enable or disable perma pvp.
+# AlwaysPvP  
+**Type:** Boolean  
+**Description:** Enable or disable perma pvp.  
+**Default:** "False"  
 
-_KickSaveEditors_: Kicks players who edit save files for cheating.
+# KickCheaters  
+**Type:** Boolean  
+**Description:** Kicks players who edit save files for cheating.  
+**Default:** "True"  
 
-_BanSaveEditors_: Writes players who edit save files to the cheaters.txt file, and prevents people in that file from joining. You must have kick enabled for this to work as intended.
+# BanCheaters  
+**Type:** Boolean  
+**Description:** None  
+**Default:** "True"  
 
-_BanKillTileAbusers_: Bans players who attempt to kill tiles using TNT or exploits. Requires kick to be enabled.
+# KickGriefers  
+**Type:** Boolean  
+**Description:** None  
+**Default:** "True"  
 
-_KickKillTileAbuesrs_: Kicks players who attempt to kill tiles using TNT or exploits.
+# BanGriefers  
+**Type:** Boolean  
+**Description:** None  
+**Default:** "True"  
 
-_BanExplosives_: Bans players who attempt to throw a bomb or dynamite.
+# BanKillTileAbusers  
+**Type:** Boolean  
+**Description:** Bans players who attempt to kill tiles using TNT or exploits. Requires kick to be enabled.  
+**Default:** "True"  
 
-_KickExplosives_: Kicks players who attempt to throw a bomb or dynamite.
+# KickKillTileAbusers  
+**Type:** Boolean  
+**Description:** Kicks players who attempt to kill tiles using TNT or exploits.  
+**Default:** "True"  
 
-_DisableExplosives_: Explosives won't break blocks
+# BanExplosives  
+**Type:** Boolean  
+**Description:** Bans players who attempt to throw a bomb or dynamite.  
+**Default:** "True"  
 
-_SpawnProtection_: Prevents tiles from being placed within _SpawnProtectionRadius_ of the default spawn.
+# KickExplosives  
+**Type:** Boolean  
+**Description:** Kicks players who attempt to throw a bomb or dynamite.  
+**Default:** "True"  
 
-_SpawnProtectionRadius_: Radius from spawn tile for _SpawnProtection_.
+# DisableExplosives  
+**Type:** Boolean  
+**Description:** Explosives won't break blocks  
+**Default:** "True"  
 
-_DistributationAgent_: *Not sure.
+# SpawnProtection  
+**Type:** Boolean  
+**Description:** Prevents tiles from being placed within SpawnProtectionRadius of the default spawn.  
+**Default:** "True"  
 
-_MaxSlots_: Max slots for the server.  *Not sure if this overrides the servers -config. 
+# SpawnProtectionRadius  
+**Type:** Int32  
+**Description:** Radius from spawn tile for SpawnProtection.  
+**Default:** "5"  
 
-_RangeChecks_: Global protection agent for any block distance based anti-grief check.
+# MaxSlots  
+**Type:** Int32  
+**Description:** Max slots for the server. If you want people to be kicked with "Server is full" set this to how many players you want max and then set Terraria max players to 2 higher.  
+**Default:** "8"  
 
-_SpamChecks_: Global protection against spamming
+# RangeChecks  
+**Type:** Boolean  
+**Description:** Global protection agent for any block distance based anti-grief check.  
+**Default:** "True"  
 
-_DisableBuild_: Disables any building; placing of blocks
+# SpamChecks  
+**Type:** Boolean  
+**Description:** Enable/Disable Terrarias built in spam checks.  
+**Default:** "False"  
 
-_TileThreshold_: *Not sure
+# DisableBuild  
+**Type:** Boolean  
+**Description:** Disables any building; placing of blocks  
+**Default:** "False"  
 
-_AdminChatRGB_: #.#.#. = Red/Blue/Green - RGB Colors for the Admin Chat Color.  Max value: 255
+# TileThreshold  
+**Type:** Int32  
+**Description:** Kick a player if they exceed this number of tile kills within 1 second.  
+**Default:** "60"  
 
-_AdminChatPrefix_: The Chat Prefix before an admin speaks.  eg. *The prefix was set to "(Admin) ", so..
-(Admin) <TerrariaDude>: Hi!
-Note: If you put a space after the prefix, it will look like this: (Admin) <TerrariaDude): Hi!
+# SuperAdminChatRGB  
+**Type:** Single[]  
+**Description:** #.#.#. = Red/Blue/Green - RGB Colors for the Admin Chat Color. Max value: 255  
+**Default:** "System.Single[]"  
 
-_PvpThrottle_: *I believe this means if PVP should be toggle-able or not.  If 1, meaning it's always on.
+# AdminChatPrefix  
+**Type:** String  
+**Description:** The Chat Prefix before an admin speaks. eg. *The prefix was set to "(Admin) ", so.. (Admin) : Hi! Note: If you put a space after the prefix, it will look like this: (Admin) <TerrariaDude): Hi!  
+**Default:** "(Admin) "  
 
-_BackupInterval_: Backup frequency in minutes. So, a value of 60 = 60 minutes. Backups are stored in the \tshock\backups folder.
+# AdminChatEnabled  
+**Type:** Boolean  
+**Description:** None  
+**Default:** "True"  
 
-_BackupKeepFor_: How long backups are kept in minutes. 2880 = 2 days.
+# PvpThrottle  
+**Type:** Int32  
+**Description:** Seconds a player has to wait between pvp toggles.  
+**Default:** "0"  
 
-_RememberLeavePos_: Remembers where a player left off.  It works by remembering the IP, NOT the character.  
-eg. When you try to disconnect, and reconnect to be automatically placed at spawn, you'll be at your last location.
-Note: Won't save after server restarts.
+# BackupInterval  
+**Type:** Int32  
+**Description:** Backup frequency in minutes. So, a value of 60 = 60 minutes. Backups are stored in the \tshock\backups folder.  
+**Default:** "0"  
 
-_HardcoreOnly_: Hardcore players ONLY.  This means softcore players cannot join.
+# BackupKeepFor  
+**Type:** Int32  
+**Description:** How long backups are kept in minutes. 2880 = 2 days.  
+**Default:** "60"  
 
-_KickOnHardcoreOnlyDeath_: *Kicks a Hardcore player on death.
+# RememberLeavePos  
+**Type:** Boolean  
+**Description:** Remembers where a player left off. It works by remembering the IP, NOT the character.  
+eg. When you try to disconnect, and reconnect to be automatically placed at spawn, you'll be at your last location. Note: Won't save after server restarts.  
+**Default:** "False"  
 
-_BanOnHardcoreOnlyDeath_: *Bans a Hardcore player on death.
+# HardcoreOnly  
+**Type:** Boolean  
+**Description:** Hardcore players ONLY. This means softcore players cannot join.  
+**Default:** "False"  
 
-_AutoSave_: *Autosave like the default Terraria offers.
+# MediumcoreOnly  
+**Type:** Boolean  
+**Description:** Mediumcore players ONLY. This means softcore players cannot join.  
+**Default:** "False"  
+
+# KickOnMediumcoreDeath  
+**Type:** Boolean  
+**Description:** Kicks a Hardcore player on death.  
+**Default:** "False"  
+
+# BanOnMediumcoreDeath  
+**Type:** Boolean  
+**Description:** Bans a Hardcore player on death.  
+**Default:** "False"  
+
+# AutoSave  
+**Type:** Boolean  
+**Description:** Enable/Disable Terrarias built in auto save  
+**Default:** "True"  
+
+# MaximumLoginAttempts  
+**Type:** Int32  
+**Description:** Number of failed login attempts before kicking the player.  
+**Default:** "3"  
+
+# RconPassword  
+**Type:** String  
+**Description:** Not implemented  
+**Default:** ""  
+
+# RconPort  
+**Type:** Int32  
+**Description:** Not implemented  
+**Default:** "7777"  
+
+# ServerName  
+**Type:** String  
+**Description:** Not implemented  
+**Default:** ""  
+
+# MasterServer  
+**Type:** String  
+**Description:** Not implemented  
+**Default:** "127.0.0.1"  
+
+# StorageType  
+**Type:** String  
+**Description:** Valid types are "sqlite" and "mysql"  
+**Default:** "sqlite"  
+
+# MySqlHost  
+**Type:** String  
+**Description:** None  
+**Default:** "localhost:3306"  
+
+# MySqlDbName  
+**Type:** String  
+**Description:** None  
+**Default:** ""  
+
+# MySqlUsername  
+**Type:** String  
+**Description:** None  
+**Default:** ""  
+
+# MySqlPassword  
+**Type:** String  
+**Description:** None  
+**Default:** ""  
+
+# RangeCheckBanReason  
+**Type:** String  
+**Description:** None  
+**Default:** "Placing impossible to place blocks."  
+
+# SendSectionAbuseReason  
+**Type:** String  
+**Description:** None  
+**Default:** "SendSection abuse."  
+
+# NPCSpawnAbuseReason  
+**Type:** String  
+**Description:** None  
+**Default:** "Spawn NPC abuse"  
+
+# UpdatePlayerAbuseReason  
+**Type:** String  
+**Description:** None  
+**Default:** "Update Player abuse"  
+
+# ExplosiveAbuseReason  
+**Type:** String  
+**Description:** None  
+**Default:** "Throwing an explosive device."  
+
+# KillMeAbuseReason  
+**Type:** String  
+**Description:** None  
+**Default:** "Trying to execute KillMe on someone else."  
+
+# IllogicalLiquidUseReason  
+**Type:** String  
+**Description:** None  
+**Default:** "Manipulating liquid without bucket."  
+
+# LiquidAbuseReason  
+**Type:** String  
+**Description:** None  
+**Default:** "Placing impossible to place liquid."  
+
+# TileKillAbuseReason  
+**Type:** String  
+**Description:** None  
+**Default:** "Tile Kill abuse ({0})"  
+
+# MediumcoreBanReason  
+**Type:** String  
+**Description:** None  
+**Default:** "Death results in a ban"  
+
+# MediumcoreKickReason  
+**Type:** String  
+**Description:** None  
+**Default:** "Death results in a kick"  
+
+# ProjectileAbuseReason  
+**Type:** String  
+**Description:** None  
+**Default:** "Projectile abuse"  
+
+# TileAbuseReason  
+**Type:** String  
+**Description:** None  
+**Default:** "Tile abuse ({0})"  
+
+# EnableDNSHostResolution  
+**Type:** Boolean  
+**Description:** None  
+**Default:** "False"  
+
+# EnableBanOnUsernames  
+**Type:** Boolean  
+**Description:** None  
+**Default:** "False"  
+
+# EnableAntiLag  
+**Type:** Boolean  
+**Description:** None  
+**Default:** "True"  
+
+# DefaultRegistrationGroupName  
+**Type:** String  
+**Description:** None  
+**Default:** "default"  
+
+# DisableSpewLogs  
+**Type:** Boolean  
+**Description:** None  
+**Default:** "True"  
+
+# HashAlgorithm  
+**Type:** String  
+**Description:** Valid types are "sha512", "sha256", "md5", append with "-xp" for the xp supported algorithms  
+**Default:** "sha512"  
+
+# BufferPackets  
+**Type:** Boolean  
+**Description:** Buffers up the packets and sends them out at the end of each frame  
+**Default:** "True"  
+
+# ChatDisplayGroup  
+**Type:** Boolean  
+**Description:** Display the users group when they chat.  
+**Default:** "False"  
+
+# ServerFullReason  
+**Type:** String  
+**Description:** String that is used when kicking people when the server is full.  
+**Default:** "Server is full"  
+
+# SaveWorldOnCrash  
+**Type:** Boolean  
+**Description:** This will save the world if Terraria crashes from an unhandled exception.  
+**Default:** "True"  
+
 
 If you do not see some of the values here, please delete config.json and run TShock again. It should regenerate.
 
