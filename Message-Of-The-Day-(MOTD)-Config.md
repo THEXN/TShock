@@ -17,6 +17,8 @@ You may also change the color of the lines displayed by using the %r,g,b% variab
 * **%000,255,000%** = Green
 * **%000,000,255%** = Blue
 
+([View more RGB color codes here](http://www.tayloredmktg.com/rgb/))
+
 Example:
 
     %255,000,000%Welcome to my server!
