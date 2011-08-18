@@ -6,7 +6,7 @@ If you have any problems with this installation, post an issue on our [Forums](h
 1. Download the latest package of TShock from the [TShock Downloads](https://github.com/TShock/TShock/downloads).
 2. Download the [TShock API](http://bit.ly/quNGBH).
 3. Extract all files from both archives into the same folder. In this example, we'll use **C:\TShock**.
-4. Copy an existing version of TerrariaServer.exe into C:\TShock. If you don't have a working copy of TerrariaServer.exe, [download it here](http://www.mediafire.com/file/r72o6088tqusj0b/TerrariaServer.zip).
+4. Copy an existing version of TerrariaServer.exe (found in **C:\Program Files\Steam\steamapps\common\terraria**) into C:\TShock.
 
 ## Install
 1. In C:\TShock, run **TerrariaServerPatcher.exe** as an Administrator (Right click -> Select "Run as Administrator")
