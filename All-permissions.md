@@ -32,7 +32,7 @@ Commands in parenthesis are aliases.
 
 ## <a name="editspawn">editspawn  
 **Description:** Allows you to edit the spawn  
-**Commands:** /antibuild /protectspawn /debugreg  
+**Commands:** /antibuild /protectspawn  
 
 ## <a name="immunetokick">immunetokick  
 **Description:** Prevents you from being kicked  
@@ -124,7 +124,7 @@ Commands in parenthesis are aliases.
 
 ## <a name="manageregion">manageregion  
 **Description:** User can edit regions  
-**Commands:** /region  
+**Commands:** /region /debugreg  
 
 ## <a name="rootonly">rootonly  
 **Description:** Meant for super admins only  
@@ -149,4 +149,6 @@ Commands in parenthesis are aliases.
 ## <a name="heal">heal  
 **Description:** None  
 **Commands:** /heal  
+
+
 
