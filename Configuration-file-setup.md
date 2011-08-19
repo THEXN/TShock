@@ -53,12 +53,12 @@ The configuration is stored in config.json, and is pretty much self explanatory.
 
 # DefaultMaximumSpawns  
 **Type:** Int32  
-**Description:** The default maximum mobs that will spawn per wave. Higher means more mobs in that wave.  
+**Description:** The default maximum mobs that will spawn per wave. Higher means more mobs in that wave.
 **Default:** "4"  
 
 # DefaultSpawnRate  
 **Type:** Int32  
-**Description:** The delay between waves. Shorter values lead to less mobs.  
+**Description:** The delay between waves in milliseconds. Shorter values lead to faster spawning mobs.
 **Default:** "700"  
 
 # ServerPort  
