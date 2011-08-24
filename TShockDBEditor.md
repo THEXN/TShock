@@ -1,11 +1,20 @@
-## _**TShockDBEditor Install and Use Guide**_
-1. Download Database Editor https://github.com/downloads/TShock/TShock/TShockDBEditor%201.0.0.zip
-2. Create a new Folder and name it DB Editor. Place all files from the .rar into DB Editor.
-3. Execute TShockDBeditor.exe- Run as admin. Open tshock.sqlite, located in your *\TerrariaServerAPI\tshock Folder.
+## _**TShockDBEditor Install and Usage Guide**_
 
-___
-___
+1. Download the latest version of the TShock Database Editor from [Github Downloads](https://github.com/TShock/TShock/downloads)
+2. Extract the .zip archive's contents into a folder of your choosing
+3. Run **TShockDBeditor.exe** (Run as Administrator)
+4. Click **Open Database**, and open your **tshock.sqlite** file (C:\TShock\tshock)
+
+![Screenshot](http://i.imgur.com/gTYtm.jpg)
+
 ## _**Features**_
-* **Remote Database Connections** (Contact your host for your log-in info)
-* **Group Manager** (Custom groups add\remove and edit. Banned\whitelisted commands editing.)
-* **Item Manager** (Whitelisted\Blacklisted items editing)
+* **Remote Database Connections** 
+ * Allows multiple users to administrate the server's database (requires MySQL)
+* **Item Bans**
+ * Whitelist/Blacklist certain items that players may bring into your server
+* **Group Manager** (See screenshot)
+ * Edit groups and permissions. Banned\Whitelist certain [permission groups](https://github.com/TShock/TShock/wiki/All-permissions)
+* **User Manager**
+ * Add, view, edit, or remove users
+* **Ban Manager**
+ * Add, view, edit, or remove bans
