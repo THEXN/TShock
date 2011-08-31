@@ -332,5 +332,5 @@ Items added in v1.0.5
 
 Items added in v1.0.6
 
-* 327 - Goldeb Key - 99 - 0
+* 327 - Golden Key - 99 - 0
 * 328 - Shadow Chest - 99 - 0
