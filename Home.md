@@ -5,6 +5,7 @@
 * **[[Configuration File Setup]]**
 * **[[NPC List]]**
 * **[[Item List]]**
+* **[[Buff List]]**
 * **[[TShockDBEditor]]**
 * **[[Donations]]**
 
