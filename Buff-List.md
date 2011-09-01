@@ -1,53 +1,28 @@
-Buff ID - Buff Name
+For use with /buff and /gbuff. The first number is the id, the second is the game name. After each is a brief description of the effect given.
 
-1 - Obsidian Skin
-
-2 - Regeneration
-
-3 - Swiftness
-
-4 - Gills
-
-5 - Ironskin
-
-6 - Mana Regeneration
-
-7 - Magic Power
-
-8 - Featherfall
-
-9 - Spelunker
-
-10 - Invisibility
-
-11 - Shine
-
-12 - Night Owl
-
-13 - Battle
-
-14 - Thorns
-
-15 - Water Walking
-
-16 - Archery
-
-17 - Hunter
-
-18 - Gravitation
-
-19 - Orb of Light
-
-20 - Poisoned
-
-21 - Potion Sickness
-
-22 - Darkness
-
-23 - Cursed
-
-24 - On Fire
-
-25 - Tipsy
-
-26 - Well Fed
+* 1 : Obsidian Skin (Immunity to lava)
+* 2 : Regeneration (Provides life regeneration)
+* 3 : Swiftness (25% increased movement speed)
+* 4 : Gills (Breathe water instead of air)
+* 5 : Ironskin (Increases defense by 8)
+* 6 : Mana Regeneration (Increased Mana regeneration)
+* 7 : Magic Power (20% increased Magic damage)
+* 8 : Featherfall (Prevents fall damage; Press UP or DOWN to control the speed of descent)
+* 9 : Spelunker (Shows the location of treasure and ore)
+* 10 : Invisibility (Makes you invisible; armor can still be seen)
+* 11 : Shine (You emit light)
+* 12 : Night Owl (Increased night vision)
+* 13 : Battle (Increased enemy spawn rate)
+* 14 : Thorns (Enemies take damage when attacking you)
+* 15 : Water Walking (Walk on water and lava; Press DOWN to enter water or lava)
+* 16 : Archery (20% increased arrow damage and speed)
+* 17 : Hunter (Shows the location of enemies)
+* 18 : Gravitation (Press UP or DOWN to reverse gravity)
+* 19 : Orb of Light (Spawns a magical orb that follows you and provides light)
+* 20 : Poisoned (Slowly take damage over time)
+* 21 : Potion Sickness (Can't use any healing items)
+* 22 : Darkness (Decreased light vision)
+* 23 : Cursed (Can't use any items)
+* 24 : On Fire (Slowly take damage over time)
+* 25 : Tipsy (4 increased Melee attack, -4 Defense)
+* 26 : Well Fed (Minor improvements to all stats)
