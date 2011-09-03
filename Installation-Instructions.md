@@ -4,17 +4,9 @@ If you have any problems with this installation, post an issue on our [Forums](h
 
 ## Download and Extract
 1. Download the latest package of TShock from the [TShock Downloads](https://github.com/TShock/TShock/downloads).
-2. Download the [TShock API](http://bit.ly/quNGBH).
-3. Extract all files from both archives into the same folder. In this example, we'll use **C:\TShock**.
-4. Copy an existing version of TerrariaServer.exe (found in **C:\Program Files\Steam\steamapps\common\terraria**) into C:\TShock.
-
-## Install
-1. In C:\TShock, run **TerrariaServerPatcher.exe** as an Administrator (Right click -> Select "Run as Administrator")
- * _Note: a "TerrariaServer hash not found" error can be solved by retrieving a fresh TerrariaServer.exe from Step #4._
-2. Wait until the program reports "Success", then close the program.
 
 ## Become an Admin
-1. Run **TerrariaServerAPI.exe**. This is your server. TerrariaServer.exe should not be used.
+1. Run **TerrariaServer.exe**. This is your server.
 2. Select the world you want to use or create a new one.
 3. After selecting your world, you will be asked for input on 3 settings: Max players, Server port, and Server password.
  * _Note: Default settings are: Max players (8), Server port (7777), and Server password (none). You may hit your ENTER key at each input to select the default setting in parenthesis ()._
