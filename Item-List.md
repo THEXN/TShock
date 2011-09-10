@@ -343,13 +343,13 @@ Items added in v1.0.6
 * 335 - Bench - 1 - 0
 * 336 - Bathtub - 1 - 0
 * 337 - Red Banner - 1 - 0
-* 338 - Green Banner - 1 - 0
-* 339 - Blue Banner - 1 - 0
-* 340 - Yellow Banner - 1 - 0
+* 338 - Green Banner - 99 - 0
+* 339 - Blue Banner - 99 - 0
+* 340 - Yellow Banner - 99 - 0
 * 341 - Lamp Post - 1 - 0
 * 342 - Tiki Torch - 99 - 0
-* 343 - Barrel - 1 - 0
-* 344 - Chinese Lantern - 1 - 0
+* 343 - Barrel - 99 - 0
+* 344 - Chinese Lantern - 99 - 0
 * 345 - Cooking Pot - 1 - 0
 * 346 - Safe - 1 - 0
 * 347 - Skull Lantern - 99 - 0
