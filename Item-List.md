@@ -353,7 +353,7 @@ Items added in v1.0.6
 * 345 - Cooking Pot - 1 - 0
 * 346 - Safe - 1 - 0
 * 347 - Skull Lantern - 99 - 0
-* 348 - Trash Can - 1 - 0
+* 348 - Trash Can - 99 - 0
 * 349 - Candelabra - 99 - 0
 * 350 - Pink Vase - 99 - 0
 * 351 - Mug - 99 - 0
