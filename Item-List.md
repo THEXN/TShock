@@ -334,3 +334,38 @@ Items added in v1.0.6
 
 * 327 - Golden Key - 99 - 0
 * 328 - Shadow Chest - 99 - 0
+* 329 - Shadow Key - 1 - 0
+* 330 - Obsidian Brick Wall - 250 - 0
+* 331 - Jungle Spores - 99 - 0
+* 332 - Loom - 1 - 0
+* 333 - Piano - 1 - 0
+* 334 - Dresser - 1 - 0
+* 335 - Bench - 1 - 0
+* 336 - Bathtub - 1 - 0
+* 337 - Red Banner - 1 - 0
+* 338 - Green Banner - 1 - 0
+* 339 - Blue Banner - 1 - 0
+* 340 - Yellow Banner - 1 - 0
+* 341 - Lamp Post - 1 - 0
+* 342 - Tiki Torch - 99 - 0
+* 343 - Barrel - 1 - 0
+* 344 - Chinese Lantern - 1 - 0
+* 345 - Cooking Pot - 1 - 0
+* 346 - Safe - 1 - 0
+* 347 - Skull Lantern - 99 - 0
+* 348 - Trash Can - 1 - 0
+* 349 - Candelabra - 99 - 0
+* 350 - Pink Vase - 99 - 0
+* 351 - Mug - 99 - 0
+* 352 - Keg - 99 - 0
+* 353 - Ale - 99 - 0
+* 354 - Bookcase - 1 - 0
+* 355 - Throne - 1 - 0 
+* 356 - Bowl - 99 - 0
+* 357 - Bowl of Soup - 99 - 0
+* 358 - Toilet - 99 - 0
+* 359 - Grandfather Clock - 1 - 0
+* 360 - Statue - 1 - 0
+* 361 - Goblin Battle Standard - 1 - 0
+* 362 - Tattered Cloth - 99 - 0
+* 363 - Sawmill - 1 - 0
