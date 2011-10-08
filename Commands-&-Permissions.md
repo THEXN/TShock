@@ -1,5 +1,5 @@
 ** ************THIS PAGE IS OUTDATED****************** **
-
+[Updated permissions](https://github.com/TShock/TShock/wiki/All-permissions)
 
 TShock requires you to be logged into an administrator-level user to run most commands. 
 Most of these commands can alter gameplay significantly
