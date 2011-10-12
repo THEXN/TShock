@@ -33,10 +33,10 @@ Your server should now be successfully running TShock. Here are a few things you
 * Familiarize yourself with the [[Commands & Permissions]].
 * Configure whatever options you choose in the **C:\TShock\tshock\config.json** file. For information on what each option does, check out [[Configuration file setup]].
  * _Note: you can open the config.json file with Notepad, or its superior, [Notepad++](http://notepad-plus-plus.org/)_
-* Make your server noticeable! With your External IP address ([WhatIsMyIP.com](http://www.whatismyip.com/)), you can sign up to have your server listed on [TerrariaNet](http://terrarianet.com/), and you can have your own sub-forum (moderated by you) with [TerrariaZone](http://terrariazone.com/).
+* Make your server noticeable! With your External IP address ([WhatIsMyIP.com](http://www.whatismyip.com/)), you can sign up to have your server listed on [TerrariaNet](http://terrarianet.com/).
 * Convert your External IP into a DNS: Using a free service like [No-IP.com](http://www.no-ip.com/), you can change your external IP address into a readable DNS name. In other words, instead of forcing your users to connect with 192.9.9.250, they can use "yourserver.no-ip.com".
  * _Protip: Because your IP will likely change once in a while, at some point your players will be unable to connect to you, and you may not even notice. You can download [No-IP's Dynamic DNS Client](http://www.no-ip.com/downloads.php) to keep your IP in sync with the DNS name you make with them._
-* Get yourself acquainted with TShock's data storage within the **C:\TShock\tshock\tshock.sqlite** file. All users, regions, permissions, and other data is kept here. [Twitchy's TShock DB Editor](https://github.com/TShock/TShock/downloads) is very user-friendly and is consistently being updated, and [SQLite Manager](https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/) can be run directly through Firefox:
+* Get yourself acquainted with TShock's data storage within the **C:\TShock\tshock\tshock.sqlite** file. All users, regions, permissions, and other data is kept here. [Twitchy's TShock DB Editor](https://github.com/TShock/TShock/downloads) is very user-friendly and <s>is consistently being updated</s>, and [SQLite Manager](https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/) can be run directly through Firefox:
  1. Open Firefox, go to the Web Development Menu, and open SQLite Manager.
  2. In the menu at the top, select **Database** -> **Connect Database**
  3. Browse to **C:\TShock\tshock** and open **tshock.sqlite**. You may now click on **Tables** in the left panel, and double click on a database record in the **Browse & Search** tab to edit it.
@@ -44,8 +44,6 @@ Your server should now be successfully running TShock. Here are a few things you
 
 ## Frequently Asked Questions & Problems
 
-* **Q: I get an error about a hash not being found!** A: You're running the patcher on an already patched or out of date version of the server.
-* **Q: The process requires elevation!** A: Run the patcher as administrator or move the patcher and the server files to a folder you have write access to.
-* **Q: Function/class not found!** A: Make sure XNAHelpers.dll is inside the ServerPlugins folder and TerrariaServerAPI.dll is in the same folder as the server itself. Also make sure you aren't intermingling old versions of XNAHelpers and TerrariaServerAPI.
-* **Q: Linux?** A: We don't support it, as we're a mod and we have no desire to re-create the entire XNA libraries. Our biggest suggestion is to virtualize Windows Server 2008 R2 with .NET framework 4 and XNA 4.
+* **Q: Function/class not found!** A: Make sure you have the latest version of TShock and TerrariaServer.
+* **Q: Linux?** A: As of version 3.2.8.0831, TShock can run in Mono.
 * **Q: Encryption/Hash algorithm not supported on Windows XP.** A: In the configuration file, change the hash algorithm to sha256 or md5.
