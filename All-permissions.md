@@ -150,5 +150,14 @@ Commands in parenthesis are aliases.
 **Description:** None  
 **Commands:** /heal  
 
+## <a name="buff">buff  
+**Description:** User can buff self 
+**Commands:** /buff  
 
+## <a name="buffplayers">buffplayers  
+**Description:** User can buff other players 
+**Commands:** /gbuff(/buffplayers)  
 
+## <a name="grow">grow  
+**Description:** None 
+**Commands:** /grow  
