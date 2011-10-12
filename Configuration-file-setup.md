@@ -3,6 +3,8 @@ The configuration is stored in config.json, and is pretty much self explanatory.
 
 **NOTE: ALL ASTERISKS "*" BEFORE A DESCRIPTION FOR THE SETTING IS A GUESS, OR A 'PRETTY SURE', THIS WAS EDITED BY A USER.**
 
+**ANOTHER NOTE: THERE ARE MANY NEW CONFIGURATION OPTIONS THAT ARE NOT LISTED YET, HENCE THIS IS SLIGHTLY OUT-OF-DATE**
+
 	{
 	  "InvasionMultiplier": 50,
 	  "DefaultMaximumSpawns": 4,
