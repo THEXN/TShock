@@ -96,7 +96,7 @@ Commands in parenthesis are aliases.
 
 ## <a name="tphere">tphere  
 **Description:** User can teleport people to them  
-**Commands:** /tphere  
+**Commands:** /tphere /sendwarp(/sw)  
 
 ## <a name="warp">warp  
 **Description:** User can use warps  
@@ -104,11 +104,15 @@ Commands in parenthesis are aliases.
 
 ## <a name="managewarp">managewarp  
 **Description:** User can manage warps  
-**Commands:** /setwarp /delwarp /hidewarp /addgroup /delgroup /modgroup  
+**Commands:** /setwarp /delwarp /hidewarp  
 
 ## <a name="manageitem">manageitem  
 **Description:** User can manage item bans  
 **Commands:** /additem /delitem  
+
+## <a name="managegroup">managegroup  
+**Description:** User can manage groups  
+**Commands:** /addgroup /delgroup /modgroup  
 
 ## <a name="cfg">cfg  
 **Description:** User can edit sevrer configurations  
@@ -150,10 +154,14 @@ Commands in parenthesis are aliases.
 **Description:** None  
 **Commands:** /heal  
 
-## <a name="buff">buff
+## <a name="buff">buff  
 **Description:** User can buff self  
 **Commands:** /buff  
 
-## <a name="buffplayers">buffplayers
+## <a name="bg">buffplayer  
 **Description:** User can buff other players  
-**Commands:** /gbuff(/buffplayers) 
+**Commands:** /gbuff(/buffplayer)  
+
+## <a name="grow">grow  
+**Description:** None  
+**Commands:** /grow  
