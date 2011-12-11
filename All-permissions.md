@@ -4,7 +4,7 @@ Commands in parenthesis are aliases.
 
 ## <a name="causeevents">causeevents  
 **Description:** None  
-**Commands:** /dropmeteor /star /bloodmoon /invade  
+**Commands:** /dropmeteor /star /itemdrop(/idrop) /fullmoon /bloodmoon /invade  
 
 ## <a name="canbuild">canbuild  
 **Description:** Required to be able to build (modify tiles and liquid)  
@@ -84,7 +84,7 @@ Commands in parenthesis are aliases.
 
 ## <a name="spawnboss">spawnboss  
 **Description:** User can spawn bosses  
-**Commands:** /eater /eye /king /skeletron /hardcore  
+**Commands:** /eater /eye /king /skeletron /wof(/wallofflesh) /twins /destroyer /skeletronp(/prime) /hardcore  
 
 ## <a name="spawnmob">spawnmob  
 **Description:** User can spawn npcs  
@@ -116,7 +116,7 @@ Commands in parenthesis are aliases.
 
 ## <a name="cfg">cfg  
 **Description:** User can edit sevrer configurations  
-**Commands:** /setspawn /reload /showconfig /serverpassword /save /maxspawns /spawnrate /broadcast(/bc) /convert  
+**Commands:** /setspawn /reload /showconfig /serverpassword /save /settle /maxspawns /spawnrate /broadcast(/bc) /convert /stats  
 
 ## <a name="time">time  
 **Description:** None  
@@ -150,6 +150,10 @@ Commands in parenthesis are aliases.
 **Description:** User can spawn items  
 **Commands:** /item(/i) /give  
 
+## <a name="clearitems">clearitems  
+**Description:** User can clear item drops.  
+**Commands:** /clearitems  
+
 ## <a name="heal">heal  
 **Description:** None  
 **Commands:** /heal  
@@ -158,10 +162,24 @@ Commands in parenthesis are aliases.
 **Description:** User can buff self  
 **Commands:** /buff  
 
-## <a name="bg">buffplayer  
+## <a name="buffplayer">buffplayer  
 **Description:** User can buff other players  
 **Commands:** /gbuff(/buffplayer)  
 
 ## <a name="grow">grow  
 **Description:** None  
 **Commands:** /grow  
+
+## <a name="hardmode">hardmode  
+**Description:** User can change hardmode state.  
+**Commands:** /hardmode /stophardmode(/disablehardmode)  
+
+## <a name="movenpc">movenpc  
+**Description:** User can change the homes of NPCs.  
+**Commands:** None  
+
+## <a name="canexplosive">canexplosive  
+**Description:** Required to be able to place Explosives  
+**Commands:** None  
+
+
