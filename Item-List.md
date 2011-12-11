@@ -1,6 +1,5 @@
 ID - Name
-0	
-1	Iron Pickaxe
+`1	Iron Pickaxe
 2	Dirt Block
 3	Stone Block
 4	Iron Broadsword
@@ -584,4 +583,4 @@ ID - Name
 582	Outlet Pump
 583	1 Second Timer
 584	3 Second Timer
-585	5 Second Timer
+585	5 Second Timer`
