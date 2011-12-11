@@ -1,5 +1,5 @@
 ID    NAME
-1	Iron Pickaxe
+* 1	Iron Pickaxe
 * 2	Dirt Block
 * 3	Stone Block
 * 4	Iron Broadsword
