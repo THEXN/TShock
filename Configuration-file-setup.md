@@ -54,12 +54,12 @@ The configuration is stored in config.json, and is pretty much self explanatory.
 ## DefaultMaximumSpawns  
 **Type:** Int32  
 **Description:** The default maximum mobs that will spawn per wave. Higher means more mobs in that wave.  
-**Default:** "4"  
+**Default:** "5"  
 
 ## DefaultSpawnRate  
 **Type:** Int32  
 **Description:** The delay between waves. Shorter values lead to less mobs.  
-**Default:** "700"  
+**Default:** "600"  
 
 ## ServerPort  
 **Type:** Int32  
@@ -422,6 +422,20 @@ eg. When you try to disconnect, and reconnect to be automatically placed at spaw
 **Description:** This is the port which the rest api will listen on.  
 **Default:** "7878"  
 
+## DisableTombstones  
+**Type:** Boolean  
+**Description:** Disable tombstones for all players.  
+**Default:** "True"  
+
+## DisplayIPToAdmins  
+**Type:** Boolean  
+**Description:** Displays a player's IP on join to everyone who has the log permission  
+**Default:** "False"  
+
+## NPCProtect  
+**Type:** Boolean  
+**Description:** Set your NPCs to be invincible.  
+**Default:** "False"  
 
 
 
