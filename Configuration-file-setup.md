@@ -432,11 +432,6 @@ eg. When you try to disconnect, and reconnect to be automatically placed at spaw
 **Description:** Displays a player's IP on join to everyone who has the log permission  
 **Default:** "False"  
 
-## NPCProtect  
-**Type:** Boolean  
-**Description:** Set your NPCs to be invincible.  
-**Default:** "False"  
-
 
 
 If you do not see some of the values here, please delete config.json and run TShock again. It should regenerate.
