@@ -58,6 +58,7 @@ Most of these commands can alter gameplay significantly
 * /star - Attempts to bring a star to your location (required night time).
 * /bloodmoon - Starts a blood moon event.
 * /invade - Toggles a goblin invasion.
+* /itemdrop(/idrop) drops an item( or group of items) randomly throughout the sky.
 
 ###Permissions Required: spawnboss###
 
