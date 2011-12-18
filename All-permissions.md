@@ -182,4 +182,12 @@ Commands in parenthesis are aliases.
 **Description:** Required to be able to place Explosives  
 **Commands:** None  
 
+## <a name="tpallow">tpallow
+**Description:** User can use the command to prevent others from tping to them.
+**Commands:** tpallow 
+
+## <a name="tpall">tpall
+**Description:** User can tp to anyone regardless of tpallow status.
+**Commands:** None
+
 
