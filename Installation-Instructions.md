@@ -3,7 +3,7 @@ Hello! Thanks for choosing TShock.
 If you have any problems with this installation, post an issue on our [Forums](http://tshock.co/xf/index.php) and if you encounter an unusual error that looks like a bug please post it on our [Issue Tracker](http://ci.tshock.co:8080/secure/IssueNavigator.jspa?mode=hide&requestId=10001).
 
 ## Download and Extract
-OUTDATED AS OF the first of December, in the year Two thousand and eleven.
+### Outdated as of the first of December, in the year two thousand and eleven.
 1. Download the latest package of TShock from the [TShock Downloads](https://github.com/TShock/TShock/downloads).
 
 ## Become an Admin
