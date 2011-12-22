@@ -23,3 +23,8 @@
 * Double check max stat saving.
 * Revamp regions to have flags for configuring item bans, npc bans, force pvp
 * Rework ban system...
+* Check ice block tile kills range, (increase it)
+* /mute command for tshock
+* No text appearing in chat?
+* Doors seem to get removed for odd reasons
+* Hallow/Corruption control settings and commands
