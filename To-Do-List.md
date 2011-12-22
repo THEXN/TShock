@@ -15,4 +15,4 @@
 * /mute command for tshock
 * No text appearing in chat?
 * Doors seem to get removed for odd reasons
-* Hallow/Corruption control settings and commands
+* Hallow/Corruption control settings
