@@ -9,10 +9,7 @@
 * Improve documentation everywhere.
 * Force time to day or night
 * Better player cap/slot handling, reserved slot support
-* Add saving every few minutes for server side inventory
-* Double check max stat saving.
 * Revamp regions to have flags for configuring item bans, npc bans, force pvp
 * /mute command for tshock
-* No text appearing in chat?
-* Doors seem to get removed for odd reasons
+* Prevent the (No text appearing in chat?) issue with checks on the motd file.
 * Hallow/Corruption control settings
