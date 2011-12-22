@@ -22,3 +22,4 @@
 * Add saving every few minutes to playerdata
 * Double check max stat saving.
 * Revamp regions to have flags for configuring item bans, npc bans, force pvp
+* Rework ban system...
