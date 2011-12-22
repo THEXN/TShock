@@ -69,3 +69,31 @@ For use with /spawnmob. The first number is the id, second is the in game name.
 * 67 : Crab
 * 68 : Dungeon Guardian
 * 69 : Antlion
+* 70 : Spike Ball
+* 71 : Dungeon Slime
+* 72 : Blazing Wheel
+* 73 : Goblin Scout
+* 74 : Bird
+* 75 : Pixie (Hardmode)
+* 76 : Unknown, output is " way spawned x time(s)."
+* 77 : Armored Skeleton
+* 78 : Mummy
+* 79 : Dark Mummy
+* 80 : Light Mummy
+* 81 : Corrupt Slime
+* 82 : Wraith
+* 83 : Cursed Hammer
+* 84 : Enchanted Sword
+* 85 : mimic
+* 86 : Unicorn
+* 87 : Wyvern Head
+* 88 : Wyvern Legs
+* 89 : Wyvern Body
+* 90 : Wyvern Body 2 (Can live without Head/Legs/Body)
+* 91 : Wyvern Body 3 (Can live without Head/Legs/Body)
+* 92 : Wyvern Tail (Can live without Head/Legs/Body)
+* 93 : Giant Bat
+* 94 : Corruptor
+* 95 : Digger Head
+* 96 : Digger Body
+* 97 : Digger Tail
