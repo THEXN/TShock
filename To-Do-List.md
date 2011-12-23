@@ -13,3 +13,5 @@
 * /mute command for tshock
 * Prevent the (No text appearing in chat?) issue with checks on the motd file.
 * Hallow/Corruption control settings
+* Require login
+* Double check item ban system on item use and blocking player animations.
