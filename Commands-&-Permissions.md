@@ -93,13 +93,13 @@ Most of these commands can alter gameplay significantly
 
 ###Permissions Required: managegroup###
 
-* /addGroup <group name> [optional permissions, space separated or comma separated, not both] - Allows adding of additional group types, other than the default groups (VIP, newadmin, trustedadmin, etc.).
- * Example: /addGroup tester ban kick heal 
- * OR: /addGroup tester ban,kick,heal 
- * NOT: /addGroup tester ban, kick, heal
-* /delGroup <group name> - Delete an existing group.
-* /modGroup add|del <group name> <permission to add or remove, only one at a time, sorry!> - <permission> is the permission required to use a set of commands.
- * Example: /modGroup add vip managewarp
+* /addgroup <group name> [optional permissions, space separated or comma separated, not both] - Allows adding of additional group types, other than the default groups (VIP, newadmin, trustedadmin, etc.).
+ * Example: /addgroup tester ban kick heal 
+ * OR: /addgroup tester ban,kick,heal 
+ * NOT: /addgroup tester ban, kick, heal
+* /delgroup <group name> - Delete an existing group.
+* /modgroup add|del <group name> <permission to add or remove, only one at a time, sorry!> - <permission> is the permission required to use a set of commands.
+ * Example: /modgroup add vip managewarp
 
 
 ###Permissions Required: manageitem###
