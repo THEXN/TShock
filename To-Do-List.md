@@ -16,6 +16,7 @@
 * Double check item ban system on item use and blocking player animations.
 * Commands to manage item bans maybe not working.
 * Implement permissions for "cheating" mana/hp/stacks. Need to figure a method to "manage" the maximum tp bypass per group.
+* Implement more configs and permissions for server side inventory mode
 
 ## Mono Issues
 * Chairs - Issue with frames
