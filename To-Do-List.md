@@ -1,3 +1,4 @@
+## General To Do
 * Improve Item Banlist
 * Improve Ban System
 * Tile Banlist
@@ -14,3 +15,7 @@
 * Hallow/Corruption control settings
 * Require login config (not server side inventory)
 * Double check item ban system on item use and blocking player animations.
+
+## Mono Issues
+* Chairs
+* Mannequins
