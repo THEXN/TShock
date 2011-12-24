@@ -11,11 +11,10 @@
 * Better player cap/slot handling, reserved slot support
 * Revamp regions to have flags for configuring item bans, npc bans, force pvp
 * /mute command for tshock
-* Prevent the (No text appearing in chat?) issue with checks on the motd file.
 * Hallow/Corruption control settings
 * Require login config (not server side inventory)
 * Double check item ban system on item use and blocking player animations.
 
 ## Mono Issues
-* Chairs
-* Mannequins
+* Chairs - Issue with frames
+* Mannequins - Issue with frames
