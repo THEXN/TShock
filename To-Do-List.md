@@ -19,6 +19,7 @@
 * Commands to manage item bans maybe not working.( the bug about it not deleting seems to be a false report )
 * Implement permissions for "cheating" mana/hp/stacks. Need to figure a method to "manage" the maximum tp bypass per group.
 * Implement more configs and permissions for server side inventory mode
+* Mana for Server Side Inventory fails. redo it.
 
 ## Mono Issues
 * Chairs - Issue with frames
