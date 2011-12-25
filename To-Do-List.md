@@ -1,16 +1,18 @@
 ## General To Do
+* Consider moving alot of stuff outside of tshock into respective admin plugins.
 * Improve Item Banlist( the bug about it not deleting seems to be a false report )
 * Improve Ban System
 * Tile Banlist
 * Tile placement and Removal Verification based on inventory
 * Improve spam checks for place and kill tile.
 * Add spam check to liquids (Not built in one)
+ * Maybe make an exploit plugin instead of stuffing it into tshock
 * Update LogTile
-* Improve documentation everywhere.
+* Improve documentation everywhere. ( lol maybe move to confluence? )
 * Force time to day or night in configs
 * Better player cap/slot handling, reserved slot support
 * Revamp regions to have flags for configuring item bans, npc bans, force pvp, block access
-* /mute command for tshock
+* /mute command for tshock( dark commited this earlier today )
 * Hallow/Corruption control settings
 * Require login config (not server side inventory)
 * Double check item ban system on item use and blocking player animations.
