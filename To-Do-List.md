@@ -1,6 +1,6 @@
 ## General To Do
 * Consider moving alot of stuff outside of tshock into respective admin plugins.
-* Improve Item Banlist( the bug about it not deleting seems to be a false report )
+* Improve Item Banlist
 * Improve Ban System
 * Tile Banlist
 * Tile placement and Removal Verification based on inventory
@@ -16,7 +16,7 @@
 * Hallow/Corruption control settings
 * Require login config (not server side inventory)
 * Double check item ban system on item use and blocking player animations.
-* Commands to manage item bans maybe not working.
+* Commands to manage item bans maybe not working.( the bug about it not deleting seems to be a false report )
 * Implement permissions for "cheating" mana/hp/stacks. Need to figure a method to "manage" the maximum tp bypass per group.
 * Implement more configs and permissions for server side inventory mode
 
