@@ -1,5 +1,5 @@
 ## General To Do
-* Improve Item Banlist
+* Improve Item Banlist( the bug about it not deleting seems to be a false report )
 * Improve Ban System
 * Tile Banlist
 * Tile placement and Removal Verification based on inventory
