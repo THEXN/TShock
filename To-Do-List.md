@@ -2,6 +2,7 @@
 * Consider moving alot of stuff outside of tshock into respective admin plugins.
 * Improve Item Banlist
 * Improve Ban System
+* Fix chest protection in regions. Causing item duplication.
 * Tile Banlist
 * Tile placement and Removal Verification based on inventory
 * Improve spam checks for place and kill tile.
