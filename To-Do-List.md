@@ -12,7 +12,7 @@
 * Improve documentation everywhere. ( lol maybe move to confluence? )
 * Force time to day or night in configs
 * Better player cap/slot handling, reserved slot support
-* Revamp regions to have flags for configuring item bans, npc bans, force pvp, block access
+* Revamp regions to have flags for configuring item bans, npc bans, force pvp, block access, switch usage
 * /mute command for tshock( dark commited this earlier today )
 * Hallow/Corruption control settings
 * Require login config (not server side inventory)
@@ -21,6 +21,7 @@
 * Implement permissions for "cheating" mana/hp/stacks. Need to figure a method to "manage" the maximum tp bypass per group.
 * Implement more configs and permissions for server side inventory mode
 * Mana for Server Side Inventory fails. redo it.
+* Remember last position.
 
 ## Mono Issues
 * Chairs - Issue with frames
