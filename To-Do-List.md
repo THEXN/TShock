@@ -1,13 +1,14 @@
 ## General To Do
-* Tile Banlist based on Item Banlist
+* Allow to ban tiles based on item banlist
 * Revamp regions to have flags for configuring item bans, npc bans, force pvp, block access, switch usage
-* Character name based accounts.
-* Implement permissions for "cheating" mana/hp/stacks. Need to figure a method to "manage" the maximum tp bypass per group.
-* Implement more configs and permissions for server side inventory mode
-* Implement configs and group overrides for item banlist
+* Character name based accounts. (More TDSM like, will likely kill old accounts in next release, Need to discuss...)
+* Implement permissions for "cheating" mana/hp/stacks. Likely have a max hp, max mana, max item stack in groups
+* Implement group overrides for item banlist. Have a ignore groups list on each item ban
+* Implement more configs/permissions/commands for server side inventory mode
 * Update LogTile
 * Tile create and destroy verification based on selected item
 * Projectile spawning verification based on selected item
+* Disallow all non player placeable tiles
 
 ## Mono Issues
 **MONO IS BROKEN, STAY AWAY FROM CODING IT :P**
