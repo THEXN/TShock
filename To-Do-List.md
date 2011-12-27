@@ -8,7 +8,6 @@
 * Add spam check to liquids (Not built in one)
  * Maybe make an exploit plugin instead of stuffing it into tshock
 * Update LogTile
-* Force time to day or night in configs
 * Better player cap/slot handling, reserved slot support
 * Revamp regions to have flags for configuring item bans, npc bans, force pvp, block access, switch usage
 * Hallow/Corruption control settings
