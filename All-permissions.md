@@ -1,4 +1,4 @@
-# This is auto generated
+# This is auto generated < And old, will be updated when we release the next one. >
 
 Commands in parenthesis are aliases.
 
