@@ -44,7 +44,7 @@ The configuration is stored in config.json, and is pretty much self explanatory.
 	  "AutoSave": true
 	}
 
-## Automatically Generated
+## Automatically Generated < And old, will be updated when we release the next one. >
 
 ## InvasionMultiplier  
 **Type:** Int32  
