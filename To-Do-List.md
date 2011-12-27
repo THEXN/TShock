@@ -22,6 +22,7 @@
 * Implement more configs and permissions for server side inventory mode
 * Mana for Server Side Inventory fails. redo it.
 * Remember last position.
+* Fix item duplication with chest use.
 
 ## Mono Issues
 * Chairs - Issue with frames
