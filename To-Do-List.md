@@ -6,6 +6,8 @@
 * Implement more configs and permissions for server side inventory mode
 * Implement configs and group overrides for item banlist
 * Update LogTile
+* Tile create and destroy verification based on selected item
+* Projectile spawning verification based on selected item
 
 ## Mono Issues
 * Chairs - Issue with frames
