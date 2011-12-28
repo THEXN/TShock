@@ -3,7 +3,7 @@
 * Revamp regions to have flags for configuring item bans, npc bans, force pvp, block access, switch usage
 * Character name based accounts. (More TDSM like, will likely kill old accounts in next release, Need to discuss...)
 * Implement permissions for "cheating" mana/hp/stacks. Likely have a max hp, max mana, max item stack in groups
-* Implement group overrides for item banlist. Have a ignore groups list on each item ban
+* Implement group overrides for item banlist. Have a ignore groups list on each item ban( done but should be tested.  Wont delete until testing has occurred )
 * Implement more configs/permissions/commands for server side inventory mode
 * Update LogTile
 * Tile create and destroy verification based on selected item
