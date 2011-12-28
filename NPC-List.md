@@ -97,3 +97,53 @@ For use with /spawnmob. The first number is the id, second is the in game name.
 * 95 : Digger Head
 * 96 : Digger Body
 * 97 : Digger Tail
+* 98 : Seeker Head
+* 99 : Seeker Body
+* 100 : Seeker Tail
+* 101 : Clinger
+* 102 : Angler Fish
+* 103 : Green Jellyfish
+* 104 : Werewolf
+* 105 : Bound Goblin
+* 106 : Bound Wizard
+* 107 : Goblin Tinkerer
+* 108 : Wizard
+* 109 : Clown
+* 110 : Skeleton Archer
+* 111 : Goblin Archer
+* 112 : Vile Spit
+* 113 : Wall of Flesh
+* 114 : Wall of Flesh Eye
+* 115 : The Hungry
+* 116 : The Hungry II
+* 117 : Leech Head
+* 118 : Leech Body
+* 119 : Leech Tail
+* 120 : Chaos Elemental
+* 121 : Slimer
+* 122 : Gastropod
+* 123 : Bound Mechanic
+* 124 : Mechanic
+* 125 : Retinazer
+* 126 : Spazmatism
+* 127 : Skeleton Prime
+* 128 : Prime Cannon
+* 129 : Prime Saw
+* 130 : Prime Vice
+* 131 : Prime Laser
+* 132 : Bald Zombie
+* 133 : Wandering Eye
+* 134 : The Destroyer
+* 135 : The Destroyer Body
+* 136 : The Destroyer Tail
+* 137 : Illuminant Bat
+* 138 : Illuminant Slime
+* 139 : Probe
+* 140 : Possessed Armor
+* 141 : Toxic Sludge
+* 142 : Santa Claus
+* 143 : Snowman Gangsta
+* 144 : Mister Stabby
+* 145 : Snow Balla
+* 146 : Unknown, output is " was spawned x time(s)."
+
