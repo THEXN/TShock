@@ -4,7 +4,7 @@ If you have any problems with this installation, post an issue on our [Forums](h
 
 ## Download and Extract
 1. Download the latest package of TShock from the [TShock Downloads](https://github.com/TShock/TShock/downloads).
- * _This is the current version TShock 3.4.1.1221.zip — TShock 3.4, for Terraria 1.1.1, includes mono, pre-patched + XNA stripped (geoip fix)_
+ * _This is the current version TShock 3.4.2.1232.zip — TShock 3.4, for Terraria 1.1.1
 
 ## Become an Admin
 1. Run **TerrariaServer.exe**. This is your server.
