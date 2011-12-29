@@ -8,6 +8,25 @@
 * Prevent DoS attacks that open sockets until something crashes.
  * Fixes : Drop connections if their state stays at 0, or prevent multiple connections from one IP.
 
+### Anti Cheat Crap
+* health/mana regen detection
+* item spawning in inventory detection
+* max stack increasing without reason
+* butcher npc detection
+* instant respawn detection
+* better noclip detection
+* water/lava abuse detection
+* projectile spam detection
+* tile kill/create spam detection
+* damage hack detection
+* pick up range hack detection
+* infinite ammo hack detection
+* prefix changing without reason detection
+* invis detection
+* death invis detection
+* tile verification with inventory
+* speedhack detection
+
 ## Mono Issues
 **MONO IS BROKEN, STAY AWAY FROM CODING IT :P**
 
