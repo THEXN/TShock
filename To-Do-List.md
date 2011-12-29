@@ -1,7 +1,6 @@
 ## General To Do
 * Allow to ban tiles based on item banlist
 * Revamp regions to have flags for configuring item bans, npc bans, force pvp, block access, switch usage
-* Implement more configs/permissions/commands for server side inventory mode
 * Update LogTile
 * Tile create and destroy verification based on selected item
 * Projectile spawning verification based on selected item
