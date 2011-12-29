@@ -5,7 +5,8 @@
 * Tile create and destroy verification based on selected item
 * Projectile spawning verification based on selected item
 * Disallow all non player placeable tiles
-* Prevent DoS attacks from keeping sockets open
+* Prevent DoS attacks that open sockets until something crashes.
+ * Fixes : Drop connections if their state stays at 0, or prevent multiple connections from one IP.
 
 ## Mono Issues
 **MONO IS BROKEN, STAY AWAY FROM CODING IT :P**
