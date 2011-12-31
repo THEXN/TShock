@@ -225,3 +225,4 @@ Commands in parenthesis are aliases.
 ## <a name="allowclientsideworldedit">allowclientsideworldedit  
 **Description:** Allow unrestricted Send Tile Square usage, for client side world editing  
 **Commands:** None  
+________________________
