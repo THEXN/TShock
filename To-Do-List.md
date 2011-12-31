@@ -7,6 +7,7 @@
 * Disallow all non player placeable tiles
 * Prevent DoS attacks that open sockets until something crashes.
  * Fixes : Drop connections if their state stays at 0, or prevent multiple connections from one IP.
+* Update santa spawning code to reflect newest hotfix.
 
 ### Anti Cheat Crap
 * health/mana regen detection
@@ -30,6 +31,4 @@
 ## Mono Issues
 **MONO IS BROKEN, STAY AWAY FROM CODING IT :P**
 
-* Chairs - Issue with frames
-* Mannequins - Issue with frames
 * File Access, Backups, Etc Etc
