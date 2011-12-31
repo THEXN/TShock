@@ -33,7 +33,7 @@ For use with /buff and /gbuff. The first number is the id, the second is the gam
 1. Confused (Reversed controls)
 1. Slow (Reduced movement speed [about 50% I think, jump is not affected]
 1. Weak (Physical abilities are decreased [reduced damage])
-1. Merfolk (
+1. Merfolk (Can breathe and move easily underwater)
 1. Silenced (Can not use items that require mana)
 1. Broken Armor (Defense is cut in half) 
 1. Horrified (You have seen something nasty, there is no escape, no effect)
