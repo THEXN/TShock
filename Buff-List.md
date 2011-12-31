@@ -26,3 +26,16 @@ For use with /buff and /gbuff. The first number is the id, the second is the gam
 1. On Fire (Slowly take damage over time)
 1. Tipsy (4 increased Melee attack, -4 Defense [Increased melee abilities, lowered defense])
 1. Well Fed (Minor improvements to all stats)
+1. Fairy (Similar to Orb of Light, but brighter, faster, and blue, green, or red light)
+1. Werewolf (Increased physical abilities, has no effect)
+1. Clairvoyance (Magic powers are increased [increased magic strength and mana regeneration])
+1. Bleeding (Can not restore life)
+1. Confused (Reversed controls)
+1. Slow (Reduced movement speed [about 50% I think, jump is not affected]
+1. Weak (Physical abilities are decreased [reduced damage])
+1. Merfolk (
+1. Silenced (Can not use items that require mana)
+1. Broken Armor (Defense is cut in half) 
+1. Horrified (You have seen something nasty, there is no escape, no effect)
+1. The Tongue (You are being sucked into the mouth)
+1. Cursed Inferno (Losing life, can not be put out by water)
