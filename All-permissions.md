@@ -1,10 +1,10 @@
-# This is auto generated < And old, will be updated when we release the next one. >
+# This is auto generated
 
 Commands in parenthesis are aliases.
 
 ## <a name="causeevents">causeevents  
 **Description:** None  
-**Commands:** /dropmeteor /star /itemdrop(/idrop) /fullmoon /bloodmoon /invade  
+**Commands:** /dropmeteor /star /fullmoon /bloodmoon /invade  
 
 ## <a name="canbuild">canbuild  
 **Description:** Required to be able to build (modify tiles and liquid)  
@@ -16,18 +16,6 @@ Commands in parenthesis are aliases.
 
 ## <a name="usebanneditem">usebanneditem  
 **Description:** Allows you to use banned items  
-**Commands:** None  
-
-## <a name="canspike">canspike  
-**Description:** Required to be able to place spikes  
-**Commands:** None  
-
-## <a name="canwater">canwater  
-**Description:** Required to be able to place/pickup water  
-**Commands:** None  
-
-## <a name="canlava">canlava  
-**Description:** Required to be able to place/pickup lava  
 **Commands:** None  
 
 ## <a name="editspawn">editspawn  
@@ -42,33 +30,45 @@ Commands in parenthesis are aliases.
 **Description:** Prevents you from being banned  
 **Commands:** None  
 
-## <a name="ignoregriefdetection">ignoregriefdetection  
-**Description:** Prevents you from being kicked/banned by TShocks grief detections  
+## <a name="ignorekilltiledetection">ignorekilltiledetection  
+**Description:** Prevents you from being reverted by kill tile abuse detection  
 **Commands:** None  
 
-## <a name="ignorecheatdetection">ignorecheatdetection  
-**Description:** Prevents you from being kicked/banned by TShocks cheat detections  
+## <a name="ignoreplacetiledetection">ignoreplacetiledetection  
+**Description:** Prevents you from being reverted by place tile abuse detection  
 **Commands:** None  
 
-## <a name="useexplosives">useexplosives  
-**Description:** Allows you to use explosives even when they are disabled  
+## <a name="ignoreliquidsetdetection">ignoreliquidsetdetection  
+**Description:** Prevents you from being disabled by liquid set abuse detection  
+**Commands:** None  
+
+## <a name="ignoreprojectiledetection">ignoreprojectiledetection  
+**Description:** Prevents you from being disabled by liquid set abuse detection  
+**Commands:** None  
+
+## <a name="ignorenoclipdetection">ignorenoclipdetection  
+**Description:** Prevents you from being reverted by no clip detection  
+**Commands:** None  
+
+## <a name="ignorestackhackdetection">ignorestackhackdetection  
+**Description:** Prevents you from being disabled by stack hack detection  
+**Commands:** None  
+
+## <a name="ignorestathackdetection">ignorestathackdetection  
+**Description:** Prevents you from being kicked by hacked health detection  
 **Commands:** None  
 
 ## <a name="logs">logs  
 **Description:** Specific log messages are sent to users with this permission  
 **Commands:** /displaylogs  
 
-## <a name="adminchat">adminchat  
-**Description:** User gets the admin prefix/color in chat  
-**Commands:** None  
-
 ## <a name="reservedslot">reservedslot  
-**Description:** Not currently working  
+**Description:** Allows you to bypass the max slots for up to 5 slots above your max  
 **Commands:** None  
 
 ## <a name="maintenance">maintenance  
 **Description:** User is notified when an update is available  
-**Commands:** /clearbans /off /off-nosave /checkupdates  
+**Commands:** /clearbans /off(/exit) /off-nosave(/exit-nosave) /checkupdates  
 
 ## <a name="kick">kick  
 **Description:** User can kick others  
@@ -116,7 +116,7 @@ Commands in parenthesis are aliases.
 
 ## <a name="cfg">cfg  
 **Description:** User can edit sevrer configurations  
-**Commands:** /setspawn /reload /showconfig /serverpassword /save /settle /maxspawns /spawnrate /broadcast(/bc) /convert /stats  
+**Commands:** /setspawn /reload /serverpassword /save /settle /maxspawns /spawnrate /broadcast(/bc /say /yell /scream /yellinanguish /speak) /convert /stats  
 
 ## <a name="time">time  
 **Description:** None  
@@ -178,16 +178,50 @@ Commands in parenthesis are aliases.
 **Description:** User can change the homes of NPCs.  
 **Commands:** None  
 
-## <a name="canexplosive">canexplosive  
-**Description:** Required to be able to place Explosives  
+## <a name="tpallow">tpallow  
+**Description:** Users can stop people from TPing to them  
+**Commands:** /tpallow  
+
+## <a name="tpall">tpall  
+**Description:** Users can tp to anyone  
 **Commands:** None  
 
-## <a name="tpallow">tpallow
-**Description:** User can use the command to prevent others from tping to them.
-**Commands:** tpallow 
+## <a name="tphide">tphide  
+**Description:** Users can tp to people without showing a notice  
+**Commands:** None  
 
-## <a name="tpall">tpall
-**Description:** User can tp to anyone regardless of tpallow status.
-**Commands:** None
+## <a name="converthardmode">converthardmode  
+**Description:** User can convert hallow into corruption and vice-versa  
+**Commands:** /convertcorruption /converthallow  
 
+## <a name="mute">mute  
+**Description:** User can mute and unmute users  
+**Commands:** /mute(/unmute)  
 
+## <a name="canregister">canregister  
+**Description:** User can register account in game  
+**Commands:** /register  
+
+## <a name="canlogin">canlogin  
+**Description:** User can login in game  
+**Commands:** /login  
+
+## <a name="canchangepassword">canchangepassword  
+**Description:** User can change password in game  
+**Commands:** /password  
+
+## <a name="canpartychat">canpartychat  
+**Description:** User can use party chat in game  
+**Commands:** /p  
+
+## <a name="cantalkinthird">cantalkinthird  
+**Description:** User can talk in third person  
+**Commands:** /me  
+
+## <a name="bypassinventorychecks">bypassinventorychecks  
+**Description:** Bypass Server Side Inventory checks  
+**Commands:** None  
+
+## <a name="allowclientsideworldedit">allowclientsideworldedit  
+**Description:** Allow unrestricted Send Tile Square usage, for client side world editing  
+**Commands:** None  
