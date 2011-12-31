@@ -7,7 +7,7 @@
 * Disallow all non player placeable tiles
 * Prevent DoS attacks that open sockets until something crashes.
  * Fixes : Drop connections if their state stays at 0, or prevent multiple connections from one IP.
-* Update santa spawning code to reflect newest hotfix.
+* Purification doesn't work
 
 ### Anti Cheat Crap
 * health/mana regen detection
