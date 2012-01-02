@@ -583,3 +583,20 @@
 *583	1 Second Timer
 *584	3 Second Timer
 *585	5 Second Timer
+*586    Candy Cane Block
+*587    Candy Cane Wall
+*588    Santa Hat
+*589    Santa Shirt
+*590    Santa Pants
+*591    Green Candy Cane Block
+*592    Green Candy Cane Wall
+*593    Snow Block
+*594    Snow Brick
+*595    Snow Brick Wall
+*596    Blue Light
+*597    Red Light
+*598    Green Light
+*599    Blue Present
+*600    Green Present
+*601    Yellow Present
+*602    Snow Globe
