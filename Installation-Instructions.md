@@ -1,5 +1,7 @@
 Hello! Thanks for choosing TShock. 
 
+**Warning: The wiki will be moving to confluence soon. While we transition pages over, editing will be restricted to those given accounts by Shank (@nicatronTg). This wiki will be turned off eventually, however, editing will be opened on Confluence when this happens. (See http://ci.tshock.co:8080/)**
+
 If you have any problems with this installation, post an issue on our [Forums](http://tshock.co/xf/index.php) and if you encounter an unusual error that looks like a bug please post it on our [Issue Tracker](http://ci.tshock.co:8080/secure/IssueNavigator.jspa?mode=hide&requestId=10001).
 
 ## Download and Extract
