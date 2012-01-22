@@ -2,51 +2,10 @@
 
 The configuration is stored in config.json, and is pretty much self explanatory. Located inside the 'tshock' folder, you can edit config.json to your preferences.
 
-
-**NOTE: ALL ASTERISKS "*" BEFORE A DESCRIPTION FOR THE SETTING IS A GUESS, OR A 'PRETTY SURE', THIS WAS EDITED BY A USER.**
-
-	{
-	  "InvasionMultiplier": 50,
-	  "DefaultMaximumSpawns": 4,
-	  "DefaultSpawnRate": 700,
-	  "ServerPort": 7777,
-	  "EnableWhitelist": false,
-	  "InfiniteInvasion": false,
-	  "AlwaysPvP": false,
-	  "KickCheaters": true,
-	  "BanCheaters": true,
-	  "KickGriefers": true,
-	  "BanGriefers": true,
-	  "BanKillTileAbusers": true,
-	  "KickKillTileAbusers": true,
-	  "BanExplosives": true,
-	  "KickExplosives": true,
-	  "DisableExplosives": true,
-	  "SpawnProtection": true,
-	  "SpawnProtectionRadius": 5,
-	  "DistributationAgent": "facepunch",
-	  "MaxSlots": 8,
-	  "RangeChecks": true,
-	  "SpamChecks": false,
-	  "DisableBuild": false,
-	  "TileThreshold": 20,
-	  "AdminChatRGB": [
-             255.0,
-             0.0,
-             0.0
-           ], 
-	  "AdminChatPrefix": "(Admin) ",
-	  "PvpThrottle": 0,
-	  "BackupInterval": 0,
-	  "BackupKeepFor": 60,
-	  "RememberLeavePos": false,
-	  "HardcoreOnly": false,
-	  "KickOnHardcoreOnlyDeath": false,
-	  "BanOnHardcoreOnlyDeath": false,
-	  "AutoSave": true
-	}
-
-## Automatically Generated (Do not edit here)
+## AllowIce  
+**Type:** Boolean  
+**Description:** Allow Ice placement even when user does not have canbuild  
+**Default:** "False"  
 
 ## AllowLoginAnyUsername  
 **Type:** Boolean  
@@ -213,6 +172,21 @@ The configuration is stored in config.json, and is pretty much self explanatory.
 **Description:** Valid types are "sha512", "sha256", "md5", append with "-xp" for the xp supported algorithms  
 **Default:** "sha512"  
 
+## IgnoreNoClip  
+**Type:** Boolean  
+**Description:** Ignores all no clip checks for players  
+**Default:** "False"  
+
+## IgnoreProjKill  
+**Type:** Boolean  
+**Description:** Ignores checking to see if player 'can' kill a projectile  
+**Default:** "False"  
+
+## IgnoreProjUpdate  
+**Type:** Boolean  
+**Description:** Ignores checking to see if player 'can' update a projectile  
+**Default:** "False"  
+
 ## InfiniteInvasion  
 **Type:** Boolean  
 **Description:** Enable the ability for invaison size to never decrease. Make sure to run /invade, and note that this adds 2 million+ goblins to the spawn que for the map.  
@@ -238,10 +212,20 @@ The configuration is stored in config.json, and is pretty much self explanatory.
 **Description:** Not implemented  
 **Default:** "127.0.0.1"  
 
+## MaxDamage  
+**Type:** Int32  
+**Description:** The maximum damage a player/npc can inflict  
+**Default:** "175"  
+
 ## MaximumLoginAttempts  
 **Type:** Int32  
 **Description:** Number of failed login attempts before kicking the player.  
 **Default:** "3"  
+
+## MaxProjDamage  
+**Type:** Int32  
+**Description:** The maximum damage a projectile can inflict  
+**Default:** "175"  
 
 ## MaxRangeForDisabled  
 **Type:** Int32  
@@ -356,7 +340,7 @@ eg. When you try to disconnect, and reconnect to be automatically placed at spaw
 
 ## ServerName  
 **Type:** String  
-**Description:** Not implemented  
+**Description:** Used when replying to a rest /status request.  
 **Default:** ""  
 
 ## ServerNickname  
@@ -423,8 +407,3 @@ eg. When you try to disconnect, and reconnect to be automatically placed at spaw
 **Type:** Int32  
 **Description:** Disable/Revert a player if they exceed this number of tile places within 1 second.  
 **Default:** "20"  
-
-
-If you do not see some of the values here, please delete config.json and run TShock again. It should regenerate.
-
-The [[Cheating and Griefing Checks]], and what is classified as cheating and griefing is located on it's respective page.
