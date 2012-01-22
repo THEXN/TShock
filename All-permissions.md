@@ -1,7 +1,3 @@
-# This is auto generated
-
-Commands in parenthesis are aliases.
-
 ## <a name="allowclientsideworldedit">allowclientsideworldedit</a>  
 **Description:** Allow unrestricted Send Tile Square usage, for client side world editing  
 **Commands:** None  
@@ -56,15 +52,15 @@ Commands in parenthesis are aliases.
 
 ## <a name="causeevents">causeevents</a>  
 **Description:** None  
-**Commands:** /dropmeteor /star /fullmoon /bloodmoon /invade  
+**Commands:** /dropmeteor /star /genore /fullmoon /bloodmoon /invade  
 
 ## <a name="cfg">cfg</a>  
 **Description:** User can edit sevrer configurations  
-**Commands:** /setspawn /reload /serverpassword /save /settle /maxspawns /spawnrate /broadcast(/bc /say /yell /scream /yellinanguish /speak) /convert /stats  
+**Commands:** /setspawn /reload /serverpassword /save /settle /maxspawns /spawnrate /broadcast(/bc /say) /stats  
 
 ## <a name="clearitems">clearitems</a>  
 **Description:** User can clear item drops.  
-**Commands:** /clearitems  
+**Commands:** /clear(/clearitems)  
 
 ## <a name="converthardmode">converthardmode</a>  
 **Description:** User can convert hallow into corruption and vice-versa  
@@ -85,6 +81,10 @@ Commands in parenthesis are aliases.
 ## <a name="heal">heal</a>  
 **Description:** None  
 **Commands:** /heal  
+
+## <a name="ignoredamagecap">ignoredamagecap</a>  
+**Description:** Prevents your actions from being ignored if damage is too high  
+**Commands:** None  
 
 ## <a name="ignorekilltiledetection">ignorekilltiledetection</a>  
 **Description:** Prevents you from being reverted by kill tile abuse detection  
@@ -124,7 +124,7 @@ Commands in parenthesis are aliases.
 
 ## <a name="item">item</a>  
 **Description:** User can spawn items  
-**Commands:** /item(/i) /give  
+**Commands:** /item(/i) /give(/g)  
 
 ## <a name="kick">kick</a>  
 **Description:** User can kick others  
@@ -148,7 +148,7 @@ Commands in parenthesis are aliases.
 
 ## <a name="manageitem">manageitem</a>  
 **Description:** User can manage item bans  
-**Commands:** /additem /delitem  
+**Commands:** /additem(/banitem) /delitem(/unbanitem) /listitems(/listbanneditems) /additemgroup /delitemgroup  
 
 ## <a name="manageregion">manageregion</a>  
 **Description:** User can edit regions  
@@ -185,6 +185,14 @@ Commands in parenthesis are aliases.
 ## <a name="spawnmob">spawnmob</a>  
 **Description:** User can spawn npcs  
 **Commands:** /spawnmob(/sm)  
+
+## <a name="startinvasion">startinvasion</a>  
+**Description:** User can start invasions (Goblin/Snow Legion) using items  
+**Commands:** None  
+
+## <a name="summonboss">summonboss</a>  
+**Description:** User can summon bosses using items  
+**Commands:** None  
 
 ## <a name="time">time</a>  
 **Description:** None  
@@ -225,4 +233,3 @@ Commands in parenthesis are aliases.
 ## <a name="whitelist">whitelist</a>  
 **Description:** User can modify the whitelist  
 **Commands:** /whitelist  
-________________________
