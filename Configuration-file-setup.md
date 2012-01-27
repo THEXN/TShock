@@ -1,7 +1,3 @@
-**Warning: The wiki will be moving to confluence soon. While we transition pages over, editing will be restricted to those given accounts by Shank (@nicatronTg). This wiki will be turned off eventually, however, editing will be opened on Confluence when this happens. (See http://ci.tshock.co:8080/)**
-
-The configuration is stored in config.json, and is pretty much self explanatory. Located inside the 'tshock' folder, you can edit config.json to your preferences.
-
 ## AllowIce  
 **Type:** Boolean  
 **Description:** Allow Ice placement even when user does not have canbuild  
@@ -207,6 +203,11 @@ The configuration is stored in config.json, and is pretty much self explanatory.
 **Description:** Kicks users using a proxy as identified with the GeoIP database  
 **Default:** "True"  
 
+## LogonDiscardThreshold  
+**Type:** Int32  
+**Description:** Time, in milliseconds, to disallow discarding items after logging in when ServerSideInventory is ON  
+**Default:** "250"  
+
 ## MasterServer  
 **Type:** String  
 **Description:** Not implemented  
@@ -276,6 +277,11 @@ The configuration is stored in config.json, and is pretty much self explanatory.
 **Type:** Int32  
 **Description:** Disable a player if they exceed this number of projectile new within 1 second.  
 **Default:** "50"  
+
+## ProjIgnoreShrapnel  
+**Type:** Boolean  
+**Description:** Ignore shrapnel from crystal bullets for Projectile Threshold.  
+**Default:** "True"  
 
 ## PvPMode  
 **Type:** String  
