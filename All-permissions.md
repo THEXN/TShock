@@ -56,7 +56,7 @@
 
 ## <a name="cfg">cfg</a>  
 **Description:** User can edit sevrer configurations  
-**Commands:** /setspawn /reload /serverpassword /save /settle /maxspawns /spawnrate /broadcast(/bc /say) /stats  
+**Commands:** /setspawn /reload /serverpassword /save /settle /maxspawns /spawnrate /broadcast(/bc /say) /stats /world  
 
 ## <a name="clearitems">clearitems</a>  
 **Description:** User can clear item drops.  
@@ -144,7 +144,7 @@
 
 ## <a name="managegroup">managegroup</a>  
 **Description:** User can manage groups  
-**Commands:** /addgroup /delgroup /modgroup  
+**Commands:** /addgroup /delgroup /modgroup /group  
 
 ## <a name="manageitem">manageitem</a>  
 **Description:** User can manage item bans  
@@ -177,6 +177,10 @@
 ## <a name="rootonly">rootonly</a>  
 **Description:** Meant for super admins only  
 **Commands:** /user /userinfo(/ui) /auth-verify  
+
+## <a name="seeids">seeids</a>  
+**Description:** User can see the id of players with /who  
+**Commands:** None  
 
 ## <a name="spawnboss">spawnboss</a>  
 **Description:** User can spawn bosses  
