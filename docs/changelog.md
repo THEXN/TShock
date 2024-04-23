@@ -91,11 +91,11 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Fixed bug where when the `UseSqlLogs` config property is true, an empty log file would still get created. (@ZakFahey)
 * Fixed typo in `/gbuff`. (@sgkoishi, #2955)
 * Rewrote the `.dockerignore` file into a denylist. (@timschumi)
+* Added CI for Docker images. (@timschumi)
 * Added a new permission, `tshock.world.time.usemoondial`, for regulating use of Enchanted Moondial. (@Arthri)
 * Added a set of new permissions, `tshock.specialeffects.{type}`, for regulating use of new special effects(Packet 51) which are not yet recognized by TShock. (@Arthri)
 * Added check for `tshock.npc.summonboss` permission for Skeletron summoning. (@Arthri)
 * Fixed `DisableDungeonGuardian` disabling Skeletron summon instead. The config option is useless as of writing. (@Arthri)
-* Added CI for Docker images. (@timschumi)
 
 ## TShock 5.2
 * An additional option `pvpwithnoteam` is added at `PvPMode` to enable PVP with no team. (@CelestialAnarchy, #2617, @ATFGK)
