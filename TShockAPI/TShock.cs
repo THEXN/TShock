@@ -316,7 +316,7 @@ namespace TShockAPI
 			{
 				if (Config.Settings.StorageType.ToLower() == "sqlite")
 				{
-					string sql = Path.Combine(SavePath, Config.Settings.SqliteDBPath);
+					string sql = Path.Combine(Config.Settings.SqliteDBPathSavePath, Config.Settings.SqliteDBPath);
 					Directory.CreateDirectory(Path.GetDirectoryName(sql));
 					DB = new Microsoft.Data.Sqlite.SqliteConnection(string.Format("Data Source={0}", sql));
 				}

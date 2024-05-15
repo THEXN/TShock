@@ -169,7 +169,7 @@ namespace TShockAPI.Configuration
 		/// Disables Skeletron Prime Bombs from spawning, useful for preventing unwanted world destruction on for the worthy seed world.
 		/// </summary>
 		[Description("Disables Skeletron Prime Bombs from spawning, useful for preventing unwanted world destruction on for the worthy seed world.")]
-		public bool DisablePrimeBombs;
+		public bool DisablePrimeBombs = true;
 
 		/// <summary>Forces the world time to be normal, day, or night.</summary>
 		[Description("Forces the world time to be normal, day, or night.")]
@@ -535,6 +535,9 @@ namespace TShockAPI.Configuration
 		/// <summary>The path of sqlite db.</summary>
 		[Description("The path of sqlite db.")]
 		public string SqliteDBPath = "tshock.sqlite";
+		/// <summary>The SavePath.</summary>
+		[Description("The SavePath.")]
+		public string SqliteDBPathSavePath = "tshock";
 
 		/// <summary>The MySQL hostname and port to direct connections to.</summary>
 		[Description("The MySQL hostname and port to direct connections to.")]
