@@ -4422,9 +4422,12 @@ namespace TShockAPI
 		{
 			var playerIndex = args.Data.ReadInt8();
 			var loadoutIndex = args.Data.ReadInt8();
-
-			// When syncing a player's own loadout index, they then sync it back to us...
-			// So let's only care if the index has actually changed, otherwise we might end up in a loop...
+			if (!TShock.ServerSideCharacterConfig.Settings.Enabled)
+			{
+				return false;
+			}//問題を修正して装備を切り替える際の問題
+			 // When syncing a player's own loadout index, they then sync it back to us...
+			 // So let's only care if the index has actually changed, otherwise we might end up in a loop...
 			if (loadoutIndex == args.TPlayer.CurrentLoadoutIndex)
 				return false;
 
