@@ -539,9 +539,6 @@ namespace TShockAPI.Configuration
 		/// <summary>The path of sqlite db.</summary>
 		[Description("The path of sqlite db.")]
 		public string SqliteDBPath = "tshock.sqlite";
-		/// <summary>The SavePath.</summary>
-		[Description("The SavePath.")]
-		public string SqliteDBPathSavePath = "tshock";
 
 		/// <summary>The MySQL hostname and port to direct connections to.</summary>
 		[Description("The MySQL hostname and port to direct connections to.")]
