@@ -93,7 +93,7 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Rewrote the `.dockerignore` file into a denylist. (@timschumi)
 * Added CI for Docker images. (@timschumi)
 * Fixed Cursed Flares kicking players for invalid buff. (@Arthri)
-* Fixed /help, /me, and /p commands can't work in non-English languages (@ACaiCat)
+* Fixed /help, /me, and /p commands can't work in non-English languages. (@ACaiCat)
 
 ## TShock 5.2
 * An additional option `pvpwithnoteam` is added at `PvPMode` to enable PVP with no team. (@CelestialAnarchy, #2617, @ATFGK)
