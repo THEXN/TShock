@@ -1,6 +1,5 @@
-**Nota del Traductor:**
-> Hola la verdad me da pereza entender los sistemas raros de pull request y cosas si si me equivoco en algo o hago algo mal porfa contactame! [Github](https://github.com/itsFrankV22) 
-**Click-> <a href="https://discord.com/invite/qdBSvagzPz"><img alt="Discord" src="https://img.shields.io/badge/Discord-%235865F2.svg?&logo=discord&logoColor=white"></a>**
+Soporte a Español por: [FrankV22_GitHub](https://github.com/itsFrankV22) [Discord](https://discord.gg/qdBSvagzPz
+)
 
 **Advertencia: La wiki se trasladará a Confluence pronto. Mientras realizamos la transición de las páginas, la edición estará restringida a aquellos con cuentas proporcionadas por Shank (@nicatronTg). Esta wiki será desactivada eventualmente, sin embargo, la edición se habilitará en Confluence cuando esto ocurra. (Ver http://ci.tshock.co:8080/)**
 
