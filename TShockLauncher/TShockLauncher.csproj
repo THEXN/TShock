@@ -91,7 +91,13 @@
 		</ItemGroup>
 		<Copy SourceFiles="@(MOFiles)" DestinationFolder="$(PublishDir)%(RecursiveDir)" />
 	</Target>
-	<Target Name="MoveBin" AfterTargets="Publish">
+	<Target Name="MoveDevBin" AfterTargets="PostBuildEvent">
+		<ItemGroup>
+			<MoveBinaries Include="$(OutDir)*" Exclude="$(OutDir)\TShock.Server*;$(OutDir)\GeoIP.dat" />
+		</ItemGroup>
+		<Move SourceFiles="@(MoveBinaries)" DestinationFolder="$(OutDir)bin" ContinueOnError="true" />
+	</Target>
+	<Target Name="MovePublishBin" AfterTargets="Publish">
 		<ItemGroup>
 			<MoveBinaries Include="$(PublishDir)*" Exclude="$(PublishDir)\TShock.Server*;$(PublishDir)\GeoIP.dat" />
 		</ItemGroup>

@@ -27,22 +27,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 using System.Reflection;
-using TShockPluginManager;
-
-if (args.Length > 0 && args[0].ToLower() == "plugins")
-{
-	var items = args.ToList();
-	items.RemoveAt(0);
-	await NugetCLI.Main(items);
-	return;
-}
-
 
 Dictionary<string, Assembly> _cache = new Dictionary<string, Assembly>();
 
 System.Runtime.Loader.AssemblyLoadContext.Default.Resolving += Default_Resolving;
 
-Start();
+await StartAsync();
 
 /// <summary>
 /// Resolves a module from the ./bin folder, either with a .dll by preference or .exe
@@ -53,6 +43,7 @@ Assembly? Default_Resolving(System.Runtime.Loader.AssemblyLoadContext arg1, Asse
 	if (_cache.TryGetValue(arg2.Name, out Assembly? asm) && asm is not null) return asm;
 
 	var loc = Path.Combine(AppContext.BaseDirectory, "bin", arg2.Name + ".dll");
+
 	if (File.Exists(loc))
 		asm = arg1.LoadFromAssemblyPath(loc);
 
@@ -70,7 +61,15 @@ Assembly? Default_Resolving(System.Runtime.Loader.AssemblyLoadContext arg1, Asse
 /// Initiates the TSAPI server.
 /// </summary>
 /// <remarks>This method exists so that the resolver can attach before TSAPI needs its dependencies.</remarks>
-void Start()
+async Task StartAsync()
 {
+	if (args.Length > 0 && args[0].ToLower() == "plugins")
+	{
+		var items = args.ToList();
+		items.RemoveAt(0);
+		await TShockPluginManager.NugetCLI.Main(items);
+		return;
+	}
+
 	TerrariaApi.Server.Program.Main(args);
 }
