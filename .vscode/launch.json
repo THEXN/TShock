@@ -9,10 +9,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/TShockLauncher/bin/Debug/net9.0/TShock.Run.dll",
-            "windows": {
-                "program": "${workspaceFolder}/TShockLauncher/bin/Debug/net9.0/TShock.dll",
-            },
+            "program": "${workspaceFolder}/TShockLauncher/bin/Debug/net9.0/TShock.Server.dll",
             "args": [],
             "cwd": "${workspaceFolder}/TShockLauncher/bin/Debug/net9.0/",
             "console": "integratedTerminal",
