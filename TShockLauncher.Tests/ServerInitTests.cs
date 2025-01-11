@@ -14,18 +14,19 @@ public class ServerInitTests
 	public void EnsureBoots()
 	{
 		var are = new AutoResetEvent(false);
-		On.Terraria.Main.hook_DedServ cb = (On.Terraria.Main.orig_DedServ orig, Terraria.Main instance) =>
+		HookEvents.HookDelegate<Terraria.Main, HookEvents.Terraria.Main.DedServEventArgs> cb = (instance, args) =>
 		{
+			args.ContinueExecution = false;
 			are.Set();
 			Debug.WriteLine("Server init process successful");
 		};
-		On.Terraria.Main.DedServ += cb;
+		HookEvents.Terraria.Main.DedServ += cb;
 
-		new Thread(() => TerrariaApi.Server.Program.Main(new string[] { })).Start();
+		new Thread(() => TerrariaApi.Server.Program.Main([])).Start();
 
 		var hit = are.WaitOne(TimeSpan.FromSeconds(10));
 
-		On.Terraria.Main.DedServ -= cb;
+		HookEvents.Terraria.Main.DedServ -= cb;
 
 		Assert.That(hit, Is.True);
 	}
