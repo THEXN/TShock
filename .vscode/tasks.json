@@ -35,7 +35,7 @@
         {
             "label": "Remote Publish",
             "options": {
-                "cwd": "TShockLauncher/bin/Debug/net6.0/linux-arm64"
+                "cwd": "TShockLauncher/bin/Debug/net9.0/linux-arm64"
             },
             "command": "C:\\Program Files\\PuTTY\\pscp.exe",
             "type": "process",

@@ -27,7 +27,7 @@ RUN \
     *) echo "Error: Unsupported platform ${TARGETPLATFORM}" && exit 1 \
     ;; \
   esac && \
-  dotnet publish -o output/ -r "${ARCH}" -v m -f net6.0 -c Release -p:PublishSingleFile=true --self-contained false
+  dotnet publish -o output/ -r "${ARCH}" -v m -f net9.0 -c Release -p:PublishSingleFile=true --self-contained false
 
 # Runtime image
 FROM --platform=${TARGETPLATFORM} mcr.microsoft.com/dotnet/runtime:6.0 AS runner

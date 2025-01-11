@@ -53,7 +53,7 @@ namespace TShockPluginManager
 		public Nugetter()
 		{
 			FrameworkReducer = new FrameworkReducer();
-			NuGetFramework = NuGetFramework.ParseFolder("net6.0");
+			NuGetFramework = NuGetFramework.ParseFolder("net9.0");
 			Settings = NuGet.Configuration.Settings.LoadDefaultSettings(root: null);
 			PathContext = NuGetPathContext.Create(Settings);
 			PackageSourceProvider = new PackageSourceProvider(Settings);
