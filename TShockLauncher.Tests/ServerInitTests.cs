@@ -27,7 +27,7 @@ public class ServerInitTests
 
 		On.Terraria.Main.DedServ -= cb;
 
-		Assert.IsTrue(hit);
+		Assert.That(hit, Is.True);
 	}
 }
 
