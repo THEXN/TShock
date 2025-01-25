@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://tshock.co/newlogo.png" alt="TShock for Terraria"><br />
+  <img src="https://tshock.s3.us-west-001.backblazeb2.com/newlogo.png" alt="TShock for Terraria"><br />
 </p>
 
 * Download: [official](https://github.com/TShock/TShock/releases) or [experimental](#experimental-downloads).
