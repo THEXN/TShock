@@ -79,6 +79,7 @@ Use past tense when adding new entries; sign your name off when you add or chang
 
 ## Upcoming changes
 * Fixed `/dump-reference-data` mutate the command names. (#2943, @sgkoishi)
+* Added `ParryDamageBuff` (Striking Moment with Brand of the Inferno and shield) for player, updated `CursedInferno` buff for NPC (@sgkoishi, #3005)
 * Changed the use of `Player.active` to `TSPlayer.Active` for consistency. (@sgkoishi, #2939)
 * Fix typo in config for IP bans. (@redchess64)
 * Fixed unable to transfer long response body for REST API. (@sgkoishi, #2925)
