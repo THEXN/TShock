@@ -79,7 +79,7 @@ Use past tense when adding new entries; sign your name off when you add or chang
 
 ## Upcoming changes
 * Fixed `/dump-reference-data` mutate the command names. (#2943, @sgkoishi)
-* You know the drill
+* Changed the use of `Player.active` to `TSPlayer.Active` for consistency. (@sgkoishi, #2939)
 * Fix typo in config for IP bans. (@redchess64)
 
 ## TShock 5.2.1
@@ -132,7 +132,6 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Relaxed custom death message restrictions to allow Inferno potions in PvP. (@drunderscore)
 * Allowed Flower Boots to place Ash Flowers on Ash Grass blocks. (@punchready)
 * Removed unnecessary range check that artifically shortened quick stack reach. (@boddyn, #2885, @bcat)
-* Re-wrote tile rect handling from scratch, fixing a certain exploitable flaw in the old code and significantly reducing the potential exploit surface, potentially even down to zero. (@punchready)
 
 ## TShock 5.1.3
 * Added support for Terraria 1.4.4.9 via OTAPI 3.1.20. (@SignatureBeef)
