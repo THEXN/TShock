@@ -81,6 +81,7 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Fixed `/dump-reference-data` mutate the command names. (#2943, @sgkoishi)
 * Changed the use of `Player.active` to `TSPlayer.Active` for consistency. (@sgkoishi, #2939)
 * Fix typo in config for IP bans. (@redchess64)
+* Fixed unable to transfer long response body for REST API. (@sgkoishi, #2925)
 
 ## TShock 5.2.1
 * Updated `TSPlayer.GodMode`. (@AgaSpace)
