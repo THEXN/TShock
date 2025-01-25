@@ -78,6 +78,11 @@ Use past tense when adding new entries; sign your name off when you add or chang
   * If there is no section called "Upcoming changes" below this line, please add one with `## Upcoming changes` as the first line, and then a bulleted item directly after with the first change. -->
 
 ## Upcoming changes
+* Fixed `/dump-reference-data` mutate the command names. (#2943, @sgkoishi)
+* You know the drill
+* Fix typo in config for IP bans. (@redchess64)
+
+## TShock 5.2.1
 * Updated `TSPlayer.GodMode`. (@AgaSpace)
   * Previously the field was used as some kind of dataset changed by /godmode command, but now it is a property that receives/changes data in journey mode.
 * Added the `TSPlayer.Client` property. It allows the developer to get the `RemoteClient` player, without an additional call to `Terraria.Netplay.Clients`. (@AgaSpace)
