@@ -30,7 +30,6 @@ using NuGet.Versioning;
 
 namespace TShockPluginManager
 {
-
 	public class Nugetter
 	{
 		// this object can figure out the right framework folders to use from a set of packages
@@ -82,15 +81,13 @@ namespace TShockPluginManager
 				// make sure the source repository can actually tell us about dependencies
 				var dependencyInfoResource = await sourceRepository.GetResourceAsync<DependencyInfoResource>();
 				// get the try and dependencies
-				// (the above function returns a nullable value, but doesn't properly indicate it as such)
-				#pragma warning disable CS8602
-				var dependencyInfo = await dependencyInfoResource?.ResolvePackage(
+				if (dependencyInfoResource is null) continue;
+				var dependencyInfo = await dependencyInfoResource.ResolvePackage(
 					package, framework, cacheContext, logger, CancellationToken.None);
-				#pragma warning restore CS8602
 
 				// oop, we don't have the ability to get dependency info from this repository, or
 				// it wasn't found. let's try the next source repository!
-				if (dependencyInfo == null) continue;
+				if (dependencyInfo is null) continue;
 
 				availablePackages.Add(dependencyInfo);
 				foreach (var dependency in dependencyInfo.Dependencies)
@@ -302,8 +299,11 @@ namespace TShockPluginManager
 
 					var relativeFolder = Path.GetDirectoryName(packageRelativeFilePath);
 					var targetFolder = Path.Join(isPlugin ? "./ServerPlugins" : "./bin", relativeFolder);
-					Directory.CreateDirectory(targetFolder);
-					File.Copy(filePath, Path.Join(targetFolder, Path.GetFileName(filePath)), true);
+					if (File.Exists(filePath))
+					{
+						Directory.CreateDirectory(targetFolder);
+						File.Copy(filePath, Path.Join(targetFolder, Path.GetFileName(filePath)), true);
+					}
 				}
 			}
 		}
