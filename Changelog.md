@@ -94,6 +94,7 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Added a hook `AccountHooks.AccountGroupUpdate`, which is called when you change the user group. (@AgaSpace)
 * Fixed the plugin manager crash when package contains XML, now it skips all the XML docs. (@sgkoishi, #3055)
 * Fixed the automatic language detection always returning en-US. (@sgkoishi, #3056)
+* Fixed forceupdate not working. (@Metratrj)
 
 ## TShock 5.2.1
 * Updated `TSPlayer.GodMode`. (@AgaSpace)
