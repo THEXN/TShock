@@ -90,6 +90,7 @@ Use past tense when adding new entries; sign your name off when you add or chang
   * Added the `ToItem` method to get a copy of `Terraria.Item`.
   * In the constructor `stack` and `prefix` are now optional parameters.
 * Fixed /help, /me, and /p commands can't work in non-English languages. (@ACaiCat)
+* Added changing the SaveOnSeverExit variable before shutting down the server. This correctly makes the "off nosave" function work. (@Metratrj)
 
 ## TShock 5.2.1
 * Updated `TSPlayer.GodMode`. (@AgaSpace)
