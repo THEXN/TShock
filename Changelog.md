@@ -89,6 +89,7 @@ Use past tense when adding new entries; sign your name off when you add or chang
   * Added constructor overload with parameter `Terraria.Item`.
   * Added the `ToItem` method to get a copy of `Terraria.Item`.
   * In the constructor `stack` and `prefix` are now optional parameters.
+* Fixed /help, /me, and /p commands can't work in non-English languages. (@ACaiCat)
 
 ## TShock 5.2.1
 * Updated `TSPlayer.GodMode`. (@AgaSpace)
