@@ -82,6 +82,10 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Added `ParryDamageBuff` (Striking Moment with Brand of the Inferno and shield) for player, updated `CursedInferno` buff for NPC (@sgkoishi, #3005)
 * Changed the use of `Player.active` to `TSPlayer.Active` for consistency. (@sgkoishi, #2939)
 * Fix typo in config for IP bans. (@redchess64)
+* Updated `TShockAPI.NetItem` (@AgaSpace):
+  * Added constructor overload with parameter `Terraria.Item`.
+  * Added the `ToItem` method to get a copy of `Terraria.Item`.
+  * In the constructor `stack` and `prefix` are now optional parameters.
 * Fixed unable to transfer long response body for REST API. (@sgkoishi, #2925)
 * Fixed the `/wind` command not being very helpful. (@punchready)
 
@@ -98,10 +102,7 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Added a property `TSPlayer.Hostile`, which gets pvp player mode. (@AgaSpace)
 * Fixed bug where when the `UseSqlLogs` config property is true, an empty log file would still get created. (@ZakFahey)
 * Fixed typo in `/gbuff`. (@sgkoishi, #2955)
-* Rewrote the `.dockerignore` file into a denylist. (@timschumi)
-* Added CI for Docker images. (@timschumi)
-* Fixed Cursed Flares kicking players for invalid buff. (@Arthri)
-* Added automatic publishing of Docker images to GHCR. (@timschumi)
+
 
 ## TShock 5.2
 * An additional option `pvpwithnoteam` is added at `PvPMode` to enable PVP with no team. (@CelestialAnarchy, #2617, @ATFGK)
