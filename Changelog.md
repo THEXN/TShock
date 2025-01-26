@@ -93,6 +93,7 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Added changing the SaveOnSeverExit variable before shutting down the server. This correctly makes the "off nosave" function work. (@Metratrj)
 * Added a hook `AccountHooks.AccountGroupUpdate`, which is called when you change the user group. (@AgaSpace)
 * Fixed the plugin manager crash when package contains XML, now it skips all the XML docs. (@sgkoishi, #3055)
+* Fixed the automatic language detection always returning en-US. (@sgkoishi, #3056)
 
 ## TShock 5.2.1
 * Updated `TSPlayer.GodMode`. (@AgaSpace)
