@@ -48,7 +48,9 @@ An example configuration file is provided:
 }
 ```
 
-In this example configuration, the `StartingInventory` manifest describes the starting items that each player has when they join. In this case, it's bronze equipment. You can customize this by adding additional entries. For example, the updated configuration file after this block adds the `Zenith` as a starting item for new players.
+In this example configuration, the `StartingInventory` manifest describes the starting items that each player has when they join. In this case, it's bronze equipment. You can customize this by adding additional entries. 
+
+The `netID` and `prefix` can be found in the [official Terraria wiki](https://terraria.wiki.gg/wiki/Data_IDs). For example, the updated configuration file after this block adds the `Zenith` as a starting item for new players. 
 
 ```json
 {
@@ -84,6 +86,8 @@ In this example configuration, the `StartingInventory` manifest describes the st
   }
 }
 ```
+
+Explanation of each field can be found [ssc config](https://github.com/Pryaxis/TShock/blob/general-devel/docs/ssc-config.md).
 
 ## Playing as an admin
 
