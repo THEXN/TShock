@@ -89,6 +89,7 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Fixed unable to transfer long response body for REST API. (@sgkoishi, #2925)
 * Fixed the `/wind` command not being very helpful. (@punchready)
 * Fixed /help, /me, and /p commands can't work in non-English languages. (@ACaiCat)
+* Added a hook `AccountHooks.AccountGroupUpdate`, which is called when you change the user group. (@AgaSpace)
 
 ## TShock 5.2.1
 * Updated `TSPlayer.GodMode`. (@AgaSpace)
