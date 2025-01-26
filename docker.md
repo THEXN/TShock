@@ -48,8 +48,6 @@ docker run -p 7777:7777 -p 7878:7878 \
 
 If you have [Docker Compose](https://docs.docker.com/compose/) installed, you can skip building the image explicitly, and rather use a `docker-compose.yml` file like so:
 ```yml
-version: "3"
-
 services:
   terraria:
     build:
