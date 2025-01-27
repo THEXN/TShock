@@ -100,6 +100,8 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Groups are now virtual and support XNA colors. (@AgaSpace)
 * Added `PlayerHooks.PrePlayerCommand` hook, which fired before command execution. (@AgaSpace)
 * Added `PlayerHooks.PostPlayerCommand` hook, which fired after command execution. (@AgaSpace)
+* Detected invalid installations, by checking for a file named `TerrariaServer.exe`. (@drunderscore)
+  * This made the two most common installation mistakes (extracting into the Terraria client directory, and extracting TShock 5 or newer into a TShock 4 or older install) prompt the user with a more useful diagnostic, rather than (likely) crashing moments later.
 
 ## TShock 5.2.1
 * Updated `TSPlayer.GodMode`. (@AgaSpace)
@@ -117,8 +119,7 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Rewrote the `.dockerignore` file into a denylist. (@timschumi)
 * Added CI for Docker images. (@timschumi)
 * Fixed Cursed Flares kicking players for invalid buff. (@Arthri)
-* Detected invalid installations, by checking for a file named `TerrariaServer.exe`. (@drunderscore)
-  * This made the two most common installation mistakes (extracting into the Terraria client directory, and extracting TShock 5 or newer into a TShock 4 or older install) prompt the user with a more useful diagnostic, rather than (likely) crashing moments later.
+
 
 ## TShock 5.2
 * An additional option `pvpwithnoteam` is added at `PvPMode` to enable PVP with no team. (@CelestialAnarchy, #2617, @ATFGK)
