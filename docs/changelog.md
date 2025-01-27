@@ -91,6 +91,8 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Fixed /help, /me, and /p commands can't work in non-English languages. (@ACaiCat)
 * Added a hook `AccountHooks.AccountGroupUpdate`, which is called when you change the user group. (@AgaSpace)
 * * Ensured `TSPlayer.PlayerData` is non-null whilst syncing loadouts. (@drunderscore)
+* * Detected invalid installations, by checking for a file named `TerrariaServer.exe`. (@drunderscore)
+  * This made the two most common installation mistakes (extracting into the Terraria client directory, and extracting TShock 5 or newer into a TShock 4 or older install) prompt the user with a more useful diagnostic, rather than (likely) crashing moments later.
 
 ## TShock 5.2.1
 * Updated `TSPlayer.GodMode`. (@AgaSpace)
