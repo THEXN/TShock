@@ -96,6 +96,7 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Fixed the automatic language detection always returning en-US. (@sgkoishi, #3056)
 * Fixed forceupdate not working. (@Metratrj)
 * Ensured `TSPlayer.PlayerData` is non-null whilst syncing loadouts. (@drunderscore)
+* Added a terminal detection that avoids title spam. (@sgkoishi, #3057)
 
 ## TShock 5.2.1
 * Updated `TSPlayer.GodMode`. (@AgaSpace)
