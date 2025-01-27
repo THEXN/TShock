@@ -95,6 +95,7 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Fixed the plugin manager crash when package contains XML, now it skips all the XML docs. (@sgkoishi, #3055)
 * Fixed the automatic language detection always returning en-US. (@sgkoishi, #3056)
 * Fixed forceupdate not working. (@Metratrj)
+* Ensured `TSPlayer.PlayerData` is non-null whilst syncing loadouts. (@drunderscore)
 
 ## TShock 5.2.1
 * Updated `TSPlayer.GodMode`. (@AgaSpace)
