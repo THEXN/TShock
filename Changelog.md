@@ -97,6 +97,7 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Fixed forceupdate not working. (@Metratrj)
 * Ensured `TSPlayer.PlayerData` is non-null whilst syncing loadouts. (@drunderscore)
 * Added a terminal detection that avoids title spam. (@sgkoishi, #3057)
+* Groups are now virtual and support XNA colors. (@AgaSpace)
 
 ## TShock 5.2.1
 * Updated `TSPlayer.GodMode`. (@AgaSpace)
