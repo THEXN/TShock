@@ -105,10 +105,6 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Added a property `TSPlayer.Hostile`, which gets pvp player mode. (@AgaSpace)
 * Fixed bug where when the `UseSqlLogs` config property is true, an empty log file would still get created. (@ZakFahey)
 * Fixed typo in `/gbuff`. (@sgkoishi, #2955)
-* Rewrote the `.dockerignore` file into a denylist. (@timschumi)
-* Added CI for Docker images. (@timschumi)
-* Fixed Cursed Flares kicking players for invalid buff. (@Arthri)
-
 
 ## TShock 5.2
 * An additional option `pvpwithnoteam` is added at `PvPMode` to enable PVP with no team. (@CelestialAnarchy, #2617, @ATFGK)
