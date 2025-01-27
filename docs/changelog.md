@@ -78,7 +78,40 @@ Use past tense when adding new entries; sign your name off when you add or chang
   * If there is no section called "Upcoming changes" below this line, please add one with `## Upcoming changes` as the first line, and then a bulleted item directly after with the first change. -->
 
 ## Upcoming changes
-* An additional option `pvpwithnoteam` is added at `PvPMode` to enable PVP with no team.(@CelestialAnarchy, #2617, @ATFGK)
+* Fixed `/dump-reference-data` mutate the command names. (#2943, @sgkoishi)
+* Added `ParryDamageBuff` (Striking Moment with Brand of the Inferno and shield) for player, updated `CursedInferno` buff for NPC (@sgkoishi, #3005)
+* Changed the use of `Player.active` to `TSPlayer.Active` for consistency. (@sgkoishi, #2939)
+* Fix typo in config for IP bans. (@redchess64)
+* Updated `TShockAPI.NetItem` (@AgaSpace):
+  * Added constructor overload with parameter `Terraria.Item`.
+  * Added the `ToItem` method to get a copy of `Terraria.Item`.
+  * In the constructor `stack` and `prefix` are now optional parameters.
+* Fixed unable to transfer long response body for REST API. (@sgkoishi, #2925)
+* Fixed the `/wind` command not being very helpful. (@punchready)
+* Fixed /help, /me, and /p commands can't work in non-English languages. (@ACaiCat)
+* Added a hook `AccountHooks.AccountGroupUpdate`, which is called when you change the user group. (@AgaSpace)
+* * Ensured `TSPlayer.PlayerData` is non-null whilst syncing loadouts. (@drunderscore)
+* * Detected invalid installations, by checking for a file named `TerrariaServer.exe`. (@drunderscore)
+  * This made the two most common installation mistakes (extracting into the Terraria client directory, and extracting TShock 5 or newer into a TShock 4 or older install) prompt the user with a more useful diagnostic, rather than (likely) crashing moments later.
+
+## TShock 5.2.1
+* Updated `TSPlayer.GodMode`. (@AgaSpace)
+  * Previously the field was used as some kind of dataset changed by /godmode command, but now it is a property that receives/changes data in journey mode.
+* Added the `TSPlayer.Client` property. It allows the developer to get the `RemoteClient` player, without an additional call to `Terraria.Netplay.Clients`. (@AgaSpace)
+* Updated the documentation for the `TSPlayer.SetPvP` method. The `sendMsg` parameter, which is responsible for sending a pvp mode change message, was not documented earlier. (@AgaSpace)
+* Added methods `TSPlayer.KillPlayer` and `TSPlayer.DamagePlayer` for which you can specify the cause (`PlayerDeathReason`) in parameters. (@AgaSpace)
+* Added an error when trying to change a `TSPlayer` team to, say, 9, when there are only 6. (@AgaSpace)
+* Added an error when trying to call the `TSPlayer.SetTeam` method with an argument (team) greater than 5 or less than 0. (@AgaSpace)
+* Added a method `TSPlayer.UpdateSection` with arguments `rectangle` and `isLoaded`, which will load some area from the server to the player. (@AgaSpace)
+* Added a method `TSPlayer.GiveItem`, which has `TShockAPI.NetItem` structure in its arguments. (@AgaSpace)
+* Added a property `TSPlayer.Hostile`, which gets pvp player mode. (@AgaSpace)
+* Fixed bug where when the `UseSqlLogs` config property is true, an empty log file would still get created. (@ZakFahey)
+* Fixed typo in `/gbuff`. (@sgkoishi, #2955)
+* Added `PlayerHooks.PrePlayerCommand` hook, which fired before command execution. (@AgaSpace)
+* Added `PlayerHooks.PostPlayerCommand` hook, which fired after command execution. (@AgaSpace)
+
+## TShock 5.2
+* An additional option `pvpwithnoteam` is added at `PvPMode` to enable PVP with no team. (@CelestialAnarchy, #2617, @ATFGK)
 * Corrected and updated deserialization of the following packets (@ATFGK):
   * `ProjectileNew`: Read the third `AI` value.
     * Before this change, it was previously possible for the projectile damage limit to falsely trigger, such as when using the Terra Balde and Fire Gauntlet together.
@@ -105,8 +138,10 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Initialized achievements and the `AchievementManager` on the server. This ensures that players cannot cause exceptions to be thrown, chat messages are always logged, and allows achievement names to be localized in the console. Also added a test case for this. (@drunderscore)
 * Allowed multiple test cases to be in TShock's test suite. (@drunderscore)
 * Fixed unable to use Purification/Evil Powder in jungle. (@sgkoishi)
-* Detected invalid installations, by checking for a file named `TerrariaServer.exe`. (@drunderscore)
-  * This made the two most common installation mistakes (extracting into the Terraria client directory, and extracting TShock 5 or newer into a TShock 4 or older install) prompt the user with a more useful diagnostic, rather than (likely) crashing moments later.
+* Set the `GetDataHandledEventArgs.Player` property for the `SyncTilePicking` data handler. (@drunderscore)
+* Relaxed custom death message restrictions to allow Inferno potions in PvP. (@drunderscore)
+* Allowed Flower Boots to place Ash Flowers on Ash Grass blocks. (@punchready)
+* Removed unnecessary range check that artifically shortened quick stack reach. (@boddyn, #2885, @bcat)
 
 ## TShock 5.1.3
 * Added support for Terraria 1.4.4.9 via OTAPI 3.1.20. (@SignatureBeef)

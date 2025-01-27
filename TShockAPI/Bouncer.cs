@@ -424,13 +424,19 @@ namespace TShockAPI
 			};
 			PlayerAddBuffWhitelist[BuffID.BrainOfConfusionBuff] = new BuffLimit
 			{
-				MaxTicks = 240,
+				MaxTicks = 60 * 4,
 				CanBeAddedWithoutHostile = true,
 				CanOnlyBeAppliedToSender = true
 			};
 			PlayerAddBuffWhitelist[BuffID.WindPushed] = new BuffLimit
 			{
 				MaxTicks = 2,
+				CanBeAddedWithoutHostile = true,
+				CanOnlyBeAppliedToSender = true
+			};
+			PlayerAddBuffWhitelist[BuffID.ParryDamageBuff] = new BuffLimit
+			{
+				MaxTicks = 60 * 5,
 				CanBeAddedWithoutHostile = true,
 				CanOnlyBeAppliedToSender = true
 			};
@@ -1878,7 +1884,7 @@ namespace TShockAPI
 				return;
 			}
 
-			if (TShock.Players[id] == null)
+			if (TShock.Players[id] == null || !TShock.Players[id].Active)
 			{
 				TShock.Log.ConsoleDebug(GetString(
 					"Bouncer / OnPlayerBuff rejected {0} ({1}) applying buff {2} to {3} for {4} ticks: target is null", args.Player.Name,
@@ -2081,7 +2087,7 @@ namespace TShockAPI
 			short amount = args.Amount;
 			byte plr = args.TargetPlayerIndex;
 
-			if (amount <= 0 || Main.player[plr] == null || !Main.player[plr].active)
+			if (amount <= 0 || TShock.Players[plr] == null || !TShock.Players[plr].Active)
 			{
 				TShock.Log.ConsoleDebug(GetString("Bouncer / OnHealOtherPlayer rejected null checks"));
 				args.Handled = true;
@@ -2589,7 +2595,7 @@ namespace TShockAPI
 			byte direction = args.Direction;
 			PlayerDeathReason reason = args.PlayerDeathReason;
 
-			if (id >= Main.maxPlayers || TShock.Players[id] == null)
+			if (id >= Main.maxPlayers || TShock.Players[id] == null || !TShock.Players[id].Active)
 			{
 				TShock.Log.ConsoleDebug(GetString("Bouncer / OnPlayerDamage rejected null check"));
 				args.Handled = true;
@@ -2659,9 +2665,12 @@ namespace TShockAPI
 			 * If the player was not specified, that is, the player index is -1, then it is definitely a custom cause, as you can only deal damage with a projectile or another player.
 			 * This is how everything else works. If an NPC is specified, its value is not -1, which is a custom cause.
 			 *
+			 * An exception to this is damage dealt by the Inferno potion to other players -- it is only identified by the other index value of 16,
+			 * even lacking a source player index.
+			 *
 			 * Checking whether this damage came from the player is necessary, because the damage from the player can come even when it is hit by a NPC
 			*/
-			if (TShock.Config.Settings.DisableCustomDeathMessages && id != args.Player.Index &&
+			if (TShock.Config.Settings.DisableCustomDeathMessages && id != args.Player.Index && reason._sourceOtherIndex != 16 &&
 				(reason._sourcePlayerIndex == -1 || reason._sourceNPCIndex != -1 || reason._sourceOtherIndex != -1 || reason._sourceCustomReason != null))
 			{
 				TShock.Log.ConsoleDebug(GetString("Bouncer / OnPlayerDamage rejected custom death message from {0}", args.Player.Name));
@@ -2851,7 +2860,7 @@ namespace TShockAPI
 			{ BuffID.Poisoned, 3600 },              // BuffID: 20
 			{ BuffID.OnFire, 1200 },                // BuffID: 24
 			{ BuffID.Confused, short.MaxValue },    // BuffID: 31 Brain of Confusion Internal Item ID: 3223
-			{ BuffID.CursedInferno, 420 },          // BuffID: 39
+			{ BuffID.CursedInferno, 600 },          // BuffID: 39
 			{ BuffID.Frostburn, 900 },              // BuffID: 44
 			{ BuffID.Ichor, 1200 },                 // BuffID: 69
 			{ BuffID.Venom, 1800 },                 // BuffID: 70

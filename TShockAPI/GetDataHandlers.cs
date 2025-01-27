@@ -2248,6 +2248,7 @@ namespace TShockAPI
 
 			var args = new SyncTilePickingEventArgs
 			{
+                                Player = player,
 				PlayerIndex = playerIndex,
 				TileX = tileX,
 				TileY = tileY,
@@ -4443,6 +4444,11 @@ namespace TShockAPI
 
 				return true;
 			}
+
+			// Don't modify the player data if it isn't there.
+			// This is the case whilst the player is connecting, as we receive the SyncLoadout packet before the ContinueConnecting2 packet.
+			if (args.Player.PlayerData == null)
+				return false;
 
 			// The client does not sync slot changes when changing loadouts, it only tells the server the loadout index changed,
 			// and the server will replicate the changes the client did. This means that PlayerData.StoreSlot is never called, so we need to
