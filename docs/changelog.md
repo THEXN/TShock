@@ -78,6 +78,21 @@ Use past tense when adding new entries; sign your name off when you add or chang
   * If there is no section called "Upcoming changes" below this line, please add one with `## Upcoming changes` as the first line, and then a bulleted item directly after with the first change. -->
 
 ## Upcoming changes
+* Fixed `/dump-reference-data` mutate the command names. (#2943, @sgkoishi)
+* Added `ParryDamageBuff` (Striking Moment with Brand of the Inferno and shield) for player, updated `CursedInferno` buff for NPC (@sgkoishi, #3005)
+* Changed the use of `Player.active` to `TSPlayer.Active` for consistency. (@sgkoishi, #2939)
+* Fix typo in config for IP bans. (@redchess64)
+* Updated `TShockAPI.NetItem` (@AgaSpace):
+  * Added constructor overload with parameter `Terraria.Item`.
+  * Added the `ToItem` method to get a copy of `Terraria.Item`.
+  * In the constructor `stack` and `prefix` are now optional parameters.
+* Fixed unable to transfer long response body for REST API. (@sgkoishi, #2925)
+* Fixed the `/wind` command not being very helpful. (@punchready)
+* Fixed /help, /me, and /p commands can't work in non-English languages. (@ACaiCat)
+* Added a hook `AccountHooks.AccountGroupUpdate`, which is called when you change the user group. (@AgaSpace)
+* * Ensured `TSPlayer.PlayerData` is non-null whilst syncing loadouts. (@drunderscore)
+
+## TShock 5.2.1
 * Updated `TSPlayer.GodMode`. (@AgaSpace)
   * Previously the field was used as some kind of dataset changed by /godmode command, but now it is a property that receives/changes data in journey mode.
 * Added the `TSPlayer.Client` property. It allows the developer to get the `RemoteClient` player, without an additional call to `Terraria.Netplay.Clients`. (@AgaSpace)
@@ -88,8 +103,8 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Added a method `TSPlayer.UpdateSection` with arguments `rectangle` and `isLoaded`, which will load some area from the server to the player. (@AgaSpace)
 * Added a method `TSPlayer.GiveItem`, which has `TShockAPI.NetItem` structure in its arguments. (@AgaSpace)
 * Added a property `TSPlayer.Hostile`, which gets pvp player mode. (@AgaSpace)
+* Fixed bug where when the `UseSqlLogs` config property is true, an empty log file would still get created. (@ZakFahey)
 * Fixed typo in `/gbuff`. (@sgkoishi, #2955)
-* Added more modification options to `Group`. (@AgaSpace)
 
 ## TShock 5.2
 * An additional option `pvpwithnoteam` is added at `PvPMode` to enable PVP with no team. (@CelestialAnarchy, #2617, @ATFGK)
@@ -123,7 +138,6 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Relaxed custom death message restrictions to allow Inferno potions in PvP. (@drunderscore)
 * Allowed Flower Boots to place Ash Flowers on Ash Grass blocks. (@punchready)
 * Removed unnecessary range check that artifically shortened quick stack reach. (@boddyn, #2885, @bcat)
-* Improved the exploit protection in tile rect handling. (@punchready)
 
 ## TShock 5.1.3
 * Added support for Terraria 1.4.4.9 via OTAPI 3.1.20. (@SignatureBeef)
