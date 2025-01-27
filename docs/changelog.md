@@ -90,6 +90,7 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Fixed the `/wind` command not being very helpful. (@punchready)
 * Fixed /help, /me, and /p commands can't work in non-English languages. (@ACaiCat)
 * Added a hook `AccountHooks.AccountGroupUpdate`, which is called when you change the user group. (@AgaSpace)
+* * Ensured `TSPlayer.PlayerData` is non-null whilst syncing loadouts. (@drunderscore)
 
 ## TShock 5.2.1
 * Updated `TSPlayer.GodMode`. (@AgaSpace)
@@ -107,6 +108,7 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Rewrote the `.dockerignore` file into a denylist. (@timschumi)
 * Added CI for Docker images. (@timschumi)
 * Fixed Cursed Flares kicking players for invalid buff. (@Arthri)
+
 
 ## TShock 5.2
 * An additional option `pvpwithnoteam` is added at `PvPMode` to enable PVP with no team. (@CelestialAnarchy, #2617, @ATFGK)
