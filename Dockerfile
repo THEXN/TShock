@@ -30,7 +30,7 @@ RUN \
   dotnet publish -o output/ -r "${ARCH}" -v m -f net9.0 -c Release -p:PublishSingleFile=true --self-contained false
 
 # Runtime image
-FROM --platform=${TARGETPLATFORM} mcr.microsoft.com/dotnet/runtime:6.0 AS runner
+FROM --platform=${TARGETPLATFORM} mcr.microsoft.com/dotnet/runtime:9.0 AS runner
 WORKDIR /server
 COPY --from=builder /TShock/TShockLauncher/output ./
 
