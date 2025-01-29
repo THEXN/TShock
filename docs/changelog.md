@@ -90,6 +90,9 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Fixed the `/wind` command not being very helpful. (@punchready)
 * Fixed /help, /me, and /p commands can't work in non-English languages. (@ACaiCat)
 * Added a hook `AccountHooks.AccountGroupUpdate`, which is called when you change the user group. (@AgaSpace)
+* * Ensured `TSPlayer.PlayerData` is non-null whilst syncing loadouts. (@drunderscore)
+* * Detected invalid installations, by checking for a file named `TerrariaServer.exe`. (@drunderscore)
+  * This made the two most common installation mistakes (extracting into the Terraria client directory, and extracting TShock 5 or newer into a TShock 4 or older install) prompt the user with a more useful diagnostic, rather than (likely) crashing moments later.
 
 ## TShock 5.2.1
 * Updated `TSPlayer.GodMode`. (@AgaSpace)
@@ -104,9 +107,8 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Added a property `TSPlayer.Hostile`, which gets pvp player mode. (@AgaSpace)
 * Fixed bug where when the `UseSqlLogs` config property is true, an empty log file would still get created. (@ZakFahey)
 * Fixed typo in `/gbuff`. (@sgkoishi, #2955)
-* Rewrote the `.dockerignore` file into a denylist. (@timschumi)
-* Added CI for Docker images. (@timschumi)
-* Fixed Cursed Flares kicking players for invalid buff. (@Arthri)
+* Added `PlayerHooks.PrePlayerCommand` hook, which fired before command execution. (@AgaSpace)
+* Added `PlayerHooks.PostPlayerCommand` hook, which fired after command execution. (@AgaSpace)
 
 ## TShock 5.2
 * An additional option `pvpwithnoteam` is added at `PvPMode` to enable PVP with no team. (@CelestialAnarchy, #2617, @ATFGK)
