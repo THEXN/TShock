@@ -791,7 +791,7 @@ namespace TShockAPI
 
 			// If the player has bypass on build protection or building is enabled; continue
 			// (General build protection takes precedence over spawn protection)
-			if (!TShock.Config.Settings.DisableBuild || HasPermission(Permissions.antibuild))
+			if (!TShock.Config.Settings.DisableBuild || HasPermission(Permissions.antibuild) || HasPermission(Permissions.antibuild2))
 			{
 				failure = BuildPermissionFailPoint.SpawnProtect;
 				// If they have spawn protect bypass, or it isn't spawn, or it isn't in spawn; continue

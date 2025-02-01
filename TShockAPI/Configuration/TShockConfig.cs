@@ -129,6 +129,10 @@ namespace TShockAPI.Configuration
 		[Description("Enable or disable anti-cheat range checks based on distance between the player and their block placements.")]
 		public bool RangeChecks = true;
 
+		/// <summary>projRangeChecks.</summary>
+		[Description("弹幕限距.")]
+		public int ProjRangeChecks = 150;
+
 		/// <summary>Prevents non-hardcore players from connecting.</summary>
 		[Description("Prevents non-hardcore players from connecting.")]
 		public bool HardcoreOnly;

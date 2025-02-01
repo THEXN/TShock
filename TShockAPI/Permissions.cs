@@ -49,6 +49,9 @@ namespace TShockAPI
 		[Description("User can set build protection status.")]
 		public static readonly string antibuild = "tshock.admin.antibuild";
 
+		[Description("茑萝建筑专用.")]
+		public static readonly string antibuild2 = "tshock.admin.antibuild2";
+
 		[Description("Prevents you from being kicked.")]
 		public static readonly string immunetokick = "tshock.admin.nokick";
 

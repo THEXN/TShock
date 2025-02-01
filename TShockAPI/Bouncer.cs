@@ -2640,7 +2640,7 @@ namespace TShockAPI
 				return;
 			}
 
-			if (!args.Player.IsInRange(TShock.Players[id].TileX, TShock.Players[id].TileY, 100))
+			if (!args.Player.IsInRange(TShock.Players[id].TileX, TShock.Players[id].TileY, TShock.Config.Settings.ProjRangeChecks))
 			{
 				TShock.Log.ConsoleDebug(GetString("Bouncer / OnPlayerDamage rejected range checks from {0}", args.Player.Name));
 				args.Player.SendData(PacketTypes.PlayerHp, "", id);
