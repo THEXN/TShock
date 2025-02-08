@@ -95,6 +95,7 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * * Ensured `TSPlayer.PlayerData` is non-null whilst syncing loadouts. (@drunderscore)
 * * Detected invalid installations, by checking for a file named `TerrariaServer.exe`. (@drunderscore)
   * This made the two most common installation mistakes (extracting into the Terraria client directory, and extracting TShock 5 or newer into a TShock 4 or older install) prompt the user with a more useful diagnostic, rather than (likely) crashing moments later.
+* Changed Bouncer to block updates which set the following fields to infinity or NaN: player position, projectile position, projectile velocity, item position, and item velocity. (@Arthri)
 
 ## TShock 5.2.1
 * Updated `TSPlayer.GodMode`. (@AgaSpace)
