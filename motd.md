@@ -15,4 +15,4 @@ The following tokens are available for use in the MOTD:
 * `%serverslots%` - The number of slots on the server
 * `%specifier%` - The command specifier (e.g. `/` or `.`)
 
-In addition, the Terraria color codes are supported. These are RGB colors in brackets. For example, `[c/FF0000:Red]` will display the word "Red" in red. [Terraria chat tags](https://terraria.fandom.com/wiki/Chat#Tags) are clientside rendered, meaning that they can be used too, even if more tags are added, without explicit TShock support.
+In addition, the Terraria color codes are supported. These are RGB colors in brackets. For example, `[c/FF0000:Red]` will display the word "Red" in red. [Terraria chat tags](https://terraria.wiki.gg/wiki/Chat#Tags) are clientside rendered, meaning that they can be used too, even if more tags are added, without explicit TShock support.
