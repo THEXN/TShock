@@ -95,6 +95,10 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * * Ensured `TSPlayer.PlayerData` is non-null whilst syncing loadouts. (@drunderscore)
 * * Detected invalid installations, by checking for a file named `TerrariaServer.exe`. (@drunderscore)
   * This made the two most common installation mistakes (extracting into the Terraria client directory, and extracting TShock 5 or newer into a TShock 4 or older install) prompt the user with a more useful diagnostic, rather than (likely) crashing moments later.
+* Updated `TShockAPI.Handlers.SendTileRectHandler` (@LaoSparrow):
+  * Fixed incorrect validating range in `TileRectMatch.MatchRemoval`.
+  * Fixed tile rect changes (e.g. turning on and off campfires) are not synced between clients.
+  * Fixed unable to place Hat Rack without permission `tshock.ignore.sendtilesquare`.
 
 ## TShock 5.2.1
 * Updated `TSPlayer.GodMode`. (@AgaSpace)
