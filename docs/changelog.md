@@ -99,6 +99,7 @@ Use past tense when adding new entries; sign your name off when you add or chang
   * Fixed incorrect validating range in `TileRectMatch.MatchRemoval`.
   * Fixed tile rect changes (e.g. turning on and off campfires) are not synced between clients.
   * Fixed unable to place Hat Rack without permission `tshock.ignore.sendtilesquare`.
+* Updated `GetDataHandlers` to ignore `NpcItemStrike(msgid 24)`, which should never be sent by a vanilla client. (@LaoSparrow)
 
 ## TShock 5.2.1
 * Updated `TSPlayer.GodMode`. (@AgaSpace)
