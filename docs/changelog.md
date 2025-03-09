@@ -117,6 +117,9 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Added a property `TSPlayer.Hostile`, which gets pvp player mode. (@AgaSpace)
 * Fixed bug where when the `UseSqlLogs` config property is true, an empty log file would still get created. (@ZakFahey)
 * Fixed typo in `/gbuff`. (@sgkoishi, #2955)
+* Added a constructor for `TShockAPI.PlayerData` that accepts the `includingStarterInventory` parameter, which is responsible for loading the TShock inventory.
+* Declared the constructor `TShockAPI.PlayerData` accepting the argument `TShockAPI.TSPlayer` obsolete.
+* Updated the `PlayerData.StoreSlot` method: Added an overload that takes `TShockAPI.NetItem`.
 * Added `PlayerHooks.PrePlayerCommand` hook, which fired before command execution. (@AgaSpace)
 * Added `PlayerHooks.PostPlayerCommand` hook, which fired after command execution. (@AgaSpace)
 
