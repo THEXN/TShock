@@ -36,6 +36,7 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Improved checks on the previous state handling changes to prevent users from connecting and having activity on the server without fully completing the player handshake. (@ohayo)
 * Filtered outgoing data to clients that aren't fully connected, to improve the privacy of the server. (@ohayo)
 * Prevent spamming spawned enemies that aren't on the enemies list. (@ohayo)
+* Updated `GetDataHandlers` to ignore `NpcItemStrike(msgid 24)`, which should never be sent by a vanilla client. (@LaoSparrow)
 
 ## TShock 5.2.2
 * Fixed `/dump-reference-data` mutate the command names. (#2943, @sgkoishi)
