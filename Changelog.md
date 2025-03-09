@@ -15,6 +15,29 @@ Use past tense when adding new entries; sign your name off when you add or chang
   * If there is no section called "Upcoming changes" below this line, please add one with `## Upcoming changes` as the first line, and then a bulleted item directly after with the first change. -->
 
 ## Upcoming changes
+
+## TShock 5.2.3
+* Updated `TShockAPI.Handlers.SendTileRectHandler` (@LaoSparrow):
+  * Fixed incorrect validating range in `TileRectMatch.MatchRemoval`.
+  * Fixed tile rect changes (e.g. turning on and off campfires) are not synced between clients.
+  * Fixed unable to place Hat Rack without permission `tshock.ignore.sendtilesquare`.
+* Changed Bouncer to block updates which set the following fields to infinity or NaN: player position, projectile position, projectile velocity, item position, and item velocity. (@Arthri)
+* Rewrote bed spawning for SSC. (@PotatoCider)
+  * Removed `TSPlayer.s{X,Y}` in favour of using desyncing client and server spawnpoint values (`Terraria.Player.Spawn{X,Y}`) until the player has changed their spawnpoint per session.
+  * Partially fixed the bed spawning bug when SSC is enabled. Players would need to spawn at their beds at least once to tell TShock that the player's spawnpoint has changed.
+* Added a constructor for `TShockAPI.PlayerData` that accepts the `includingStarterInventory` parameter, which is responsible for loading the TShock inventory. (@AgaSpace)
+* Declared the constructor `TShockAPI.PlayerData` accepting the argument `TShockAPI.TSPlayer` obsolete. (@AgaSpace)
+* Updated the `PlayerData.StoreSlot` method: Added an overload that takes `TShockAPI.NetItem`. (@AgaSpace)
+* Added a new permission, `tshock.world.time.usemoondial`, for regulating use of Enchanted Moondial. (@Arthri)
+* Added a set of new permissions, `tshock.specialeffects.{type}`, for regulating use of new special effects(Packet 51) which are not yet recognized by TShock. (@Arthri)
+* Added check for `tshock.npc.summonboss` permission for Skeletron summoning. (@Arthri)
+* Fixed `DisableDungeonGuardian` disabling Skeletron summon instead. The config option is useless as of writing. (@Arthri)
+* Seed initial group database with default and guest names from config. (@drunderscore)
+* Improved checks on the previous state handling changes to prevent users from connecting and having activity on the server without fully completing the player handshake. (@ohayo)
+* Filtered outgoing data to clients that aren't fully connected, to improve the privacy of the server. (@ohayo)
+* Prevent spamming spawned enemies that aren't on the enemies list. (@ohayo)
+
+## TShock 5.2.2
 * Fixed `/dump-reference-data` mutate the command names. (#2943, @sgkoishi)
 * Added `ParryDamageBuff` (Striking Moment with Brand of the Inferno and shield) for player, updated `CursedInferno` buff for NPC (@sgkoishi, #3005)
 * Changed the use of `Player.active` to `TSPlayer.Active` for consistency. (@sgkoishi, #2939)
@@ -39,25 +62,6 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Added `PlayerHooks.PostPlayerCommand` hook, which fired after command execution. (@AgaSpace)
 * Detected invalid installations, by checking for a file named `TerrariaServer.exe`. (@drunderscore)
   * This made the two most common installation mistakes (extracting into the Terraria client directory, and extracting TShock 5 or newer into a TShock 4 or older install) prompt the user with a more useful diagnostic, rather than (likely) crashing moments later.
-* Updated `TShockAPI.Handlers.SendTileRectHandler` (@LaoSparrow):
-  * Fixed incorrect validating range in `TileRectMatch.MatchRemoval`.
-  * Fixed tile rect changes (e.g. turning on and off campfires) are not synced between clients.
-  * Fixed unable to place Hat Rack without permission `tshock.ignore.sendtilesquare`.
-* Changed Bouncer to block updates which set the following fields to infinity or NaN: player position, projectile position, projectile velocity, item position, and item velocity. (@Arthri)
-* Rewrote bed spawning for SSC. (@PotatoCider)
-  * Removed `TSPlayer.s{X,Y}` in favour of using desyncing client and server spawnpoint values (`Terraria.Player.Spawn{X,Y}`) until the player has changed their spawnpoint per session.
-  * Partially fixed the bed spawning bug when SSC is enabled. Players would need to spawn at their beds at least once to tell TShock that the player's spawnpoint has changed.
-* Added a constructor for `TShockAPI.PlayerData` that accepts the `includingStarterInventory` parameter, which is responsible for loading the TShock inventory. (@AgaSpace)
-* Declared the constructor `TShockAPI.PlayerData` accepting the argument `TShockAPI.TSPlayer` obsolete. (@AgaSpace)
-* Updated the `PlayerData.StoreSlot` method: Added an overload that takes `TShockAPI.NetItem`. (@AgaSpace)
-* Added a new permission, `tshock.world.time.usemoondial`, for regulating use of Enchanted Moondial. (@Arthri)
-* Added a set of new permissions, `tshock.specialeffects.{type}`, for regulating use of new special effects(Packet 51) which are not yet recognized by TShock. (@Arthri)
-* Added check for `tshock.npc.summonboss` permission for Skeletron summoning. (@Arthri)
-* Fixed `DisableDungeonGuardian` disabling Skeletron summon instead. The config option is useless as of writing. (@Arthri)
-* Seed initial group database with default and guest names from config. (@drunderscore)
-* Improved checks on the previous state handling changes to prevent users from connecting and having activity on the server without fully completing the player handshake. (@ohayo)
-* Filtered outgoing data to clients that aren't fully connected, to improve the privacy of the server. (@ohayo)
-* Prevent spamming spawned enemies that aren't on the enemies list. (@ohayo)
 
 ## TShock 5.2.1
 * Updated `TSPlayer.GodMode`. (@AgaSpace)
