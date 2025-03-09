@@ -106,6 +106,7 @@ Use past tense when adding new entries; sign your name off when you add or chang
   * Fixed incorrect validating range in `TileRectMatch.MatchRemoval`.
   * Fixed tile rect changes (e.g. turning on and off campfires) are not synced between clients.
   * Fixed unable to place Hat Rack without permission `tshock.ignore.sendtilesquare`.
+* Changed Bouncer to block updates which set the following fields to infinity or NaN: player position, projectile position, projectile velocity, item position, and item velocity. (@Arthri)
 
 ## TShock 5.2.1
 * Updated `TSPlayer.GodMode`. (@AgaSpace)
