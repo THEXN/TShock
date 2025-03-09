@@ -107,6 +107,9 @@ Use past tense when adding new entries; sign your name off when you add or chang
   * Fixed tile rect changes (e.g. turning on and off campfires) are not synced between clients.
   * Fixed unable to place Hat Rack without permission `tshock.ignore.sendtilesquare`.
 * Changed Bouncer to block updates which set the following fields to infinity or NaN: player position, projectile position, projectile velocity, item position, and item velocity. (@Arthri)
+* Rewrote bed spawning for SSC. (@PotatoCider)
+  * Removed `TSPlayer.s{X,Y}` in favour of using desyncing client and server spawnpoint values (`Terraria.Player.Spawn{X,Y}`) until the player has changed their spawnpoint per session.
+  * Partially fixed the bed spawning bug when SSC is enabled. Players would need to spawn at their beds at least once to tell TShock that the player's spawnpoint has changed.
 
 ## TShock 5.2.1
 * Updated `TSPlayer.GodMode`. (@AgaSpace)
