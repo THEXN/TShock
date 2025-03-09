@@ -117,6 +117,11 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Added a property `TSPlayer.Hostile`, which gets pvp player mode. (@AgaSpace)
 * Fixed bug where when the `UseSqlLogs` config property is true, an empty log file would still get created. (@ZakFahey)
 * Fixed typo in `/gbuff`. (@sgkoishi, #2955)
+
+Rewrote the Added a new permission, `tshock.world.time.usemoondial`, for regulating use of Enchanted Moondial. (@Arthri)
+* Added a set of new permissions, `tshock.specialeffects.{type}`, for regulating use of new special effects(Packet 51) which are not yet recognized by TShock. (@Arthri)
+* Added check for `tshock.npc.summonboss` permission for Skeletron summoning. (@Arthri)
+* Fixed `DisableDungeonGuardian` disabling Skeletron summon instead. The config option is useless as of writing. (@Arthri)
 * Added a constructor for `TShockAPI.PlayerData` that accepts the `includingStarterInventory` parameter, which is responsible for loading the TShock inventory.
 * Declared the constructor `TShockAPI.PlayerData` accepting the argument `TShockAPI.TSPlayer` obsolete.
 * Updated the `PlayerData.StoreSlot` method: Added an overload that takes `TShockAPI.NetItem`.
