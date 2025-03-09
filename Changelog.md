@@ -117,6 +117,7 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Added a set of new permissions, `tshock.specialeffects.{type}`, for regulating use of new special effects(Packet 51) which are not yet recognized by TShock. (@Arthri)
 * Added check for `tshock.npc.summonboss` permission for Skeletron summoning. (@Arthri)
 * Fixed `DisableDungeonGuardian` disabling Skeletron summon instead. The config option is useless as of writing. (@Arthri)
+* Seed initial group database with default and guest names from config. (@drunderscore)
 
 ## TShock 5.2.1
 * Updated `TSPlayer.GodMode`. (@AgaSpace)
