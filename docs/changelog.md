@@ -94,7 +94,9 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Added a hook `AccountHooks.AccountGroupUpdate`, which is called when you change the user group. (@AgaSpace)
 * * Ensured `TSPlayer.PlayerData` is non-null whilst syncing loadouts. (@drunderscore)
 * * Detected invalid installations, by checking for a file named `TerrariaServer.exe`. (@drunderscore)
-  * This made the two most common installation mistakes (extracting into the Terraria client directory, and extracting TShock 5 or newer into a TShock 4 or older install) prompt the user with a more useful diagnostic, rather than (likely) crashing moments later.
+  * This made the two most common installation mistakes (extracting into the Terraria client directory, and extracting TShock 5 or newer into a TShock 4 or older install) prompt the user with a more useful diagnostic, rather than (likely) crashing moments later. Rewrote bed spawning for SSC. (@PotatoCider)
+  * Removed `TSPlayer.s{X,Y}` in favour of using desyncing client and server spawnpoint values (`Terraria.Player.Spawn{X,Y}`) until the player has changed their spawnpoint per session.
+  * Partially fixed the bed spawning bug when SSC is enabled. Players would need to spawn at their beds at least once to tell TShock that the player's spawnpoint has changed.
 * Changed Bouncer to block updates which set the following fields to infinity or NaN: player position, projectile position, projectile velocity, item position, and item velocity. (@Arthri)
 * Updated `TShockAPI.Handlers.SendTileRectHandler` (@LaoSparrow):
   * Fixed incorrect validating range in `TileRectMatch.MatchRemoval`.
