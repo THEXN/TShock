@@ -110,6 +110,9 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Rewrote bed spawning for SSC. (@PotatoCider)
   * Removed `TSPlayer.s{X,Y}` in favour of using desyncing client and server spawnpoint values (`Terraria.Player.Spawn{X,Y}`) until the player has changed their spawnpoint per session.
   * Partially fixed the bed spawning bug when SSC is enabled. Players would need to spawn at their beds at least once to tell TShock that the player's spawnpoint has changed.
+* Added a constructor for `TShockAPI.PlayerData` that accepts the `includingStarterInventory` parameter, which is responsible for loading the TShock inventory. (@AgaSpace)
+* Declared the constructor `TShockAPI.PlayerData` accepting the argument `TShockAPI.TSPlayer` obsolete. (@AgaSpace)
+* Updated the `PlayerData.StoreSlot` method: Added an overload that takes `TShockAPI.NetItem`. (@AgaSpace)
 
 ## TShock 5.2.1
 * Updated `TSPlayer.GodMode`. (@AgaSpace)
