@@ -113,6 +113,10 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Added a constructor for `TShockAPI.PlayerData` that accepts the `includingStarterInventory` parameter, which is responsible for loading the TShock inventory. (@AgaSpace)
 * Declared the constructor `TShockAPI.PlayerData` accepting the argument `TShockAPI.TSPlayer` obsolete. (@AgaSpace)
 * Updated the `PlayerData.StoreSlot` method: Added an overload that takes `TShockAPI.NetItem`. (@AgaSpace)
+* Added a new permission, `tshock.world.time.usemoondial`, for regulating use of Enchanted Moondial. (@Arthri)
+* Added a set of new permissions, `tshock.specialeffects.{type}`, for regulating use of new special effects(Packet 51) which are not yet recognized by TShock. (@Arthri)
+* Added check for `tshock.npc.summonboss` permission for Skeletron summoning. (@Arthri)
+* Fixed `DisableDungeonGuardian` disabling Skeletron summon instead. The config option is useless as of writing. (@Arthri)
 
 ## TShock 5.2.1
 * Updated `TSPlayer.GodMode`. (@AgaSpace)
