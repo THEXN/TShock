@@ -118,6 +118,9 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Added check for `tshock.npc.summonboss` permission for Skeletron summoning. (@Arthri)
 * Fixed `DisableDungeonGuardian` disabling Skeletron summon instead. The config option is useless as of writing. (@Arthri)
 * Seed initial group database with default and guest names from config. (@drunderscore)
+* Improved checks on the previous state handling changes to prevent users from connecting and having activity on the server without fully completing the player handshake. (@ohayo)
+* Filtered outgoing data to clients that aren't fully connected, to improve the privacy of the server. (@ohayo)
+* Prevent spamming spawned enemies that aren't on the enemies list. (@ohayo)
 
 ## TShock 5.2.1
 * Updated `TSPlayer.GodMode`. (@AgaSpace)
