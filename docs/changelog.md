@@ -78,6 +78,33 @@ Use past tense when adding new entries; sign your name off when you add or chang
   * If there is no section called "Upcoming changes" below this line, please add one with `## Upcoming changes` as the first line, and then a bulleted item directly after with the first change. -->
 
 ## Upcoming changes
+* Added a variable for handshake (True upon spawn player), clients no longer notify others of their presence and cant chat if this is never set to true. (@ohayo)
+* Fixed a security issue with how bans are handled on join. (@ohayo)
+* Fixed `/dump-reference-data` mutate the command names. (#2943, @sgkoishi)
+* Added `ParryDamageBuff` (Striking Moment with Brand of the Inferno and shield) for player, updated `CursedInferno` buff for NPC (@sgkoishi, #3005)
+* Changed the use of `Player.active` to `TSPlayer.Active` for consistency. (@sgkoishi, #2939)
+* Fix typo in config for IP bans. (@redchess64)
+* Updated `TShockAPI.NetItem` (@AgaSpace):
+  * Added constructor overload with parameter `Terraria.Item`.
+  * Added the `ToItem` method to get a copy of `Terraria.Item`.
+  * In the constructor `stack` and `prefix` are now optional parameters.
+* Fixed unable to transfer long response body for REST API. (@sgkoishi, #2925)
+* Fixed the `/wind` command not being very helpful. (@punchready)
+* Fixed /help, /me, and /p commands can't work in non-English languages. (@ACaiCat)
+* Added a hook `AccountHooks.AccountGroupUpdate`, which is called when you change the user group. (@AgaSpace)
+* * Ensured `TSPlayer.PlayerData` is non-null whilst syncing loadouts. (@drunderscore)
+* * Detected invalid installations, by checking for a file named `TerrariaServer.exe`. (@drunderscore)
+  * This made the two most common installation mistakes (extracting into the Terraria client directory, and extracting TShock 5 or newer into a TShock 4 or older install) prompt the user with a more useful diagnostic, rather than (likely) crashing moments later. Rewrote bed spawning for SSC. (@PotatoCider)
+  * Removed `TSPlayer.s{X,Y}` in favour of using desyncing client and server spawnpoint values (`Terraria.Player.Spawn{X,Y}`) until the player has changed their spawnpoint per session.
+  * Partially fixed the bed spawning bug when SSC is enabled. Players would need to spawn at their beds at least once to tell TShock that the player's spawnpoint has changed.
+* Changed Bouncer to block updates which set the following fields to infinity or NaN: player position, projectile position, projectile velocity, item position, and item velocity. (@Arthri)
+* Updated `TShockAPI.Handlers.SendTileRectHandler` (@LaoSparrow):
+  * Fixed incorrect validating range in `TileRectMatch.MatchRemoval`.
+  * Fixed tile rect changes (e.g. turning on and off campfires) are not synced between clients.
+  * Fixed unable to place Hat Rack without permission `tshock.ignore.sendtilesquare`.
+* Updated `GetDataHandlers` to ignore `NpcItemStrike(msgid 24)`, which should never be sent by a vanilla client. (@LaoSparrow)
+
+## TShock 5.2.1
 * Updated `TSPlayer.GodMode`. (@AgaSpace)
   * Previously the field was used as some kind of dataset changed by /godmode command, but now it is a property that receives/changes data in journey mode.
 * Added the `TSPlayer.Client` property. It allows the developer to get the `RemoteClient` player, without an additional call to `Terraria.Netplay.Clients`. (@AgaSpace)
@@ -88,10 +115,13 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Added a method `TSPlayer.UpdateSection` with arguments `rectangle` and `isLoaded`, which will load some area from the server to the player. (@AgaSpace)
 * Added a method `TSPlayer.GiveItem`, which has `TShockAPI.NetItem` structure in its arguments. (@AgaSpace)
 * Added a property `TSPlayer.Hostile`, which gets pvp player mode. (@AgaSpace)
+* Fixed bug where when the `UseSqlLogs` config property is true, an empty log file would still get created. (@ZakFahey)
 * Fixed typo in `/gbuff`. (@sgkoishi, #2955)
 * Added a constructor for `TShockAPI.PlayerData` that accepts the `includingStarterInventory` parameter, which is responsible for loading the TShock inventory.
 * Declared the constructor `TShockAPI.PlayerData` accepting the argument `TShockAPI.TSPlayer` obsolete.
 * Updated the `PlayerData.StoreSlot` method: Added an overload that takes `TShockAPI.NetItem`.
+* Added `PlayerHooks.PrePlayerCommand` hook, which fired before command execution. (@AgaSpace)
+* Added `PlayerHooks.PostPlayerCommand` hook, which fired after command execution. (@AgaSpace)
 
 ## TShock 5.2
 * An additional option `pvpwithnoteam` is added at `PvPMode` to enable PVP with no team. (@CelestialAnarchy, #2617, @ATFGK)
@@ -125,7 +155,6 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Relaxed custom death message restrictions to allow Inferno potions in PvP. (@drunderscore)
 * Allowed Flower Boots to place Ash Flowers on Ash Grass blocks. (@punchready)
 * Removed unnecessary range check that artifically shortened quick stack reach. (@boddyn, #2885, @bcat)
-* Improved the exploit protection in tile rect handling. (@punchready)
 
 ## TShock 5.1.3
 * Added support for Terraria 1.4.4.9 via OTAPI 3.1.20. (@SignatureBeef)
