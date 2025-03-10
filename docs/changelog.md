@@ -94,7 +94,15 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Added a hook `AccountHooks.AccountGroupUpdate`, which is called when you change the user group. (@AgaSpace)
 * * Ensured `TSPlayer.PlayerData` is non-null whilst syncing loadouts. (@drunderscore)
 * * Detected invalid installations, by checking for a file named `TerrariaServer.exe`. (@drunderscore)
-  * This made the two most common installation mistakes (extracting into the Terraria client directory, and extracting TShock 5 or newer into a TShock 4 or older install) prompt the user with a more useful diagnostic, rather than (likely) crashing moments later.
+  * This made the two most common installation mistakes (extracting into the Terraria client directory, and extracting TShock 5 or newer into a TShock 4 or older install) prompt the user with a more useful diagnostic, rather than (likely) crashing moments later. Rewrote bed spawning for SSC. (@PotatoCider)
+  * Removed `TSPlayer.s{X,Y}` in favour of using desyncing client and server spawnpoint values (`Terraria.Player.Spawn{X,Y}`) until the player has changed their spawnpoint per session.
+  * Partially fixed the bed spawning bug when SSC is enabled. Players would need to spawn at their beds at least once to tell TShock that the player's spawnpoint has changed.
+* Changed Bouncer to block updates which set the following fields to infinity or NaN: player position, projectile position, projectile velocity, item position, and item velocity. (@Arthri)
+* Updated `TShockAPI.Handlers.SendTileRectHandler` (@LaoSparrow):
+  * Fixed incorrect validating range in `TileRectMatch.MatchRemoval`.
+  * Fixed tile rect changes (e.g. turning on and off campfires) are not synced between clients.
+  * Fixed unable to place Hat Rack without permission `tshock.ignore.sendtilesquare`.
+* Updated `GetDataHandlers` to ignore `NpcItemStrike(msgid 24)`, which should never be sent by a vanilla client. (@LaoSparrow)
 
 ## TShock 5.2.1
 * Updated `TSPlayer.GodMode`. (@AgaSpace)
@@ -109,6 +117,14 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Added a property `TSPlayer.Hostile`, which gets pvp player mode. (@AgaSpace)
 * Fixed bug where when the `UseSqlLogs` config property is true, an empty log file would still get created. (@ZakFahey)
 * Fixed typo in `/gbuff`. (@sgkoishi, #2955)
+
+Rewrote the Added a new permission, `tshock.world.time.usemoondial`, for regulating use of Enchanted Moondial. (@Arthri)
+* Added a set of new permissions, `tshock.specialeffects.{type}`, for regulating use of new special effects(Packet 51) which are not yet recognized by TShock. (@Arthri)
+* Added check for `tshock.npc.summonboss` permission for Skeletron summoning. (@Arthri)
+* Fixed `DisableDungeonGuardian` disabling Skeletron summon instead. The config option is useless as of writing. (@Arthri)
+* Added a constructor for `TShockAPI.PlayerData` that accepts the `includingStarterInventory` parameter, which is responsible for loading the TShock inventory.
+* Declared the constructor `TShockAPI.PlayerData` accepting the argument `TShockAPI.TSPlayer` obsolete.
+* Updated the `PlayerData.StoreSlot` method: Added an overload that takes `TShockAPI.NetItem`.
 * Added `PlayerHooks.PrePlayerCommand` hook, which fired before command execution. (@AgaSpace)
 * Added `PlayerHooks.PostPlayerCommand` hook, which fired after command execution. (@AgaSpace)
 
