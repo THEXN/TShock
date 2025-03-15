@@ -15,6 +15,12 @@ Use past tense when adding new entries; sign your name off when you add or chang
   * If there is no section called "Upcoming changes" below this line, please add one with `## Upcoming changes` as the first line, and then a bulleted item directly after with the first change. -->
 
 ## Upcoming changes
+* Deleted `tsCharacter` table will no longer result in empty inventory, but starter ones. (@sgkoishi)
+* [World-based permanent boosters](https://terraria.wiki.gg/wiki/Consumables#Permanent_boosters) like [`Advanced Combat Techniques`](https://terraria.wiki.gg/wiki/Advanced_Combat_Techniques) and [`Peddler's Satchel`](https://terraria.wiki.gg/wiki/Peddler%27s_Satchel) requires their corresponding permission instead of `summonboss`. (@sgkoishi)
+
+<hr>
+
+* `converthardmode` was removed more than 10 years ago in 7f5ee04 (@sgkoishi)
 
 ## TShock 5.2.3
 * Updated `TShockAPI.Handlers.SendTileRectHandler` (@LaoSparrow):
