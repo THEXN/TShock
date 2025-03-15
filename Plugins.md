@@ -9,3 +9,10 @@ Plugins supplied by the community may harm your computer or cause you to experie
 * [TShock中文插件搜集仓库 | TShock Chinese Plugin Collection](https://github.com/UnrealMultiple/TShockPlugin) by [UnrealMultiple](https://github.com/UnrealMultiple)
   * 这是一个致力于收集整合 TShock中文插件的仓库，我们将持续收集优质的 TShock 中文插件，并及时进行更新.
   * This is a repository dedicated to collecting and integrating TShock Chinese plugins. We will continue to collect high-quality TShock Chinese plugins and update them in a timely manner.
+
+# Plugin frameworks
+
+Here is a list of tools to help make developing plugins easier:
+
+* [Easy Commands](https://github.com/ZakFahey/easy-commands-tshock) by [GameRoom](/ZakFahey)
+  * This is a development library for C# that makes it easier to write commands in your TShock plugins. If you have a multi-server proxy, you can use the base library as a command parser there as well.
