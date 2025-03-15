@@ -9,6 +9,8 @@ Plugins supplied by the community may harm your computer or cause you to experie
 * [TShock中文插件搜集仓库 | TShock Chinese Plugin Collection](https://github.com/UnrealMultiple/TShockPlugin) by [UnrealMultiple](https://github.com/UnrealMultiple)
   * 这是一个致力于收集整合 TShock中文插件的仓库，我们将持续收集优质的 TShock 中文插件，并及时进行更新.
   * This is a repository dedicated to collecting and integrating TShock Chinese plugins. We will continue to collect high-quality TShock Chinese plugins and update them in a timely manner.
+* [AutoTeam](https://github.com/CyberBotX/TShock_AutoTeam) by [CyberBotX](https://github.com/CyberBotX)
+  * A plugin to automatically join a player to their previous team (if any) on connect. No configuration required, previous team is stored in the TShock database.
 
 # Plugin frameworks
 
