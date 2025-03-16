@@ -1,14 +1,14 @@
 ## tshock.accountinfo.details
 Player can see advanced information about any user account.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.ignore.sendtilesquare
 Allow unrestricted SendTileSquare usage, for client side world editing.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.ignore.dropbanneditem
 Allow dropping banned items without the item being eaten.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.annoy
 User can annoy others.
@@ -24,7 +24,7 @@ User can ban others.
 
 ## tshock.world.time.bloodmoon
 User can force a blood moon.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.admin.broadcast
 User can broadcast messages.
@@ -44,11 +44,11 @@ User can kill all enemy npcs.
 
 ## tshock.ignore.ssc
 Bypass server side character checks.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.world.modify
 User can modify the world.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.account.changepassword
 User can change password in game.
@@ -56,7 +56,7 @@ User can change password in game.
 
 ## tshock.canchat
 Player can chat.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.account.login
 User can login in game.
@@ -68,7 +68,7 @@ User can logout in game.
 
 ## tshock.world.paint
 User can paint tiles.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.partychat
 User can use party chat in game.
@@ -84,11 +84,11 @@ User can talk in third person.
 
 ## tshock.projectiles.usebanned
 Player can use banned projectiles.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.tiles.usebanned
 Player can place banned tiles.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.cfg.password
 User can edit the server password.
@@ -112,7 +112,7 @@ User can clear the list of users who have completed an angler quest that day.
 
 ## tshock.world.converthardmode
 User can convert hallow into corruption and vice-versa.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.cfg.createdumps
 User can create reference files of Terraria IDs and the permission matrix in the server folder.
@@ -120,11 +120,11 @@ User can create reference files of Terraria IDs and the permission matrix in the
 
 ## tshock.tp.demonconch
 User can use the Demon Conch.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.world.time.dropmeteor
 User can drop a meteor.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.world.setdungeon
 User can set the dungeon's location.
@@ -132,11 +132,11 @@ User can set the dungeon's location.
 
 ## tshock.world.time.eclipse
 User can force an eclipse.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.world.editregion
 Allows you to edit regions.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.world.editspawn
 Allows you to edit the spawn.
@@ -144,7 +144,7 @@ Allows you to edit the spawn.
 
 ## tshock.world.time.fullmoon
 User can force a full moon.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.tp.getpos
 User can get the position of players.
@@ -160,7 +160,7 @@ Player recovers health as damage is taken.  Can be one shotted.
 
 ## tshock.godmode.other
 User can godmode other players.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.world.grow
 User can grow plants.
@@ -168,7 +168,7 @@ User can grow plants.
 
 ## tshock.world.growevil
 User can grow evil biome plants.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.world.sethalloween
 User can force the server to Halloween mode.
@@ -188,59 +188,59 @@ User can use /home.
 
 ## tshock.npc.hurttown
 User can hurt town NPCs.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.ignore.damage
 Prevents your actions from being ignored if damage is too high.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.ignore.hp
 Prevents you from being disabled by abnormal HP.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.ignore.removetile
 Prevents you from being reverted by kill tile abuse detection.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.ignore.liquid
 Prevents you from being disabled by liquid set abuse detection.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.ignore.mp
 Prevents you from being disabled by abnormal MP.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.ignore.npcbuff
 Prevents your from being kicked by npc buff hack detection.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.ignore.paint
 Prevents you from being disabled by paint abuse detection.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.ignore.placetile
 Prevents you from being reverted by place tile abuse detection.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.ignore.projectile
 Prevents you from being disabled by projectile abuse detection.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.ignore.itemstack
 Prevents you from being disabled by stack hack detection.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.admin.noban
 Prevents you from being banned.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.admin.nokick
 Prevents you from being kicked.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.npc.invade
 User can start an invasion. Warning: high network use. Easy to abuse.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.item.spawn
 User can spawn items.
@@ -248,55 +248,55 @@ User can spawn items.
 
 ## tshock.journey.biomespreadfreeze
 User can use Creative UI to stop the biome spread of the world.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.journey.research
 User can contribute research by sacrificing items
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.journey.godmode
 User can use Creative UI to toggle character godmode.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.journey.placementrange
 User can use Creative UI to toggle increased placement range.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.journey.rain.freeze
 User can use Creative UI to stop the world rain strength from changing.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.journey.rain.strength
 User can use Creative UI to set world rain strength/seed.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.journey.setdifficulty
 User can use Creative UI to set world difficulty/mode.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.journey.setspawnrate
 User can use Creative UI to set the NPC spawn rate of the world.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.journey.time.freeze
 User can use Creative UI freeze time.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.journey.time.set
 User can use Creative UI to set world time.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.journey.time.setspeed
 User can use Creative UI to set world time speed.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.journey.wind.freeze
 User can use Creative UI to stop the world wind strength from changing.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.journey.wind.strength
 User can use Creative UI to set world wind strength/seed.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.admin.kick
 User can kick others.
@@ -312,7 +312,7 @@ Specific log messages are sent to users with this permission.
 
 ## tshock.tp.magicconch
 User can use the Magic Conch.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.cfg.maintenance
 User is notified when an update is available, user can turn off / restart the server.
@@ -320,11 +320,11 @@ User is notified when an update is available, user can turn off / restart the se
 
 ## tshock.world.events.bloodmoon
 User can use the 'bloodmoon' subcommand of the 'worldevent' command
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.world.events.eclipse
 User can use the 'eclipse' subcommand of the 'worldevent' command
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.world.events
 User can use the 'worldevent' command
@@ -332,7 +332,7 @@ User can use the 'worldevent' command
 
 ## tshock.world.events.fullmoon
 User can use the 'fullmoon' subcommand of the 'worldevent' command
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.admin.group
 User can manage groups.
@@ -340,7 +340,7 @@ User can manage groups.
 
 ## tshock.world.events.invasion
 User can use the 'invasion' subcommand of the 'worldevent' command
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.admin.itemban
 User can manage item bans.
@@ -348,11 +348,11 @@ User can manage item bans.
 
 ## tshock.world.events.lanternsnight
 User can use the 'lanternsnight' subcommand of the 'worldevent' command
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.world.events.meteor
 User can use the 'meteor' subcommand of the 'worldevent' command
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.admin.projectileban
 User can manage projectile bans.
@@ -360,7 +360,7 @@ User can manage projectile bans.
 
 ## tshock.world.events.rain
 User can use the 'rain' subcommand of the 'worldevent' command
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.admin.region
 User can manage regions.
@@ -368,7 +368,7 @@ User can manage regions.
 
 ## tshock.world.events.sandstorm
 User can use the 'sandstorm' subcommand of the 'worldevent' command
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.admin.tileban
 User can manage tile bans.
@@ -376,7 +376,7 @@ User can manage tile bans.
 
 ## tshock.admin.warp
 User can manage warps.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.npc.maxspawns
 User can edit the max spawns.
@@ -384,7 +384,7 @@ User can edit the max spawns.
 
 ## tshock.world.movenpc
 User can change the homes of NPCs.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.admin.mute
 User can mute and unmute users.
@@ -392,11 +392,11 @@ User can mute and unmute users.
 
 ## tshock.tp.pylon
 User can use pylons to teleport
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.world.rain
 User can turn on or off the rain.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.npc.rename
 User can rename NPCs.
@@ -404,7 +404,7 @@ User can rename NPCs.
 
 ## tshock.reservedslot
 Allows you to bypass the max slots for up to 5 slots above your max.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.respawn
 Player can respawn themselves.
@@ -412,15 +412,15 @@ Player can respawn themselves.
 
 ## tshock.respawn.other
 Player can respawn others.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.tp.rod
 User can use the Rod of Discord.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.world.sandstorm
 User can turn on or off sandstorms.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.admin.savessi
 User can save all the players SSI (server side character) state.
@@ -428,11 +428,11 @@ User can save all the players SSI (server side character) state.
 
 ## tshock.admin.seeplayerids
 User can see the id of players with /who.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.sendemoji
 Player can send emotes.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.info
 User can get the server info.
@@ -460,7 +460,7 @@ User can spawn npcs.
 
 ## tshock.npc.spawnpets
 User can spawn pets. Warning: high network use. Easy to abuse.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.npc.spawnrate
 User can edit the spawnrate.
@@ -468,11 +468,11 @@ User can edit the spawnrate.
 
 ## tshock.npc.startdd2
 User can start the dd2 event.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.npc.startinvasion
 User can start invasions (Goblin/Snow Legion) using items.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.su
 Allows a user to elevate to superadmin for 10 minutes.
@@ -480,7 +480,7 @@ Allows a user to elevate to superadmin for 10 minutes.
 
 ## tshock.npc.summonboss
 User can summon bosses using items.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.synclocalarea
 Player can resync themselves with server state.
@@ -496,7 +496,7 @@ User can change expert state.
 
 ## tshock.world.toggleparty
 Player can toggle party event.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.tp.self
 User can teleport to others.
@@ -504,7 +504,7 @@ User can teleport to others.
 
 ## tshock.tp.allothers
 User can teleport *everyone* to them.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.tp.block
 Users can stop people from teleporting.
@@ -520,7 +520,7 @@ User can teleport other people.
 
 ## tshock.tp.override
 Users can override teleport blocks.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.tp.pos
 User can teleport to tile positions.
@@ -528,11 +528,11 @@ User can teleport to tile positions.
 
 ## tshock.tp.tppotion
 User can use Teleportation Potions.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.tp.silent
 Users can teleport to people without showing a notice
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.ssc.upload
 User can upload their joined character data as SSC data.
@@ -540,11 +540,15 @@ User can upload their joined character data as SSC data.
 
 ## tshock.ssc.upload.others
 User can upload other players join data to the SSC database.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.item.usebanned
 Allows you to use banned items.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
+
+## tshock.world.time.usemoondial
+Player can use the Enchanted Moondial item.
+* **Commands**: `No associated commands.`
 
 ## tshock.superadmin.user
 Meant for super admins only.
@@ -556,7 +560,7 @@ User can get other users' info.
 
 ## tshock.world.time.usesundial
 Player can use the Enchanted Sundial item.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.warp
 User can use warps.
@@ -590,9 +594,13 @@ User can settle liquids.
 User can set the world spawn.
 * **Commands**: `/setspawn`
 
+## tshock.world.worldupgrades
+User can use world-based permanent boosters like Advanced Combat Techniques
+* **Commands**: `No associated commands.`
+
 ## tshock.tp.wormhole
 User can use wormhole potions.
-* **Commands**: `None`
+* **Commands**: `No associated commands.`
 
 ## tshock.world.setxmas
 User can force the server to Christmas mode.
