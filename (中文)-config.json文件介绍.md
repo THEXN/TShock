@@ -14,7 +14,7 @@
 * **默认值**: `True`
 
 ## AllowCutTilesAndBreakables  
-允许玩家在通常无法建造的地方破坏临时方块（草、罐子等）。
+允许玩家在通常无法建造的地方破坏临时方块（草、罐子等）。*
 * **字段类型**: `Boolean`
 * **默认值**: `False`
 
@@ -64,7 +64,8 @@
 * **默认值**: `10`
 
 ## BackupKeepFor  
-备份保留多长时间，以分钟计。例如：2880 = 2天
+备份保留多长时间，以分钟计。
+例如：2880 = 2天
 * **字段类型**: `Int32`
 * **默认值**: `240`
 
@@ -304,7 +305,8 @@
 * **默认值**: `False`
 
 ## InvasionMultiplier  
-确定入侵事件的大小。计算入侵大小的公式是100 + (multiplier * (active players with greater than 200 health的数量))
+确定入侵事件的大小。
+计算入侵大小的公式是100 + (multiplier * (active players with greater than 200 health的数量))
 * **字段类型**: `Int32`
 * **默认值**: `1`
 
@@ -313,47 +315,47 @@
 * **字段类型**: `Boolean`
 * **默认值**: `False`
 
-## 伤害阈值超限时踢出玩家  
+## KickOnDamageThresholdBroken  
 当用户超过最大伤害阈值时是否踢出。
 * **字段类型**: `Boolean`
 * **默认值**: `False`
 
-## 硬核模式死亡时踢出  
+## KickOnHardcoreDeath  
 硬核模式玩家死亡时是否踢出。
 * **字段类型**: `Boolean`
 * **默认值**: `False`
 
-## 治疗他人阈值超限时踢出  
+## KickOnHealOtherThresholdBroken  
 当用户超过治疗他人阈值时是否踢出。
 * **字段类型**: `Boolean`
 * **默认值**: `False`
 
-## 中核模式死亡时踢出  
+## KickOnMediumcoreDeath  
 中核模式玩家死亡时是否踢出。
 * **字段类型**: `Boolean`
 * **默认值**: `False`
 
-## 抛射物阈值超限时踢出  
+## KickOnProjectileThresholdBroken  
 当用户超过射弹阈值时是否踢出。
 * **字段类型**: `Boolean`
 * **默认值**: `False`
 
-## 方块破坏阈值超限时踢出  
+## KickOnTileKillThresholdBroken  
 当用户超过方块破坏阈值时是否踢出。
 * **字段类型**: `Boolean`
 * **默认值**: `False`
 
-## 方块液体操作阈值超限时踢出  
-当用户超过方块液体操作阈值时是否踢出。
+## KickOnTileLiquidThresholdBroken  
+当用户超过液体操作阈值时是否踢出。
 * **字段类型**: `Boolean`
 * **默认值**: `False`
 
-## 方块涂色阈值超限时踢出  
-当用户超过方块涂色阈值时是否踢出。
+## KickOnTilePaintThresholdBroken  
+当用户超过方块刷漆阈值时是否踢出。
 * **字段类型**: `Boolean`
 * **默认值**: `False`
 
-## 方块放置阈值超限时踢出  
+## KickOnTilePlaceThresholdBroken  
 当用户超过方块放置阈值时是否踢出。
 * **字段类型**: `Boolean`
 * **默认值**: `False`
@@ -475,7 +477,7 @@
 * **默认值**: `True`
 
 ## PvPMode  
-设置PvP模式。有效类型包括："normal"（正常）、"always"（始终开启）和"disabled"（禁用）。
+设置PvP模式。有效类型包括："normal"（正常）、"always"（始终开启），"pvpwithnoteam"（始终开启且禁止组队）和"disabled"（禁用）。
 * **字段类型**: `String`
 * **默认值**: `normal`
 
@@ -606,17 +608,20 @@ sqlite数据库的路径。
 * **默认值**: `tshock.sqlite`
 
 ## StatueSpawn200  
-一个雕像在200像素(?)(12.5格)内可以生成的NPC数量，之后才会停止生成。默认 = 3。
+一个雕像在200像素(?)(12.5格)内可以生成的NPC数量，之后才会停止生成。
+默认 = 3。
 * **字段类型**: `Int32`
 * **默认值**: `3`
 
 ## StatueSpawn600  
-一个雕像在600像素(?)(37.5格)内可以生成的NPC数量，之后才会停止生成。默认 = 6。
+一个雕像在600像素(?)(37.5格)内可以生成的NPC数量，之后才会停止生成。
+默认 = 6。
 * **字段类型**: `Int32`
 * **默认值**: `6`
 
 ## StatueSpawnWorld  
-一个雕像可以生成的NPC总数，之后才会停止生成。默认 = 10。
+一个雕像可以生成的NPC总数，之后才会停止生成。
+默认 = 10。
 * **字段类型**: `Int32`
 * **默认值**: `10`
 
@@ -631,7 +636,9 @@ sqlite数据库的路径。
 * **默认值**: `(Super Admin) `
 
 ## SuperAdminChatRGB  
-超级管理员组的聊天颜色。#.#.# = 红/绿/蓝 最大值：255
+超级管理员组的聊天颜色。
+#.#.# = 红/绿/蓝 
+最大值：255
 * **字段类型**: `Int32[]`
 * **默认值**: `System.Int32[]`
 
@@ -672,6 +679,7 @@ The superadmin chat suffix.
 
 ## UseSqlLogs  
 是否将日志保存到SQL数据库而不是文本文件。
+默认值 = false.
 * **字段类型**: `Boolean`
 * **默认值**: `False`
 
@@ -679,4 +687,9 @@ The superadmin chat suffix.
 当玩家因未加入白名单而被踢出时显示的原因。
 * **字段类型**: `String`
 * **默认值**: `You are not on the whitelist.`
+
+## WorldTileProvider  
+允许更改默认的世界图块生成器。有效类型包括："default", "constileation"和"heaptile"。
+* **字段类型**: `String`
+* **默认值**: `default`
 
