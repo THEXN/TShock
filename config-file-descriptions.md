@@ -160,7 +160,7 @@ Allows you to disable or enable protection against creating custom messages with
 * **Default**: `True`
 
 ## DisableDefaultIPBan  
-Disbales IP bans by default, if no arguments are passed to the ban command.
+Disables IP bans by default, if no arguments are passed to the ban command.
 * **Field type**: `Boolean`
 * **Default**: `False`
 
@@ -477,7 +477,7 @@ Whether or not to ignore shrapnel from crystal bullets for the projectile thresh
 * **Default**: `True`
 
 ## PvPMode  
-Sets the PvP mode. Valid types are: "normal", "always" and "disabled".
+Sets the PvP mode. Valid types are: "normal", "always", "pvpwithnoteam" and "disabled".
 * **Field type**: `String`
 * **Default**: `normal`
 
@@ -687,4 +687,9 @@ Default = false.
 The reason given when kicking players for not being on the whitelist.
 * **Field type**: `String`
 * **Default**: `You are not on the whitelist.`
+
+## WorldTileProvider  
+Allows changing of the default world tile provider.
+* **Field type**: `String`
+* **Default**: `default`
 
