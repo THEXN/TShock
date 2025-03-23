@@ -7,10 +7,15 @@ Plugins supplied by the community may harm your computer or cause you to experie
 # Modern plugins
 
 * [TShock中文插件搜集仓库 | TShock Chinese Plugin Collection](https://github.com/UnrealMultiple/TShockPlugin) by [UnrealMultiple](https://github.com/UnrealMultiple)
-  * 这是一个致力于收集整合 TShock中文插件的仓库，我们将持续收集优质的 TShock 中文插件，并及时进行更新.
-  * This is a repository dedicated to collecting and integrating TShock Chinese plugins. We will continue to collect high-quality TShock Chinese plugins and update them in a timely manner.
+  * 这是一个收集整合 TShock中文插件的仓库。
+  * This is a collection of plugins that support Chinese (including both translated and original), with some also available in other languages including English, Spanish, and Russian.
 * [AutoTeam](https://github.com/CyberBotX/TShock_AutoTeam) by [CyberBotX](https://github.com/CyberBotX)
   * A plugin to automatically join a player to their previous team (if any) on connect. No configuration required, previous team is stored in the TShock database.
+* [Chireiden.TShock.Omni](https://github.com/sgkoishi/yaaiomni) by [SGKoishi](https://github.com/sgkoishi)
+  * A miscellaneous plugin that provides many random features a server might need. It also backports some of the fixes to outdated TShock versions.
+    * Player wildcards, command hide/rename and loops, run as others, missing permission lookup, chat spam restrictions, character export/reset, wildcard bans, language and other changes, soundness fixes, etc.
+    * The satellite plugin Chireiden.TShock.Omni.Misc provides some less commonly used features for debugging, troubleshooting and minigames.
+    * The satellite tool SourceGen is a simple generator helps the development.
 
 # Plugin frameworks
 
