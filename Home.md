@@ -63,8 +63,8 @@ On Apple Silicon, you can run TShock using Rosetta 2. This is done by using the 
 1. **Do not install `dotnet` from homebrew**. Instead, install the [.NET 6 SDK for x86](https://dotnet.microsoft.com/en-us/download).
 1. Add the `x64` version of .NET to your path: `export PATH=$PATH:/usr/local/share/dotnet/x64/`.
 1. If you haven't already installed, Rosetta 2, run `sudo softwareupdate --install-rosetta --agree-to-license` in your terminal.
+1. Run `xattr -r -d com.apple.quarantine TShock.Server` in the terminal. This will remove the `com.apple.quarantine` flag that prevents you from opening TShock.
 1. Run `./TShock.Server` in the terminal.
-    * If you get a prompt indicating that you can't run `TShock.Server` because Apple can't check it for malicious software, right click on `TShock.Server` in Finder, then select "Open" and then choose Terminal. You will then be prompted to bypass system security. Click "open" on the prompt asking to bypass system security. If you've done this correctly, you can run `TShock.Server` from terminal without needing to do this again.
 
 If you get an error that looks like this:
 
