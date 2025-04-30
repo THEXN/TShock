@@ -18,7 +18,7 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Deleted `tsCharacter` table will no longer result in empty inventory, but starter ones. (@sgkoishi)
 * [World-based permanent boosters](https://terraria.wiki.gg/wiki/Consumables#Permanent_boosters) like [`Advanced Combat Techniques`](https://terraria.wiki.gg/wiki/Advanced_Combat_Techniques) and [`Peddler's Satchel`](https://terraria.wiki.gg/wiki/Peddler%27s_Satchel) requires their corresponding permission instead of `summonboss`. (@sgkoishi)
 * Note: `converthardmode` was removed more than 10 years ago in 7f5ee04. (@sgkoishi)
-
+* Fix mobile player see others "break" after respawning (@ACaiCat)
 ## TShock 5.2.3
 * Updated `TShockAPI.Handlers.SendTileRectHandler` (@LaoSparrow):
   * Fixed incorrect validating range in `TileRectMatch.MatchRemoval`.
