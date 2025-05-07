@@ -5,7 +5,8 @@ Plugins supplied by the community may harm your computer or cause you to experie
 <!-- Plugin authors: Please link to your GitHub repositories or other source code repositories. Do not link to direct DLL downloads. From your source code repository or plugin page, please direct users to your trusted downloads. -->
 
 # Modern plugins
-
+* [BanGuard plugin](https://github.com/BanGuard-TShock/plugin) by the [BanGuard team](https://github.com/BanGuard-TShock)
+  * Lets Terraria admins share bans and verify accounts via Discord.
 * [TShock中文插件搜集仓库 | TShock Chinese Plugin Collection](https://github.com/UnrealMultiple/TShockPlugin) by [UnrealMultiple](https://github.com/UnrealMultiple)
   * 这是一个收集整合 TShock中文插件的仓库。
   * This is a collection of plugins that support Chinese (including both translated and original), with some also available in other languages including English, Spanish, and Russian.
