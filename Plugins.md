@@ -6,7 +6,7 @@ Plugins supplied by the community may harm your computer or cause you to experie
 
 # Modern plugins
 * [BanGuard plugin](https://github.com/BanGuard-TShock/plugin) by the [BanGuard team](https://github.com/BanGuard-TShock)
-  * Lets Terraria admins share bans and verify accounts via Discord.
+  * BanGuard (plugin) is a powerful TShock plugin that connects directly to the BanGuard API, enabling Terraria servers to share categorized ban data across a secure network for improved moderation and decision-making. It also streamlines account verification by linking Terraria and Discord accounts, allowing players to verify their identity once for faster and more secure access across all connected servers.
 * [TShock中文插件搜集仓库 | TShock Chinese Plugin Collection](https://github.com/UnrealMultiple/TShockPlugin) by [UnrealMultiple](https://github.com/UnrealMultiple)
   * 这是一个收集整合 TShock中文插件的仓库。
   * This is a collection of plugins that support Chinese (including both translated and original), with some also available in other languages including English, Spanish, and Russian.
