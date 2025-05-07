@@ -2,7 +2,7 @@
   <img src="https://tshock.s3.us-west-001.backblazeb2.com/newlogo.png" alt="TShock for Terraria"><br />
 </p>
 
-* Download: [official](https://silverhostserver.com/12332/) or [experimental](#experimental-downloads).
+* Download: [official](https://github.com/TShock/TShock/releases) or [experimental](#experimental-downloads).
 * Download: [plugins](https://github.com/topics/tshock-plugin) that work with TShock, [OTAPI](https://github.com/topics/otapi), TSAPI, and Terraria.
 * Join [Discord](https://discord.gg/Cav9nYX).
 * Talk on [GitHub discussions](https://github.com/Pryaxis/TShock/discussions) to ask for help, chat, and other things. This is the best way to get help if Discord isn't your thing.
@@ -20,7 +20,7 @@ Generally, TShock needs at least 1GB of memory, but alternative tile providers m
 
 1. If you're on Windows 10 or another operating system, install the [.NET Runtime version 6.x](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) or the .NET SDK 6.x if you're intending to build and develop plugins. If you're on Windows 11 22H2 or later, you probably already have .NET 6 installed.
 
-1. Download [the latest stable version](https://silverhostserver.com/12332/) and `unzip` the folder using your favorite unzip tool. Make sure that all of the files in the zip get into one folder. This is where your server will be stored. The file structure looks like this:
+1. Download [the latest stable version](https://github.com/TShock/TShock/releases) and `unzip` the folder using your favorite unzip tool. Make sure that all of the files in the zip get into one folder. This is where your server will be stored. The file structure looks like this:
 
           TShock.Server.exe
           bin\
