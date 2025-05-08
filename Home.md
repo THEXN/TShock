@@ -2,7 +2,7 @@
   <img src="https://tshock.s3.us-west-001.backblazeb2.com/newlogo.png" alt="TShock for Terraria"><br />
 </p>
 
-* Download: [official](https://github.com/TShock/TShock/releases) or [experimental](#experimental-downloads).
+* Download: [official stable and pre-releases](https://github.com/TShock/TShock/releases) of TShock or [experimental](#experimental-downloads).
 * Download: [plugins](https://github.com/Pryaxis/TShock/wiki/Plugins) that work with TShock, [plugins that work with OTAPI](https://github.com/topics/otapi), TSAPI, and Terraria.
 * Join [Discord](https://discord.gg/Cav9nYX).
 * Talk on [GitHub discussions](https://github.com/Pryaxis/TShock/discussions) to ask for help, chat, and other things. This is the best way to get help if Discord isn't your thing.
