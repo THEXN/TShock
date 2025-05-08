@@ -20,6 +20,7 @@ Use past tense when adding new entries; sign your name off when you add or chang
 * Note: `converthardmode` was removed more than 10 years ago in 7f5ee04. (@sgkoishi)
 * Fix mobile player see others "break" after respawning (@ACaiCat)
 * Fix Console title not updating and world not saving when last player disconnects (@Fraku-64)
+* Added pet spawning permission to default group, on groups database seeding (@SakuraIsayeki)
 ## TShock 5.2.3
 * Updated `TShockAPI.Handlers.SendTileRectHandler` (@LaoSparrow):
   * Fixed incorrect validating range in `TileRectMatch.MatchRemoval`.
