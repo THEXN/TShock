@@ -4,7 +4,7 @@ Plugins supplied by the community may harm your computer or cause you to experie
 
 <!-- Plugin authors: Please link to your GitHub repositories or other source code repositories. Do not link to direct DLL downloads. From your source code repository or plugin page, please direct users to your trusted downloads. -->
 
-A historical list of plugins is available on [the old repository](https://github.com/Pryaxis/Plugins/), and you can find others [on github](https://github.com/topics/tshock-plugin), and on our Discord server.
+A historical list of plugins is available on [the old repository](https://github.com/Pryaxis/Plugins/), and you can find others [on github](https://github.com/topics/tshock-plugin), and on our [Discord server](https://discord.gg/Cav9nYX).
 
 # Modern plugins
 * [BanGuard plugin](https://github.com/BanGuard-TShock/plugin) by the [BanGuard team](https://github.com/BanGuard-TShock)
