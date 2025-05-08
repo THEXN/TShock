@@ -1,4 +1,4 @@
-This is a list of TShock plugins supplied by the community.
+This is a list of TShock plugins supplied by the community. If you build TShock plugins, you can add your plugins here.
 
 Plugins supplied by the community may harm your computer or cause you to experience untold catastrophic damage. Only install plugins from people you trust. These plugins are supplied by the community -- and TShock does not evaluate the safety or security of individual plugins or maintainers at this time.
 
