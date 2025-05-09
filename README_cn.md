@@ -30,9 +30,9 @@ TShock是为泰拉瑞亚服务器和社区开发的一个工具箱。这个工�
 如果要生成打包后的发行版，运行：
 
 1. `cd TShockLauncher`
-1. `dotnet publish -r win-x64 -f net6.0 -c Release -p:PublishSingleFile=true --self-contained false`
+1. `dotnet publish -r win-x64 -f net9.0 -c Release -p:PublishSingleFile=true --self-contained false`
 
-注意在这个例子中你将会生成`win-x64`架构的版本。你也可以生成`win-x64`、`osx-x64`、`linux-x64`、`linux-arm64`、`linux-arm`的版本。你可以在`TShockLauncher/bin/Release/net6.0/`文件夹下对应架构的文件夹里找到生成后的发行版。
+注意在这个例子中你将会生成`win-x64`架构的版本。你也可以生成`win-x64`、`osx-x64`、`linux-x64`、`linux-arm64`、`linux-arm`的版本。你可以在`TShockLauncher/bin/Release/net9.0/`文件夹下对应架构的文件夹里找到生成后的发行版。
 
 ### 跟泰拉瑞亚本体代码交互
 
