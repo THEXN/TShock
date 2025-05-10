@@ -19,6 +19,8 @@ A historical list of plugins is available on [the old repository](https://github
     * Player wildcards, command hide/rename and loops, run as others, missing permission lookup, chat spam restrictions, character export/reset, wildcard bans, language and other changes, soundness fixes, etc.
     * The satellite plugin Chireiden.TShock.Omni.Misc provides some less commonly used features for debugging, troubleshooting and minigames.
     * The satellite tool SourceGen is a simple generator helps the development.
+* [SmartRegions](https://github.com/ZakFahey/SmartRegions) by [GameRoom](https://github.com/ZakFahey)
+  * This plugin allows you to execute an arbitrary command for a player when they enter a region. You could use this to set a player's team, heal them, give them items, or whatever else you want.
 
 # Plugin frameworks
 
