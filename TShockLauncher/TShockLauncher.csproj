@@ -32,9 +32,10 @@
 		<PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
 		<PackageReference Include="MySql.Data" Version="9.1.0" />
 		<PackageReference Include="Microsoft.Data.Sqlite" Version="9.0.0" />
+        <PackageReference Include="Npgsql" Version="9.0.3" />
+        
 		<PackageReference Include="ModFramework" Version="1.1.13" GeneratePathProperty="true" /> <!-- only used to extract out to ./bin. -->
 		<PackageReference Include="GetText.NET" Version="8.0.5" /> <!-- only used to extract out to ./bin. -->
-		<PackageReference Include="Npgsql" Version="9.0.3" /> <!-- only used to extract out to ./bin. -->
 
 		<!-- the launcher doesnt need the direct OTAPI reference, but since PackageReference[ExcludeFromSingleFile] doesnt work, exclude the assets and copy manually -->
 		<PackageReference Include="OTAPI.Upcoming" Version="3.2.4" ExcludeAssets="all" GeneratePathProperty="true" />
