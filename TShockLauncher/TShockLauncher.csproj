@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
-		<TargetFramework>net6.0</TargetFramework>
+		<TargetFramework>net9.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<AssemblyName>TShock.Server</AssemblyName> <!-- TShock was initially decided on by a community poll, however tshock already exists as a folder and will clash -->
@@ -30,23 +30,23 @@
 
 	<ItemGroup>
 		<PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
-		<PackageReference Include="MySql.Data" Version="8.4.0" />
-		<PackageReference Include="Microsoft.Data.Sqlite" Version="6.0.11" />
-		<PackageReference Include="ModFramework" Version="1.1.7" GeneratePathProperty="true" /> <!-- only used to extract out to ./bin. -->
-		<PackageReference Include="GetText.NET" Version="1.7.14" />
+		<PackageReference Include="MySql.Data" Version="9.1.0" />
+		<PackageReference Include="Microsoft.Data.Sqlite" Version="9.0.0" />
+		<PackageReference Include="ModFramework" Version="1.1.13" GeneratePathProperty="true" /> <!-- only used to extract out to ./bin. -->
+		<PackageReference Include="GetText.NET" Version="8.0.5" /> <!-- only used to extract out to ./bin. -->
 		<PackageReference Include="Npgsql" Version="6.0.13" /> <!-- only used to extract out to ./bin. -->
 
 		<!-- the launcher doesnt need the direct OTAPI reference, but since PackageReference[ExcludeFromSingleFile] doesnt work, exclude the assets and copy manually -->
-		<PackageReference Include="OTAPI.Upcoming" Version="3.1.20" ExcludeAssets="all" GeneratePathProperty="true" />
-		<None Include="$(PkgOTAPI_Upcoming)\lib\net6.0\OTAPI.dll">
+		<PackageReference Include="OTAPI.Upcoming" Version="3.2.4" ExcludeAssets="all" GeneratePathProperty="true" />
+		<None Include="$(PkgOTAPI_Upcoming)\lib\net9.0\OTAPI.dll">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
 		</None>
-		<None Include="$(PkgOTAPI_Upcoming)\lib\net6.0\OTAPI.Runtime.dll">
+		<None Include="$(PkgOTAPI_Upcoming)\lib\net9.0\OTAPI.Runtime.dll">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
 		</None>
-		<None Include="$(PkgModFramework)\lib\net6.0\ModFramework.dll">
+		<None Include="$(PkgModFramework)\lib\net9.0\ModFramework.dll">
 		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		  <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
 		</None>
@@ -92,7 +92,13 @@
 		</ItemGroup>
 		<Copy SourceFiles="@(MOFiles)" DestinationFolder="$(PublishDir)%(RecursiveDir)" />
 	</Target>
-	<Target Name="MoveBin" AfterTargets="Publish">
+	<Target Name="MoveDevBin" AfterTargets="PostBuildEvent">
+		<ItemGroup>
+			<MoveBinaries Include="$(OutDir)*" Exclude="$(OutDir)\TShock.Server*;$(OutDir)\GeoIP.dat" />
+		</ItemGroup>
+		<Move SourceFiles="@(MoveBinaries)" DestinationFolder="$(OutDir)bin" ContinueOnError="true" />
+	</Target>
+	<Target Name="MovePublishBin" AfterTargets="Publish">
 		<ItemGroup>
 			<MoveBinaries Include="$(PublishDir)*" Exclude="$(PublishDir)\TShock.Server*;$(PublishDir)\GeoIP.dat" />
 		</ItemGroup>
