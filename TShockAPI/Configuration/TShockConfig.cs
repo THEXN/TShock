@@ -131,7 +131,7 @@ namespace TShockAPI.Configuration
 
 		/// <summary>projRangeChecks.</summary>
 		[Description("弹幕限距.")]
-		public int ProjRangeChecks = 150;
+		public int ProjRangeChecks = 130;
 
 		/// <summary>Prevents non-hardcore players from connecting.</summary>
 		[Description("Prevents non-hardcore players from connecting.")]
