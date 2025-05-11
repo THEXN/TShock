@@ -9,5 +9,5 @@ build_script:
 
     dotnet test
 artifacts:
-- path: ./TShockLauncher/bin/Debug/net6.0
+- path: ./TShockLauncher/bin/Debug/net9.0
   name: TShockAVDebug
