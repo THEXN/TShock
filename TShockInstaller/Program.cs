@@ -27,11 +27,11 @@ if (arch is null)
 
 string? url = null;
 if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
-	url = $"https://dotnetcli.azureedge.net/dotnet/Runtime/6.0.11/dotnet-runtime-6.0.11-osx-{arch}.tar.gz";
+	url = $"https://dotnetcli.azureedge.net/dotnet/Runtime/9.0.0/dotnet-runtime-9.0.0-osx-{arch}.tar.gz";
 else if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-	url = $"https://dotnetcli.azureedge.net/dotnet/Runtime/6.0.11/dotnet-runtime-6.0.11-win-{arch}.zip";
+	url = $"https://dotnetcli.azureedge.net/dotnet/Runtime/9.0.0/dotnet-runtime-9.0.0-win-{arch}.zip";
 else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
-	url = $"https://dotnetcli.azureedge.net/dotnet/Runtime/6.0.11/dotnet-runtime-6.0.11-linux-{arch}.tar.gz";
+	url = $"https://dotnetcli.azureedge.net/dotnet/Runtime/9.0.0/dotnet-runtime-9.0.0-linux-{arch}.tar.gz";
 
 if(url is null)
 {
