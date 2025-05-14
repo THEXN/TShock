@@ -15,7 +15,7 @@ Use past tense when adding new entries; sign your name off when you add or chang
   * If there is no section called "Upcoming changes" below this line, please add one with `## Upcoming changes` as the first line, and then a bulleted item directly after with the first change. -->
 
 ## Upcoming changes
-This could be you!
+- Added support for PostgreSQL as a database option. (@SakuraIsayeki)
 
 ## TShock 5.2.4
 * Deleted `tsCharacter` table will no longer result in empty inventory, but starter ones. (@sgkoishi)
