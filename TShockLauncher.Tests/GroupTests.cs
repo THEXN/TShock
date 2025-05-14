@@ -21,17 +21,17 @@ public class GroupTests
 		groups.AddPermissions("test", new() { "abc" });
 
 		var hasperm = groups.GetGroupByName("test").Permissions.Contains("abc");
-		Assert.IsTrue(hasperm);
+		Assert.That(hasperm, Is.True);
 
 		groups.DeletePermissions("test", new() { "abc" });
 
 		hasperm = groups.GetGroupByName("test").Permissions.Contains("abc");
-		Assert.IsFalse(hasperm);
+		Assert.That(hasperm, Is.False);
 
 		groups.DeleteGroup("test");
 
 		var g = groups.GetGroupByName("test");
-		Assert.IsNull(g);
+		Assert.That(g, Is.Null);
 	}
 }
 
