@@ -32,9 +32,9 @@ If you want to run the `TShockLauncher` (which runs a server), run:
 To produce a packaged release (suitable for distribution), run:
 
 1. `cd TShockLauncher`
-1. `dotnet publish -r win-x64 -f net6.0 -c Release -p:PublishSingleFile=true --self-contained false`
+1. `dotnet publish -r win-x64 -f net9.0 -c Release -p:PublishSingleFile=true --self-contained false`
 
-Note that in this example, you'd be building for `win-x64`. You can build for `win-x64`, `osx-x64`, `linux-x64`, `linux-arm64`, `linux-arm`. Your release will be in the `TShockLauncher/bin/Release/net6.0/` folder under the architecture you specified.
+Note that in this example, you'd be building for `win-x64`. You can build for `win-x64`, `osx-x64`, `linux-x64`, `linux-arm64`, `linux-arm`. Your release will be in the `TShockLauncher/bin/Release/net9.0/` folder under the architecture you specified.
 
 ### Working with Terraria
 
