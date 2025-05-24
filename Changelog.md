@@ -18,6 +18,7 @@ Use past tense when adding new entries; sign your name off when you add or chang
 - Added support for PostgreSQL as a database option. (@SakuraIsayeki)
 - Fix item disappeared when hitting an ItemFrame without permission. (@ACaiCat)
 - Fixed unable to place LogicSensors (@LaoSparrow)
+- Added player ban reloading to /reload. (@Terrabade)
 
 ## TShock 5.2.4
 * Deleted `tsCharacter` table will no longer result in empty inventory, but starter ones. (@sgkoishi)
