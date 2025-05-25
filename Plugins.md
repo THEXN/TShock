@@ -6,12 +6,14 @@ Plugins supplied by the community may harm your computer or cause you to experie
 
 A historical list of plugins is available on [the old repository](https://github.com/Pryaxis/Plugins/), and you can find others [on github](https://github.com/topics/tshock-plugin), and on our [Discord server](https://discord.gg/Cav9nYX) [here](https://ptb.discord.com/channels/479657350043664384/1025055555921915924).
 
-# Modern plugins
-* [BanGuard plugin](https://github.com/BanGuard-TShock/plugin) by the [BanGuard team](https://github.com/BanGuard-TShock)
-  * BanGuard (plugin) is a powerful TShock plugin that connects directly to the BanGuard API, enabling Terraria servers to share categorized ban data across a secure network for improved moderation and decision-making. It also streamlines account verification by linking Terraria and Discord accounts, allowing players to verify their identity once for faster and more secure access across all connected servers.
+# Collections
 * [TShock中文插件搜集仓库 | TShock Chinese Plugin Collection](https://github.com/UnrealMultiple/TShockPlugin) by [UnrealMultiple](https://github.com/UnrealMultiple)
   * 这是一个收集整合 TShock中文插件的仓库。
   * This is a collection of plugins that support Chinese (including both translated and original), with some also available in other languages including English, Spanish, and Russian.
+
+# Modern plugins
+* [BanGuard plugin](https://github.com/BanGuard-TShock/plugin) by the [BanGuard team](https://github.com/BanGuard-TShock)
+  * BanGuard (plugin) is a powerful TShock plugin that connects directly to the BanGuard API, enabling Terraria servers to share categorized ban data across a secure network for improved moderation and decision-making. It also streamlines account verification by linking Terraria and Discord accounts, allowing players to verify their identity once for faster and more secure access across all connected servers.
 * [AutoTeam](https://github.com/CyberBotX/TShock_AutoTeam) by [CyberBotX](https://github.com/CyberBotX)
   * A plugin to automatically join a player to their previous team (if any) on connect. No configuration required, previous team is stored in the TShock database.
 * [Chireiden.TShock.Omni](https://github.com/sgkoishi/yaaiomni) by [SGKoishi](https://github.com/sgkoishi)
