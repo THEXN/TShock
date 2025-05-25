@@ -68,3 +68,7 @@ services:
 ```
 To run the server interactively, for example to generate a world, use `docker compose run --rm terraria` (without the `command:` for now).
 Then, you can use `docker compose up -d` to run it in the background, and have it automatically restart with your host system.
+
+## Downloading official images
+
+TShock [automatically publishes images for each commit](https://github.com/Pryaxis/TShock/pkgs/container/tshock). You can use the [latest published / released version from nuget](https://github.com/Pryaxis/TShock/pkgs/container/tshock/411853684?tag=nuget-release) too. By using the `nuget-release` tag, you effectively reference the latest stable version of TShock. By using `general-devel`, you effectively have the latest development version of TShock.
