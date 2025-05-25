@@ -11,7 +11,7 @@ A historical list of plugins is available on [the old repository](https://github
   * 这是一个收集整合 TShock中文插件的仓库。
   * This is a collection of plugins that support Chinese (including both translated and original), with some also available in other languages including English, Spanish, and Russian.
 
-# Modern plugins
+# General plugins
 * [BanGuard plugin](https://github.com/BanGuard-TShock/plugin) by the [BanGuard team](https://github.com/BanGuard-TShock)
   * BanGuard (plugin) is a powerful TShock plugin that connects directly to the BanGuard API, enabling Terraria servers to share categorized ban data across a secure network for improved moderation and decision-making. It also streamlines account verification by linking Terraria and Discord accounts, allowing players to verify their identity once for faster and more secure access across all connected servers.
 * [AutoTeam](https://github.com/CyberBotX/TShock_AutoTeam) by [CyberBotX](https://github.com/CyberBotX)
