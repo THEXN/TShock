@@ -19,5 +19,19 @@
   * [Descripción del archivo de configuración](/(Esp)-Descripci%C3%B3n-del-archivo-de-configuraci%C3%B3n)
   * [Parámetros de la línea de comandos](./(Esp)-Parámetros-de-la-línea-de-comandos)
 * Chinese / 中文
-  * [config.json文件介绍](./(中文)-config.json文件介绍)
-  * [权限说明](./(中文)-权限说明)
+  * [主页](./(中文)-主页)
+  * [命令行参数](./(中文)-命令行参数)
+  * [语言](./(中文)-lang)
+    * [开发者: i18n](./(中文)-i18n)
+  * [插件](./(中文)-插件)
+    * [管理](./(中文)-软件包)
+  * [Docker容器](./(中文)-docker)
+  * 子系统
+    * [ssc](./ssc)
+    * [图格提供程序](./(中文)-图格提供程序)
+    * [每日消息](./(中文)-每日消息)
+  * 定义文件
+    * [config.json文件介绍](./(中文)-config.json文件介绍)
+    * [权限说明](./(中文)-权限说明)
+    * [sscconfig.json文件说明](./(中文)-sscconfig.json文件说明)
+    * [REST字段](./(中文)-REST字段)

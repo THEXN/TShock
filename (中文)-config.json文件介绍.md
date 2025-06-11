@@ -1,25 +1,27 @@
+- 有`*`标记的表示描述有问题在本文档已修正。有`x`标记的表示无法正常使用。
+
 ## AllowAllowedGroupsToSpawnBannedItems  
 即使设置了 PreventBannedItemSpawn 为 true，也允许“禁止物品允许列表中的组”生成禁止物品。
 * **字段类型**: `Boolean`
 * **默认值**: `False`
 
 ## AllowCorruptionCreep  
-允许腐化蔓延。*
+允许腐化蔓延。`*`
 * **字段类型**: `Boolean`
 * **默认值**: `True`
 
 ## AllowCrimsonCreep  
-允许时猩红蔓延。*
+允许猩红蔓延。`*`
 * **字段类型**: `Boolean`
 * **默认值**: `True`
 
 ## AllowCutTilesAndBreakables  
-允许玩家在通常无法建造的地方破坏临时方块（草、罐子等）。*
+允许玩家在通常无法建造的地方破坏临时方块（草、罐子等）。`x`
 * **字段类型**: `Boolean`
 * **默认值**: `False`
 
 ## AllowHallowCreep  
-允许神圣蔓延。*
+允许神圣蔓延。`*`
 * **字段类型**: `Boolean`
 * **默认值**: `True`
 
@@ -306,7 +308,7 @@
 
 ## InvasionMultiplier  
 确定入侵事件的大小。
-计算入侵大小的公式是100 + (multiplier * (active players with greater than 200 health的数量))
+计算入侵大小的公式是100 + (倍数 * (血量大于200的活跃玩家的数量))
 * **字段类型**: `Int32`
 * **默认值**: `1`
 
