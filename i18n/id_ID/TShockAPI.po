@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: tshock\n"
-"POT-Creation-Date: 2022-12-06 05:43:49+0000\n"
-"PO-Revision-Date: 2022-12-06 05:52\n"
+"POT-Creation-Date: 2023-08-15 09:53:07+0000\n"
+"PO-Revision-Date: 2025-06-15 17:54\n"
 "Last-Translator: \n"
 "Language-Team: Indonesian\n"
 "MIME-Version: 1.0\n"
@@ -17,8 +17,8 @@ msgstr ""
 "X-Crowdin-File-ID: 6\n"
 "Language: id_ID\n"
 
-#: ../../TShockAPI/DB/CharacterManager.cs:194
-#: ../../TShockAPI/DB/CharacterManager.cs:264
+#: ../../TShockAPI/DB/CharacterManager.cs:197
+#: ../../TShockAPI/DB/CharacterManager.cs:267
 #, csharp-format
 msgctxt "{0} is a player name"
 msgid "Skipping SSC save (due to tshock.ignore.ssc) for {0}"
@@ -153,23 +153,23 @@ msgstr "- Lain-lain :"
 msgid "- Palm trees :"
 msgstr "- Pohon Palm :"
 
-#: ../../TShockAPI/TShock.cs:963
+#: ../../TShockAPI/TShock.cs:999
 msgid "!!! > Set DisableLoginBeforeJoin to true in the config file and /reload if this is a problem."
 msgstr "!!! > Atur DisableLoginBeforeJoin menjadi true didalam berkas config dan /reload jika ini sebuah masalah."
 
-#: ../../TShockAPI/TShock.cs:957
+#: ../../TShockAPI/TShock.cs:993
 msgid "!!! > Set DisableUUIDLogin to true in the config file and /reload if this is a problem."
 msgstr "!!! > Atur DisableUUIDLogin menjadi true didalam berkas config, selanjutnya /reload jika ini sebuah masalah."
 
-#: ../../TShockAPI/TShock.cs:962
+#: ../../TShockAPI/TShock.cs:998
 msgid "!!! Login before join is enabled. Existing accounts can login & the server password will be bypassed."
 msgstr "!!! Masuk sebelum bergabung diaktifkan. Akun yang ada dapat masuk & kata sandi server akan dilewati."
 
-#: ../../TShockAPI/TShock.cs:951
+#: ../../TShockAPI/TShock.cs:987
 msgid "!!! The server password in config.json was overridden by the interactive prompt and will be ignored."
 msgstr "!!! Kata sandi server di config.json diganti oleh prompt interaktif dan akan diabaikan."
 
-#: ../../TShockAPI/TShock.cs:956
+#: ../../TShockAPI/TShock.cs:992
 msgid "!!! UUID login is enabled. If a user's UUID matches an account, the server password will be bypassed."
 msgstr "!!! Login UUID diaktifkan. Jika UUID pengguna cocok dengan sebuah akun, kata sandi server akan dilewati."
 
@@ -231,12 +231,12 @@ msgstr "{0} ({1}) telah mengubah sandi untuk akun {2}."
 msgid "{0} ({1}) failed to change the password for account {2}."
 msgstr "{0} ({1}) gagal mengubah sandi untuk akun {2}."
 
-#: ../../TShockAPI/TShock.cs:1659
+#: ../../TShockAPI/TShock.cs:1695
 #, csharp-format
 msgid "{0} ({1}) from '{2}' group from '{3}' joined. ({4}/{5})"
 msgstr "{0} ({1}) dari '{2}' dari grup '{3}' telah bergabung. ({4}/{5})"
 
-#: ../../TShockAPI/TShock.cs:1667
+#: ../../TShockAPI/TShock.cs:1703
 #, csharp-format
 msgid "{0} ({1}) from '{2}' group joined. ({3}/{4})"
 msgstr "{0} ({1}) dari '{2}' grup telah bergabung. ({3}/{4})"
@@ -246,7 +246,7 @@ msgstr "{0} ({1}) dari '{2}' grup telah bergabung. ({3}/{4})"
 msgid "{0} ({1}) had {2} or more invalid login attempts and was kicked automatically."
 msgstr "{0} ({1}) telah melakukan kesalahan login sebanyak {2} atau lebih dan telah dikeluarkan secara otomatis."
 
-#: ../../TShockAPI/TShock.cs:1663
+#: ../../TShockAPI/TShock.cs:1699
 #, csharp-format
 msgid "{0} ({1}) has joined."
 msgstr "{0} ({1}) telah bergabung."
@@ -347,17 +347,17 @@ msgstr "{0} <{1}|{2}|{3}> [{4}]"
 msgid "{0} added account {1} to group {2}."
 msgstr "{0} telah menambahkan {1} ke dalam grup {2}."
 
-#: ../../TShockAPI/GetDataHandlers.cs:3546
+#: ../../TShockAPI/GetDataHandlers.cs:3587
 #, csharp-format
 msgid "{0} applied advanced combat techniques volume 2!"
 msgstr "{0} menerapkan advanced combat techniques volume 2!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3564
+#: ../../TShockAPI/GetDataHandlers.cs:3605
 #, csharp-format
 msgid "{0} applied advanced combat techniques!"
 msgstr "{0} telah menerapkan teknik pertempuran tingkat lanjut!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3543
+#: ../../TShockAPI/GetDataHandlers.cs:3584
 #, csharp-format
 msgid "{0} applied traveling merchant's satchel!"
 msgstr "{0} menerapkan tas Travelling Merchant!"
@@ -367,8 +367,8 @@ msgstr "{0} menerapkan tas Travelling Merchant!"
 msgid "{0} attempted to register for the account {1} but it was already taken."
 msgstr "{0} mencoba mendaftarkan akun {1} tetapi telah digunakan."
 
-#: ../../TShockAPI/GetDataHandlers.cs:2637
-#: ../../TShockAPI/GetDataHandlers.cs:3212
+#: ../../TShockAPI/GetDataHandlers.cs:2672
+#: ../../TShockAPI/GetDataHandlers.cs:3252
 #, csharp-format
 msgid "{0} authenticated successfully as user {1}."
 msgstr "{0} telah berhasil diautentikasi sebagai pengguna {1}."
@@ -378,7 +378,7 @@ msgstr "{0} telah berhasil diautentikasi sebagai pengguna {1}."
 msgid "{0} authenticated successfully as user: {1}."
 msgstr "{0} berhasil masuk sebagai: {1}."
 
-#: ../../TShockAPI/TSPlayer.cs:1955
+#: ../../TShockAPI/TSPlayer.cs:2042
 #, csharp-format
 msgid "{0} banned {1} for '{2}'."
 msgstr "{0} diblokir {1} untuk '{2}'."
@@ -462,7 +462,7 @@ msgstr "{0} telah menonaktifkan mode halloween."
 msgid "{0} disabled xmas mode."
 msgstr "{0} telah menonaktifkan mode natal."
 
-#: ../../TShockAPI/TShock.cs:1398
+#: ../../TShockAPI/TShock.cs:1434
 #, csharp-format
 msgid "{0} disconnected."
 msgstr "{0} terputus."
@@ -565,12 +565,12 @@ msgstr "{0} telah mengakhiri peristiwa invasi saat ini."
 msgid "{0} has ended the Old One's Army event."
 msgstr "{0} telah mengakhiri peristiwa Old One's Army."
 
-#: ../../TShockAPI/TShock.cs:1670
+#: ../../TShockAPI/TShock.cs:1706
 #, csharp-format
 msgid "{0} has joined."
 msgstr "{0} telah bergabung."
 
-#: ../../TShockAPI/TShock.cs:1674
+#: ../../TShockAPI/TShock.cs:1710
 #, csharp-format
 msgid "{0} has joined. IP: {1}"
 msgstr "{0} telah bergabung. IP: {1}"
@@ -590,7 +590,7 @@ msgstr "{0} telah melempar dirinya sendiri keluar angkasa."
 msgid "{0} has launched himself into space."
 msgstr "{0} telah melempar dirinya sendiri keluar angkasa."
 
-#: ../../TShockAPI/TShock.cs:1397
+#: ../../TShockAPI/TShock.cs:1433
 #, csharp-format
 msgid "{0} has left."
 msgstr "{0} telah keluar."
@@ -605,25 +605,25 @@ msgstr "{0} telah dibisukan {1} kurun waktu {2}."
 msgid "{0} has respawned you."
 msgstr "{0} telah memunculkan anda kembali."
 
-#: ../../TShockAPI/GetDataHandlers.cs:3555
+#: ../../TShockAPI/GetDataHandlers.cs:3596
 #, csharp-format
 msgid "{0} has sent a request to the bunny delivery service!"
 msgstr "{0} telah mengirim sebuah permintaan ke pelayanan pengiriman kelinci!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3561
+#: ../../TShockAPI/GetDataHandlers.cs:3602
 #, csharp-format
 msgid "{0} has sent a request to the cat delivery service!"
 msgstr "{0} telah mengirim sebuah permintaan ke pelayanan pengiriman kucing!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3558
+#: ../../TShockAPI/GetDataHandlers.cs:3599
 #, csharp-format
 msgid "{0} has sent a request to the dog delivery service!"
 msgstr "{0} telah mengirim sebuah permintaan ke pelayanan pengiriman anjing!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3552
+#: ../../TShockAPI/GetDataHandlers.cs:3593
 #, csharp-format
 msgid "{0} has sent a request to the slime delivery service!"
-msgstr ""
+msgstr "{0} telah mengirim sebuah permintaan ke kurir slime!"
 
 #: ../../TShockAPI/Commands.cs:2878
 #, csharp-format
@@ -636,10 +636,10 @@ msgstr[0] "{0} telah membangkitkan {1} {2} kali."
 msgid "{0} has spawned a Wall of Flesh."
 msgstr "{0} telah membangkitkan Wall of Flesh."
 
-#: ../../TShockAPI/GetDataHandlers.cs:2620
+#: ../../TShockAPI/GetDataHandlers.cs:2655
 #, csharp-format
 msgid "{0} has SSC data in the database, but has the tshock.ignore.ssc permission. This means their SSC data is being ignored."
-msgstr ""
+msgstr "{0} mempunyai data SSC di dalam database, tetapi juga mempunyai permission tshock.ignore.ssc. Hal ini akan mengakibatkan data SSC mereka akan diabaikan."
 
 #: ../../TShockAPI/Commands.cs:2342
 #, csharp-format
@@ -721,7 +721,7 @@ msgstr "{0} sudah dicegah dari penggunaan proyektil {1}."
 msgid "{0} is banned! Remove it!"
 msgstr "{0} diblokir! Buang itu!"
 
-#: ../../TShockAPI/Commands.cs:6751
+#: ../../TShockAPI/Commands.cs:6747
 #, csharp-format
 msgid "{0} is no longer in god mode."
 msgstr "{0} tidak lagi dalam mode dewa."
@@ -743,7 +743,7 @@ msgstr "{0} tidak diblokir."
 msgid "{0} is not dead!"
 msgstr "{0} belum mati!"
 
-#: ../../TShockAPI/Commands.cs:6750
+#: ../../TShockAPI/Commands.cs:6746
 #, csharp-format
 msgid "{0} is now in god mode."
 msgstr "{0} sekarang dalam mode dewa."
@@ -759,7 +759,7 @@ msgstr "{0} telah offline dan tidak dapat menerima balasan anda."
 msgid "{0} just killed you!"
 msgstr "{0} telah membunuh anda!"
 
-#: ../../TShockAPI/TSPlayer.cs:1926
+#: ../../TShockAPI/TSPlayer.cs:2013
 #, csharp-format
 msgid "{0} kicked {1} for '{2}'"
 msgstr "{1} dikeluarkan oleh {0} karena '{2}'"
@@ -857,8 +857,8 @@ msgstr "{0} telah memulai gerhana."
 msgid "{0} started the frost moon at wave {1}!"
 msgstr "{0} telah memulai bulan dingin di gelombang {1}!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:4150
-#: ../../TShockAPI/GetDataHandlers.cs:4152
+#: ../../TShockAPI/GetDataHandlers.cs:4194
+#: ../../TShockAPI/GetDataHandlers.cs:4196
 #, csharp-format
 msgid "{0} started the Old One's Army event!"
 msgstr "{0} telah memulai peristiwa Old One's Army!"
@@ -893,63 +893,63 @@ msgstr "{0} telah menghentikan malam lentera."
 msgid "{0} successfully deleted account: {1}."
 msgstr "{0} telah sukses menghapus akun: {1}."
 
-#: ../../TShockAPI/GetDataHandlers.cs:3567
+#: ../../TShockAPI/GetDataHandlers.cs:3608
 #, csharp-format
 msgid "{0} summoned a Blood Moon!"
 msgstr "{0} telah memunculkan Bulan Berdarah!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3579
+#: ../../TShockAPI/GetDataHandlers.cs:3620
 #, csharp-format
 msgid "{0} summoned a frost moon!"
 msgstr "{0} telah memunculkan bulan beku!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3591
+#: ../../TShockAPI/GetDataHandlers.cs:3632
 #, csharp-format
 msgid "{0} summoned a Goblin Invasion!"
 msgstr "{0} telah memunculkan invasi goblin!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3573
+#: ../../TShockAPI/GetDataHandlers.cs:3614
 #, csharp-format
 msgid "{0} summoned a Martian invasion!"
 msgstr "{0} telah memunculkan invasi Martian!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3549
+#: ../../TShockAPI/GetDataHandlers.cs:3590
 #, csharp-format
 msgid "{0} summoned a Mechdusa!"
 msgstr "{0} telah membangkitkan Mechdusa!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3570
+#: ../../TShockAPI/GetDataHandlers.cs:3611
 #, csharp-format
 msgid "{0} summoned a Moon Lord!"
 msgstr "{0} telah membangkitkan Moon Lord!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3582
+#: ../../TShockAPI/GetDataHandlers.cs:3623
 #, csharp-format
 msgid "{0} summoned a pumpkin moon!"
 msgstr "{0} telah memunculkan bulan labu!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3576
+#: ../../TShockAPI/GetDataHandlers.cs:3617
 #, csharp-format
 msgid "{0} summoned an eclipse!"
 msgstr "{0} telah memunculkan gerhana!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3598
+#: ../../TShockAPI/GetDataHandlers.cs:3639
 #, csharp-format
 msgid "{0} summoned the {1}!"
 msgstr "{0} telah membangkitkan {1}!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:2977
-#: ../../TShockAPI/GetDataHandlers.cs:2980
+#: ../../TShockAPI/GetDataHandlers.cs:3016
+#: ../../TShockAPI/GetDataHandlers.cs:3019
 #, csharp-format
 msgid "{0} summoned the Empress of Light!"
 msgstr "{0} telah membangkitkan Empress of Light!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3585
+#: ../../TShockAPI/GetDataHandlers.cs:3626
 #, csharp-format
 msgid "{0} summoned the Pirates!"
 msgstr "{0} telah memunculkan si Bajak Laut!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3588
+#: ../../TShockAPI/GetDataHandlers.cs:3629
 #, csharp-format
 msgid "{0} summoned the Snow Legion!"
 msgstr "{0} telah memunculkan Pasukan Salju!"
@@ -991,12 +991,12 @@ msgstr "{0} telah memicu sebuah meteor."
 msgid "{0} warped you to {1}."
 msgstr "{0} telah menandai anda ke {1}."
 
-#: ../../TShockAPI/TSPlayer.cs:1953
+#: ../../TShockAPI/TSPlayer.cs:2040
 #, csharp-format
 msgid "{0} was banned for '{1}'."
 msgstr "{0} telah diblokir karena '{1}'."
 
-#: ../../TShockAPI/TSPlayer.cs:1924
+#: ../../TShockAPI/TSPlayer.cs:2011
 #, csharp-format
 msgid "{0} was kicked for '{1}'"
 msgstr "{0} telah dikeluarkan karena '{1}'"
@@ -1085,24 +1085,24 @@ msgstr "{0}user password username sandi-baru -- mengubah sandi pengguna"
 #: ../../TShockAPI/Permissions.cs:547
 #, csharp-format
 msgid "* **Commands**: `{0}`"
-msgstr ""
+msgstr "* **Perintah**: `{0}`"
 
 #: ../../TShockAPI/Configuration/ServerSideConfig.cs:123
 #: ../../TShockAPI/Configuration/TShockConfig.cs:645
 #, csharp-format
 msgid "* **Default**: `{0}`"
-msgstr ""
+msgstr "* **Default**: `{0}`"
 
 #: ../../TShockAPI/Configuration/ServerSideConfig.cs:122
 #: ../../TShockAPI/Configuration/TShockConfig.cs:644
 #, csharp-format
 msgid "* **Field type**: `{0}`"
-msgstr ""
+msgstr "* **Jenis data**: `{0}`"
 
 #: ../../TShockAPI/Rest/RestManager.cs:1220
 #, csharp-format
 msgid "* **Permissions**: `{0}`"
-msgstr ""
+msgstr "* **Hak akses**: `{0}`"
 
 #: ../../TShockAPI/Commands.cs:5430
 #, csharp-format
@@ -1112,15 +1112,15 @@ msgstr "*{0} {1}"
 #: ../../TShockAPI/Rest/RestManager.cs:1253
 #, csharp-format
 msgid "**Example Usage**: `{0}?{1}`"
-msgstr ""
+msgstr "**Contoh penggunaan**: `{0}?{1}`"
 
 #: ../../TShockAPI/Rest/RestManager.cs:1243
 msgid "**Nouns**:"
-msgstr ""
+msgstr "**Objek**:"
 
 #: ../../TShockAPI/Rest/RestManager.cs:1230
 msgid "**Verbs**:"
-msgstr ""
+msgstr "**Aksi**:"
 
 #: ../../TShockAPI/Commands.cs:1613
 #, csharp-format
@@ -1141,7 +1141,7 @@ msgstr "<Dari {0}> {1}"
 #: ../../TShockPluginManager/NugetCLI.cs:187
 #, csharp-format
 msgid "<green>{0} <black>from <blue>{1} <black>[{2}]"
-msgstr ""
+msgstr "<green>{0}<black> dari <blue>{1}<black>[{2}]"
 
 #: ../../TShockPluginManager/NugetCLI.cs:178
 #, csharp-format
@@ -1158,13 +1158,13 @@ msgstr "<Ke {0}> {1}"
 #, csharp-format
 msgid "=== Dependency ==="
 msgid_plural "=== Dependencies ==="
-msgstr[0] ""
+msgstr[0] "=== Dependensi ==="
 
 #: ../../TShockPluginManager/NugetCLI.cs:133
 #, csharp-format
 msgid "=== Requested Plugin ==="
 msgid_plural "=== Requested Plugins ==="
-msgstr[0] ""
+msgstr[0] "=== Plugin yang dibutuhkan ==="
 
 #: ../../TShockAPI/Commands.cs:2818
 msgid "a Deerclops"
@@ -1178,7 +1178,7 @@ msgstr "Grup dengan nama yang sama sudah ada."
 msgid "A lot of things will fail because of this. You must manually delete and re-create the allowed field."
 msgstr "Banyak hal yang akan gagal karena ini. Anda harus menghapus dan membuat ulang field yang diizinkan."
 
-#: ../../TShockAPI/TShock.cs:986
+#: ../../TShockAPI/TShock.cs:1022
 msgid "A malicious server can easily steal a user's UUID. You may consider turning this option off if you run a public server."
 msgstr "Server jahat dapat dengan mudah mencuri UUID pengguna. Anda dapat mempertimbangkan untuk mematikan opsi ini jika Anda menjalankan server publik."
 
@@ -1194,7 +1194,7 @@ msgstr "Sebuah meteor telah terpicu."
 msgid "a Nebula Pillar"
 msgstr "sebuah Pilar Nebula"
 
-#: ../../TShockAPI/TShock.cs:974
+#: ../../TShockAPI/TShock.cs:1010
 msgid "A password for this server was set in config.json and is being used."
 msgstr "Sebuah kata sandi untuk server ini telah ditetapkan didalam config.json dan digunakan saat ini."
 
@@ -1202,7 +1202,7 @@ msgstr "Sebuah kata sandi untuk server ini telah ditetapkan didalam config.json 
 msgid "A player name must be provided to kick a player. Please provide one."
 msgstr "Nama pemain harus ada untuk menendang pemain. Mohon sediakan nama pemain itu."
 
-#: ../../TShockAPI/GetDataHandlers.cs:2451
+#: ../../TShockAPI/GetDataHandlers.cs:2486
 msgid "A plugin on this server stopped your login."
 msgstr "Sebuah plugin di server ini memberhentikan proses masuk anda."
 
@@ -1315,7 +1315,7 @@ msgstr "semua boss"
 
 #: ../../TShockPluginManager/NugetCLI.cs:169
 msgid "All done! :)"
-msgstr ""
+msgstr "Berhasil! :)"
 
 #: ../../TShockAPI/Commands.cs:2104
 msgid "All REST tokens have been destroyed."
@@ -1354,7 +1354,7 @@ msgstr "Amber Gemtree"
 msgid "Amethyst Gemtree"
 msgstr "Amethyst Gemtree"
 
-#: ../../TShockAPI/TShock.cs:996
+#: ../../TShockAPI/TShock.cs:1032
 msgid "An account has been detected in the user database, but setup-code.txt is still present."
 msgstr "Sebuah akun telah terdeteksi didalam basis data pemain, tapi setup-code.txt masih ada."
 
@@ -1368,7 +1368,7 @@ msgstr "Pengecualian telah terjadi selama pengembalian basis data: {0}"
 msgid "An exception has occurred during database transaction: {0}"
 msgstr "Pengecualian telah terjadi selama transaksi basis data: {0}"
 
-#: ../../TShockAPI/TShock.cs:1489
+#: ../../TShockAPI/TShock.cs:1525
 msgid "An exception occurred executing a command."
 msgstr "Terjadi sebuah pengecualian dalam menjalankan sebuah perintah."
 
@@ -1428,19 +1428,19 @@ msgid "Arguments: send [player] [warp name], hide [warp name] [Enable(true/false
 msgstr "Argumennya: send [pemain] [nama warp], hide [nama warp] [Enable(true/false)]."
 
 #: ../../TShockAPI/Commands.cs:903
-#: ../../TShockAPI/GetDataHandlers.cs:2636
-#: ../../TShockAPI/GetDataHandlers.cs:3211
+#: ../../TShockAPI/GetDataHandlers.cs:2671
+#: ../../TShockAPI/GetDataHandlers.cs:3251
 #, csharp-format
 msgid "Authenticated as {0} successfully."
 msgstr "Berhasil diautentikasi sebagai {0}."
 
-#: ../../TShockAPI/TShock.cs:440
-#: ../../TShockAPI/TShock.cs:1590
+#: ../../TShockAPI/TShock.cs:471
+#: ../../TShockAPI/TShock.cs:1626
 msgid "AutoSave Disabled"
 msgstr "Penyimpanan Otomatis Nonaktif"
 
-#: ../../TShockAPI/TShock.cs:438
-#: ../../TShockAPI/TShock.cs:1588
+#: ../../TShockAPI/TShock.cs:469
+#: ../../TShockAPI/TShock.cs:1624
 msgid "AutoSave Enabled"
 msgstr "Penyimpanan Otomatis Aktif"
 
@@ -1489,11 +1489,11 @@ msgstr "Pencadangan gagal!"
 msgid "Backup Thread"
 msgstr "Utas Cadangan"
 
-#: ../../TShockAPI/TShock.cs:444
+#: ../../TShockAPI/TShock.cs:475
 msgid "Backups Disabled"
 msgstr "Cadangan Nonaktif"
 
-#: ../../TShockAPI/TShock.cs:442
+#: ../../TShockAPI/TShock.cs:473
 msgid "Backups Enabled"
 msgstr "Cadangan Aktif"
 
@@ -1576,7 +1576,7 @@ msgstr "Proyektil diblokir {0}."
 msgid "Banned tile {0}."
 msgstr "Tile diblokir {0}."
 
-#: ../../TShockAPI/TSPlayer.cs:1950
+#: ../../TShockAPI/TSPlayer.cs:2037
 #, csharp-format
 msgid "Banned: {0}"
 msgstr "Diblokir: {0}"
@@ -1611,15 +1611,15 @@ msgstr "Kedudukan Bulan Berdarah: {0}"
 msgid "Boreal Tree"
 msgstr "Pohon Boreal"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3264
+#: ../../TShockAPI/GetDataHandlers.cs:3304
 #, csharp-format
 msgid "Bouncer / HandleNpcTalk rejected from bouncer out of bounds from {0}"
-msgstr ""
+msgstr "Bouncer / HandleNpcTalk telah ditolak dari bouncer, out of bounds dari {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3257
+#: ../../TShockAPI/GetDataHandlers.cs:3297
 #, csharp-format
 msgid "Bouncer / HandleNpcTalk rejected from bouncer throttle from {0}"
-msgstr ""
+msgstr "Bouncer / HandleNpcTalk ditolak karena throttling bouncer dari {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1465
 #, csharp-format
@@ -1656,52 +1656,52 @@ msgstr "Bouncer / OnChestOpen (pemeriksaan jangkauan) ditolak dari {0}"
 msgid "Bouncer / OnChestOpen rejected from region check from {0}"
 msgstr "Bouncer / OnChestOpen (Pemeriksaan Wilayah) ditolak dari {0}"
 
-#: ../../TShockAPI/Bouncer.cs:2735
+#: ../../TShockAPI/Bouncer.cs:2738
 #, csharp-format
 msgid "Bouncer / OnFishOutNPC rejected for not finding active bobber projectile! - From {0}"
 msgstr "Penolakan / OnFishOutNPC ditolak karena tidak ditemukan proyektil bobber aktif! - Dari {0}"
 
-#: ../../TShockAPI/Bouncer.cs:2729
+#: ../../TShockAPI/Bouncer.cs:2732
 #, csharp-format
 msgid "Bouncer / OnFishOutNPC rejected for not using a fishing rod! - From {0}"
 msgstr "Penolakan / OnFishOutNPC ditolak karena tidak menggunakan sebuah pancingan! - Dari {0}"
 
-#: ../../TShockAPI/Bouncer.cs:2741
+#: ../../TShockAPI/Bouncer.cs:2744
 #, csharp-format
 msgid "Bouncer / OnFishOutNPC rejected for the NPC not being on the fishable NPCs list! - From {0}"
 msgstr "Penolakan / OnFishOutNPC ditolak karena NPC tidak berada dalam daftar NPC yang bisa dipancing! - Dari {0}"
 
-#: ../../TShockAPI/Bouncer.cs:2753
+#: ../../TShockAPI/Bouncer.cs:2756
 #, csharp-format
 msgid "Bouncer / OnFishOutNPC rejected range checks from {0}"
 msgstr "Penolakan / OnFishOutNPC menolak pemeriksaan jangkauan! - Dari {0}"
 
-#: ../../TShockAPI/Bouncer.cs:2747
+#: ../../TShockAPI/Bouncer.cs:2750
 #, csharp-format
 msgid "Bouncer / OnFishOutNPC rejected summon boss permissions from {0}"
 msgstr "Penolakan / OnFishOutNPC menolak izin pembangkitan boss dari {0}"
 
-#: ../../TShockAPI/Bouncer.cs:2781
+#: ../../TShockAPI/Bouncer.cs:2784
 #, csharp-format
 msgid "Bouncer / OnFoodPlatterTryPlacing rejected disabled from {0}"
 msgstr "Penolakan / OnFoodPlatterTryPlacing menolak disabled dari {0}"
 
-#: ../../TShockAPI/Bouncer.cs:2774
+#: ../../TShockAPI/Bouncer.cs:2777
 #, csharp-format
 msgid "Bouncer / OnFoodPlatterTryPlacing rejected item not placed by hand from {0}"
 msgstr "Penolakan / OnFoodPlatterTryPlacing menolak item tidak diletakkan oleh tangan dari {0}"
 
-#: ../../TShockAPI/Bouncer.cs:2792
+#: ../../TShockAPI/Bouncer.cs:2795
 #, csharp-format
 msgid "Bouncer / OnFoodPlatterTryPlacing rejected permissions from {0}"
 msgstr "Penolakan / OnFoodPlatterTryPlacing menolak izin dari {0}"
 
-#: ../../TShockAPI/Bouncer.cs:2803
+#: ../../TShockAPI/Bouncer.cs:2806
 #, csharp-format
 msgid "Bouncer / OnFoodPlatterTryPlacing rejected range checks from {0}"
 msgstr "Penolakan / OnFoodPlatterTryPlacing menolak pemeriksaan jangkauan dari {0}"
 
-#: ../../TShockAPI/Bouncer.cs:2767
+#: ../../TShockAPI/Bouncer.cs:2770
 #, csharp-format
 msgid "Bouncer / OnFoodPlatterTryPlacing rejected tile placement valid from {0}"
 msgstr "Penolakan / OnFoodPlatterTryPlacing menolak peletakkan tile valid dari {0}"
@@ -1794,22 +1794,22 @@ msgstr "Penolakan / OnItemDrop menolak pemeriksaan jangkauan dari {0}"
 msgid "Bouncer / OnItemDrop rejected from sneaky from {0}"
 msgstr "Penolakan / OnItemDrop menolak dari sneaky(menyelinap) dari {0}"
 
-#: ../../TShockAPI/Bouncer.cs:2703
+#: ../../TShockAPI/Bouncer.cs:2706
 #, csharp-format
 msgid "Bouncer / OnKillMe rejected bad length death text from {0}"
 msgstr "Penolakan / OnKillMe menolak panjang teks kematian yang buruk dari {0}"
 
-#: ../../TShockAPI/Bouncer.cs:2710
+#: ../../TShockAPI/Bouncer.cs:2713
 #, csharp-format
 msgid "Bouncer / OnKillMe rejected custom death message from {0}"
 msgstr "Penolakan / OnKillMe menolak pesan kematian kostum dari {0}"
 
-#: ../../TShockAPI/Bouncer.cs:2684
+#: ../../TShockAPI/Bouncer.cs:2687
 #, csharp-format
 msgid "Bouncer / OnKillMe rejected high damage from {0} {1}"
 msgstr "Penolakan / OnKillMe menolak damage tinggi dari {0} {1}"
 
-#: ../../TShockAPI/Bouncer.cs:2693
+#: ../../TShockAPI/Bouncer.cs:2696
 #, csharp-format
 msgid "Bouncer / OnKillMe rejected index check from {0}"
 msgstr "Penolakan / OnKillMe menolak pemeriksaan index dari {0}"
@@ -1837,7 +1837,7 @@ msgstr "Bouncer / OnLiquidSet ditolak pengecekan tidak cocok dari {0}"
 #: ../../TShockAPI/Bouncer.cs:1731
 #, csharp-format
 msgid "Bouncer / OnLiquidSet rejected liquid type {0} from {1} holding {2}"
-msgstr ""
+msgstr "Bouncer / OnLiquidSet menolak tipe cairan {0} dari {1} yang sedang memegang {2}"
 
 #: ../../TShockAPI/Bouncer.cs:1840
 #, csharp-format
@@ -2184,7 +2184,7 @@ msgstr ""
 msgid "Bouncer / OnPlayerBuff rejected {0} ({1}) applying buff {2} to {3} for {4} ticks: target is null"
 msgstr ""
 
-#: ../../TShockAPI/Bouncer.cs:2667
+#: ../../TShockAPI/Bouncer.cs:2670
 #, csharp-format
 msgid "Bouncer / OnPlayerDamage rejected custom death message from {0}"
 msgstr "Penolakan / OnPlayerDamage menolak pesan mati kostum dari {0}"
@@ -2474,53 +2474,48 @@ msgstr "Bouncer / OnUpdateNPCHome menolak Perizinan membangun rumah npc dari {0}
 msgid "Bouncer / OnUpdateNPCHome rejected range checks from {0}"
 msgstr "Bouncer / OnUpdateNPCHome menolak pengecekan jarak dari {0}"
 
-#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:558
+#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:413
 #, csharp-format
 msgid "Bouncer / SendTileRect accepted clientside world edit from {0}"
 msgstr "Bouncer / SendTileRect menerima sisi klien ubah dunia {0}"
 
-#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:414
+#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:468
+#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:488
+#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:500
+#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:511
 #, csharp-format
-msgid "Bouncer / SendTileRect processing a tile conversion update - [{0}] -> [{1}]"
-msgstr "Bouncer / SendTileRect memproses pembaruan tile -[{0}] -> [{1}]"
-
-#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:429
-#, csharp-format
-msgid "Bouncer / SendTileRect processing a wall conversion update - [{0}] -> [{1}]"
+msgid "Bouncer / SendTileRect reimplemented from {0}"
 msgstr ""
 
-#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:129
-#, csharp-format
-msgid "Bouncer / SendTileRect reimplemented from carbonara from {0}"
-msgstr "Bouncer / SendTileRect mengimplementasikan ulang atas carbonara dari {0}"
-
-#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:299
-msgid "Bouncer / SendTileRect rejected for banned tile"
-msgstr "Bouncer / SendTileRect menolak atas tile blokiran"
-
-#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:578
+#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:446
 #, csharp-format
 msgid "Bouncer / SendTileRect rejected from being disabled from {0}"
 msgstr "Bouncer / SendTileRect menolak atas menjadi disabled dari {0}"
 
-#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:293
+#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:518
 #, csharp-format
-msgid "Bouncer / SendTileRect rejected from no permission for tile object from {0}"
-msgstr "Bouncer / SendTileRect menolak atas bukan Perizinan untuk bentuk tile dari {0}"
+msgid "Bouncer / SendTileRect rejected from matches from {0}"
+msgstr ""
 
-#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:565
+#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:459
 #, csharp-format
-msgid "Bouncer / SendTileRect rejected from non-vanilla tilemod from {0}"
-msgstr "Bouncer / SendTileRect menolak atas non-vanilla tilemod dari {0}"
+msgid "Bouncer / SendTileRect rejected from out of bounds / build permission from {0}"
+msgstr ""
 
-#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:571
+#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:478
+#, csharp-format
+msgid "Bouncer / SendTileRect rejected from out of range from {0}"
+msgstr ""
+
+#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:427
+#, csharp-format
+msgid "Bouncer / SendTileRect rejected from size from {0}"
+msgstr ""
+
+#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:436
 #, csharp-format
 msgid "Bouncer / SendTileRect rejected from throttle from {0}"
 msgstr "Bouncer / SendTileRect menolak atas throttle dari {0}"
-
-#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:610
-msgid "Bouncer / SendTileRectHandler - rejected tile object because object dimensions fall outside the tile rect (excessive size)"
-msgstr "Bouncer / SendTileRectHandler - menolak bentuk tile karena bentuk dimensi jatuh keluar kotak tile (kelebihan ukuran}"
 
 #: ../../TShockAPI/Utils.cs:136
 #, csharp-format
@@ -2544,7 +2539,7 @@ msgstr "Sintaks buff dan Contoh"
 msgid "Butcher Syntax and Example"
 msgstr "Sintaks penjagal dan Contoh"
 
-#: ../../TShockAPI/GetDataHandlers.cs:2619
+#: ../../TShockAPI/GetDataHandlers.cs:2654
 msgid "Bypass SSC is enabled for your account. SSC data will not be loaded or saved."
 msgstr "Akunmu telah diperbolehkan untuk mengabaikan SSC. Data SSC tidak akan dimuat ataupun disimpan."
 
@@ -2650,7 +2645,7 @@ msgstr "Perintah-perintah ({{0}}/{{1}}):"
 msgid "Commands: add, del, hide, list, send, [warpname]."
 msgstr "Perintah-perintah: add, del, hide, list, send, [warpname]."
 
-#: ../../TShockAPI/TShock.cs:765
+#: ../../TShockAPI/TShock.cs:801
 #, csharp-format
 msgid "Config path has been set to {0}"
 msgstr "Jalur konfigurasi telah di tetapkan menjadi {0}"
@@ -2663,7 +2658,7 @@ msgstr "Memuat ulang konfigurasi, perizinan, dan wilayah telah selesai. Beberapa
 msgid "Connect to the internet to figure out what to download?"
 msgstr ""
 
-#: ../../TShockAPI/TShock.cs:1329
+#: ../../TShockAPI/TShock.cs:1365
 msgid "Connecting via a proxy is not allowed."
 msgstr "Koneksi dengan proxy tidak diperbolehkan."
 
@@ -2676,7 +2671,7 @@ msgstr "Pengguna cocok: {0}overridessc|{0}ossc <player name>"
 msgid "Corruption Palm"
 msgstr "Corruption Palm"
 
-#: ../../TShockAPI/TShock.cs:296
+#: ../../TShockAPI/TShock.cs:300
 #, csharp-format
 msgid "Could not apply the given log path / log format, defaults will be used. Exception details:\n"
 "{0}"
@@ -2750,7 +2745,7 @@ msgstr "Target yang ditentukan tidak dapat ditemukan. Periksa apakah ejaanmu ben
 msgid "Could not rename {0}!"
 msgstr "Tidak dapat mengubah nama {0}!"
 
-#: ../../TShockAPI/TShock.cs:1448
+#: ../../TShockAPI/TShock.cs:1484
 msgid "Crash attempt via long chat packet."
 msgstr "Percobaan crash melalui paket chat panjang."
 
@@ -2785,12 +2780,12 @@ msgstr "Maksimal memanggil saat ini: {0}."
 msgid "Current spawn rate: {0}."
 msgstr "Tingkat memanggil saat ini: {0}."
 
-#: ../../TShockAPI/Bouncer.cs:2686
+#: ../../TShockAPI/Bouncer.cs:2689
 #, csharp-format
 msgid "Death Exploit Attempt: Damage {0}"
 msgstr "Upaya Pemanfaatan Kematian: Kerusakan {0}"
 
-#: ../../TShockAPI/Bouncer.cs:2704
+#: ../../TShockAPI/Bouncer.cs:2707
 msgid "Death reason outside of normal bounds."
 msgstr "Penyebab kematian di luar batas normal."
 
@@ -2990,7 +2985,7 @@ msgstr "Contoh: {0}warp add foobar, {0}warp hide foobar true, {0}warp foobar."
 msgid "Executes a command as the super admin."
 msgstr "Perintah dieksekusi sebagai admin super."
 
-#: ../../TShockAPI/GetDataHandlers.cs:4371
+#: ../../TShockAPI/GetDataHandlers.cs:4416
 msgid "Exploit attempt detected!"
 msgstr "Percobaan Exploit terdeteksi!"
 
@@ -3033,7 +3028,7 @@ msgstr "Gagal menamai ulang grup {0}."
 msgid "Failed to rename the region."
 msgstr "Gagal menamai ulang wilayah ini."
 
-#: ../../TShockAPI/Bouncer.cs:2685
+#: ../../TShockAPI/Bouncer.cs:2688
 msgid "Failed to shade polygon normals."
 msgstr "Gagal besarnya normal shade polygon."
 
@@ -3088,372 +3083,372 @@ msgid "Gave {0} {1}."
 msgid_plural "Gave {0} {1}s."
 msgstr[0] "Telah memberi {0} {1}."
 
-#: ../../TShockAPI/GetDataHandlers.cs:3796
+#: ../../TShockAPI/GetDataHandlers.cs:3839
 #, csharp-format
 msgid "GetDataHandlers / HandleCatchNpc catch zero {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3804
+#: ../../TShockAPI/GetDataHandlers.cs:3847
 #, csharp-format
 msgid "GetDataHandlers / HandleCatchNpc rejected catch npc {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3119
+#: ../../TShockAPI/GetDataHandlers.cs:3158
 #, csharp-format
 msgid "GetDataHandlers / HandleChestActive rejected build permission and region check {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3094
+#: ../../TShockAPI/GetDataHandlers.cs:3133
 #, csharp-format
 msgid "GetDataHandlers / HandleChestItem rejected max stacks {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:2844
+#: ../../TShockAPI/GetDataHandlers.cs:2881
 #, csharp-format
 msgid "GetDataHandlers / HandleDoorUse rejected door gap check {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:2829
+#: ../../TShockAPI/GetDataHandlers.cs:2866
 #, csharp-format
 msgid "GetDataHandlers / HandleDoorUse rejected out of range door {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:2835
+#: ../../TShockAPI/GetDataHandlers.cs:2872
 #, csharp-format
 msgid "GetDataHandlers / HandleDoorUse rejected type 0 5 check {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:2669
+#: ../../TShockAPI/GetDataHandlers.cs:2704
 msgid "GetDataHandlers / HandleGetSection rejected reserve slot"
-msgstr ""
-
-#: ../../TShockAPI/GetDataHandlers.cs:4042
-#, csharp-format
-msgid "GetDataHandlers / HandleKillPortal rejected owner mismatch check {0}"
-msgstr ""
-
-#: ../../TShockAPI/GetDataHandlers.cs:2989
-#, csharp-format
-msgid "GetDataHandlers / HandleNpcStrike rejected Cultist summon from {0}"
-msgstr ""
-
-#: ../../TShockAPI/GetDataHandlers.cs:2972
-#, csharp-format
-msgid "GetDataHandlers / HandleNpcStrike rejected EoL summon from {0}"
-msgstr ""
-
-#: ../../TShockAPI/GetDataHandlers.cs:2962
-#, csharp-format
-msgid "GetDataHandlers / HandleNpcStrike rejected npc strike {0}"
-msgstr ""
-
-#: ../../TShockAPI/GetDataHandlers.cs:3250
-#, csharp-format
-msgid "GetDataHandlers / HandleNpcTalk rejected npc talk {0}"
 msgstr ""
 
 #: ../../TShockAPI/GetDataHandlers.cs:4086
 #, csharp-format
+msgid "GetDataHandlers / HandleKillPortal rejected owner mismatch check {0}"
+msgstr ""
+
+#: ../../TShockAPI/GetDataHandlers.cs:3028
+#, csharp-format
+msgid "GetDataHandlers / HandleNpcStrike rejected Cultist summon from {0}"
+msgstr ""
+
+#: ../../TShockAPI/GetDataHandlers.cs:3011
+#, csharp-format
+msgid "GetDataHandlers / HandleNpcStrike rejected EoL summon from {0}"
+msgstr ""
+
+#: ../../TShockAPI/GetDataHandlers.cs:3001
+#, csharp-format
+msgid "GetDataHandlers / HandleNpcStrike rejected npc strike {0}"
+msgstr ""
+
+#: ../../TShockAPI/GetDataHandlers.cs:3290
+#, csharp-format
+msgid "GetDataHandlers / HandleNpcTalk rejected npc talk {0}"
+msgstr ""
+
+#: ../../TShockAPI/GetDataHandlers.cs:4130
+#, csharp-format
 msgid "GetDataHandlers / HandleNpcTeleportPortal rejected not thinking with portals {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:4079
+#: ../../TShockAPI/GetDataHandlers.cs:4123
 #, csharp-format
 msgid "GetDataHandlers / HandleNpcTeleportPortal rejected null check {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3920
+#: ../../TShockAPI/GetDataHandlers.cs:3963
 #, csharp-format
 msgid "GetDataHandlers / HandleNumberOfAnglerQuestsCompleted surprise packet! Someone tell the TShock team! {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:4144
+#: ../../TShockAPI/GetDataHandlers.cs:4188
 #, csharp-format
 msgid "GetDataHandlers / HandleOldOnesArmy rejected permissions {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:4138
+#: ../../TShockAPI/GetDataHandlers.cs:4182
 #, csharp-format
 msgid "GetDataHandlers / HandleOldOnesArmy rejected throttled {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3622
+#: ../../TShockAPI/GetDataHandlers.cs:3664
 #, csharp-format
 msgid "GetDataHandlers / HandlePaintTile rejected range check {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3640
+#: ../../TShockAPI/GetDataHandlers.cs:3682
 #, csharp-format
 msgid "GetDataHandlers / HandlePaintTile rejected select consistency {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3649
+#: ../../TShockAPI/GetDataHandlers.cs:3691
 #, csharp-format
 msgid "GetDataHandlers / HandlePaintTile rejected throttle/permission/range check {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3669
+#: ../../TShockAPI/GetDataHandlers.cs:3712
 #, csharp-format
 msgid "GetDataHandlers / HandlePaintWall rejected range check {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3687
+#: ../../TShockAPI/GetDataHandlers.cs:3730
 #, csharp-format
 msgid "GetDataHandlers / HandlePaintWall rejected selector consistency {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3696
+#: ../../TShockAPI/GetDataHandlers.cs:3739
 #, csharp-format
 msgid "GetDataHandlers / HandlePaintWall rejected throttle/permission/range {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3411
+#: ../../TShockAPI/GetDataHandlers.cs:3452
 #, csharp-format
 msgid "GetDataHandlers / HandlePlayerBuffList handled event and sent data {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3396
+#: ../../TShockAPI/GetDataHandlers.cs:3437
 #, csharp-format
 msgid "GetDataHandlers / HandlePlayerBuffList zeroed player buff due to below state 2 {0} {1}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:2777
+#: ../../TShockAPI/GetDataHandlers.cs:2814
 #, csharp-format
 msgid "GetDataHandlers / HandlePlayerHp rejected over max hp {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:2522
+#: ../../TShockAPI/GetDataHandlers.cs:2557
 msgid "GetDataHandlers / HandlePlayerInfo rejected hardcore required"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:2516
+#: ../../TShockAPI/GetDataHandlers.cs:2551
 msgid "GetDataHandlers / HandlePlayerInfo rejected mediumcore required"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:2457
+#: ../../TShockAPI/GetDataHandlers.cs:2492
 msgid "GetDataHandlers / HandlePlayerInfo rejected name length 0"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:2450
+#: ../../TShockAPI/GetDataHandlers.cs:2485
 #, csharp-format
 msgid "GetDataHandlers / HandlePlayerInfo rejected plugin phase {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:2510
+#: ../../TShockAPI/GetDataHandlers.cs:2545
 msgid "GetDataHandlers / HandlePlayerInfo rejected softcore required"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:4210
-#: ../../TShockAPI/GetDataHandlers.cs:4216
+#: ../../TShockAPI/GetDataHandlers.cs:4255
+#: ../../TShockAPI/GetDataHandlers.cs:4261
 #, csharp-format
 msgid "GetDataHandlers / HandlePlayerKillMeV2 kicked with difficulty {0} {1}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:4225
+#: ../../TShockAPI/GetDataHandlers.cs:4270
 #, csharp-format
 msgid "GetDataHandlers / HandlePlayerKillMeV2 ssc delete {0} {1}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3289
+#: ../../TShockAPI/GetDataHandlers.cs:3329
 #, csharp-format
 msgid "GetDataHandlers / HandlePlayerMana rejected max mana {0} {1}/{2}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:2554
+#: ../../TShockAPI/GetDataHandlers.cs:2589
 msgid "GetDataHandlers / HandlePlayerSlot rejected ignore ssc packets"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3316
+#: ../../TShockAPI/GetDataHandlers.cs:3357
 #, csharp-format
 msgid "GetDataHandlers / HandlePlayerTeam rejected team fastswitch {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:2757
+#: ../../TShockAPI/GetDataHandlers.cs:2794
 #, csharp-format
 msgid "GetDataHandlers / HandlePlayerUpdate home position delta {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3144
+#: ../../TShockAPI/GetDataHandlers.cs:3183
 msgid "GetDataHandlers / HandlePlayerZone rejected null check"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3025
+#: ../../TShockAPI/GetDataHandlers.cs:3064
 #, csharp-format
 msgid "GetDataHandlers / HandleProjectileKill permitted skeletron prime exemption {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3029
+#: ../../TShockAPI/GetDataHandlers.cs:3068
 #, csharp-format
 msgid "GetDataHandlers / HandleProjectileKill rejected banned projectile {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3014
+#: ../../TShockAPI/GetDataHandlers.cs:3053
 #, csharp-format
 msgid "GetDataHandlers / HandleProjectileKill rejected tombstone {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3354
+#: ../../TShockAPI/GetDataHandlers.cs:3395
 #, csharp-format
 msgid "GetDataHandlers / HandleSign rejected sign on build permission {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3361
+#: ../../TShockAPI/GetDataHandlers.cs:3402
 #, csharp-format
 msgid "GetDataHandlers / HandleSign rejected sign range check {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3334
+#: ../../TShockAPI/GetDataHandlers.cs:3375
 #, csharp-format
 msgid "GetDataHandlers / HandleSignRead rejected out of bounds {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:2700
+#: ../../TShockAPI/GetDataHandlers.cs:2737
 #, csharp-format
 msgid "GetDataHandlers / HandleSpawn force teleport 'vanilla spawn' {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:2711
+#: ../../TShockAPI/GetDataHandlers.cs:2748
 #, csharp-format
 msgid "GetDataHandlers / HandleSpawn force teleport phase 1 {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:2720
+#: ../../TShockAPI/GetDataHandlers.cs:2757
 #, csharp-format
 msgid "GetDataHandlers / HandleSpawn force teleport phase 2 {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:2682
+#: ../../TShockAPI/GetDataHandlers.cs:2717
 #, csharp-format
 msgid "GetDataHandlers / HandleSpawn rejected dead player spawn request {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3517
+#: ../../TShockAPI/GetDataHandlers.cs:3558
 #, csharp-format
 msgid "GetDataHandlers / HandleSpawnBoss rejected boss {0} {1}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3507
+#: ../../TShockAPI/GetDataHandlers.cs:3548
 #, csharp-format
 msgid "GetDataHandlers / HandleSpawnBoss rejected bouner throttled {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3524
+#: ../../TShockAPI/GetDataHandlers.cs:3565
 #, csharp-format
 msgid "GetDataHandlers / HandleSpawnBoss rejected invasion {0} {1}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3531
+#: ../../TShockAPI/GetDataHandlers.cs:3572
 #, csharp-format
 msgid "GetDataHandlers / HandleSpawnBoss rejected pet {0} {1}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3442
+#: ../../TShockAPI/GetDataHandlers.cs:3483
 #, csharp-format
 msgid "GetDataHandlers / HandleSpecial rejected enchanted sundial permission (ForceTime) {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3436
+#: ../../TShockAPI/GetDataHandlers.cs:3477
 #, csharp-format
 msgid "GetDataHandlers / HandleSpecial rejected enchanted sundial permission {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3426
+#: ../../TShockAPI/GetDataHandlers.cs:3467
 #, csharp-format
 msgid "GetDataHandlers / HandleSpecial rejected type 1 for {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:4005
+#: ../../TShockAPI/GetDataHandlers.cs:4049
 #, csharp-format
 msgid "GetDataHandlers / HandleSyncExtraValue rejected expert/master mode check {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3999
+#: ../../TShockAPI/GetDataHandlers.cs:4043
 #, csharp-format
 msgid "GetDataHandlers / HandleSyncExtraValue rejected extents check {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:4011
+#: ../../TShockAPI/GetDataHandlers.cs:4055
 #, csharp-format
 msgid "GetDataHandlers / HandleSyncExtraValue rejected npc id out of bounds check - NPC ID: {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:4018
+#: ../../TShockAPI/GetDataHandlers.cs:4062
 #, csharp-format
 msgid "GetDataHandlers / HandleSyncExtraValue rejected npc is null - NPC ID: {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:4025
+#: ../../TShockAPI/GetDataHandlers.cs:4069
 #, csharp-format
 msgid "GetDataHandlers / HandleSyncExtraValue rejected range check {0},{1} vs {2},{3} which is {4}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:4397
+#: ../../TShockAPI/GetDataHandlers.cs:4442
 #, csharp-format
 msgid "GetDataHandlers / HandleSyncLoadout rejected loadout index sync {0}"
 msgstr "GetDataHandlers / HandleSyncLoadout menolak sinkronisasi indeks loadout {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:4388
+#: ../../TShockAPI/GetDataHandlers.cs:4433
 #, csharp-format
 msgid "GetDataHandlers / HandleSyncLoadout rejected loadout index sync out of bounds {0}"
 msgstr "GetDataHandlers / HandleSyncLoadout menolak diluar batas sinkronisasi indeks {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3753
+#: ../../TShockAPI/GetDataHandlers.cs:3796
 #, csharp-format
 msgid "GetDataHandlers / HandleTeleport rejected npc teleport {0} {1}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3762
+#: ../../TShockAPI/GetDataHandlers.cs:3805
 #, csharp-format
 msgid "GetDataHandlers / HandleTeleport rejected p2p extents {0} {1}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3768
+#: ../../TShockAPI/GetDataHandlers.cs:3811
 #, csharp-format
 msgid "GetDataHandlers / HandleTeleport rejected p2p wormhole permission {0} {1}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3744
+#: ../../TShockAPI/GetDataHandlers.cs:3787
 #, csharp-format
 msgid "GetDataHandlers / HandleTeleport rejected rod type {0} {1}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3842
-#: ../../TShockAPI/GetDataHandlers.cs:3858
-#: ../../TShockAPI/GetDataHandlers.cs:3881
+#: ../../TShockAPI/GetDataHandlers.cs:3885
 #: ../../TShockAPI/GetDataHandlers.cs:3901
+#: ../../TShockAPI/GetDataHandlers.cs:3924
+#: ../../TShockAPI/GetDataHandlers.cs:3944
 #, csharp-format
 msgid "GetDataHandlers / HandleTeleportationPotion rejected not holding the correct item {0} {1}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3832
+#: ../../TShockAPI/GetDataHandlers.cs:3875
 #, csharp-format
 msgid "GetDataHandlers / HandleTeleportationPotion rejected permissions {0} {1}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:4126
+#: ../../TShockAPI/GetDataHandlers.cs:4170
 #, csharp-format
 msgid "GetDataHandlers / HandleToggleParty rejected no party {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3059
+#: ../../TShockAPI/GetDataHandlers.cs:3098
 #, csharp-format
 msgid "GetDataHandlers / HandleTogglePvp rejected fastswitch {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3052
+#: ../../TShockAPI/GetDataHandlers.cs:3091
 #, csharp-format
 msgid "GetDataHandlers / HandleTogglePvp rejected index mismatch {0}"
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:2735
+#: ../../TShockAPI/GetDataHandlers.cs:2772
 msgid "GetDataHandlers / OnPlayerUpdate rejected from null player."
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:2464
+#: ../../TShockAPI/GetDataHandlers.cs:2499
 msgid "GetDataHandlers / rejecting player for name prefix starting with tsi: or tsn:."
 msgstr ""
 
-#: ../../TShockAPI/GetDataHandlers.cs:3492
+#: ../../TShockAPI/GetDataHandlers.cs:3533
 #, csharp-format
 msgid "GetDataHandlers / UpdateNPCHome rejected no permission {0}"
 msgstr ""
@@ -3606,7 +3601,7 @@ msgstr "Menumbuhkan tanaman di lokasi anda."
 msgid "Hallow Palm"
 msgstr "Hallow Palm"
 
-#: ../../TShockAPI/GetDataHandlers.cs:4372
+#: ../../TShockAPI/GetDataHandlers.cs:4417
 #, csharp-format
 msgid "HandleSyncCavernMonsterType: Player is trying to modify NPC cavernMonsterType; this is a crafted packet! - From {0}"
 msgstr ""
@@ -3693,7 +3688,7 @@ msgstr "jika player ini tidak melakukan kecurangan, harap laporkan ambang cairan
 msgid "If this player wasn't hacking, please report the tile place threshold they were disabled for to TShock so we can improve this!"
 msgstr "jika player ini tidak melakukan kecurangan, harap laporkan ambang peletakan tile mereka akan mematikan ini untuk TShock sehingga kami dapat meningkatkan ini!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3026
+#: ../../TShockAPI/GetDataHandlers.cs:3065
 msgid "If this was not skeletron prime related, please report to TShock what happened."
 msgstr "Jika ini tidak terkait dengan skeletron prime, harap laporkan ke Tshock apa yang terjadi."
 
@@ -3741,7 +3736,7 @@ msgstr "Jika anda melihat pesan ini dan kamu tau apa yang dilakukan pemain, dimo
 msgid "Ignoring shrapnel per config.."
 msgstr "Pecahan diabaikan setiap konfigurasi.."
 
-#: ../../TShockAPI/GetDataHandlers.cs:2465
+#: ../../TShockAPI/GetDataHandlers.cs:2500
 msgid "Illegal name: prefixes tsi: and tsn: are forbidden."
 msgstr "Nama ilegal: awalan tsi: dan tsn: dilarang."
 
@@ -3963,7 +3958,7 @@ msgstr "Konfigurasi REST tidak benar: \n"
 "Harap sesuaikan konfigurasi Anda dan mulai ulang peladen. \n"
 "Tekan sembarang tombol untuk keluar."
 
-#: ../../TShockAPI/GetDataHandlers.cs:3231
+#: ../../TShockAPI/GetDataHandlers.cs:3271
 msgid "Invalid server password."
 msgstr "Kata sandi server salah."
 
@@ -4395,7 +4390,7 @@ msgstr "Sub-Perintah Item Ban {{0}}/{{1}}:"
 msgid "Item bans ({{0}}/{{1}}):"
 msgstr "Item yang diblokir ({{0}}/{{1}}):"
 
-#: ../../TShockAPI/TSPlayer.cs:1920
+#: ../../TShockAPI/TSPlayer.cs:2007
 #, csharp-format
 msgid "Kicked {0} for : '{1}'"
 msgstr "Dikeluarkan {0} karena : '{1}'"
@@ -4404,7 +4399,7 @@ msgstr "Dikeluarkan {0} karena : '{1}'"
 msgid "Kicked via web"
 msgstr "Dikeluarkan melalui web"
 
-#: ../../TShockAPI/TSPlayer.cs:1919
+#: ../../TShockAPI/TSPlayer.cs:2006
 #, csharp-format
 msgid "Kicked: {0}"
 msgstr "Dikeluarkan: {0}"
@@ -4482,12 +4477,12 @@ msgstr "list [halaman] - daftar semua grup."
 msgid "List Online Players Syntax"
 msgstr "Daftar Sintaks Pemain-Pemain Daring"
 
-#: ../../TShockAPI/TShock.cs:828
+#: ../../TShockAPI/TShock.cs:864
 #, csharp-format
 msgid "Listening on IP {0}."
 msgstr "IP {0} didengarkan."
 
-#: ../../TShockAPI/TShock.cs:809
+#: ../../TShockAPI/TShock.cs:845
 #, csharp-format
 msgid "Listening on port {0}."
 msgstr "Port {0} didengarkan."
@@ -4504,7 +4499,7 @@ msgstr "Daftar-daftar Perintah atau memberikan bantuan pada mereka."
 msgid "listusers - Lists all REST users and their current active tokens."
 msgstr "listusers - semua daftar-daftar para pengguna REST dan token-token milik mereka saat ini."
 
-#: ../../TShockAPI/TShock.cs:798
+#: ../../TShockAPI/TShock.cs:834
 #, csharp-format
 msgid "Loading dedicated config file: {0}"
 msgstr "Memuat berkas konfigurasi khusus: {0}"
@@ -4522,7 +4517,7 @@ msgstr "Tampilan catatan yang dinonaktifkan."
 msgid "Log display enabled."
 msgstr "Tampilan catatan yang diaktifkan."
 
-#: ../../TShockAPI/TShock.cs:785
+#: ../../TShockAPI/TShock.cs:821
 #, csharp-format
 msgid "Log path has been set to {0}"
 msgstr "Jalur log telah ditetapkan menjadi {0}"
@@ -4531,11 +4526,11 @@ msgstr "Jalur log telah ditetapkan menjadi {0}"
 msgid "Login attempt failed - see the message above."
 msgstr "Gagal upaya masuk - lihat pesan di atas."
 
-#: ../../TShockAPI/TShock.cs:980
+#: ../../TShockAPI/TShock.cs:1016
 msgid "Login before join enabled. Users may be prompted for an account specific password instead of a server password on connect."
 msgstr ""
 
-#: ../../TShockAPI/TShock.cs:985
+#: ../../TShockAPI/TShock.cs:1021
 msgid "Login using UUID enabled. Users automatically login via UUID."
 msgstr "Masuk menggunakan UUID diaktifkan. Pengguna secara otomatis masuk melalui UUID."
 
@@ -4655,7 +4650,7 @@ msgstr "Nama pemain tidak ada."
 msgid "Mode: {0}"
 msgstr "Mode: {0}"
 
-#: ../../TShockAPI/TSPlayer.cs:1966
+#: ../../TShockAPI/TSPlayer.cs:2053
 msgid "More than one match found -- unable to decide which is correct: "
 msgstr "Kecocokan ditemukan lebih dari satu - tidak dapat memutuskan mana yang benar: "
 
@@ -4702,7 +4697,7 @@ msgstr "Tidak pernah."
 msgid "New name is too large!"
 msgstr "Nama baru tersebut terlalu panjang!"
 
-#: ../../TShockAPI/TShock.cs:864
+#: ../../TShockAPI/TShock.cs:900
 #, csharp-format
 msgid "New worlds will be generated with the {0} world evil type!"
 msgstr "Dunia baru akan dibuat ulang dengan tipe seram {0}!"
@@ -4776,9 +4771,9 @@ msgstr "Tidak diinzinkan. Token yang disediakan menjadi tidak valid karena perub
 msgid "Not authorized. The specified API endpoint requires a token, but the provided token was not valid."
 msgstr "Tidak diizinkan. API endpoint yang ditentukan memerlukan sebuah token, tapi token yang disediakan tidak valid."
 
+#: ../../TShockAPI/Rest/SecureRest.cs:180
 #: ../../TShockAPI/Rest/RestCommand.cs:95
 #: ../../TShockAPI/Rest/RestCommand.cs:101
-#: ../../TShockAPI/Rest/SecureRest.cs:180
 msgid "Not authorized. The specified API endpoint requires a token."
 msgstr "Tidak diizinkan. API endpoint yang ditentukan membutuhkan sebuah token."
 
@@ -4804,7 +4799,7 @@ msgstr "Kerusakan NPC terlampaui {0}."
 
 #: ../../TShockPluginManager/NugetCLI.cs:103
 msgid "One moment..."
-msgstr ""
+msgstr "Tunggu sebentar..."
 
 #: ../../TShockAPI/DB/RegionManager.cs:102
 #, csharp-format
@@ -4911,8 +4906,8 @@ msgstr "Pemain \"{0}\" harus menghubungkan ulang terlebih dahulu, karena sampah 
 msgid "Player \"{0}\" is already logged in."
 msgstr "Pemain \"{0}\" sudah masuk."
 
-#: ../../TShockAPI/TSPlayer.cs:1883
-#: ../../TShockAPI/TSPlayer.cs:1887
+#: ../../TShockAPI/TSPlayer.cs:1970
+#: ../../TShockAPI/TSPlayer.cs:1974
 #, csharp-format
 msgid "Player {0} has been disabled for {1}."
 msgstr "Pemain {0} telah dinonaktifkan dalam {1}."
@@ -4973,7 +4968,7 @@ msgstr "Pemain tidak mempunyai izin untuk membuat {0} proyektil."
 msgid "Player not found. Unable to kick the player."
 msgstr "Pemain tidak ditemukan. tidak dapat mengeluarkan pemain tersebut."
 
-#: ../../TShockAPI/TShock.cs:1696
+#: ../../TShockAPI/TShock.cs:1732
 #, csharp-format
 msgid "Please {0}register or {0}login to play!"
 msgstr "Silahkan {0}register atau {0}login untuk dapat bermain!"
@@ -4999,7 +4994,7 @@ msgstr "Setelah proses ini harap gunakan {0}login <nama-pengguna> <kata-sandi>."
 msgid "Please use the following to create a permanent account for you."
 msgstr "Harap ikuti petunjuk untuk membuat akun anda menjadi permanen."
 
-#: ../../TShockAPI/TShock.cs:895
+#: ../../TShockAPI/TShock.cs:931
 #, csharp-format
 msgid "Port overridden by startup argument. Set to {0}"
 msgstr "Port ditimpa oleh argumen startup. Ditetapkan ke {0}"
@@ -5049,7 +5044,7 @@ msgstr "Pemblokiran proyektil ({{0}}/{{1}}):"
 #: ../../TShockAPI/Bouncer.cs:1286
 #, csharp-format
 msgid "Projectile create threshold exceeded {0}."
-msgstr ""
+msgstr "Pembuatan projectile telah melewati ambang batas {0}."
 
 #: ../../TShockAPI/Bouncer.cs:1192
 #, csharp-format
@@ -5074,37 +5069,37 @@ msgstr "Yang dilindungi: {0}."
 msgid "Quick usage: {0} {1} \"Griefing\""
 msgstr "Penggunaan cepat: {0} {1} \"Penghancuran\""
 
-#: ../../TShockAPI/TSPlayer.cs:758
+#: ../../TShockAPI/TSPlayer.cs:759
 #, csharp-format
 msgid "Rangecheck failed for {0} ({1}, {2}) (rg: {3}/{5}, {4}/{5})"
 msgstr "Pengecekan jarak gagal selama {0} ({1}, {2}) (rg: {3}/{5}, {4}/{5})"
 
-#: ../../TShockAPI/TShock.cs:1196
+#: ../../TShockAPI/TShock.cs:1232
 msgid "Reached HealOtherPlayer threshold"
-msgstr ""
+msgstr "Telah mencapai ambang batas dari HealOtherPlayer"
 
 #: ../../TShockAPI/Bouncer.cs:2110
 msgid "Reached HealOtherPlayer threshold."
 msgstr "Mencapai ambang batas HealOtherPlayer."
 
-#: ../../TShockAPI/TShock.cs:1187
+#: ../../TShockAPI/TShock.cs:1223
 msgid "Reached paint threshold"
-msgstr ""
+msgstr "Telah mencapai ambang batas dari paint."
 
 #: ../../TShockAPI/Bouncer.cs:1290
 msgid "Reached projectile create threshold."
 msgstr ""
 
-#: ../../TShockAPI/TShock.cs:1178
+#: ../../TShockAPI/TShock.cs:1214
 msgid "Reached projectile threshold"
 msgstr ""
 
+#: ../../TShockAPI/TShock.cs:1144
 #: ../../TShockAPI/Bouncer.cs:922
-#: ../../TShockAPI/TShock.cs:1108
 msgid "Reached TileKill threshold."
 msgstr "Mencapai ambang TileKill."
 
-#: ../../TShockAPI/TShock.cs:1169
+#: ../../TShockAPI/TShock.cs:1205
 msgid "Reached TileLiquid threshold"
 msgstr ""
 
@@ -5117,7 +5112,7 @@ msgstr "Mencapai ambang TileLiquid {0}."
 msgid "Reached TileLiquid threshold."
 msgstr "Mencapai ambang TileLiquid."
 
-#: ../../TShockAPI/TShock.cs:1125
+#: ../../TShockAPI/TShock.cs:1161
 msgid "Reached TilePlace threshold"
 msgstr ""
 
@@ -5375,7 +5370,7 @@ msgstr "Mengirim anda ke titik dihidupkannya dunia ini."
 msgid "Sends you to your spawn point."
 msgstr "Mengirim anda ke titik dihidupkannya diri anda."
 
-#: ../../TShockAPI/TShock.cs:738
+#: ../../TShockAPI/TShock.cs:774
 msgid "Server console interrupted!"
 msgstr "Konsol server terputus!"
 
@@ -5387,7 +5382,7 @@ msgstr "Server penuh"
 msgid "Server is full. No reserved slots open."
 msgstr "Server penuh. Tidak ada slot cadangan yang terbuka."
 
-#: ../../TShockAPI/TShock.cs:1300
+#: ../../TShockAPI/TShock.cs:1336
 msgid "Server is shutting down..."
 msgstr "Server dimatikan..."
 
@@ -5417,7 +5412,7 @@ msgstr "Peladen sedang dalam dimatikan."
 msgid "Server side characters are enabled. You need to be logged-in to play."
 msgstr "Karakter dalam peladen diaktifkan. anda harus masuk untuk bermain."
 
-#: ../../TShockAPI/TShock.cs:1691
+#: ../../TShockAPI/TShock.cs:1727
 #, csharp-format
 msgid "Server side characters is enabled! Please {0}register or {0}login to play!"
 msgstr "Karakter khusus server diaktifkan! Silahkan {0}register atau {0}login untuk bermain!"
@@ -5541,7 +5536,7 @@ msgstr "Mematikan peladen ini dengan menyimpan."
 msgid "Shuts down the server without saving."
 msgstr "Mematikan peladen tanpa menyimpan."
 
-#: ../../TShockAPI/TShock.cs:735
+#: ../../TShockAPI/TShock.cs:771
 msgid "Shutting down safely. To force shutdown, send SIGINT (CTRL + C) again."
 msgstr "Mematikan dengan aman. Untuk mematikan paksa, kirim SIGINT (CTRL + C) lagi."
 
@@ -5558,7 +5553,7 @@ msgstr "Skeletron"
 msgid "Skeletron Prime"
 msgstr "Skeletron Prime"
 
-#: ../../TShockAPI/TSPlayer.cs:1069
+#: ../../TShockAPI/TSPlayer.cs:1076
 #, csharp-format
 msgid "Skipping SSC save (due to tshock.ignore.ssc) for {0}"
 msgstr "Mengabaikan penyimpanan SSC untuk {0} (karena menggunakan tshock.ignore.ssc) dalam {0}"
@@ -5634,66 +5629,66 @@ msgstr "antrian penyisipan Catatan SQL gagal: {0}"
 msgid "SSC must be enabled to use this command."
 msgstr "Harus mengaktifkan SSC ketika ingin menggunakan perintah ini."
 
-#: ../../TShockAPI/TSPlayer.cs:434
+#: ../../TShockAPI/TSPlayer.cs:435
 #, csharp-format
 msgid "Stack cheat detected. Remove armor {0} ({1}) and then rejoin."
 msgstr "Terindikasi kecurangan penumpukan. menghapus armor {0} ({1}) dan kemudian masuk kembali."
 
-#: ../../TShockAPI/TSPlayer.cs:577
+#: ../../TShockAPI/TSPlayer.cs:578
 #, csharp-format
 msgid "Stack cheat detected. Remove Defender's Forge item {0} ({1}) and then rejoin."
 msgstr "Terindikasi kecurangan penumpukan. menghapus item yang ada di Defender's Forge {0} ({1}) dan kemudian masuk kembali."
 
-#: ../../TShockAPI/TSPlayer.cs:454
+#: ../../TShockAPI/TSPlayer.cs:455
 #, csharp-format
 msgid "Stack cheat detected. Remove dye {0} ({1}) and then rejoin."
 msgstr "Terindikasi kecurangan penumpukan. menghapus dye {0} ({1}) dan kemudian masuk kembali."
 
-#: ../../TShockAPI/TSPlayer.cs:414
-#: ../../TShockAPI/TSPlayer.cs:474
+#: ../../TShockAPI/TSPlayer.cs:415
+#: ../../TShockAPI/TSPlayer.cs:475
 #, csharp-format
 msgid "Stack cheat detected. Remove item {0} ({1}) and then rejoin."
 msgstr "Terindikasi kecurangan penumpukan. menghapus item {0} ({1}) dan kemudian masuk kembali."
 
-#: ../../TShockAPI/TSPlayer.cs:494
+#: ../../TShockAPI/TSPlayer.cs:495
 #, csharp-format
 msgid "Stack cheat detected. Remove item dye {0} ({1}) and then rejoin."
 msgstr "Terindikasi kecurangan penumpukan. menghapus dye item {0} ({1}) dan kemudian masuk kembali."
 
-#: ../../TShockAPI/TSPlayer.cs:618
-#: ../../TShockAPI/TSPlayer.cs:638
+#: ../../TShockAPI/TSPlayer.cs:619
+#: ../../TShockAPI/TSPlayer.cs:639
 #, csharp-format
 msgid "Stack cheat detected. Remove Loadout 1 item {0} ({1}) and then rejoin."
 msgstr "Terindikasi kecurangan penumpukan. menghapus item yang ada di Loudout ke-1 {0} ({1}) dan kemudian masuk kembali."
 
-#: ../../TShockAPI/TSPlayer.cs:658
-#: ../../TShockAPI/TSPlayer.cs:678
+#: ../../TShockAPI/TSPlayer.cs:659
+#: ../../TShockAPI/TSPlayer.cs:679
 #, csharp-format
 msgid "Stack cheat detected. Remove Loadout 2 item {0} ({1}) and then rejoin."
 msgstr "Terindikasi kecurangan penumpukan. menghapus item yang ada di Loadout ke-2 {0} ({1}) dan kemudian masuk kembali."
 
-#: ../../TShockAPI/TSPlayer.cs:698
-#: ../../TShockAPI/TSPlayer.cs:718
+#: ../../TShockAPI/TSPlayer.cs:699
+#: ../../TShockAPI/TSPlayer.cs:719
 #, csharp-format
 msgid "Stack cheat detected. Remove Loadout 3 item {0} ({1}) and then rejoin."
 msgstr "Terindikasi kecurangan penumpukan. menghapus item yang ada di Loadout ke-3 {0} ({1}) dan kemudian masuk kembali."
 
-#: ../../TShockAPI/TSPlayer.cs:515
+#: ../../TShockAPI/TSPlayer.cs:516
 #, csharp-format
 msgid "Stack cheat detected. Remove piggy-bank item {0} ({1}) and then rejoin."
 msgstr "Terindikasi kecurangan penumpukan. menghapus item yang ada di piggy-bank {0} ({1}) dan kemudian masuk kembali."
 
-#: ../../TShockAPI/TSPlayer.cs:536
+#: ../../TShockAPI/TSPlayer.cs:537
 #, csharp-format
 msgid "Stack cheat detected. Remove safe item {0} ({1}) and then rejoin."
 msgstr "Terindikasi kecurangan penumpukan. menghapus item yang ada di safe {0} ({1}) dan kemudian masuk kembali."
 
-#: ../../TShockAPI/TSPlayer.cs:556
+#: ../../TShockAPI/TSPlayer.cs:557
 #, csharp-format
 msgid "Stack cheat detected. Remove trash item {0} ({1}) and then rejoin."
 msgstr "Terindikasi kecurangan penumpukan. menghapus item yang ada di kantong sampah {0} ({1}) dan kemudian masuk kembali."
 
-#: ../../TShockAPI/TSPlayer.cs:598
+#: ../../TShockAPI/TSPlayer.cs:599
 #, csharp-format
 msgid "Stack cheat detected. Remove Void Vault item {0} ({1}) and then rejoin."
 msgstr "Terindikasi kecurangan penumpukan. menghapus item yang ada di Void Vault {0} ({1}) dan kemudian masuk kembali."
@@ -5710,21 +5705,21 @@ msgstr "Pertunjukan bulan penuh telah dimulai."
 msgid "Started an eclipse."
 msgstr "Gerhana telah dimulai."
 
-#: ../../TShockAPI/TShock.cs:927
+#: ../../TShockAPI/TShock.cs:963
 msgid "Startup parameter overrode maximum player slot configuration value."
 msgstr "Parameter startup mengesampingkan nilai konfigurasi slot pemain maksimum."
 
-#: ../../TShockAPI/TShock.cs:909
+#: ../../TShockAPI/TShock.cs:945
 msgid "Startup parameter overrode REST enable."
-msgstr ""
+msgstr "Parameter startup telah menimpa konfigurasi yang mengaktifkan REST"
 
-#: ../../TShockAPI/TShock.cs:918
+#: ../../TShockAPI/TShock.cs:954
 msgid "Startup parameter overrode REST port."
-msgstr ""
+msgstr "Parameter startup telah menimpa konfigurasi yang mengatur port REST"
 
-#: ../../TShockAPI/TShock.cs:901
+#: ../../TShockAPI/TShock.cs:937
 msgid "Startup parameter overrode REST token."
-msgstr ""
+msgstr "Parameter startup telah menimpa konfigurasi yang mengatur token REST"
 
 #: ../../TShockAPI/Commands.cs:2310
 msgid "Stopped an eclipse."
@@ -5886,7 +5881,7 @@ msgstr "Warp yang dituju, {0}, tidak ditemukan."
 msgid "the Destroyer"
 msgstr "the Destroyer"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3427
+#: ../../TShockAPI/GetDataHandlers.cs:3468
 msgid "The Dungeon Guardian returned you to your spawn point."
 msgstr "The Dungeon Guardian telah mengembalikan anda ke tempat titik muncul."
 
@@ -6027,7 +6022,7 @@ msgstr "Nilainya harus lebih besar dari nol."
 
 #: ../../TShockPluginManager/NugetCLI.cs:127
 msgid "The versions of plugins you requested aren't compatible with eachother."
-msgstr ""
+msgstr "Versi plugin yang anda request tidak compatible antara satu dengan yang lain"
 
 #: ../../TShockAPI/Commands.cs:2722
 msgid "the Wall of Flesh"
@@ -6096,7 +6091,7 @@ msgstr "Terjadi kesalahan saat memproses permintaan terkait proses masuk atau au
 
 #: ../../TShockPluginManager/NugetCLI.cs:121
 msgid "There was an issue figuring out what to download."
-msgstr ""
+msgstr "Terdapat masalah dalam menentukan apa yang perlu di download"
 
 #: ../../TShockPluginManager/NugetCLI.cs:90
 msgid "There was an issue reading the packages.json."
@@ -6108,8 +6103,8 @@ msgid "This is the plugin you requested to install."
 msgid_plural "These are the plugins you requested to install"
 msgstr[0] ""
 
-#: ../../TShockAPI/TShock.cs:1013
-#: ../../TShockAPI/TShock.cs:1023
+#: ../../TShockAPI/TShock.cs:1049
+#: ../../TShockAPI/TShock.cs:1059
 #, csharp-format
 msgid "This token will display until disabled by verification. ({0}setup)"
 msgstr "Token ini akan ditampilkan hingga dinonaktifkan oleh verifikasi. ({0}setup)"
@@ -6159,8 +6154,8 @@ msgstr "Untuk menyingkirkan NPC tanpa membuatnya menjatuhkan item, gunakan perin
 msgid "To mute a player without broadcasting to chat, use the command with {0} instead of {1}"
 msgstr "Untuk membisukan pemain tanpa menyiarkan ke dalam obrolan, gunakan perintah dengan {0} daripada {1}"
 
-#: ../../TShockAPI/TShock.cs:1012
-#: ../../TShockAPI/TShock.cs:1022
+#: ../../TShockAPI/TShock.cs:1048
+#: ../../TShockAPI/TShock.cs:1058
 #, csharp-format
 msgid "To setup the server, join the game and type {0}setup {1}"
 msgstr "Untuk mengatur pelanden. masuk kedalam permainan dan ketik {0}setup {1}"
@@ -6227,7 +6222,7 @@ msgstr "Tipe-tipe Trees dan lain lain tersedia untuk digunakan. ({{0}}/{{1}}):"
 msgid "Tried to grow a {0}."
 msgstr "Mencoba menumbuhkan sebuah {0}."
 
-#: ../../TShockAPI/TShock.cs:399
+#: ../../TShockAPI/TShock.cs:403
 #, csharp-format
 msgid "TShock {0} ({1}) now running."
 msgstr "TShock {0} ({1}) sekarang berjalan."
@@ -6236,23 +6231,23 @@ msgstr "TShock {0} ({1}) sekarang berjalan."
 msgid "TShock Ban Help"
 msgstr "Bantuan TShock Ban"
 
-#: ../../TShockAPI/TShock.cs:449
+#: ../../TShockAPI/TShock.cs:480
 msgid "TShock comes with no warranty & is free software."
 msgstr "Tshock hadir tanpa jaminan & merupakan perangkat lunak gratis."
 
-#: ../../TShockAPI/TShock.cs:461
+#: ../../TShockAPI/TShock.cs:492
 msgid "TShock encountered a problem from which it cannot recover. The following message may help diagnose the problem."
 msgstr "TShock mengalami masalah yang tidak dapat dipulihkan. Pesan berikut dapat membantu mendiagnosis masalah."
 
-#: ../../TShockAPI/TShock.cs:1021
+#: ../../TShockAPI/TShock.cs:1057
 msgid "TShock Notice: setup-code.txt is still present, and the code located in that file will be used."
 msgstr "Pemberitahuan TShock : masih ada setup-code.txt, dan tempat kode di dalam berkas itu akan digunakan."
 
-#: ../../TShockAPI/TShock.cs:353
+#: ../../TShockAPI/TShock.cs:357
 msgid "TShock was improperly shut down. Please use the exit command in the future to prevent this."
 msgstr "Tshock dimatikan dengan tidak benar. Lain kali silakan gunakan perintah keluar untuk mencegah hal ini."
 
-#: ../../TShockAPI/TShock.cs:997
+#: ../../TShockAPI/TShock.cs:1033
 msgid "TShock will now disable the initial setup system and remove setup-code.txt as it is no longer needed."
 msgstr "TShock sekarang akan menonaktifkan sistem pengaturan awal dan menghapus setup-code.txt karena tidak dibutuhkan kembali."
 
@@ -6405,11 +6400,11 @@ msgstr "tidak dapat meluncur {0} karena dia tidak lagi masuk."
 msgid "Unable to launch {0} because she is not logged in."
 msgstr "tidak dapat meluncur {0} karena dia tidak lagi masuk."
 
-#: ../../TShockAPI/TShock.cs:1484
+#: ../../TShockAPI/TShock.cs:1520
 msgid "Unable to parse command '{0}' from player {1}."
 msgstr "Tidak dapat mengurai perintah '{0}' dari pemain {1}."
 
-#: ../../TShockAPI/TShock.cs:1483
+#: ../../TShockAPI/TShock.cs:1519
 msgid "Unable to parse command. Please contact an administrator for assistance."
 msgstr "Tidak dapat mengurai perintah. Silakan hubungi administrasi untuk mendapatkan bantuan."
 
@@ -6450,7 +6445,7 @@ msgstr "tanaman tidak dikenali!"
 msgid "Unrecognized player direction"
 msgstr "Penghubung pemain tidak dikenal."
 
-#: ../../TShockAPI/TShock.cs:462
+#: ../../TShockAPI/TShock.cs:493
 msgid "Until the problem is resolved, TShock will not be able to start (and will crash on startup)."
 msgstr "Sampai masalah teratasi, TShock tidak akan dapat dijalankan (dan akan macet saat memulai)."
 
@@ -6492,11 +6487,11 @@ msgstr "Gunakan: /uploadssc [playername]."
 msgid "Use \"{0}worldevent rain slime\" to start slime rain!"
 msgstr "Gunakan \"{0}worldevent rain slime\" untuk memulai hujan slime!"
 
-#: ../../TShockAPI/TSPlayer.cs:1971
+#: ../../TShockAPI/TSPlayer.cs:2058
 msgid "Use \"my query\" for items with spaces."
 msgstr "Gunakan \"my query\" untuk item dengan spasi."
 
-#: ../../TShockAPI/TSPlayer.cs:1972
+#: ../../TShockAPI/TSPlayer.cs:2059
 msgid "Use tsi:[number] or tsn:[username] to distinguish between user IDs and usernames."
 msgstr "Gunakan tsi:[number] atau tsn:[username] untuk membedakan antara ID pengguna dan nama pengguna."
 
@@ -6550,8 +6545,8 @@ msgstr "Bantuan perintah manajemen pengguna:"
 msgid "Username or password may be incorrect or this account may not have sufficient privileges."
 msgstr "Nama pengguna atau kata sandi mungkin salah atau akun ini mungkin tidak memiliki keunggulan yang cukup."
 
-#: ../../TShockAPI/TShock.cs:390
 #: ../../TShockAPI/TShock.cs:394
+#: ../../TShockAPI/TShock.cs:398
 #, csharp-format
 msgid "Using {0} for tile implementation"
 msgstr "Menggunakan {0} untuk implementasi tile"
@@ -6665,7 +6660,7 @@ msgstr "Warp kedalam {0}."
 msgid "Warps ({{0}}/{{1}}):"
 msgstr "Warp-warp ({{0}}/{{1}}):"
 
-#: ../../TShockAPI/TShock.cs:448
+#: ../../TShockAPI/TShock.cs:479
 msgid "Welcome to TShock for Terraria!"
 msgstr "Selamat datang di Tshock untuk Terraria!"
 
@@ -6695,12 +6690,12 @@ msgstr "Dunia telah dicadangkan."
 msgid "World mode set to {0}."
 msgstr "Mode dunia diatur menjadi {0}."
 
-#: ../../TShockAPI/TShock.cs:818
+#: ../../TShockAPI/TShock.cs:854
 #, csharp-format
 msgid "World name will be overridden by: {0}"
 msgstr "Nama dunia akan ditimpa oleh: {0}"
 
-#: ../../TShockAPI/TShock.cs:775
+#: ../../TShockAPI/TShock.cs:811
 #, csharp-format
 msgid "World path has been set to {0}"
 msgstr "Jalur dunia telah dtetapkan ke {0}"
@@ -6731,7 +6726,7 @@ msgstr "Anda sudah masuk, tidak perlu masuk lagi."
 msgid "You are dead. Dead players can't go home."
 msgstr "Anda telah mati. Pemain yang mati tidak dapat pulang ke rumah."
 
-#: ../../TShockAPI/TShock.cs:1501
+#: ../../TShockAPI/TShock.cs:1537
 msgid "You are muted!"
 msgstr "Anda telah dibisukan!"
 
@@ -6742,7 +6737,7 @@ msgstr "Anda telah dibisukan!"
 msgid "You are muted."
 msgstr "Anda telah dibisukan!"
 
-#: ../../TShockAPI/Commands.cs:6758
+#: ../../TShockAPI/Commands.cs:6754
 #, csharp-format
 msgid "You are no longer in god mode."
 msgstr "Anda sudah lama tidak dalam mode dewa."
@@ -6767,7 +6762,7 @@ msgstr "Anda tidak termasuk dalam daftar putih."
 msgid "You are now being annoyed."
 msgstr "Anda sekarang dibuat kesal."
 
-#: ../../TShockAPI/Commands.cs:6757
+#: ../../TShockAPI/Commands.cs:6753
 #, csharp-format
 msgid "You are now in god mode."
 msgstr "Anda sekarang berada dalam mode dewa."
@@ -6784,7 +6779,7 @@ msgid "You butchered {0} NPC."
 msgid_plural "You butchered {0} NPCs."
 msgstr[0] "Anda telah membunuh {0} NPC"
 
-#: ../../TShockAPI/TShock.cs:450
+#: ../../TShockAPI/TShock.cs:481
 msgid "You can modify & distribute it under the terms of the GNU GPLv3."
 msgstr "Anda dapat memodifikasi dan mendistribusikannya di bawah ketentuan GNU GPLv3."
 
@@ -6862,7 +6857,7 @@ msgstr "Anda tidak dapat masuk selagi menggunakan sebuah item."
 msgid "You cannot spawn banned items."
 msgstr "Anda tidak dapat memunculkan item-item yang diblokir."
 
-#: ../../TShockAPI/GetDataHandlers.cs:3445
+#: ../../TShockAPI/GetDataHandlers.cs:3486
 msgid "You cannot use the Enchanted Sundial because time is stopped."
 msgstr "Anda tidak dapat menggunakan Enchanted Sundial karena waktu telah dihentikan."
 
@@ -6892,7 +6887,7 @@ msgstr[0] "Anda telah menghapus proyektil {0} dalam jangkauan dari {1}."
 msgid "You didn't put a player name."
 msgstr "Anda tidak memasukkan nama pemain."
 
-#: ../../TShockAPI/GetDataHandlers.cs:4211
+#: ../../TShockAPI/GetDataHandlers.cs:4256
 msgid "You died! Normally, you'd be banned."
 msgstr "Kamu mati! Biasanya, kamu akan diblokir."
 
@@ -6901,15 +6896,15 @@ msgstr "Kamu mati! Biasanya, kamu akan diblokir."
 msgid "You do not have access to this command."
 msgstr "Anda tidak memiliki izin akses pada perintah ini."
 
-#: ../../TShockAPI/TSPlayer.cs:828
+#: ../../TShockAPI/TSPlayer.cs:829
 msgid "You do not have permission to build in the spawn point."
 msgstr "Anda tidak memiliki izin untuk membangun di dalam titik muncul."
 
-#: ../../TShockAPI/TSPlayer.cs:831
+#: ../../TShockAPI/TSPlayer.cs:832
 msgid "You do not have permission to build in this region."
 msgstr "Anda tidak memiliki izin untuk membangun di dalam wilayah ini."
 
-#: ../../TShockAPI/TSPlayer.cs:825
+#: ../../TShockAPI/TSPlayer.cs:826
 msgid "You do not have permission to build on this server."
 msgstr "Anda tidak memiliki izin untuk membangun didalam peladen ini."
 
@@ -6945,7 +6940,7 @@ msgstr "Anda tidak memiliki izin untuk membuat mode dewa pada pemain lainnya."
 msgid "You do not have permission to grow this tree type"
 msgstr "Anda tidak memiliki izin untuk menumbuhan tipe pohon"
 
-#: ../../TShockAPI/GetDataHandlers.cs:2960
+#: ../../TShockAPI/GetDataHandlers.cs:2999
 msgid "You do not have permission to hurt Town NPCs."
 msgstr "Anda tidak memiliki izin untuk menyakiti NPC Alun-alun."
 
@@ -7003,7 +6998,7 @@ msgstr "Anda tidak memiliki izin untuk melakukan tindakan ini."
 msgid "You do not have permission to place actuators."
 msgstr "Anda tidak memiliki izin untuk menaruh aktuator."
 
-#: ../../TShockAPI/GetDataHandlers.cs:3967
+#: ../../TShockAPI/GetDataHandlers.cs:4011
 msgid "You do not have permission to place Logic Sensors."
 msgstr "Anda tidak memiliki izin untuk menaruh logic Sensor."
 
@@ -7012,7 +7007,7 @@ msgstr "Anda tidak memiliki izin untuk menaruh logic Sensor."
 msgid "You do not have permission to place this tile."
 msgstr "Anda tidak memiliki izin untuk menaruh tile ini."
 
-#: ../../TShockAPI/GetDataHandlers.cs:3493
+#: ../../TShockAPI/GetDataHandlers.cs:3534
 msgid "You do not have permission to relocate Town NPCs."
 msgstr "Anda tidak memiliki izin untuk mengatur lokasi ulang NPC Alun-alun."
 
@@ -7028,15 +7023,15 @@ msgstr "Anda tidak memiliki izin untuk melihat ID pemain."
 msgid "You do not have permission to send emotes!"
 msgstr "Anda tidak memiliki izin untuk mengirim emoji!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3532
+#: ../../TShockAPI/GetDataHandlers.cs:3573
 msgid "You do not have permission to spawn pets."
 msgstr "Anda tidak memiliki izin untuk memunculkan peliharaan."
 
-#: ../../TShockAPI/GetDataHandlers.cs:4127
+#: ../../TShockAPI/GetDataHandlers.cs:4171
 msgid "You do not have permission to start a party."
 msgstr "Anda tidak memiliki izin untuk memulai pesta."
 
-#: ../../TShockAPI/GetDataHandlers.cs:3525
+#: ../../TShockAPI/GetDataHandlers.cs:3566
 msgid "You do not have permission to start invasions."
 msgstr "Anda tidak memiliki izin untuk memulai peristiwa."
 
@@ -7045,19 +7040,19 @@ msgstr "Anda tidak memiliki izin untuk memulai peristiwa."
 msgid "You do not have permission to start the {0} event."
 msgstr "Anda tidak memiliki izin untuk memulai peristiwa {0}."
 
-#: ../../TShockAPI/GetDataHandlers.cs:4145
+#: ../../TShockAPI/GetDataHandlers.cs:4189
 msgid "You do not have permission to start the Old One's Army."
 msgstr "Anda tidak diizinkan untuk memulai Old One's Army."
 
-#: ../../TShockAPI/GetDataHandlers.cs:3518
+#: ../../TShockAPI/GetDataHandlers.cs:3559
 msgid "You do not have permission to summon bosses."
 msgstr "Anda tidak memiliki izin untuk memanggil boss."
 
-#: ../../TShockAPI/GetDataHandlers.cs:2970
+#: ../../TShockAPI/GetDataHandlers.cs:3009
 msgid "You do not have permission to summon the Empress of Light."
 msgstr "Anda tidak memiliki izin untuk memanggil sang Empress of Light."
 
-#: ../../TShockAPI/GetDataHandlers.cs:2987
+#: ../../TShockAPI/GetDataHandlers.cs:3026
 msgid "You do not have permission to summon the Lunatic Cultist!"
 msgstr "Anda tidak memiliki izin untuk memanggil sang Lunatic Cultist!"
 
@@ -7073,12 +7068,12 @@ msgstr "Anda tidak memiliki izin untuk telportasi semua para pemain."
 msgid "You do not have permission to teleport other players."
 msgstr "Anda tidak memiliki izin untuk teleportasi pemain lainnya."
 
-#: ../../TShockAPI/GetDataHandlers.cs:3833
+#: ../../TShockAPI/GetDataHandlers.cs:3876
 #, csharp-format
 msgid "You do not have permission to teleport using {0}."
 msgstr "Anda tidak memiliki izin untuk teleportasi menggunakan {0}."
 
-#: ../../TShockAPI/GetDataHandlers.cs:3745
+#: ../../TShockAPI/GetDataHandlers.cs:3788
 msgid "You do not have permission to teleport using items."
 msgstr "Anda tidak memiliki izin untuk teleportasi menggunakan item."
 
@@ -7086,7 +7081,7 @@ msgstr "Anda tidak memiliki izin untuk teleportasi menggunakan item."
 msgid "You do not have permission to teleport using pylons."
 msgstr "Anda tidak memiliki izin untuk teleportasi menggunakan pylon."
 
-#: ../../TShockAPI/GetDataHandlers.cs:3769
+#: ../../TShockAPI/GetDataHandlers.cs:3812
 msgid "You do not have permission to teleport using Wormhole Potions."
 msgstr "Anda tidak memiliki izin untuk teleportasi menggunakan Wormhole Potion."
 
@@ -7102,7 +7097,7 @@ msgstr "Anda tidak memiliki izin untuk aktifkan/nonaktifkan mode dewa."
 msgid "You do not have permission to upload another player's character join-state server-side-character data."
 msgstr "Anda tidak memiliki izin untuk mengunggah karakter pemain lain yang menggabung data karakter sisi peladen."
 
-#: ../../TShockAPI/GetDataHandlers.cs:3437
+#: ../../TShockAPI/GetDataHandlers.cs:3478
 msgid "You do not have permission to use the Enchanted Sundial."
 msgstr "Anda tidak memiliki izin untuk menggunakan Enchanted Sundial."
 
@@ -7115,7 +7110,7 @@ msgstr ""
 msgid "You failed to change your password."
 msgstr "Anda telah gagal dalam mengganti kata sandi anda."
 
-#: ../../TShockAPI/GetDataHandlers.cs:2458
+#: ../../TShockAPI/GetDataHandlers.cs:2493
 msgid "You have been Bounced."
 msgstr ""
 
@@ -7146,7 +7141,7 @@ msgstr "Anda telah mengganti grup {0} ke {1}"
 msgid "You have changed {0}'s group to {1} for {2}"
 msgstr "Anda telah mengganti grup {0} ke {1} dalam {2}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:4226
+#: ../../TShockAPI/GetDataHandlers.cs:4271
 msgid "You have fallen in hardcore mode, and your items have been lost forever."
 msgstr "Anda telah gugur di mode hardcore, dan item anda akan hilang selamanya."
 
@@ -7214,11 +7209,11 @@ msgstr "Anda telah meluncurkan kembang api mengenai {0}."
 msgid "You launched fireworks on yourself."
 msgstr "Anda telah meluncurkan kembang api mengenai diri anda sendiri."
 
-#: ../../TShockAPI/TShock.cs:608
+#: ../../TShockAPI/TShock.cs:648
 msgid "You logged in from another location."
 msgstr "Anda masuk dari lokasi lain."
 
-#: ../../TShockAPI/TShock.cs:599
+#: ../../TShockAPI/TShock.cs:639
 msgid "You logged in from the same IP."
 msgstr "Anda masuk dari IP yang sama."
 
@@ -7226,7 +7221,7 @@ msgstr "Anda masuk dari IP yang sama."
 msgid "You may now receive whispers from other players."
 msgstr "Anda sekarang dapat menerima bisikan dari pemain lain."
 
-#: ../../TShockAPI/GetDataHandlers.cs:2621
+#: ../../TShockAPI/GetDataHandlers.cs:2656
 msgid "You may wish to consider removing the tshock.ignore.ssc permission or negating it for this player."
 msgstr "Anda mungkin ingin mempertimbangkan untuk menghapus izin tshock.ignore.ssc atau meniadakannya untuk pemain ini."
 
@@ -7238,7 +7233,7 @@ msgstr "Anda harus masuk untuk memanfaatkan wilayah yang dilindungi."
 msgid "You must provide a setup code!"
 msgstr "Anda harus memberikan kode penyiapan!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3448
+#: ../../TShockAPI/GetDataHandlers.cs:3489
 msgid "You must set ForceTime to normal via config to use the Enchanted Sundial."
 msgstr "anda harus mengatur ForceTime ke bentuk normal dengan konfigurasi untuk menggunakan Enchanted Sundial."
 
@@ -7250,17 +7245,17 @@ msgstr "Anda harus membangkitkan sang Wall of Flesh di neraka."
 msgid "You must use this command in-game."
 msgstr "Anda harus di dalam permain untuk menggunakan perintah ini."
 
-#: ../../TShockAPI/GetDataHandlers.cs:2523
+#: ../../TShockAPI/GetDataHandlers.cs:2558
 msgid "You need to join with a hardcore player."
 msgstr "Anda harus bergabung dengan karakter hardcore."
 
-#: ../../TShockAPI/GetDataHandlers.cs:2517
+#: ../../TShockAPI/GetDataHandlers.cs:2552
 msgid "You need to join with a mediumcore player or higher."
 msgstr "Anda harus bergabung dengan karakter mediumcore atau lebih tinggi."
 
-#: ../../TShockAPI/GetDataHandlers.cs:2511
+#: ../../TShockAPI/GetDataHandlers.cs:2546
 msgid "You need to join with a softcore player."
-msgstr ""
+msgstr "Anda harus join menggunakan karakter softcore."
 
 #: ../../TShockAPI/Bouncer.cs:551
 msgid "You need to rejoin to ensure your trash can is cleared!"
@@ -7285,7 +7280,7 @@ msgstr "Anda memberi warp {0} kepada {1}."
 msgid "You were teleported to {0}."
 msgstr "Anda diteleportasi ke {0}."
 
-#: ../../TShockAPI/TShock.cs:1706
+#: ../../TShockAPI/TShock.cs:1742
 msgid "You will be teleported to your last known location..."
 msgstr "Anda akan diteleportasikan ke tempat lokasi terakhir anda yang diketahui..."
 
@@ -7319,7 +7314,7 @@ msgstr "Grup akun Anda tidak dapat dimuat. Silakan hubungi administrasi peladen 
 msgid "Your client sent a blank character name."
 msgstr "Klien Anda mengirim nama karakter kosong."
 
-#: ../../TShockAPI/TShock.cs:1351
+#: ../../TShockAPI/TShock.cs:1387
 msgid "Your client sent a blank UUID. Configure it to send one or use a different client."
 msgstr ""
 
@@ -7350,7 +7345,7 @@ msgstr "Data karakter lokal anda, dari koneksi awal anda, telah diunggah ke dala
 msgid "Your new account has been verified, and the {0}setup system has been turned off."
 msgstr "Akun baru anda telah terverifikasi, dan sistem {0}setup telah dimatikan."
 
-#: ../../TShockAPI/GetDataHandlers.cs:3217
+#: ../../TShockAPI/GetDataHandlers.cs:3257
 msgid "Your password did not match this character's password."
 msgstr "Kata sandi anda tidak cocok dengan kata sandi karakter ini."
 
@@ -7371,7 +7366,7 @@ msgstr "Dump referensi Anda telah dibuat di berkas pelden."
 msgid "Your server-side character data has been saved."
 msgstr "Karakter sisi peladen anda telah disimpan."
 
-#: ../../TShockAPI/TSPlayer.cs:1325
+#: ../../TShockAPI/TSPlayer.cs:1342
 msgid "Your temporary group access has expired."
 msgstr "Akses grup sementara anda telah berakhir."
 
@@ -7379,13 +7374,13 @@ msgstr "Akses grup sementara anda telah berakhir."
 msgid "z <name> <#> - Sets the z-order of the region."
 msgstr "z <nama> <#> - mengatur urutan-z wilayah."
 
-#: ../../TShockAPI/GetDataHandlers.cs:3235
+#: ../../TShockAPI/GetDataHandlers.cs:3275
 msgctxt "Likely non-vanilla client send zero-length password"
 msgid "You have been Bounced for invalid password."
-msgstr ""
+msgstr "Anda telah dikick dikarenakan salah password."
 
 #: ../../TShockAPI/TSServerPlayer.cs:34
 msgctxt "The account name of server console."
 msgid "ServerConsole"
-msgstr ""
+msgstr "ServerConsole"
 

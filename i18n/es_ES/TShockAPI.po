@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: tshock\n"
-"POT-Creation-Date: 2022-12-06 05:43:49+0000\n"
-"PO-Revision-Date: 2023-01-18 17:58\n"
+"POT-Creation-Date: 2023-08-15 09:53:07+0000\n"
+"PO-Revision-Date: 2025-06-15 17:54\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -17,8 +17,8 @@ msgstr ""
 "X-Crowdin-File-ID: 6\n"
 "Language: es_ES\n"
 
-#: ../../TShockAPI/DB/CharacterManager.cs:194
-#: ../../TShockAPI/DB/CharacterManager.cs:264
+#: ../../TShockAPI/DB/CharacterManager.cs:197
+#: ../../TShockAPI/DB/CharacterManager.cs:267
 #, csharp-format
 msgctxt "{0} is a player name"
 msgid "Skipping SSC save (due to tshock.ignore.ssc) for {0}"
@@ -153,23 +153,23 @@ msgstr "- Varios :"
 msgid "- Palm trees :"
 msgstr "- Palmeras :"
 
-#: ../../TShockAPI/TShock.cs:963
+#: ../../TShockAPI/TShock.cs:999
 msgid "!!! > Set DisableLoginBeforeJoin to true in the config file and /reload if this is a problem."
 msgstr "!!! > En el archivo de configuración marca DisableLoginBeforeJoin como true y usa /reload si esto es un problema."
 
-#: ../../TShockAPI/TShock.cs:957
+#: ../../TShockAPI/TShock.cs:993
 msgid "!!! > Set DisableUUIDLogin to true in the config file and /reload if this is a problem."
 msgstr "!!! > En el archivo de configuración marca DisableUUIDLogin como true y usa /reload si esto es un problema."
 
-#: ../../TShockAPI/TShock.cs:962
+#: ../../TShockAPI/TShock.cs:998
 msgid "!!! Login before join is enabled. Existing accounts can login & the server password will be bypassed."
 msgstr "!!! Activado inicio de sesión antes de entrar. Las cuentas ya existentes pueden iniciar sesión omitiendo la contraseña del servidor."
 
-#: ../../TShockAPI/TShock.cs:951
+#: ../../TShockAPI/TShock.cs:987
 msgid "!!! The server password in config.json was overridden by the interactive prompt and will be ignored."
 msgstr "!!! La contraseña del servidor en config.json fue anulada por el diálogo interactivo, y será ignorada."
 
-#: ../../TShockAPI/TShock.cs:956
+#: ../../TShockAPI/TShock.cs:992
 msgid "!!! UUID login is enabled. If a user's UUID matches an account, the server password will be bypassed."
 msgstr "!!! El inicio de sesión UUID está habilitado. Si el UUID de un usuario coincide con una cuenta, la contraseña del servidor será omitida."
 
@@ -231,12 +231,12 @@ msgstr "{0} ({1}) ha cambiado la contraseña de la cuenta {2}."
 msgid "{0} ({1}) failed to change the password for account {2}."
 msgstr "{0} ({1}) no pudo cambiar la contraseña de la cuenta {2}."
 
-#: ../../TShockAPI/TShock.cs:1659
+#: ../../TShockAPI/TShock.cs:1695
 #, csharp-format
 msgid "{0} ({1}) from '{2}' group from '{3}' joined. ({4}/{5})"
 msgstr "{0} ({1}) del grupo '{2}' desde '{3}' se ha conectado. ({4}/{5})"
 
-#: ../../TShockAPI/TShock.cs:1667
+#: ../../TShockAPI/TShock.cs:1703
 #, csharp-format
 msgid "{0} ({1}) from '{2}' group joined. ({3}/{4})"
 msgstr "{0} ({1}) del grupo '{2}' se ha conectado. ({3}/{4})"
@@ -246,7 +246,7 @@ msgstr "{0} ({1}) del grupo '{2}' se ha conectado. ({3}/{4})"
 msgid "{0} ({1}) had {2} or more invalid login attempts and was kicked automatically."
 msgstr "{0} ({1}) tuvo {2} o más intentos de inicio de sesión no válidos y fue expulsado automáticamente."
 
-#: ../../TShockAPI/TShock.cs:1663
+#: ../../TShockAPI/TShock.cs:1699
 #, csharp-format
 msgid "{0} ({1}) has joined."
 msgstr "{0} ({1}) se ha conectado."
@@ -347,17 +347,17 @@ msgstr "{0} <{1}|{2}|{3}> [{4}]"
 msgid "{0} added account {1} to group {2}."
 msgstr "{0} añadió la cuenta {1} al grupo {2}."
 
-#: ../../TShockAPI/GetDataHandlers.cs:3546
+#: ../../TShockAPI/GetDataHandlers.cs:3587
 #, csharp-format
 msgid "{0} applied advanced combat techniques volume 2!"
 msgstr "¡{0} aplicó el volumen 2 de Técnicas Avanzadas de Combate!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3564
+#: ../../TShockAPI/GetDataHandlers.cs:3605
 #, csharp-format
 msgid "{0} applied advanced combat techniques!"
 msgstr "¡{0} aplicó Técnicas Avanzadas de Combate!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3543
+#: ../../TShockAPI/GetDataHandlers.cs:3584
 #, csharp-format
 msgid "{0} applied traveling merchant's satchel!"
 msgstr "¡{0} ha aplicado el sachet del mercader ambulante!"
@@ -367,8 +367,8 @@ msgstr "¡{0} ha aplicado el sachet del mercader ambulante!"
 msgid "{0} attempted to register for the account {1} but it was already taken."
 msgstr "{0} intentó registrar la cuenta {1} pero ya está en uso."
 
-#: ../../TShockAPI/GetDataHandlers.cs:2637
-#: ../../TShockAPI/GetDataHandlers.cs:3212
+#: ../../TShockAPI/GetDataHandlers.cs:2672
+#: ../../TShockAPI/GetDataHandlers.cs:3252
 #, csharp-format
 msgid "{0} authenticated successfully as user {1}."
 msgstr "{0} se ha autenticado correctamente como el usuario {1}."
@@ -378,7 +378,7 @@ msgstr "{0} se ha autenticado correctamente como el usuario {1}."
 msgid "{0} authenticated successfully as user: {1}."
 msgstr "{0} se ha autenticado correctamente como el usuario: {1}."
 
-#: ../../TShockAPI/TSPlayer.cs:1955
+#: ../../TShockAPI/TSPlayer.cs:2042
 #, csharp-format
 msgid "{0} banned {1} for '{2}'."
 msgstr "{0} baneó a {1} por '{2}'."
@@ -466,7 +466,7 @@ msgstr "{0} ha desactivado el modo halloween."
 msgid "{0} disabled xmas mode."
 msgstr "{0} ha desactivado el modo navidad."
 
-#: ../../TShockAPI/TShock.cs:1398
+#: ../../TShockAPI/TShock.cs:1434
 #, csharp-format
 msgid "{0} disconnected."
 msgstr "{0} se desconectó."
@@ -570,12 +570,12 @@ msgstr "{0} finalizó la invasión en curso."
 msgid "{0} has ended the Old One's Army event."
 msgstr "{0} ha finalizado la invasión del Ejército del Antiguo."
 
-#: ../../TShockAPI/TShock.cs:1670
+#: ../../TShockAPI/TShock.cs:1706
 #, csharp-format
 msgid "{0} has joined."
 msgstr "{0} se ha conectado."
 
-#: ../../TShockAPI/TShock.cs:1674
+#: ../../TShockAPI/TShock.cs:1710
 #, csharp-format
 msgid "{0} has joined. IP: {1}"
 msgstr "{0} se ha conectado. IP: {1}"
@@ -595,7 +595,7 @@ msgstr "{0} se lanzó ella misma a la estratosfera."
 msgid "{0} has launched himself into space."
 msgstr "{0} se lanzó el mismo a la estratosfera."
 
-#: ../../TShockAPI/TShock.cs:1397
+#: ../../TShockAPI/TShock.cs:1433
 #, csharp-format
 msgid "{0} has left."
 msgstr "{0} se desconectó."
@@ -610,22 +610,22 @@ msgstr "{0} ha silenciado a {1} por {2}."
 msgid "{0} has respawned you."
 msgstr "{0} te ha reaparecido."
 
-#: ../../TShockAPI/GetDataHandlers.cs:3555
+#: ../../TShockAPI/GetDataHandlers.cs:3596
 #, csharp-format
 msgid "{0} has sent a request to the bunny delivery service!"
 msgstr "¡{0} ha enviado una solicitud al servicio de entrega de conejos!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3561
+#: ../../TShockAPI/GetDataHandlers.cs:3602
 #, csharp-format
 msgid "{0} has sent a request to the cat delivery service!"
 msgstr "¡{0} ha enviado una solicitud al servicio de entrega de gatos!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3558
+#: ../../TShockAPI/GetDataHandlers.cs:3599
 #, csharp-format
 msgid "{0} has sent a request to the dog delivery service!"
 msgstr "¡{0} ha enviado una solicitud al servicio de entrega de perros!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3552
+#: ../../TShockAPI/GetDataHandlers.cs:3593
 #, csharp-format
 msgid "{0} has sent a request to the slime delivery service!"
 msgstr "¡{0} ha enviado una solicitud al servicio de entrega de slimes!"
@@ -642,7 +642,7 @@ msgstr[1] "{0} ha invocado a {1} {2} veces."
 msgid "{0} has spawned a Wall of Flesh."
 msgstr "{0} ha invocado un Muro Carnoso."
 
-#: ../../TShockAPI/GetDataHandlers.cs:2620
+#: ../../TShockAPI/GetDataHandlers.cs:2655
 #, csharp-format
 msgid "{0} has SSC data in the database, but has the tshock.ignore.ssc permission. This means their SSC data is being ignored."
 msgstr "{0} tiene datos SSC en la base de datos, mas tiene el permiso tshock.ignore.ssc; sus datos SSC están siendo ignorados."
@@ -727,7 +727,7 @@ msgstr "A {0} ya se le había prohibido usar el proyectil {1}."
 msgid "{0} is banned! Remove it!"
 msgstr "¡{0} es un objeto prohibido! ¡Desequípalo!"
 
-#: ../../TShockAPI/Commands.cs:6751
+#: ../../TShockAPI/Commands.cs:6747
 #, csharp-format
 msgid "{0} is no longer in god mode."
 msgstr "{0} ya no está en modo dios."
@@ -749,7 +749,7 @@ msgstr "{0} no está baneado(a)."
 msgid "{0} is not dead!"
 msgstr "¡{0} no ha muerto!"
 
-#: ../../TShockAPI/Commands.cs:6750
+#: ../../TShockAPI/Commands.cs:6746
 #, csharp-format
 msgid "{0} is now in god mode."
 msgstr "{0} está ahora en modo dios."
@@ -765,7 +765,7 @@ msgstr "{0} está desconectado(a) y no puede recibir tu respuesta."
 msgid "{0} just killed you!"
 msgstr "¡{0} te acaba de matar!"
 
-#: ../../TShockAPI/TSPlayer.cs:1926
+#: ../../TShockAPI/TSPlayer.cs:2013
 #, csharp-format
 msgid "{0} kicked {1} for '{2}'"
 msgstr "{0} expulsó a {1} por '{2}'"
@@ -865,8 +865,8 @@ msgstr "{0} inició un eclipse."
 msgid "{0} started the frost moon at wave {1}!"
 msgstr "¡{0} inició la luna helada en la ronda {1}!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:4150
-#: ../../TShockAPI/GetDataHandlers.cs:4152
+#: ../../TShockAPI/GetDataHandlers.cs:4194
+#: ../../TShockAPI/GetDataHandlers.cs:4196
 #, csharp-format
 msgid "{0} started the Old One's Army event!"
 msgstr "¡{0} inició el evento del Ejército del Antiguo!"
@@ -901,63 +901,63 @@ msgstr "{0} detuvo la noche de faroles."
 msgid "{0} successfully deleted account: {1}."
 msgstr "{0} eliminó exitosamente la cuenta: {1}."
 
-#: ../../TShockAPI/GetDataHandlers.cs:3567
+#: ../../TShockAPI/GetDataHandlers.cs:3608
 #, csharp-format
 msgid "{0} summoned a Blood Moon!"
 msgstr "¡{0} invocó una Luna Sangrienta!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3579
+#: ../../TShockAPI/GetDataHandlers.cs:3620
 #, csharp-format
 msgid "{0} summoned a frost moon!"
 msgstr "¡{0} invocó una Luna Helada!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3591
+#: ../../TShockAPI/GetDataHandlers.cs:3632
 #, csharp-format
 msgid "{0} summoned a Goblin Invasion!"
 msgstr "¡{0} ha invocado una Invasión de Duendes!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3573
+#: ../../TShockAPI/GetDataHandlers.cs:3614
 #, csharp-format
 msgid "{0} summoned a Martian invasion!"
 msgstr "¡{0} invocó una invasión Marciana!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3549
+#: ../../TShockAPI/GetDataHandlers.cs:3590
 #, csharp-format
 msgid "{0} summoned a Mechdusa!"
 msgstr "¡{0} ha invocado a Mechdusa!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3570
+#: ../../TShockAPI/GetDataHandlers.cs:3611
 #, csharp-format
 msgid "{0} summoned a Moon Lord!"
 msgstr "¡{0} ha invocado al Señor de la Luna!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3582
+#: ../../TShockAPI/GetDataHandlers.cs:3623
 #, csharp-format
 msgid "{0} summoned a pumpkin moon!"
 msgstr "¡{0} invocó una Luna Calabaza!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3576
+#: ../../TShockAPI/GetDataHandlers.cs:3617
 #, csharp-format
 msgid "{0} summoned an eclipse!"
 msgstr "¡{0} invocó un eclipse!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3598
+#: ../../TShockAPI/GetDataHandlers.cs:3639
 #, csharp-format
 msgid "{0} summoned the {1}!"
 msgstr "¡{0} ha invocado a {1}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:2977
-#: ../../TShockAPI/GetDataHandlers.cs:2980
+#: ../../TShockAPI/GetDataHandlers.cs:3016
+#: ../../TShockAPI/GetDataHandlers.cs:3019
 #, csharp-format
 msgid "{0} summoned the Empress of Light!"
 msgstr "¡{0} ha invocado a la Emperatriz de la Luz!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3585
+#: ../../TShockAPI/GetDataHandlers.cs:3626
 #, csharp-format
 msgid "{0} summoned the Pirates!"
 msgstr "¡{0} ha invocado los Piratas!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3588
+#: ../../TShockAPI/GetDataHandlers.cs:3629
 #, csharp-format
 msgid "{0} summoned the Snow Legion!"
 msgstr "¡{0} ha invocado a la Legión de Escarcha!"
@@ -999,12 +999,12 @@ msgstr "{0} desencadenó un meteoro."
 msgid "{0} warped you to {1}."
 msgstr "{0} te transportó hacia {1}."
 
-#: ../../TShockAPI/TSPlayer.cs:1953
+#: ../../TShockAPI/TSPlayer.cs:2040
 #, csharp-format
 msgid "{0} was banned for '{1}'."
 msgstr "{0} fue baneado por '{1}'."
 
-#: ../../TShockAPI/TSPlayer.cs:1924
+#: ../../TShockAPI/TSPlayer.cs:2011
 #, csharp-format
 msgid "{0} was kicked for '{1}'"
 msgstr "Se expulsó a {0} por '{1}'"
@@ -1188,7 +1188,7 @@ msgstr "Ya existe un grupo con el mismo nombre."
 msgid "A lot of things will fail because of this. You must manually delete and re-create the allowed field."
 msgstr "Esto causará muchos fallos. Debes borrar y recrear manualmente el campo permitido."
 
-#: ../../TShockAPI/TShock.cs:986
+#: ../../TShockAPI/TShock.cs:1022
 msgid "A malicious server can easily steal a user's UUID. You may consider turning this option off if you run a public server."
 msgstr "Un servidor malicioso puede robar fácilmente la UUID de un usuario. Considera desactivar esta opción si tienes un servidor público."
 
@@ -1204,7 +1204,7 @@ msgstr "Un meteoro ha sido desencadenado."
 msgid "a Nebula Pillar"
 msgstr "una Columna de Nebulosa"
 
-#: ../../TShockAPI/TShock.cs:974
+#: ../../TShockAPI/TShock.cs:1010
 msgid "A password for this server was set in config.json and is being used."
 msgstr "Se estableció una contraseña para este servidor en config.json y está en uso."
 
@@ -1212,7 +1212,7 @@ msgstr "Se estableció una contraseña para este servidor en config.json y está
 msgid "A player name must be provided to kick a player. Please provide one."
 msgstr "Debes escribir el nombre del jugador para poder expulsarlo. Por favor escribe su nombre."
 
-#: ../../TShockAPI/GetDataHandlers.cs:2451
+#: ../../TShockAPI/GetDataHandlers.cs:2486
 msgid "A plugin on this server stopped your login."
 msgstr "Un plugin en el servidor detuvo tu inicio de sesión."
 
@@ -1364,7 +1364,7 @@ msgstr "Arbolgema de Ámbar"
 msgid "Amethyst Gemtree"
 msgstr "Arbolgema de Amatista"
 
-#: ../../TShockAPI/TShock.cs:996
+#: ../../TShockAPI/TShock.cs:1032
 msgid "An account has been detected in the user database, but setup-code.txt is still present."
 msgstr "Se ha detectado una cuenta de usuario en la base de datos, pero setup-code.txt sigue presente."
 
@@ -1378,7 +1378,7 @@ msgstr "Ha ocurrido una excepción durante la restauración de la base de datos:
 msgid "An exception has occurred during database transaction: {0}"
 msgstr "Ha ocurrido una excepción durante la transacción de la base de datos: {0}"
 
-#: ../../TShockAPI/TShock.cs:1489
+#: ../../TShockAPI/TShock.cs:1525
 msgid "An exception occurred executing a command."
 msgstr "Se ha producido una excepción al ejecutar un comando."
 
@@ -1438,19 +1438,19 @@ msgid "Arguments: send [player] [warp name], hide [warp name] [Enable(true/false
 msgstr "Parámetros: send [jugador] [nombre de warp], hide [nombre de warp] [Activar(true/false)]."
 
 #: ../../TShockAPI/Commands.cs:903
-#: ../../TShockAPI/GetDataHandlers.cs:2636
-#: ../../TShockAPI/GetDataHandlers.cs:3211
+#: ../../TShockAPI/GetDataHandlers.cs:2671
+#: ../../TShockAPI/GetDataHandlers.cs:3251
 #, csharp-format
 msgid "Authenticated as {0} successfully."
 msgstr "Autenticado como {0} correctamente."
 
-#: ../../TShockAPI/TShock.cs:440
-#: ../../TShockAPI/TShock.cs:1590
+#: ../../TShockAPI/TShock.cs:471
+#: ../../TShockAPI/TShock.cs:1626
 msgid "AutoSave Disabled"
 msgstr "AutoGuardado Desactivado"
 
-#: ../../TShockAPI/TShock.cs:438
-#: ../../TShockAPI/TShock.cs:1588
+#: ../../TShockAPI/TShock.cs:469
+#: ../../TShockAPI/TShock.cs:1624
 msgid "AutoSave Enabled"
 msgstr "AutoGuardado Activado"
 
@@ -1499,11 +1499,11 @@ msgstr "¡Respaldo fallido!"
 msgid "Backup Thread"
 msgstr "Hilo de Respaldo"
 
-#: ../../TShockAPI/TShock.cs:444
+#: ../../TShockAPI/TShock.cs:475
 msgid "Backups Disabled"
 msgstr "Respaldos Desactivados"
 
-#: ../../TShockAPI/TShock.cs:442
+#: ../../TShockAPI/TShock.cs:473
 msgid "Backups Enabled"
 msgstr "Respaldos Activados"
 
@@ -1586,7 +1586,7 @@ msgstr "Se ha prohibido el proyectil {0}."
 msgid "Banned tile {0}."
 msgstr "Se ha prohibido el bloque {0}."
 
-#: ../../TShockAPI/TSPlayer.cs:1950
+#: ../../TShockAPI/TSPlayer.cs:2037
 #, csharp-format
 msgid "Banned: {0}"
 msgstr "Baneado: {0}"
@@ -1621,258 +1621,258 @@ msgstr "Estado de la Luna Sangrienta: {0}"
 msgid "Boreal Tree"
 msgstr "Árbol Boreal"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3264
+#: ../../TShockAPI/GetDataHandlers.cs:3304
 #, csharp-format
 msgid "Bouncer / HandleNpcTalk rejected from bouncer out of bounds from {0}"
-msgstr "Bouncer / HandleNpcTalk rechazó desde el bouncer fuera de area de {0}"
+msgstr "Bouncer / HandleNpcTalk rechazado por el bouncer, fuera de los bordes desde {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3257
+#: ../../TShockAPI/GetDataHandlers.cs:3297
 #, csharp-format
 msgid "Bouncer / HandleNpcTalk rejected from bouncer throttle from {0}"
-msgstr "Bouncer / HandleNpcTalk rechazó desde el bouncer limitado de {0}"
+msgstr "Bouncer / HandleNpcTalk rechazado por el bouncer, limitado desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1465
 #, csharp-format
 msgid "Bouncer / OnChestItemChange rejected from chest mismatch from {0}"
-msgstr "Bouncer / OnChestItemChange rechazo desde cofre no coincidente de {0}"
+msgstr "Bouncer / OnChestItemChange rechazado por cofre no coincidente desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1472
 #, csharp-format
 msgid "Bouncer / OnChestItemChange rejected from disable from {0}"
-msgstr "Bouncer / OnChestItemChange rechazo desde desactivación de {0}"
+msgstr "Bouncer / OnChestItemChange rechazado por desactivación desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1487
 #, csharp-format
 msgid "Bouncer / OnChestItemChange rejected from range check from {0}"
-msgstr "Bouncer / OnChestItemChange rechazo desde la comprobación de rango de {0}"
+msgstr "Bouncer / OnChestItemChange rechazado por comprobación de rango desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1480
 #, csharp-format
 msgid "Bouncer / OnChestItemChange rejected from region protection? from {0}"
-msgstr "Bouncer / OnChestItemChange rechazo desde ¿protección de región? de {0}"
+msgstr "Bouncer / OnChestItemChange rechazado por ¿protección de región? desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1500
 #, csharp-format
 msgid "Bouncer / OnChestOpen rejected from disabled from {0}"
-msgstr "Bouncer / OnChestOpen rechazo desde desactivación de {0}"
+msgstr "Bouncer / OnChestOpen rechazado por desactivación desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1507
 #, csharp-format
 msgid "Bouncer / OnChestOpen rejected from range check from {0}"
-msgstr "Bouncer / OnChestOpen rechazo desde comprobación de rango de {0}"
+msgstr "Bouncer / OnChestOpen rechazado por comprobación de rango desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1514
 #, csharp-format
 msgid "Bouncer / OnChestOpen rejected from region check from {0}"
-msgstr "Bouncer / OnChestOpen rechazo desde comprobación de región de {0}"
+msgstr "Bouncer / OnChestOpen rechazado por comprobación de región desde {0}"
 
-#: ../../TShockAPI/Bouncer.cs:2735
+#: ../../TShockAPI/Bouncer.cs:2738
 #, csharp-format
 msgid "Bouncer / OnFishOutNPC rejected for not finding active bobber projectile! - From {0}"
-msgstr "Bouncer / OnFishOutNPC rechazo ¡por no encontrar proyectil de señuelo activo! - De {0}"
+msgstr "Bouncer / OnFishOutNPC rechazado ¡por no encontrar proyectil de señuelo activo! - Desde {0}"
 
-#: ../../TShockAPI/Bouncer.cs:2729
+#: ../../TShockAPI/Bouncer.cs:2732
 #, csharp-format
 msgid "Bouncer / OnFishOutNPC rejected for not using a fishing rod! - From {0}"
-msgstr "Bouncer / OnFishOutNPC rechazo ¡por no usar una caña de pescar! - De {0}"
+msgstr "Bouncer / OnFishOutNPC rechazado ¡por no usar una caña de pescar! - Desde {0}"
 
-#: ../../TShockAPI/Bouncer.cs:2741
+#: ../../TShockAPI/Bouncer.cs:2744
 #, csharp-format
 msgid "Bouncer / OnFishOutNPC rejected for the NPC not being on the fishable NPCs list! - From {0}"
-msgstr "Bouncer / OnFishOutNPC rechazo ¡por no estar el NPC en la lista de NPC que pueden ser pescados! - De {0}"
+msgstr "Bouncer / OnFishOutNPC rechazado ¡por no estar el NPC en la lista de NPC que pueden ser pescados! - Desde {0}"
 
-#: ../../TShockAPI/Bouncer.cs:2753
+#: ../../TShockAPI/Bouncer.cs:2756
 #, csharp-format
 msgid "Bouncer / OnFishOutNPC rejected range checks from {0}"
-msgstr "Bouncer / OnFishOutNPC rechazo comprobaciones de rango de {0}"
+msgstr "Bouncer / OnFishOutNPC rechazado, comprobaciones de rango desde {0}"
 
-#: ../../TShockAPI/Bouncer.cs:2747
+#: ../../TShockAPI/Bouncer.cs:2750
 #, csharp-format
 msgid "Bouncer / OnFishOutNPC rejected summon boss permissions from {0}"
-msgstr "Bouncer / OnFishOutNPC rechazó permisos de invocación de jefe de {0}"
+msgstr "Bouncer / OnFishOutNPC rechazado, permisos de invocación de jefe desde {0}"
 
-#: ../../TShockAPI/Bouncer.cs:2781
+#: ../../TShockAPI/Bouncer.cs:2784
 #, csharp-format
 msgid "Bouncer / OnFoodPlatterTryPlacing rejected disabled from {0}"
-msgstr "Bouncer / OnFoodPlatterTryPlacing rechazó desactivación de {0}"
+msgstr "Bouncer / OnFoodPlatterTryPlacing rechazado, desactivación desde {0}"
 
-#: ../../TShockAPI/Bouncer.cs:2774
+#: ../../TShockAPI/Bouncer.cs:2777
 #, csharp-format
 msgid "Bouncer / OnFoodPlatterTryPlacing rejected item not placed by hand from {0}"
-msgstr "Bouncer / OnFoodPlatterTryPlacing rechazó objeto no puesto manualmente de {0}"
+msgstr "Bouncer / OnFoodPlatterTryPlacing rechazado, objeto no colocado manualmente desde {0}"
 
-#: ../../TShockAPI/Bouncer.cs:2792
+#: ../../TShockAPI/Bouncer.cs:2795
 #, csharp-format
 msgid "Bouncer / OnFoodPlatterTryPlacing rejected permissions from {0}"
-msgstr "Bouncer / OnFoodPlatterTryPlacing rechazó los permisos de {0}"
+msgstr "Bouncer / OnFoodPlatterTryPlacing rechazado, permisos desde {0}"
 
-#: ../../TShockAPI/Bouncer.cs:2803
+#: ../../TShockAPI/Bouncer.cs:2806
 #, csharp-format
 msgid "Bouncer / OnFoodPlatterTryPlacing rejected range checks from {0}"
-msgstr "Bouncer / OnFoodPlatterTryPlacing rechazó las comprobaciones de rango de {0}"
+msgstr "Bouncer / OnFoodPlatterTryPlacing rechazado, comprobaciones de rango desde {0}"
 
-#: ../../TShockAPI/Bouncer.cs:2767
+#: ../../TShockAPI/Bouncer.cs:2770
 #, csharp-format
 msgid "Bouncer / OnFoodPlatterTryPlacing rejected tile placement valid from {0}"
-msgstr "Bouncer / OnFoodPlatterTryPlacing rechazó la colocación de bloques válidos desde {0}"
+msgstr "Bouncer / OnFoodPlatterTryPlacing rechazado, colocación de bloques válida desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2508
 #, csharp-format
 msgid "Bouncer / OnGemLockToggle invalid placement/deadmod from {0}"
-msgstr "Bouncer / OnGemLockToggle colocación inválida/deadmod de {0}"
+msgstr "Bouncer / OnGemLockToggle colocación inválida/deadmod desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2501
 #, csharp-format
 msgid "Bouncer / OnGemLockToggle rejected boundaries check from {0}"
-msgstr "Bouncer / OnGemLockToggle rechazada la comprobación de umbral de {0}"
+msgstr "Bouncer / OnGemLockToggle rechazado, comprobación de límites desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2515
 #, csharp-format
 msgid "Bouncer / OnGemLockToggle rejected disabled from {0}"
-msgstr "Bouncer / OnGemLockToggle rechazó el estado deshabilitado desde {0}"
+msgstr "Bouncer / OnGemLockToggle rechazado, deshabilitado desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2524
 #, csharp-format
 msgid "Bouncer / OnGemLockToggle rejected permissions check from {0}"
-msgstr "Bouncer / OnGemLockToggle rechazó la comprobación de permisos de {0}"
+msgstr "Bouncer / OnGemLockToggle rechazado, comprobación de permisos desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:453
 msgid "Bouncer / OnGetSection rejected empty player name."
-msgstr "Bouncer / OnGetSection rechazó un nombre de jugador vacío."
+msgstr "Bouncer / OnGetSection rechazado, nombre de jugador vacío."
 
 #: ../../TShockAPI/Bouncer.cs:445
 #, csharp-format
 msgid "Bouncer / OnGetSection rejected GetSection packet from {0}"
-msgstr "Bouncer / OnGetSection rechazó el paquete GetSection de {0}"
+msgstr "Bouncer / OnGetSection rechazado, paquete GetSection desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2096
 #, csharp-format
 msgid "Bouncer / OnHealOtherPlayer 0.2 check from {0}"
-msgstr "Bouncer / OnHealOtherPlayer 0.2 comprobar desde {0}"
+msgstr "Bouncer / OnHealOtherPlayer comprobación 0.2 desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2120
 #, csharp-format
 msgid "Bouncer / OnHealOtherPlayer rejected disabled/throttled from {0}"
-msgstr "Bouncer / OnHealOtherPlayer rechazó el estado deshabilitado/limitado desde {0}"
+msgstr "Bouncer / OnHealOtherPlayer rechazado, deshabilitado/limitado desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2112
 #, csharp-format
 msgid "Bouncer / OnHealOtherPlayer rejected heal other threshold from {0} {1}/{2}"
-msgstr "Bouncer / OnHealOtherPlayer rechazó el umbral de sanar a otro desde {0} {1}/{2}"
+msgstr "Bouncer / OnHealOtherPlayer rechazado, umbral de sanar a otro desde {0} {1}/{2}"
 
 #: ../../TShockAPI/Bouncer.cs:2086
 msgid "Bouncer / OnHealOtherPlayer rejected null checks"
-msgstr "Bouncer / OnHealOtherPlayer rechazó comprobaciones nulas"
+msgstr "Bouncer / OnHealOtherPlayer rechazado, comprobaciones nulas"
 
 #: ../../TShockAPI/Bouncer.cs:1074
 #, csharp-format
 msgid "Bouncer / OnItemDrop rejected from attempt crash from {0}"
-msgstr "Bouncer / OnItemDrop rechazó desde un intento de crasheo desde {0}"
+msgstr "Bouncer / OnItemDrop rechazado por intento de crasheo desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1150
 #, csharp-format
 msgid "Bouncer / OnItemDrop rejected from disabled from {0}"
-msgstr "Bouncer / OnItemDrop rechazó desde estado deshabilitado de {0}"
+msgstr "Bouncer / OnItemDrop rechazado por estado deshabilitado desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1130
 #, csharp-format
 msgid "Bouncer / OnItemDrop rejected from drop item ban check / max stack check / min stack check from {0}"
-msgstr "Bouncer / OnItemDrop rechazó la comprobación de objeto prohibido arrojado / comprobación de stack máximo / comprobación de stack mínimo desde {0}"
+msgstr "Bouncer / OnItemDrop rechazado por comprobación de objeto prohibido arrojado / comprobación de stack máximo / comprobación de stack mínimo desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1099
 #, csharp-format
 msgid "Bouncer / OnItemDrop rejected from dupe range check from {0}"
-msgstr "Bouncer / OnItemDrop rechazó desde la comprobación de rango de duplicación de {0}"
+msgstr "Bouncer / OnItemDrop rechazado por comprobación de rango de duplicación desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1120
 #, csharp-format
 msgid "Bouncer / OnItemDrop rejected from item drop/pickup check from {0}"
-msgstr "Bouncer / OnItemDrop rechazó desde la comprobación de objeto arrojado/recogido de {0}"
+msgstr "Bouncer / OnItemDrop rechazado por comprobación de objeto arrojado/recogido desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1084
 #, csharp-format
 msgid "Bouncer / OnItemDrop rejected from prefix check from {0}"
-msgstr "Bouncer / OnItemDrop rechazado desde la comprobación de prefijo de {0}"
+msgstr "Bouncer / OnItemDrop rechazado por comprobación de prefijo desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1110
 #, csharp-format
 msgid "Bouncer / OnItemDrop rejected from range check from {0}"
-msgstr "Bouncer / OnItemDrop rechazado desde la comprobación de rango de {0}"
+msgstr "Bouncer / OnItemDrop rechazado por comprobación de rango desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1141
 #, csharp-format
 msgid "Bouncer / OnItemDrop rejected from sneaky from {0}"
-msgstr "Bouncer / OnItemDrop rechazado desde un sospechoso de {0}"
+msgstr "Bouncer / OnItemDrop rechazado por acción furtiva desde {0}"
 
-#: ../../TShockAPI/Bouncer.cs:2703
+#: ../../TShockAPI/Bouncer.cs:2706
 #, csharp-format
 msgid "Bouncer / OnKillMe rejected bad length death text from {0}"
-msgstr "Bouncer / OnKillMe rechazó el texto de muerte de longitud incorrecta de {0}"
+msgstr "Bouncer / OnKillMe rechazado, texto mortuorio de longitud maliciosa desde {0}"
 
-#: ../../TShockAPI/Bouncer.cs:2710
+#: ../../TShockAPI/Bouncer.cs:2713
 #, csharp-format
 msgid "Bouncer / OnKillMe rejected custom death message from {0}"
-msgstr "Bouncer / OnKillMe rechazó el mensaje personalizado de muerte de {0}"
+msgstr "Bouncer / OnKillMe rechazado, mensaje mortuorio personalizado desde {0}"
 
-#: ../../TShockAPI/Bouncer.cs:2684
+#: ../../TShockAPI/Bouncer.cs:2687
 #, csharp-format
 msgid "Bouncer / OnKillMe rejected high damage from {0} {1}"
-msgstr "Bouncer / OnKillMe rechazó el daño elevado de {0} {1}"
+msgstr "Bouncer / OnKillMe rechazado, daño elevado desde {0} {1}"
 
-#: ../../TShockAPI/Bouncer.cs:2693
+#: ../../TShockAPI/Bouncer.cs:2696
 #, csharp-format
 msgid "Bouncer / OnKillMe rejected index check from {0}"
-msgstr "Bouncer / OnKillMe rechazó la comprobación de índice de {0}"
+msgstr "Bouncer / OnKillMe rechazado, comprobación de índice desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1832
 #, csharp-format
 msgid "Bouncer / OnLiquidSet rejected build permission from {0}"
-msgstr "Bouncer / OnLiquidSet rechazó el permiso de construcción de {0}"
+msgstr "Bouncer / OnLiquidSet rechazado, permiso de construcción desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1676
 #, csharp-format
 msgid "Bouncer / OnLiquidSet rejected disabled from {0}"
-msgstr "Bouncer / OnLiquidSet rechazo por deshabilitamiento de {0}"
+msgstr "Bouncer / OnLiquidSet rechazado, deshabilitado desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1694
 #, csharp-format
 msgid "Bouncer / OnLiquidSet rejected from liquid threshold from {0} {1}/{2}"
-msgstr "Bouncer / OnLiquidSet rechazado desde el umbral de líquido de {0} {1}/{2}"
+msgstr "Bouncer / OnLiquidSet rechazado por umbral de líquido desde {0} {1}/{2}"
 
 #: ../../TShockAPI/Bouncer.cs:1669
 #, csharp-format
 msgid "Bouncer / OnLiquidSet rejected invalid check from {0}"
-msgstr "Bouncer / OnLiquidSet rechazó comprobación inválida desde {0}"
+msgstr "Bouncer / OnLiquidSet rechazado, comprobación inválida desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1731
 #, csharp-format
 msgid "Bouncer / OnLiquidSet rejected liquid type {0} from {1} holding {2}"
-msgstr "Bouncer / OnLiquidSet rechazó el tipo de líquido {0} de {1} sosteniendo {2}"
+msgstr "Bouncer / OnLiquidSet rechazado, tipo de líquido {0} de {1} sosteniendo {2}"
 
 #: ../../TShockAPI/Bouncer.cs:1840
 #, csharp-format
 msgid "Bouncer / OnLiquidSet rejected range checks from {0}"
-msgstr "Bouncer / OnLiquidSet rechazó las comprobaciones de rango de {0}"
+msgstr "Bouncer / OnLiquidSet rechazado, comprobaciones de rango desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1848
 #, csharp-format
 msgid "Bouncer / OnLiquidSet rejected throttle from {0}"
-msgstr "Bouncer / OnLiquidSet rechazó limitación desde {0}"
+msgstr "Bouncer / OnLiquidSet rechazado, limitación desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2573
 #, csharp-format
 msgid "Bouncer / OnMassWireOperation rejected build perms from {0}"
-msgstr "Bouncer / OnMassWireOperation rechazó los permisos de construcción desde {0}"
+msgstr "Bouncer / OnMassWireOperation rechazado, permisos de construcción desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2566
 #, csharp-format
 msgid "Bouncer / OnMassWireOperation rejected disabled from {0}"
-msgstr "Bouncer / OnMassWireOperation rechazó por deshabilitación desde {0}"
+msgstr "Bouncer / OnMassWireOperation rechazado, deshabilitado desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2559
 #, csharp-format
 msgid "Bouncer / OnMassWireOperation rejected valid placement from {0}"
-msgstr "Bouncer / OnMassWireOperation rechazó la colocación válida desde {0}"
+msgstr "Bouncer / OnMassWireOperation rechazado, colocación válida desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1274
 #, csharp-format
@@ -1892,32 +1892,32 @@ msgstr "Bouncer / OnNewProjectile rechazado por estar sobre el límite de proyec
 #: ../../TShockAPI/Bouncer.cs:1315
 #, csharp-format
 msgid "Bouncer / OnNewProjectile rejected from bouncer modified AI from {0}."
-msgstr "Bouncer / OnNewProjectile rechazado desde el bouncer por IA modificada de {0}."
+msgstr "Bouncer / OnNewProjectile rechazado por el bouncer, IA modificada desde {0}."
 
 #: ../../TShockAPI/Bouncer.cs:1331
 #, csharp-format
 msgid "Bouncer / OnNewProjectile rejected from bouncer modified Zenith projectile from {0}."
-msgstr "Bouncer / OnNewProjectile rechazado desde el bouncer por proyectil Cenit modificado de {0}."
+msgstr "Bouncer / OnNewProjectile rechazado por el bouncer, proyectil Cenit modificado desde {0}."
 
 #: ../../TShockAPI/Bouncer.cs:1302
 #, csharp-format
 msgid "Bouncer / OnNewProjectile rejected from bouncer throttle from {0}"
-msgstr "Bouncer / OnNewProjectile rechazado desde el bouncer por limitación de {0}"
+msgstr "Bouncer / OnNewProjectile rechazado por el bouncer, limitación desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1201
 #, csharp-format
 msgid "Bouncer / OnNewProjectile rejected from disabled from {0}"
-msgstr "Bouncer / OnNewProjectile rechazó desde estado deshabilitado de {0}"
+msgstr "Bouncer / OnNewProjectile rechazado por estado deshabilitado desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1238
 #, csharp-format
 msgid "Bouncer / OnNewProjectile rejected from hostile projectile from {0}"
-msgstr "Bouncer / OnNewProjectile rechazado por uso de proyectil hostil de {0}"
+msgstr "Bouncer / OnNewProjectile rechazado por uso de proyectil hostil desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1183
 #, csharp-format
 msgid "Bouncer / OnNewProjectile rejected from permission check from {0} {1}"
-msgstr "Bouncer / OnNewProjectile rechazado por comprobación de permisos de {0} {1}"
+msgstr "Bouncer / OnNewProjectile rechazado por comprobación de permisos desde {0} {1}"
 
 #: ../../TShockAPI/Bouncer.cs:1294
 #, csharp-format
@@ -1932,605 +1932,600 @@ msgstr "Bouncer / OnNewProjectile rechazado por límite de daño de proyectil de
 #: ../../TShockAPI/Bouncer.cs:1249
 #, csharp-format
 msgid "Bouncer / OnNewProjectile rejected from tombstones from {0}"
-msgstr "Bouncer / OnNewProjectile rechazado por lápidas de {0}"
+msgstr "Bouncer / OnNewProjectile rechazado por lápidas desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1269
 #, csharp-format
 msgid "Bouncer / OnNewProjectile rejected from weird check from {0} {1}"
-msgstr "Bouncer / OnNewProjectile rechazado por comprobación extraña de {0} {1}"
+msgstr "Bouncer / OnNewProjectile rechazado por comprobación extraña desde {0} {1}"
 
 #: ../../TShockAPI/Bouncer.cs:2040
 #, csharp-format
 msgid "Bouncer / OnNPCAddBuff rejected abnormal buff ({0}, last for {4}) added to {1} ({2}) from {3}."
-msgstr "Bouncer / OnNPCAddBuff rechazó un buff anormal ({0}, de duración {4}) aplicado a {1} ({2}) por {3}."
+msgstr "Bouncer / OnNPCAddBuff rechazado, buff anormal ({0}, de duración {4}) aplicado a {1} ({2}) por {3}."
 
 #: ../../TShockAPI/Bouncer.cs:1994
 #, csharp-format
 msgid "Bouncer / OnNPCAddBuff rejected disabled from {0}"
-msgstr "Bouncer / OnNPCAddBuff rechazó el estado deshabilitado desde {0}"
+msgstr "Bouncer / OnNPCAddBuff rechazado, deshabilitado desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1987
 #, csharp-format
 msgid "Bouncer / OnNPCAddBuff rejected null npc from {0}"
-msgstr "Bouncer / OnNPCAddBuff rechazó PNJ nulo de {0}"
+msgstr "Bouncer / OnNPCAddBuff rechazado, PNJ nulo desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1978
 #, csharp-format
 msgid "Bouncer / OnNPCAddBuff rejected out of bounds NPC update from {0}"
-msgstr "Bouncer / OnNPCAddBuff rechazó actualización de PNJ fuera de los bordes desde {0}"
+msgstr "Bouncer / OnNPCAddBuff rechazado, actualización de PNJ fuera de los bordes desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1416
 #, csharp-format
 msgid "Bouncer / OnNPCStrike rejected from bouncer throttle from {0}"
-msgstr ""
+msgstr "Bouncer / OnNPCStrike rechazado por el bouncer, limitación desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1391
 #, csharp-format
 msgid "Bouncer / OnNPCStrike rejected from damage threshold from {0} {1}/{2}"
-msgstr ""
+msgstr "Bouncer / OnNPCStrike rechazado por umbral de daño desde {0} {1}/{2}"
 
 #: ../../TShockAPI/Bouncer.cs:1399
 #, csharp-format
 msgid "Bouncer / OnNPCStrike rejected from disabled from {0}"
-msgstr ""
+msgstr "Bouncer / OnNPCStrike rechazado por estado deshabilitado desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1408
 #, csharp-format
 msgid "Bouncer / OnNPCStrike rejected from range checks from {0}"
-msgstr ""
+msgstr "Bouncer / OnNPCStrike rechazado por comprobaciones de rango desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1550
 #, csharp-format
 msgid "Bouncer / OnPlaceChest / rejected from invalid place style from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlaceChest / rechazado por estilo de colocación inválido de {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1542
 #, csharp-format
 msgid "Bouncer / OnPlaceChest rejected from disabled from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlaceChest rechazado por estado deshabilitado desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1535
 #, csharp-format
 msgid "Bouncer / OnPlaceChest rejected from invalid check from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlaceChest rechazado por comprobación inválida desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1583
 #, csharp-format
 msgid "Bouncer / OnPlaceChest rejected from invalid permission from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlaceChest rechazado por permiso inválido desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1591
 #, csharp-format
 msgid "Bouncer / OnPlaceChest rejected from range check from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlaceChest rechazado por comprobación de rango desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1562
 #, csharp-format
 msgid "Bouncer / OnPlaceChest rejected from weird check from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlaceChest rechazado por comprobación extraña desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1573
 #, csharp-format
 msgid "Bouncer / OnPlaceChest rejected from weird placement check from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlaceChest rechazado por comprobación de colocación extraña desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2440
 #, csharp-format
 msgid "Bouncer / OnPlaceItemFrame rejected disabled from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlaceItemFrame rechazado, deshabilitado desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2448
 #, csharp-format
 msgid "Bouncer / OnPlaceItemFrame rejected permissions from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlaceItemFrame rechazado, permisos desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2456
 #, csharp-format
 msgid "Bouncer / OnPlaceItemFrame rejected range checks from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlaceItemFrame rechazado, comprobaciones de rango desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2433
 #, csharp-format
 msgid "Bouncer / OnPlaceItemFrame rejected tile placement valid from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlaceItemFrame rechazado, colocación de bloques válida desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2313
 #, csharp-format
 msgid "Bouncer / OnPlaceObject rejected awkward tile creation/selection from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlaceObject rechazado, creación/selección incómoda de bloques desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2300
 #, csharp-format
 msgid "Bouncer / OnPlaceObject rejected Axe of Regrowth only places saplings {0}"
-msgstr ""
+msgstr "Bouncer / OnPlaceObject rechazado, Hacha de Regeneración solo coloca brotes {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2261
 #, csharp-format
 msgid "Bouncer / OnPlaceObject rejected banned tiles from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlaceObject rechazado, bloques prohibidos desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2270
 #, csharp-format
 msgid "Bouncer / OnPlaceObject rejected dead people don't do things from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlaceObject rechazado, la gente muerta no hace cosas desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2278
 #, csharp-format
 msgid "Bouncer / OnPlaceObject rejected disabled from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlaceObject rechazado, deshabilitado desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2252
 #, csharp-format
 msgid "Bouncer / OnPlaceObject rejected fake containers from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlaceObject rechazado, contenedores falsos desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2351
 #, csharp-format
 msgid "Bouncer / OnPlaceObject rejected mad loop from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlaceObject rechazado, bucle loco desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2336
 #, csharp-format
 msgid "Bouncer / OnPlaceObject rejected null tile data from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlaceObject rechazado, datos de casilla nulos desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2325
 #, csharp-format
 msgid "Bouncer / OnPlaceObject rejected object placement with invalid style {1} (expected {2}) from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlaceObject rechazado, colocación de objeto con estilo inválido {1} (se esperaba {2}) desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2229
 #, csharp-format
 msgid "Bouncer / OnPlaceObject rejected out of bounds tile from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlaceObject rechazado, bloque fuera de los bordes desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2236
 #, csharp-format
 msgid "Bouncer / OnPlaceObject rejected out of bounds tile x from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlaceObject rechazado, casilla x fuera de los bordes desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2243
 #, csharp-format
 msgid "Bouncer / OnPlaceObject rejected out of bounds tile y from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlaceObject rechazado, casilla y fuera de los bordes desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2367
 #, csharp-format
 msgid "Bouncer / OnPlaceObject rejected range checks from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlaceObject rechazado, comprobaciones de rango desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2289
 #, csharp-format
 msgid "Bouncer / OnPlaceObject rejected rubblemaker I can't believe it's not rubble! from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlaceObject rechazado, demoledor ¡no puedo creer que no son escombros! desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2375
 #, csharp-format
 msgid "Bouncer / OnPlaceObject rejected tile place threshold from {0} {1}/{2}"
-msgstr ""
+msgstr "Bouncer / OnPlaceObject rechazado, umbral de colocación de bloque desde {0} {1}/{2}"
 
 #: ../../TShockAPI/Bouncer.cs:2222
 #, csharp-format
 msgid "Bouncer / OnPlaceObject rejected valid placements from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlaceObject rechazado, colocaciones válidas desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2406
 #, csharp-format
 msgid "Bouncer / OnPlaceTileEntity rejected disabled from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlaceTileEntity rechazado, deshabilitado desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2413
 #, csharp-format
 msgid "Bouncer / OnPlaceTileEntity rejected permissions from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlaceTileEntity rechazado, permisos desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2420
 #, csharp-format
 msgid "Bouncer / OnPlaceTileEntity rejected range checks from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlaceTileEntity rechazado, comprobaciones de rango desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2399
 #, csharp-format
 msgid "Bouncer / OnPlaceTileEntity rejected tile placement valid from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlaceTileEntity rechazado, colocación de bloque válida desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1642
 #, csharp-format
 msgid "Bouncer / OnPlayerAnimation rejected from disabled from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlayerAnimation rechazado por estado deshabilitado desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1650
 #, csharp-format
 msgid "Bouncer / OnPlayerAnimation rejected from throttle from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlayerAnimation rechazado por limitación desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1960
 #, csharp-format
 msgid "Bouncer / OnPlayerBuff rejected {0} ({1}) applying buff {2} to {3} for {4} ticks: buff cannot be applied for that long"
-msgstr ""
+msgstr "Bouncer / OnPlayerBuff rechazado, {0} ({1}) aplicando buff {2} a {3} por {4} ticks: el buff no se puede aplicar por tanto tiempo"
 
 #: ../../TShockAPI/Bouncer.cs:1942
 #, csharp-format
 msgid "Bouncer / OnPlayerBuff rejected {0} ({1}) applying buff {2} to {3} for {4} ticks: buff cannot be applied to non-senders"
-msgstr ""
+msgstr "Bouncer / OnPlayerBuff rechazado, {0} ({1}) aplicando el buff {2} a {3} por {4} ticks: el buff no puede aplicarse a no-remitentes"
 
 #: ../../TShockAPI/Bouncer.cs:1951
 #, csharp-format
 msgid "Bouncer / OnPlayerBuff rejected {0} ({1}) applying buff {2} to {3} for {4} ticks: buff cannot be applied without pvp"
-msgstr ""
+msgstr "Bouncer / OnPlayerBuff rechazado, {0} ({1}) aplicando buff {2} a {3} por {4} ticks: el buff no se puede aplicar sin JcJ"
 
 #: ../../TShockAPI/Bouncer.cs:1933
 #, csharp-format
 msgid "Bouncer / OnPlayerBuff rejected {0} ({1}) applying buff {2} to {3} for {4} ticks: buff is not whitelisted"
-msgstr ""
+msgstr "Bouncer / OnPlayerBuff rechazado, {0} ({1}) aplicando buff {2} a {3} por {4} ticks: el buff no está en la lista blanca"
 
 #: ../../TShockAPI/Bouncer.cs:1893
 #, csharp-format
 msgid "Bouncer / OnPlayerBuff rejected {0} ({1}) applying buff {2} to {3} for {4} ticks: invalid buff type"
-msgstr ""
+msgstr "Bouncer / OnPlayerBuff rechazado, {0} ({1}) aplicando buff {2} a {3} por {4} ticks: tipo de buff inválido"
 
 #: ../../TShockAPI/Bouncer.cs:1902
 #, csharp-format
 msgid "Bouncer / OnPlayerBuff rejected {0} ({1}) applying buff {2} to {3} for {4} ticks: sender is being disabled"
-msgstr ""
+msgstr "Bouncer / OnPlayerBuff rechazado, {0} ({1}) aplicando buff {2} a {3} por {4} ticks: remitente está siendo deshabilitado"
 
 #: ../../TShockAPI/Bouncer.cs:1911
 #, csharp-format
 msgid "Bouncer / OnPlayerBuff rejected {0} ({1}) applying buff {2} to {3} for {4} ticks: sender is being throttled"
-msgstr ""
+msgstr "Bouncer / OnPlayerBuff rechazado, {0} ({1}) aplicando buff {2} a {3} por {4} ticks: remitente está siendo limitado"
 
 #: ../../TShockAPI/Bouncer.cs:1924
 #, csharp-format
 msgid "Bouncer / OnPlayerBuff rejected {0} ({1}) applying buff {2} to {3} for {4} ticks: sender is not in range of target"
-msgstr ""
+msgstr "Bouncer / OnPlayerBuff rechazado, {0} ({1}) aplicando buff {2} a {3} por {4} ticks: remitente fuera de rango del objetivo"
 
 #: ../../TShockAPI/Bouncer.cs:1875
 #, csharp-format
 msgid "Bouncer / OnPlayerBuff rejected {0} ({1}) applying buff {2} to {3} for {4} ticks: target ID out of bounds"
-msgstr ""
+msgstr "Bouncer / OnPlayerBuff rechazado, {0} ({1}) aplicando buff {2} a {3} por {4} ticks: ID de objetivo fuera de los límites"
 
 #: ../../TShockAPI/Bouncer.cs:1884
 #, csharp-format
 msgid "Bouncer / OnPlayerBuff rejected {0} ({1}) applying buff {2} to {3} for {4} ticks: target is null"
-msgstr ""
+msgstr "Bouncer / OnPlayerBuff rechazado, {0} ({1}) aplicando buff {2} a {3} por {4} ticks: el objetivo es nulo"
 
-#: ../../TShockAPI/Bouncer.cs:2667
+#: ../../TShockAPI/Bouncer.cs:2670
 #, csharp-format
 msgid "Bouncer / OnPlayerDamage rejected custom death message from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlayerDamage rechazado, mensaje mortuorio personalizado desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2603
 #, csharp-format
 msgid "Bouncer / OnPlayerDamage rejected damage threshold from {0} {1}/{2}"
-msgstr ""
+msgstr "Bouncer / OnPlayerDamage rechazado, umbral de daño desde {0} {1}/{2}"
 
 #: ../../TShockAPI/Bouncer.cs:2610
 #, csharp-format
 msgid "Bouncer / OnPlayerDamage rejected damage threshold2 from {0} {1}/{2}"
-msgstr ""
+msgstr "Bouncer / OnPlayerDamage rechazado, umbral2 de daño desde {0} {1}/{2}"
 
 #: ../../TShockAPI/Bouncer.cs:2630
 #, csharp-format
 msgid "Bouncer / OnPlayerDamage rejected disabled from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlayerDamage rechazado, deshabilitado desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2621
 #, csharp-format
 msgid "Bouncer / OnPlayerDamage rejected hostile from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlayerDamage rechazado, hostil desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2594
 msgid "Bouncer / OnPlayerDamage rejected null check"
-msgstr ""
+msgstr "Bouncer / OnPlayerDamage rechazado, comprobación nula"
 
 #: ../../TShockAPI/Bouncer.cs:2639
 #, csharp-format
 msgid "Bouncer / OnPlayerDamage rejected range checks from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlayerDamage rechazado, comprobaciones de rango desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2648
 #, csharp-format
 msgid "Bouncer / OnPlayerDamage rejected throttled from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlayerDamage rechazado, limitado desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2488
 #, csharp-format
 msgid "Bouncer / OnPlayerPortalTeleport rejected disabled/throttled from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlayerPortalTeleport rechazado, deshabilitado/limitado desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2480
 #, csharp-format
 msgid "Bouncer / OnPlayerPortalTeleport rejected teleport out of bounds from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlayerPortalTeleport rechazado, teletransporte fuera de los bordes desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2469
 #, csharp-format
 msgid "Bouncer / OnPlayerPortalTeleport rejected untargetable teleport from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlayerPortalTeleport rechazado, teletransporte inalcanzable desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:517
 #, csharp-format
 msgid "Bouncer / OnPlayerUpdate *would have rejected* from (last network position zero) {0}"
-msgstr ""
+msgstr "Bouncer / OnPlayerUpdate *habría rechazado* desde (última posición en red cero) {0}"
 
 #: ../../TShockAPI/Bouncer.cs:495
 #, csharp-format
 msgid "Bouncer / OnPlayerUpdate force kicked (attempted to set velocity +/- 50000) from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlayerUpdate forzó la expulsión (se intentó establecer velocidad +/- 50000) desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:479
 #, csharp-format
 msgid "Bouncer / OnPlayerUpdate force kicked (attempted to set velocity to infinity) from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlayerUpdate forzó la expulsión (se intentó establecer velocidad al infinito) desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:487
 #, csharp-format
 msgid "Bouncer / OnPlayerUpdate force kicked (attempted to set velocity to NaN) from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlayerUpdate forzó la expulsión (se intentó establecer velocidad a un NaN) desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:561
 #, csharp-format
 msgid "Bouncer / OnPlayerUpdate rejected from (??) {0}"
-msgstr ""
+msgstr "Bouncer / OnPlayerUpdate rechazado desde (??) {0}"
 
 #: ../../TShockAPI/Bouncer.cs:565
 #, csharp-format
 msgid "Bouncer / OnPlayerUpdate rejected from (below ??) {0}"
-msgstr ""
+msgstr "Bouncer / OnPlayerUpdate rechazado desde (bajo ??) {0}"
 
 #: ../../TShockAPI/Bouncer.cs:573
 #, csharp-format
 msgid "Bouncer / OnPlayerUpdate rejected from (corpses don't move) {0}"
-msgstr ""
+msgstr "Bouncer / OnPlayerUpdate rechazado desde (los cadáveres no se mueven) {0}"
 
 #: ../../TShockAPI/Bouncer.cs:510
 #, csharp-format
 msgid "Bouncer / OnPlayerUpdate rejected from (inventory length) {0}"
-msgstr ""
+msgstr "Bouncer / OnPlayerUpdate rechazado desde (longitud de inventario) {0}"
 
 #: ../../TShockAPI/Bouncer.cs:503
 #, csharp-format
 msgid "Bouncer / OnPlayerUpdate rejected from (position check) {0}"
-msgstr ""
+msgstr "Bouncer / OnPlayerUpdate rechazado desde (comprobación de posición) {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1628
 #, csharp-format
 msgid "Bouncer / OnPlayerZone rejected from {0}"
-msgstr ""
+msgstr "Bouncer / OnPlayerZone rechazado, desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1445
 #, csharp-format
 msgid "Bouncer / OnProjectileKill rejected from bouncer throttle from {0}"
-msgstr ""
+msgstr "Bouncer / OnProjectileKill rechazado por el bouncer, limitación desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1437
 #, csharp-format
 msgid "Bouncer / OnProjectileKill rejected from disabled from {0}"
-msgstr ""
+msgstr "Bouncer / OnProjectileKill rechazado por estado deshabilitado desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:1430
 #, csharp-format
 msgid "Bouncer / OnProjectileKill rejected from negative projectile index from {0}"
-msgstr ""
+msgstr "Bouncer / OnProjectileKill rechazado por índice de proyectil negativo desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2153
 #, csharp-format
 msgid "Bouncer / OnReleaseNPC rejected npc release from {0}"
-msgstr ""
+msgstr "Bouncer / OnReleaseNPC rechazado, liberación de PNJ desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2145
 #, csharp-format
 msgid "Bouncer / OnReleaseNPC rejected out of bounds from {0}"
-msgstr ""
+msgstr "Bouncer / OnReleaseNPC rechazado, fuera de los bordes desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2204
 #, csharp-format
 msgid "Bouncer / OnReleaseNPC rejected throttle from {0}"
-msgstr ""
+msgstr "Bouncer / OnReleaseNPC rechazado, limitación desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2160
 #, csharp-format
 msgid "Bouncer / OnReleaseNPC released different critter from {0}"
-msgstr ""
+msgstr "Bouncer / OnReleaseNPC liberó una criatura distinta desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:700
 #, csharp-format
 msgid "Bouncer / OnTileEdit rejected from (axe) {0} {1} {2}"
-msgstr ""
+msgstr "Bouncer / OnTileEdit rechazado desde (hacha) {0} {1} {2}"
 
 #: ../../TShockAPI/Bouncer.cs:804
 #, csharp-format
 msgid "Bouncer / OnTileEdit rejected from (chestcap) {0} {1} {2}"
-msgstr ""
+msgstr "Bouncer / OnTileEdit rechazado desde (tope de cofre) {0} {1} {2}"
 
 #: ../../TShockAPI/Bouncer.cs:708
 #, csharp-format
 msgid "Bouncer / OnTileEdit rejected from (hammer) {0} {1} {2}"
-msgstr ""
+msgstr "Bouncer / OnTileEdit rechazado desde (martillo) {0} {1} {2}"
 
 #: ../../TShockAPI/Bouncer.cs:737
 #, csharp-format
 msgid "Bouncer / OnTileEdit rejected from (hammer2) {0} {1} {2}"
-msgstr ""
+msgstr "Bouncer / OnTileEdit rechazado desde (martillo2) {0} {1} {2}"
 
 #: ../../TShockAPI/Bouncer.cs:756
 #, csharp-format
 msgid "Bouncer / OnTileEdit rejected from (inconceivable rope coil) {0} {1} {2} selectedItem:{3} itemCreateTile:{4}"
-msgstr ""
+msgstr "Bouncer / OnTileEdit rechazado por (rollo de cuerda inconcebible) {0} {1} {2} selectedItem:{3} itemCreateTile:{4}"
 
 #: ../../TShockAPI/Bouncer.cs:767
 #, csharp-format
 msgid "Bouncer / OnTileEdit rejected from (ms1) {0} {1} {2}"
-msgstr ""
+msgstr "Bouncer / OnTileEdit rechazado desde (ms1) {0} {1} {2}"
 
 #: ../../TShockAPI/Bouncer.cs:639
 #, csharp-format
 msgid "Bouncer / OnTileEdit rejected from (pdm) {0} {1} {2}"
-msgstr ""
+msgstr "Bouncer / OnTileEdit rechazado desde (pdm) {0} {1} {2}"
 
 #: ../../TShockAPI/Bouncer.cs:725
 #, csharp-format
 msgid "Bouncer / OnTileEdit rejected from (pick) {0} {1} {2}"
-msgstr ""
+msgstr "Bouncer / OnTileEdit rechazado desde (pico) {0} {1} {2}"
 
 #: ../../TShockAPI/Bouncer.cs:675
 #: ../../TShockAPI/Bouncer.cs:686
 #, csharp-format
 msgid "Bouncer / OnTileEdit rejected from (placestyle) {0} {1} {2} placeStyle: {3} expectedStyle: {4}"
-msgstr ""
+msgstr "Bouncer / OnTileEdit rechazado por (estilo de colocación) {0} {1} {2} placeStyle: {3} expectedStyle: {4}"
 
 #: ../../TShockAPI/Bouncer.cs:653
 #, csharp-format
 msgid "Bouncer / OnTileEdit rejected from (tb) {0} {1} {2}"
-msgstr ""
+msgstr "Bouncer / OnTileEdit rechazado desde (tb) {0} {1} {2}"
 
 #: ../../TShockAPI/Bouncer.cs:603
 #, csharp-format
 msgid "Bouncer / OnTileEdit rejected from (tile placement valid) {0} {1} {2}"
-msgstr ""
+msgstr "Bouncer / OnTileEdit rechazado desde (colocación de bloque válida) {0} {1} {2}"
 
 #: ../../TShockAPI/Bouncer.cs:848
 #, csharp-format
 msgid "Bouncer / OnTileEdit rejected from actuator/presserator from {0} {1} {2}"
-msgstr ""
+msgstr "Bouncer / OnTileEdit rechazado por activador/pulsificador desde {0} {1} {2}"
 
 #: ../../TShockAPI/Bouncer.cs:612
 #, csharp-format
 msgid "Bouncer / OnTileEdit rejected from build from {0} {1} {2}"
-msgstr ""
+msgstr "Bouncer / OnTileEdit rechazado por construcción desde {0} {1} {2}"
 
 #: ../../TShockAPI/Bouncer.cs:869
 #, csharp-format
 msgid "Bouncer / OnTileEdit rejected from disable from {0} {1} {2}"
-msgstr ""
+msgstr "Bouncer / OnTileEdit rechazado por deshabilitación desde {0} {1} {2}"
 
 #: ../../TShockAPI/Bouncer.cs:624
 #, csharp-format
 msgid "Bouncer / OnTileEdit rejected from editData out of bounds {0} {1} {2}"
-msgstr ""
+msgstr "Bouncer / OnTileEdit rechazado por editData fuera de los bordes {0} {1} {2}"
 
 #: ../../TShockAPI/Bouncer.cs:908
 #, csharp-format
 msgid "Bouncer / OnTileEdit rejected from explosives/fuses from {0} {1} {2}"
-msgstr ""
+msgstr "Bouncer / OnTileEdit rechazado por explosivos/fusibles desde {0} {1} {2}"
 
 #: ../../TShockAPI/Bouncer.cs:878
 #, csharp-format
 msgid "Bouncer / OnTileEdit rejected from ice/build from {0} {1} {2}"
-msgstr ""
+msgstr "Bouncer / OnTileEdit rechazado por hielo/construcción desde {0} {1} {2}"
 
 #: ../../TShockAPI/Bouncer.cs:823
 #, csharp-format
 msgid "Bouncer / OnTileEdit rejected from place wire from {0} {1} {2}"
-msgstr ""
+msgstr "Bouncer / OnTileEdit rechazado por colocación de cable desde {0} {1} {2}"
 
 #: ../../TShockAPI/Bouncer.cs:858
 #, csharp-format
 msgid "Bouncer / OnTileEdit rejected from sts allow cut from {0} {1} {2}"
-msgstr ""
+msgstr "Bouncer / OnTileEdit rechazado por sts permite corte desde {0} {1} {2}"
 
 #: ../../TShockAPI/Bouncer.cs:952
 #, csharp-format
 msgid "Bouncer / OnTileEdit rejected from throttled from {0} {1} {2}"
-msgstr ""
+msgstr "Bouncer / OnTileEdit rechazado por limitación desde {0} {1} {2}"
 
 #: ../../TShockAPI/Bouncer.cs:926
 #, csharp-format
 msgid "Bouncer / OnTileEdit rejected from tile kill threshold from {0}, (value: {1})"
-msgstr ""
+msgstr "Bouncer / OnTileEdit rechazado por umbral de destrucción de bloques desde {0}, (valor: {1})"
 
 #: ../../TShockAPI/Bouncer.cs:944
 #, csharp-format
 msgid "Bouncer / OnTileEdit rejected from tile place threshold from {0}, (value: {1})"
-msgstr ""
+msgstr "Bouncer / OnTileEdit rechazado por umbral de colocación de bloques desde {0}, (valor: {1})"
 
 #: ../../TShockAPI/Bouncer.cs:786
 #, csharp-format
 msgid "Bouncer / OnTileEdit rejected from tile placement not matching selected item createTile {0} {1} {2} selectedItemID:{3} createTile:{4}"
-msgstr ""
+msgstr "Bouncer / OnTileEdit rechazado por colocación de bloque no coincidente con el createTile del objeto seleccionado {0} {1} {2} selectedItemID:{3} createTile:{4}"
 
 #: ../../TShockAPI/Bouncer.cs:776
 #, csharp-format
 msgid "Bouncer / OnTileEdit rejected from using ice rod but not placing ice block {0} {1} {2}"
-msgstr ""
+msgstr "Bouncer / OnTileEdit rechazado por usar el báculo de hielo pero no colocar un bloque de hielo {0} {1} {2}"
 
 #: ../../TShockAPI/Bouncer.cs:795
 #, csharp-format
 msgid "Bouncer / OnTileEdit rejected from wall placement not matching selected item createWall {0} {1} {2} selectedItemID:{3} createWall:{4}"
-msgstr ""
+msgstr "Bouncer / OnTileEdit rechazado por colocación de muro no coincidente con el createWall del objeto seleccionado {0} {1} {2} selectedItemID:{3} createWall:{4}"
 
 #: ../../TShockAPI/Bouncer.cs:985
 #, csharp-format
 msgid "Bouncer / OnTileEdit rejected from weird confusing flow control from {0}"
-msgstr ""
+msgstr "Bouncer / OnTileEdit rechazado por control de flujo extraño y confuso desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:837
 #, csharp-format
 msgid "Bouncer / OnTileEdit rejected from wire cutter from {0} {1} {2}"
-msgstr ""
+msgstr "Bouncer / OnTileEdit rechazado por cortador de cable desde {0} {1} {2}"
 
 #: ../../TShockAPI/Bouncer.cs:632
 #, csharp-format
 msgid "Bouncer / OnTileEdit super accepted from (ice block) {0} {1} {2}"
-msgstr ""
+msgstr "Bouncer / OnTileEdit super aceptado desde (bloque de hielo) {0} {1} {2}"
 
 #: ../../TShockAPI/Bouncer.cs:2060
 #, csharp-format
 msgid "Bouncer / OnUpdateNPCHome rejected npc home build permission from {0}"
-msgstr ""
+msgstr "Bouncer / OnUpdateNPCHome rechazado, permiso de construcción de casa para PNJ desde {0}"
 
 #: ../../TShockAPI/Bouncer.cs:2070
 #, csharp-format
 msgid "Bouncer / OnUpdateNPCHome rejected range checks from {0}"
-msgstr ""
+msgstr "Bouncer / OnUpdateNPCHome rechazado, comprobaciones de rango desde {0}"
 
-#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:558
+#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:413
 #, csharp-format
 msgid "Bouncer / SendTileRect accepted clientside world edit from {0}"
-msgstr ""
+msgstr "Bouncer / SendTileRect aceptó edición de mundo por parte del cliente desde {0}"
 
-#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:414
+#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:468
+#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:488
+#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:500
+#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:511
 #, csharp-format
-msgid "Bouncer / SendTileRect processing a tile conversion update - [{0}] -> [{1}]"
+msgid "Bouncer / SendTileRect reimplemented from {0}"
 msgstr ""
 
-#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:429
-#, csharp-format
-msgid "Bouncer / SendTileRect processing a wall conversion update - [{0}] -> [{1}]"
-msgstr ""
-
-#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:129
-#, csharp-format
-msgid "Bouncer / SendTileRect reimplemented from carbonara from {0}"
-msgstr ""
-
-#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:299
-msgid "Bouncer / SendTileRect rejected for banned tile"
-msgstr ""
-
-#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:578
+#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:446
 #, csharp-format
 msgid "Bouncer / SendTileRect rejected from being disabled from {0}"
-msgstr ""
+msgstr "Bouncer / SendTileRect rechazado por estar deshabilitado desde {0}"
 
-#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:293
+#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:518
 #, csharp-format
-msgid "Bouncer / SendTileRect rejected from no permission for tile object from {0}"
+msgid "Bouncer / SendTileRect rejected from matches from {0}"
 msgstr ""
 
-#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:565
+#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:459
 #, csharp-format
-msgid "Bouncer / SendTileRect rejected from non-vanilla tilemod from {0}"
+msgid "Bouncer / SendTileRect rejected from out of bounds / build permission from {0}"
 msgstr ""
 
-#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:571
+#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:478
+#, csharp-format
+msgid "Bouncer / SendTileRect rejected from out of range from {0}"
+msgstr ""
+
+#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:427
+#, csharp-format
+msgid "Bouncer / SendTileRect rejected from size from {0}"
+msgstr ""
+
+#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:436
 #, csharp-format
 msgid "Bouncer / SendTileRect rejected from throttle from {0}"
-msgstr ""
-
-#: ../../TShockAPI/Handlers/SendTileRectHandler.cs:610
-msgid "Bouncer / SendTileRectHandler - rejected tile object because object dimensions fall outside the tile rect (excessive size)"
-msgstr ""
+msgstr "Bouncer / SendTileRect rechazado por limitación desde {0}"
 
 #: ../../TShockAPI/Utils.cs:136
 #, csharp-format
@@ -2554,7 +2549,7 @@ msgstr "Sintaxis y Ejemplo de Buff"
 msgid "Butcher Syntax and Example"
 msgstr "Sintaxis y Ejemplo de Butcher"
 
-#: ../../TShockAPI/GetDataHandlers.cs:2619
+#: ../../TShockAPI/GetDataHandlers.cs:2654
 msgid "Bypass SSC is enabled for your account. SSC data will not be loaded or saved."
 msgstr "Tu cuenta tiene activado el bypass de SSC. Los datos SSC no serán cargados ni guardados."
 
@@ -2660,7 +2655,7 @@ msgstr "Comandos ({{0}}/{{1}}):"
 msgid "Commands: add, del, hide, list, send, [warpname]."
 msgstr "Comandos: add, del, hide, list, send, [nombre de warp]."
 
-#: ../../TShockAPI/TShock.cs:765
+#: ../../TShockAPI/TShock.cs:801
 #, csharp-format
 msgid "Config path has been set to {0}"
 msgstr "La ruta de configuración se ha establecido en {0}"
@@ -2673,7 +2668,7 @@ msgstr "Recarga de configuración, permisos y regiones completada. Algunos cambi
 msgid "Connect to the internet to figure out what to download?"
 msgstr "¿Conectarse a Internet para averiguar qué descargar?"
 
-#: ../../TShockAPI/TShock.cs:1329
+#: ../../TShockAPI/TShock.cs:1365
 msgid "Connecting via a proxy is not allowed."
 msgstr "No se permite la conexión a través de un proxy."
 
@@ -2686,7 +2681,7 @@ msgstr "Uso correcto: {0}overridessc|{0}ossc <nombre del jugador>"
 msgid "Corruption Palm"
 msgstr "Palmera Corrupta"
 
-#: ../../TShockAPI/TShock.cs:296
+#: ../../TShockAPI/TShock.cs:300
 #, csharp-format
 msgid "Could not apply the given log path / log format, defaults will be used. Exception details:\n"
 "{0}"
@@ -2760,7 +2755,7 @@ msgstr "No se pudo encontrar el objetivo especificado. Revise que esté bien esc
 msgid "Could not rename {0}!"
 msgstr "¡No se pudo renombrar a {0}!"
 
-#: ../../TShockAPI/TShock.cs:1448
+#: ../../TShockAPI/TShock.cs:1484
 msgid "Crash attempt via long chat packet."
 msgstr "Intento de crasheo a través de un paquete de chat largo."
 
@@ -2795,12 +2790,12 @@ msgstr "Número máximo actual de enemigos generados: {0}."
 msgid "Current spawn rate: {0}."
 msgstr "Tasa actual de generación de enemigos: {0}."
 
-#: ../../TShockAPI/Bouncer.cs:2686
+#: ../../TShockAPI/Bouncer.cs:2689
 #, csharp-format
 msgid "Death Exploit Attempt: Damage {0}"
 msgstr "Intento de Exploit de Muerte: Daño {0}"
 
-#: ../../TShockAPI/Bouncer.cs:2704
+#: ../../TShockAPI/Bouncer.cs:2707
 msgid "Death reason outside of normal bounds."
 msgstr "Razón de muerte fuera de los límites normales."
 
@@ -3000,7 +2995,7 @@ msgstr "Ejemplos: {0}warp add foobar, {0}warp hide foobar true, {0}warp foobar."
 msgid "Executes a command as the super admin."
 msgstr "Ejecuta un comando como súper admin."
 
-#: ../../TShockAPI/GetDataHandlers.cs:4371
+#: ../../TShockAPI/GetDataHandlers.cs:4416
 msgid "Exploit attempt detected!"
 msgstr "¡Intento de exploit detectado!"
 
@@ -3043,7 +3038,7 @@ msgstr "No se pudo renombrar el grupo {0}."
 msgid "Failed to rename the region."
 msgstr "No se pudo renombrar la región."
 
-#: ../../TShockAPI/Bouncer.cs:2685
+#: ../../TShockAPI/Bouncer.cs:2688
 msgid "Failed to shade polygon normals."
 msgstr "Error al sombrear las normales del polígono."
 
@@ -3100,375 +3095,375 @@ msgid_plural "Gave {0} {1}s."
 msgstr[0] "Dio {0} {1}."
 msgstr[1] "Dio {0} {1}s."
 
-#: ../../TShockAPI/GetDataHandlers.cs:3796
+#: ../../TShockAPI/GetDataHandlers.cs:3839
 #, csharp-format
 msgid "GetDataHandlers / HandleCatchNpc catch zero {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandleCatchNpc capturó cero {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3804
+#: ../../TShockAPI/GetDataHandlers.cs:3847
 #, csharp-format
 msgid "GetDataHandlers / HandleCatchNpc rejected catch npc {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandleCatchNpc rechazado, captura PNJ {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3119
+#: ../../TShockAPI/GetDataHandlers.cs:3158
 #, csharp-format
 msgid "GetDataHandlers / HandleChestActive rejected build permission and region check {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandleChestActive rechazado, permiso de construcción y comprobación de región {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3094
+#: ../../TShockAPI/GetDataHandlers.cs:3133
 #, csharp-format
 msgid "GetDataHandlers / HandleChestItem rejected max stacks {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandleChestItem rechazado, stacks máximos {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:2844
+#: ../../TShockAPI/GetDataHandlers.cs:2881
 #, csharp-format
 msgid "GetDataHandlers / HandleDoorUse rejected door gap check {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandleDoorUse rechazado, comprobaciones de espacio de puerta {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:2829
+#: ../../TShockAPI/GetDataHandlers.cs:2866
 #, csharp-format
 msgid "GetDataHandlers / HandleDoorUse rejected out of range door {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandleDoorUse rechazado, puerta fuera de alcance {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:2835
+#: ../../TShockAPI/GetDataHandlers.cs:2872
 #, csharp-format
 msgid "GetDataHandlers / HandleDoorUse rejected type 0 5 check {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandleDoorUse rechazado, comprobación tipo 0 5 {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:2669
+#: ../../TShockAPI/GetDataHandlers.cs:2704
 msgid "GetDataHandlers / HandleGetSection rejected reserve slot"
-msgstr ""
-
-#: ../../TShockAPI/GetDataHandlers.cs:4042
-#, csharp-format
-msgid "GetDataHandlers / HandleKillPortal rejected owner mismatch check {0}"
-msgstr ""
-
-#: ../../TShockAPI/GetDataHandlers.cs:2989
-#, csharp-format
-msgid "GetDataHandlers / HandleNpcStrike rejected Cultist summon from {0}"
-msgstr ""
-
-#: ../../TShockAPI/GetDataHandlers.cs:2972
-#, csharp-format
-msgid "GetDataHandlers / HandleNpcStrike rejected EoL summon from {0}"
-msgstr ""
-
-#: ../../TShockAPI/GetDataHandlers.cs:2962
-#, csharp-format
-msgid "GetDataHandlers / HandleNpcStrike rejected npc strike {0}"
-msgstr ""
-
-#: ../../TShockAPI/GetDataHandlers.cs:3250
-#, csharp-format
-msgid "GetDataHandlers / HandleNpcTalk rejected npc talk {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandleGetSection rechazado, ranura de reserva"
 
 #: ../../TShockAPI/GetDataHandlers.cs:4086
 #, csharp-format
-msgid "GetDataHandlers / HandleNpcTeleportPortal rejected not thinking with portals {0}"
-msgstr ""
+msgid "GetDataHandlers / HandleKillPortal rejected owner mismatch check {0}"
+msgstr "GetDataHandlers / HandleKillPortal rechazado, comprobación de dueño no concordante {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:4079
+#: ../../TShockAPI/GetDataHandlers.cs:3028
+#, csharp-format
+msgid "GetDataHandlers / HandleNpcStrike rejected Cultist summon from {0}"
+msgstr "GetDataHandlers / HandleNpcStrike rechazado, invocación de Sectario desde {0}"
+
+#: ../../TShockAPI/GetDataHandlers.cs:3011
+#, csharp-format
+msgid "GetDataHandlers / HandleNpcStrike rejected EoL summon from {0}"
+msgstr "GetDataHandlers / HandleNpcStrike rechazado, invocación de Emperatriz desde {0}"
+
+#: ../../TShockAPI/GetDataHandlers.cs:3001
+#, csharp-format
+msgid "GetDataHandlers / HandleNpcStrike rejected npc strike {0}"
+msgstr "GetDataHandlers / HandleNpcStrike rechazado, golpe a PNJ {0}"
+
+#: ../../TShockAPI/GetDataHandlers.cs:3290
+#, csharp-format
+msgid "GetDataHandlers / HandleNpcTalk rejected npc talk {0}"
+msgstr "GetDataHandlers / HandleNpcTalk rechazado, diálogo de PNJ {0}"
+
+#: ../../TShockAPI/GetDataHandlers.cs:4130
+#, csharp-format
+msgid "GetDataHandlers / HandleNpcTeleportPortal rejected not thinking with portals {0}"
+msgstr "GetDataHandlers / HandleNpcTeleportPortal rechazado, no está pensando con portales {0}"
+
+#: ../../TShockAPI/GetDataHandlers.cs:4123
 #, csharp-format
 msgid "GetDataHandlers / HandleNpcTeleportPortal rejected null check {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandleNpcTeleportPortal rechazado, comprobación nula {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3920
+#: ../../TShockAPI/GetDataHandlers.cs:3963
 #, csharp-format
 msgid "GetDataHandlers / HandleNumberOfAnglerQuestsCompleted surprise packet! Someone tell the TShock team! {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandleNumberOfAnglerQuestsCompleted ¡Paquete sorpresa! ¡Alguien avise al equipo de TShock! {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:4144
+#: ../../TShockAPI/GetDataHandlers.cs:4188
 #, csharp-format
 msgid "GetDataHandlers / HandleOldOnesArmy rejected permissions {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandleOldOnesArmy rechazado, permisos {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:4138
+#: ../../TShockAPI/GetDataHandlers.cs:4182
 #, csharp-format
 msgid "GetDataHandlers / HandleOldOnesArmy rejected throttled {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandleOldOnesArmy rechazado, limitado {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3622
+#: ../../TShockAPI/GetDataHandlers.cs:3664
 #, csharp-format
 msgid "GetDataHandlers / HandlePaintTile rejected range check {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandlePaintTile rechazado, comprobación de rango {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3640
+#: ../../TShockAPI/GetDataHandlers.cs:3682
 #, csharp-format
 msgid "GetDataHandlers / HandlePaintTile rejected select consistency {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandlePaintTile rechazado, consistencia de selección {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3649
+#: ../../TShockAPI/GetDataHandlers.cs:3691
 #, csharp-format
 msgid "GetDataHandlers / HandlePaintTile rejected throttle/permission/range check {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandlePaintTile rechazado, comprobación de limitación/permiso/rango {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3669
+#: ../../TShockAPI/GetDataHandlers.cs:3712
 #, csharp-format
 msgid "GetDataHandlers / HandlePaintWall rejected range check {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandlePaintWall rechazado, comprobación de rango {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3687
+#: ../../TShockAPI/GetDataHandlers.cs:3730
 #, csharp-format
 msgid "GetDataHandlers / HandlePaintWall rejected selector consistency {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandlePaintWall rechazado, consistencia de selector {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3696
+#: ../../TShockAPI/GetDataHandlers.cs:3739
 #, csharp-format
 msgid "GetDataHandlers / HandlePaintWall rejected throttle/permission/range {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandlePaintWall rechazado, limitación/permiso/rango {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3411
+#: ../../TShockAPI/GetDataHandlers.cs:3452
 #, csharp-format
 msgid "GetDataHandlers / HandlePlayerBuffList handled event and sent data {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandlePlayerBuffList manejó el evento y envió los datos {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3396
+#: ../../TShockAPI/GetDataHandlers.cs:3437
 #, csharp-format
 msgid "GetDataHandlers / HandlePlayerBuffList zeroed player buff due to below state 2 {0} {1}"
-msgstr ""
+msgstr "GetDataHandlers / HandlePlayerBuffList dejó en cero buff de jugador por estar bajo estado 2 {0} {1}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:2777
+#: ../../TShockAPI/GetDataHandlers.cs:2814
 #, csharp-format
 msgid "GetDataHandlers / HandlePlayerHp rejected over max hp {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandlePlayerHp rechazado, sobre HP máximo {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:2522
+#: ../../TShockAPI/GetDataHandlers.cs:2557
 msgid "GetDataHandlers / HandlePlayerInfo rejected hardcore required"
-msgstr ""
+msgstr "GetDataHandlers / HandlePlayerInfo rechazado, se requiere hardcore"
 
-#: ../../TShockAPI/GetDataHandlers.cs:2516
+#: ../../TShockAPI/GetDataHandlers.cs:2551
 msgid "GetDataHandlers / HandlePlayerInfo rejected mediumcore required"
-msgstr ""
+msgstr "GetDataHandlers / HandlePlayerInfo rechazado, se requiere mediumcore"
 
-#: ../../TShockAPI/GetDataHandlers.cs:2457
+#: ../../TShockAPI/GetDataHandlers.cs:2492
 msgid "GetDataHandlers / HandlePlayerInfo rejected name length 0"
-msgstr ""
+msgstr "GetDataHandlers / HandlePlayerInfo rechazado, largo de nombre 0"
 
-#: ../../TShockAPI/GetDataHandlers.cs:2450
+#: ../../TShockAPI/GetDataHandlers.cs:2485
 #, csharp-format
 msgid "GetDataHandlers / HandlePlayerInfo rejected plugin phase {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandlePlayerInfo rechazado, fase de plugin {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:2510
+#: ../../TShockAPI/GetDataHandlers.cs:2545
 msgid "GetDataHandlers / HandlePlayerInfo rejected softcore required"
-msgstr ""
+msgstr "GetDataHandlers / HandlePlayerInfo rechazado, se requiere softcore"
 
-#: ../../TShockAPI/GetDataHandlers.cs:4210
-#: ../../TShockAPI/GetDataHandlers.cs:4216
+#: ../../TShockAPI/GetDataHandlers.cs:4255
+#: ../../TShockAPI/GetDataHandlers.cs:4261
 #, csharp-format
 msgid "GetDataHandlers / HandlePlayerKillMeV2 kicked with difficulty {0} {1}"
-msgstr ""
+msgstr "GetDataHandlers / HandlePlayerKillMeV2 expulsado con dificultad {0} {1}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:4225
+#: ../../TShockAPI/GetDataHandlers.cs:4270
 #, csharp-format
 msgid "GetDataHandlers / HandlePlayerKillMeV2 ssc delete {0} {1}"
-msgstr ""
+msgstr "GetDataHandlers / HandlePlayerKillMeV2 eliminación de SSC {0} {1}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3289
+#: ../../TShockAPI/GetDataHandlers.cs:3329
 #, csharp-format
 msgid "GetDataHandlers / HandlePlayerMana rejected max mana {0} {1}/{2}"
-msgstr ""
+msgstr "GetDataHandlers / HandlePlayerMana rechazado, mana máximo {0} {1}/{2}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:2554
+#: ../../TShockAPI/GetDataHandlers.cs:2589
 msgid "GetDataHandlers / HandlePlayerSlot rejected ignore ssc packets"
-msgstr ""
+msgstr "GetDataHandlers / HandlePlayerSlot rechazado, paquetes que ignoran SSC"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3316
+#: ../../TShockAPI/GetDataHandlers.cs:3357
 #, csharp-format
 msgid "GetDataHandlers / HandlePlayerTeam rejected team fastswitch {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandlePlayerTeam rechazado, cambio rápido de equipo {0}"
+
+#: ../../TShockAPI/GetDataHandlers.cs:2794
+#, csharp-format
+msgid "GetDataHandlers / HandlePlayerUpdate home position delta {0}"
+msgstr "GetDataHandlers / HandlePlayerUpdate delta de posición de casa {0}"
+
+#: ../../TShockAPI/GetDataHandlers.cs:3183
+msgid "GetDataHandlers / HandlePlayerZone rejected null check"
+msgstr "GetDataHandlers / HandlePlayerZone rechazado, comprobación nula"
+
+#: ../../TShockAPI/GetDataHandlers.cs:3064
+#, csharp-format
+msgid "GetDataHandlers / HandleProjectileKill permitted skeletron prime exemption {0}"
+msgstr "GetDataHandlers / HandleProjectileKill permitió la exención de Esqueletrón Mayor {0}"
+
+#: ../../TShockAPI/GetDataHandlers.cs:3068
+#, csharp-format
+msgid "GetDataHandlers / HandleProjectileKill rejected banned projectile {0}"
+msgstr "GetDataHandlers / HandleProjectileKill rechazado, proyectil prohibido {0}"
+
+#: ../../TShockAPI/GetDataHandlers.cs:3053
+#, csharp-format
+msgid "GetDataHandlers / HandleProjectileKill rejected tombstone {0}"
+msgstr "GetDataHandlers / HandleProjectileKill rechazado, lápida {0}"
+
+#: ../../TShockAPI/GetDataHandlers.cs:3395
+#, csharp-format
+msgid "GetDataHandlers / HandleSign rejected sign on build permission {0}"
+msgstr "GetDataHandlers / HandleSign rechazado, cartel en permiso de construcción {0}"
+
+#: ../../TShockAPI/GetDataHandlers.cs:3402
+#, csharp-format
+msgid "GetDataHandlers / HandleSign rejected sign range check {0}"
+msgstr "GetDataHandlers / HandleSign rechazado, comprobación de rango para cartel {0}"
+
+#: ../../TShockAPI/GetDataHandlers.cs:3375
+#, csharp-format
+msgid "GetDataHandlers / HandleSignRead rejected out of bounds {0}"
+msgstr "GetDataHandlers / HandleSignRead rechazado, fuera de los bordes {0}"
+
+#: ../../TShockAPI/GetDataHandlers.cs:2737
+#, csharp-format
+msgid "GetDataHandlers / HandleSpawn force teleport 'vanilla spawn' {0}"
+msgstr "GetDataHandlers / HandleSpawn teletransporte forzado a 'punto de aparición vainilla' {0}"
+
+#: ../../TShockAPI/GetDataHandlers.cs:2748
+#, csharp-format
+msgid "GetDataHandlers / HandleSpawn force teleport phase 1 {0}"
+msgstr "GetDataHandlers / HandleSpawn teletransporte forzado fase 1 {0}"
 
 #: ../../TShockAPI/GetDataHandlers.cs:2757
 #, csharp-format
-msgid "GetDataHandlers / HandlePlayerUpdate home position delta {0}"
-msgstr ""
-
-#: ../../TShockAPI/GetDataHandlers.cs:3144
-msgid "GetDataHandlers / HandlePlayerZone rejected null check"
-msgstr ""
-
-#: ../../TShockAPI/GetDataHandlers.cs:3025
-#, csharp-format
-msgid "GetDataHandlers / HandleProjectileKill permitted skeletron prime exemption {0}"
-msgstr ""
-
-#: ../../TShockAPI/GetDataHandlers.cs:3029
-#, csharp-format
-msgid "GetDataHandlers / HandleProjectileKill rejected banned projectile {0}"
-msgstr ""
-
-#: ../../TShockAPI/GetDataHandlers.cs:3014
-#, csharp-format
-msgid "GetDataHandlers / HandleProjectileKill rejected tombstone {0}"
-msgstr ""
-
-#: ../../TShockAPI/GetDataHandlers.cs:3354
-#, csharp-format
-msgid "GetDataHandlers / HandleSign rejected sign on build permission {0}"
-msgstr ""
-
-#: ../../TShockAPI/GetDataHandlers.cs:3361
-#, csharp-format
-msgid "GetDataHandlers / HandleSign rejected sign range check {0}"
-msgstr ""
-
-#: ../../TShockAPI/GetDataHandlers.cs:3334
-#, csharp-format
-msgid "GetDataHandlers / HandleSignRead rejected out of bounds {0}"
-msgstr ""
-
-#: ../../TShockAPI/GetDataHandlers.cs:2700
-#, csharp-format
-msgid "GetDataHandlers / HandleSpawn force teleport 'vanilla spawn' {0}"
-msgstr ""
-
-#: ../../TShockAPI/GetDataHandlers.cs:2711
-#, csharp-format
-msgid "GetDataHandlers / HandleSpawn force teleport phase 1 {0}"
-msgstr ""
-
-#: ../../TShockAPI/GetDataHandlers.cs:2720
-#, csharp-format
 msgid "GetDataHandlers / HandleSpawn force teleport phase 2 {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandleSpawn teletransporte forzado fase 2 {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:2682
+#: ../../TShockAPI/GetDataHandlers.cs:2717
 #, csharp-format
 msgid "GetDataHandlers / HandleSpawn rejected dead player spawn request {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandleSpawn rechazado, petición de spawn de jugador muerto {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3517
+#: ../../TShockAPI/GetDataHandlers.cs:3558
 #, csharp-format
 msgid "GetDataHandlers / HandleSpawnBoss rejected boss {0} {1}"
-msgstr ""
+msgstr "GetDataHandlers / HandleSpawnBoss rechazado, jefe {0} {1}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3507
+#: ../../TShockAPI/GetDataHandlers.cs:3548
 #, csharp-format
 msgid "GetDataHandlers / HandleSpawnBoss rejected bouner throttled {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandleSpawnBoss rechazado, limitado por bouncer {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3524
+#: ../../TShockAPI/GetDataHandlers.cs:3565
 #, csharp-format
 msgid "GetDataHandlers / HandleSpawnBoss rejected invasion {0} {1}"
-msgstr ""
+msgstr "GetDataHandlers / HandleSpawnBoss rechazado, invasión {0} {1}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3531
+#: ../../TShockAPI/GetDataHandlers.cs:3572
 #, csharp-format
 msgid "GetDataHandlers / HandleSpawnBoss rejected pet {0} {1}"
-msgstr ""
+msgstr "GetDataHandlers / HandleSpawnBoss rechazado, mascota {0} {1}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3442
+#: ../../TShockAPI/GetDataHandlers.cs:3483
 #, csharp-format
 msgid "GetDataHandlers / HandleSpecial rejected enchanted sundial permission (ForceTime) {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandleSpecial rechazado, permiso para Reloj de Sol Encantado (ForceTime) {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3436
+#: ../../TShockAPI/GetDataHandlers.cs:3477
 #, csharp-format
 msgid "GetDataHandlers / HandleSpecial rejected enchanted sundial permission {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandleSpecial rechazado, permiso para Reloj de Sol Encantado {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3426
+#: ../../TShockAPI/GetDataHandlers.cs:3467
 #, csharp-format
 msgid "GetDataHandlers / HandleSpecial rejected type 1 for {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandleSpecial rechazado, tipo 1 para {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:4005
+#: ../../TShockAPI/GetDataHandlers.cs:4049
 #, csharp-format
 msgid "GetDataHandlers / HandleSyncExtraValue rejected expert/master mode check {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandleSyncExtraValue rechazado, comprobación de modo experto/maestro {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3999
+#: ../../TShockAPI/GetDataHandlers.cs:4043
 #, csharp-format
 msgid "GetDataHandlers / HandleSyncExtraValue rejected extents check {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandleSyncExtraValue rechazado, comprobación de medidas {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:4011
+#: ../../TShockAPI/GetDataHandlers.cs:4055
 #, csharp-format
 msgid "GetDataHandlers / HandleSyncExtraValue rejected npc id out of bounds check - NPC ID: {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandleSyncExtraValue rechazado, comprobación de ID PNJ fuera de los límites - ID PNJ: {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:4018
+#: ../../TShockAPI/GetDataHandlers.cs:4062
 #, csharp-format
 msgid "GetDataHandlers / HandleSyncExtraValue rejected npc is null - NPC ID: {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandleSyncExtraValue rechazado, el PNJ es nulo - ID PNJ: {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:4025
+#: ../../TShockAPI/GetDataHandlers.cs:4069
 #, csharp-format
 msgid "GetDataHandlers / HandleSyncExtraValue rejected range check {0},{1} vs {2},{3} which is {4}"
-msgstr ""
+msgstr "GetDataHandlers / HandleSyncExtraValue rechazado, comprobación de rango {0},{1} vs {2},{3} que es {4}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:4397
+#: ../../TShockAPI/GetDataHandlers.cs:4442
 #, csharp-format
 msgid "GetDataHandlers / HandleSyncLoadout rejected loadout index sync {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandleSyncLoadout rechazado, sincronización índice de set {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:4388
+#: ../../TShockAPI/GetDataHandlers.cs:4433
 #, csharp-format
 msgid "GetDataHandlers / HandleSyncLoadout rejected loadout index sync out of bounds {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandleSyncLoadout rechazado, sincronización índice de set fuera de los límites {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3753
+#: ../../TShockAPI/GetDataHandlers.cs:3796
 #, csharp-format
 msgid "GetDataHandlers / HandleTeleport rejected npc teleport {0} {1}"
-msgstr ""
+msgstr "GetDataHandlers / HandleTeleport rechazado, teletransporte de PNJ {0} {1}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3762
+#: ../../TShockAPI/GetDataHandlers.cs:3805
 #, csharp-format
 msgid "GetDataHandlers / HandleTeleport rejected p2p extents {0} {1}"
-msgstr ""
+msgstr "GetDataHandlers / HandleTeleport rechazado, medidas p2p {0} {1}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3768
+#: ../../TShockAPI/GetDataHandlers.cs:3811
 #, csharp-format
 msgid "GetDataHandlers / HandleTeleport rejected p2p wormhole permission {0} {1}"
-msgstr ""
+msgstr "GetDataHandlers / HandleTeleport rechazado, permiso agujero de gusano p2p {0} {1}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3744
+#: ../../TShockAPI/GetDataHandlers.cs:3787
 #, csharp-format
 msgid "GetDataHandlers / HandleTeleport rejected rod type {0} {1}"
-msgstr ""
+msgstr "GetDataHandlers / HandleTeleport rechazado, tipo de varita {0} {1}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3842
-#: ../../TShockAPI/GetDataHandlers.cs:3858
-#: ../../TShockAPI/GetDataHandlers.cs:3881
+#: ../../TShockAPI/GetDataHandlers.cs:3885
 #: ../../TShockAPI/GetDataHandlers.cs:3901
+#: ../../TShockAPI/GetDataHandlers.cs:3924
+#: ../../TShockAPI/GetDataHandlers.cs:3944
 #, csharp-format
 msgid "GetDataHandlers / HandleTeleportationPotion rejected not holding the correct item {0} {1}"
-msgstr ""
+msgstr "GetDataHandlers / HandleTeleportationPotion rechazado, no se sostiene el objeto correcto {0} {1}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3832
+#: ../../TShockAPI/GetDataHandlers.cs:3875
 #, csharp-format
 msgid "GetDataHandlers / HandleTeleportationPotion rejected permissions {0} {1}"
-msgstr ""
+msgstr "GetDataHandlers / HandleTeleportationPotion rechazado, permisos {0} {1}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:4126
+#: ../../TShockAPI/GetDataHandlers.cs:4170
 #, csharp-format
 msgid "GetDataHandlers / HandleToggleParty rejected no party {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandleToggleParty rechazado, sin grupo {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3059
+#: ../../TShockAPI/GetDataHandlers.cs:3098
 #, csharp-format
 msgid "GetDataHandlers / HandleTogglePvp rejected fastswitch {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandleTogglePvp rechazado, cambio rápido {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3052
+#: ../../TShockAPI/GetDataHandlers.cs:3091
 #, csharp-format
 msgid "GetDataHandlers / HandleTogglePvp rejected index mismatch {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandleTogglePvp rechazado, índice no concordante {0}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:2735
+#: ../../TShockAPI/GetDataHandlers.cs:2772
 msgid "GetDataHandlers / OnPlayerUpdate rejected from null player."
-msgstr ""
+msgstr "GetDataHandlers / OnPlayerUpdate rechazado por jugador nulo."
 
-#: ../../TShockAPI/GetDataHandlers.cs:2464
+#: ../../TShockAPI/GetDataHandlers.cs:2499
 msgid "GetDataHandlers / rejecting player for name prefix starting with tsi: or tsn:."
-msgstr ""
+msgstr "GetDataHandlers / rechazando jugador por prefijo de nombre comenzando con tsi: o tsn:."
 
-#: ../../TShockAPI/GetDataHandlers.cs:3492
+#: ../../TShockAPI/GetDataHandlers.cs:3533
 #, csharp-format
 msgid "GetDataHandlers / UpdateNPCHome rejected no permission {0}"
-msgstr ""
+msgstr "GetDataHandlers / UpdateNPCHome rechazado, sin permiso {0}"
 
 #: ../../TShockAPI/DB/UserManager.cs:291
 #, csharp-format
@@ -3618,7 +3613,7 @@ msgstr "Crece plantas en tu ubicación."
 msgid "Hallow Palm"
 msgstr "Palmera Sagrada"
 
-#: ../../TShockAPI/GetDataHandlers.cs:4372
+#: ../../TShockAPI/GetDataHandlers.cs:4417
 #, csharp-format
 msgid "HandleSyncCavernMonsterType: Player is trying to modify NPC cavernMonsterType; this is a crafted packet! - From {0}"
 msgstr "HandleSyncCavernMonsterType: El jugador está intentando modificar el cavernMonsterType de PNJ; ¡este es un paquete creado artificialmente! - De {0}"
@@ -3704,7 +3699,7 @@ msgstr "Si este jugador no estaba haciendo trampa, ¡favor reportar a TShock el 
 msgid "If this player wasn't hacking, please report the tile place threshold they were disabled for to TShock so we can improve this!"
 msgstr "Si este jugador no estaba haciendo trampa, ¡favor reportar a TShock el umbral de colocación de bloques por el que fue deshabilitado para mejorar el sistema!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3026
+#: ../../TShockAPI/GetDataHandlers.cs:3065
 msgid "If this was not skeletron prime related, please report to TShock what happened."
 msgstr "Si esto no estaba relacionado con Esqueletrón Prime, por favor reporta a TShock lo ocurrido."
 
@@ -3752,7 +3747,7 @@ msgstr "Si ves este mensaje y sabes lo que hizo ese jugador, favor reportar a TS
 msgid "Ignoring shrapnel per config.."
 msgstr "Ignorando esquirlas de acuerdo a la configuración.."
 
-#: ../../TShockAPI/GetDataHandlers.cs:2465
+#: ../../TShockAPI/GetDataHandlers.cs:2500
 msgid "Illegal name: prefixes tsi: and tsn: are forbidden."
 msgstr "Nombre ilegal: los prefijos tsi: y tsn: están prohibidos."
 
@@ -3974,7 +3969,7 @@ msgstr "Configuración REST inválida: \n"
 "Por favor ajusta tu configuración y reinicia el servidor. \n"
 "Presiona cualquier tecla para salir."
 
-#: ../../TShockAPI/GetDataHandlers.cs:3231
+#: ../../TShockAPI/GetDataHandlers.cs:3271
 msgid "Invalid server password."
 msgstr "Contraseña de servidor inválida."
 
@@ -4406,7 +4401,7 @@ msgstr "Sub-Comandos de Item Ban ({{0}}/{{1}}):"
 msgid "Item bans ({{0}}/{{1}}):"
 msgstr "Objetos prohibidos ({{0}}/{{1}}):"
 
-#: ../../TShockAPI/TSPlayer.cs:1920
+#: ../../TShockAPI/TSPlayer.cs:2007
 #, csharp-format
 msgid "Kicked {0} for : '{1}'"
 msgstr "Se expulsó a {0} por : '{1}'"
@@ -4415,7 +4410,7 @@ msgstr "Se expulsó a {0} por : '{1}'"
 msgid "Kicked via web"
 msgstr "Expulsado vía web"
 
-#: ../../TShockAPI/TSPlayer.cs:1919
+#: ../../TShockAPI/TSPlayer.cs:2006
 #, csharp-format
 msgid "Kicked: {0}"
 msgstr "Expulsado: {0}"
@@ -4493,12 +4488,12 @@ msgstr "list [página] - Muestra los grupos."
 msgid "List Online Players Syntax"
 msgstr "Sintaxis de List Online Players"
 
-#: ../../TShockAPI/TShock.cs:828
+#: ../../TShockAPI/TShock.cs:864
 #, csharp-format
 msgid "Listening on IP {0}."
 msgstr "Escuchando IP {0}."
 
-#: ../../TShockAPI/TShock.cs:809
+#: ../../TShockAPI/TShock.cs:845
 #, csharp-format
 msgid "Listening on port {0}."
 msgstr "Escuchando puerto {0}."
@@ -4515,7 +4510,7 @@ msgstr "Muestra comandos o ayuda sobre los mismos."
 msgid "listusers - Lists all REST users and their current active tokens."
 msgstr "listusers - Muestra todos los usuarios REST y sus tókens activos."
 
-#: ../../TShockAPI/TShock.cs:798
+#: ../../TShockAPI/TShock.cs:834
 #, csharp-format
 msgid "Loading dedicated config file: {0}"
 msgstr "Cargando un archivo de configuración dedicado: {0}"
@@ -4533,7 +4528,7 @@ msgstr "Registro en pantalla desactivado."
 msgid "Log display enabled."
 msgstr "Registro en pantalla activado."
 
-#: ../../TShockAPI/TShock.cs:785
+#: ../../TShockAPI/TShock.cs:821
 #, csharp-format
 msgid "Log path has been set to {0}"
 msgstr "La ruta del registro se ha establecido en {0}"
@@ -4542,11 +4537,11 @@ msgstr "La ruta del registro se ha establecido en {0}"
 msgid "Login attempt failed - see the message above."
 msgstr "Fallo en el intento de inicio de sesión - vea el mensaje anterior."
 
-#: ../../TShockAPI/TShock.cs:980
+#: ../../TShockAPI/TShock.cs:1016
 msgid "Login before join enabled. Users may be prompted for an account specific password instead of a server password on connect."
 msgstr "El inicio de sesión antes de entrar está activado. A los usuarios se les solicitará la contraseña de su cuenta en lugar de la contraseña del servidor cuando se conecten."
 
-#: ../../TShockAPI/TShock.cs:985
+#: ../../TShockAPI/TShock.cs:1021
 msgid "Login using UUID enabled. Users automatically login via UUID."
 msgstr "Inicio de sesión con UUID habilitado. Los usuarios iniciarán sesión automáticamente a través de su UUID."
 
@@ -4666,7 +4661,7 @@ msgstr "Falta el nombre del jugador."
 msgid "Mode: {0}"
 msgstr "Modo: {0}"
 
-#: ../../TShockAPI/TSPlayer.cs:1966
+#: ../../TShockAPI/TSPlayer.cs:2053
 msgid "More than one match found -- unable to decide which is correct: "
 msgstr "Hay más de una coincidencia -- no se puede decidir la correcta: "
 
@@ -4713,7 +4708,7 @@ msgstr "Nunca."
 msgid "New name is too large!"
 msgstr "¡El nuevo nombre es demasiado largo!"
 
-#: ../../TShockAPI/TShock.cs:864
+#: ../../TShockAPI/TShock.cs:900
 #, csharp-format
 msgid "New worlds will be generated with the {0} world evil type!"
 msgstr "¡Los mundos nuevos serán generados con el bioma maligno {0}!"
@@ -4787,9 +4782,9 @@ msgstr "No autorizado. El tóken proporcionado fue invalidado debido a cambios e
 msgid "Not authorized. The specified API endpoint requires a token, but the provided token was not valid."
 msgstr "No autorizado. El punto final API especificado requiere un tóken, pero el que fue proporcionado no era válido."
 
+#: ../../TShockAPI/Rest/SecureRest.cs:180
 #: ../../TShockAPI/Rest/RestCommand.cs:95
 #: ../../TShockAPI/Rest/RestCommand.cs:101
-#: ../../TShockAPI/Rest/SecureRest.cs:180
 msgid "Not authorized. The specified API endpoint requires a token."
 msgstr "No autorizado. El punto final API especificado requiere un tóken."
 
@@ -4922,8 +4917,8 @@ msgstr "El jugador \"{0}\" debe reconectarse antes, pues necesita eliminar su pa
 msgid "Player \"{0}\" is already logged in."
 msgstr "El jugador \"{0}\" ya está conectado."
 
-#: ../../TShockAPI/TSPlayer.cs:1883
-#: ../../TShockAPI/TSPlayer.cs:1887
+#: ../../TShockAPI/TSPlayer.cs:1970
+#: ../../TShockAPI/TSPlayer.cs:1974
 #, csharp-format
 msgid "Player {0} has been disabled for {1}."
 msgstr "El jugador {0} ha sido deshabilitado por {1}."
@@ -4985,7 +4980,7 @@ msgstr "El jugador no tiene permiso para crear el proyectil {0}."
 msgid "Player not found. Unable to kick the player."
 msgstr "Jugador no encontrado. Imposible expulsar al jugador."
 
-#: ../../TShockAPI/TShock.cs:1696
+#: ../../TShockAPI/TShock.cs:1732
 #, csharp-format
 msgid "Please {0}register or {0}login to play!"
 msgstr "¡Por favor usa {0}register o {0}login para jugar!"
@@ -5011,7 +5006,7 @@ msgstr "Por favor usa {0}login <nombreUsuario> <contraseña> después de esto."
 msgid "Please use the following to create a permanent account for you."
 msgstr "Por favor utiliza lo siguiente para crearte una cuenta permanente."
 
-#: ../../TShockAPI/TShock.cs:895
+#: ../../TShockAPI/TShock.cs:931
 #, csharp-format
 msgid "Port overridden by startup argument. Set to {0}"
 msgstr "Puerto sobreescrito por argumento de inicio. Establecido en {0}"
@@ -5086,12 +5081,12 @@ msgstr "Protegido: {0}."
 msgid "Quick usage: {0} {1} \"Griefing\""
 msgstr "Uso abreviado: {0} {1} \"Molestar\""
 
-#: ../../TShockAPI/TSPlayer.cs:758
+#: ../../TShockAPI/TSPlayer.cs:759
 #, csharp-format
 msgid "Rangecheck failed for {0} ({1}, {2}) (rg: {3}/{5}, {4}/{5})"
 msgstr "Rangecheck falló para {0} ({1}, {2}) (rg: {3}/{5}, {4}/{5})"
 
-#: ../../TShockAPI/TShock.cs:1196
+#: ../../TShockAPI/TShock.cs:1232
 msgid "Reached HealOtherPlayer threshold"
 msgstr "Se alcanzó el umbral de HealOtherPlayer"
 
@@ -5099,7 +5094,7 @@ msgstr "Se alcanzó el umbral de HealOtherPlayer"
 msgid "Reached HealOtherPlayer threshold."
 msgstr "Se alcanzó el umbral de HealOtherPlayer."
 
-#: ../../TShockAPI/TShock.cs:1187
+#: ../../TShockAPI/TShock.cs:1223
 msgid "Reached paint threshold"
 msgstr "Se alcanzó el umbral de pintura"
 
@@ -5107,16 +5102,16 @@ msgstr "Se alcanzó el umbral de pintura"
 msgid "Reached projectile create threshold."
 msgstr "Se alcanzó el umbral de creación de proyectiles."
 
-#: ../../TShockAPI/TShock.cs:1178
+#: ../../TShockAPI/TShock.cs:1214
 msgid "Reached projectile threshold"
 msgstr "Se alcanzó el umbral de proyectiles"
 
+#: ../../TShockAPI/TShock.cs:1144
 #: ../../TShockAPI/Bouncer.cs:922
-#: ../../TShockAPI/TShock.cs:1108
 msgid "Reached TileKill threshold."
 msgstr "Se alcanzó el umbral de TileKill."
 
-#: ../../TShockAPI/TShock.cs:1169
+#: ../../TShockAPI/TShock.cs:1205
 msgid "Reached TileLiquid threshold"
 msgstr "Se alcanzó el umbral de TileLiquid"
 
@@ -5129,7 +5124,7 @@ msgstr "Se alcanzó el umbral de líquidos {0}."
 msgid "Reached TileLiquid threshold."
 msgstr "Se alcanzó el umbral de líquidos."
 
-#: ../../TShockAPI/TShock.cs:1125
+#: ../../TShockAPI/TShock.cs:1161
 msgid "Reached TilePlace threshold"
 msgstr "Se alcanzó el umbral de bloques puestos"
 
@@ -5387,7 +5382,7 @@ msgstr "Te envía al punto de aparición del mundo."
 msgid "Sends you to your spawn point."
 msgstr "Te envía a tu punto de aparición."
 
-#: ../../TShockAPI/TShock.cs:738
+#: ../../TShockAPI/TShock.cs:774
 msgid "Server console interrupted!"
 msgstr "¡Se ha interrumpido la consola del servidor!"
 
@@ -5399,7 +5394,7 @@ msgstr "Servidor lleno"
 msgid "Server is full. No reserved slots open."
 msgstr "Servidor lleno y sin cupos reservados."
 
-#: ../../TShockAPI/TShock.cs:1300
+#: ../../TShockAPI/TShock.cs:1336
 msgid "Server is shutting down..."
 msgstr "El servidor se está cerrando..."
 
@@ -5429,7 +5424,7 @@ msgstr "El servidor se está cerrando."
 msgid "Server side characters are enabled. You need to be logged-in to play."
 msgstr "Los personajes exclusivos-de-servidor están activados. Debes estar autenticado para jugar."
 
-#: ../../TShockAPI/TShock.cs:1691
+#: ../../TShockAPI/TShock.cs:1727
 #, csharp-format
 msgid "Server side characters is enabled! Please {0}register or {0}login to play!"
 msgstr "¡Los personajes exclusivos-de-servidor están activados! ¡Por favor usa {0}register o {0}login para jugar!"
@@ -5553,7 +5548,7 @@ msgstr "Apaga el servidor guardándolo."
 msgid "Shuts down the server without saving."
 msgstr "Apaga el servidor sin guardarlo."
 
-#: ../../TShockAPI/TShock.cs:735
+#: ../../TShockAPI/TShock.cs:771
 msgid "Shutting down safely. To force shutdown, send SIGINT (CTRL + C) again."
 msgstr "Apagando de forma segura. Para forzar el apagado, envíe SIGINT (CTRL + C) de nuevo."
 
@@ -5570,7 +5565,7 @@ msgstr "Esqueletrón"
 msgid "Skeletron Prime"
 msgstr "Esqueletrón Mayor"
 
-#: ../../TShockAPI/TSPlayer.cs:1069
+#: ../../TShockAPI/TSPlayer.cs:1076
 #, csharp-format
 msgid "Skipping SSC save (due to tshock.ignore.ssc) for {0}"
 msgstr "Omitiendo guardado SSC (debido a tshock.ignore.ssc) para {0}"
@@ -5647,66 +5642,66 @@ msgstr "Consulta de inserción de registro SQL fallida: {0}"
 msgid "SSC must be enabled to use this command."
 msgstr "Para usar este comando SSC debe estar activado."
 
-#: ../../TShockAPI/TSPlayer.cs:434
+#: ../../TShockAPI/TSPlayer.cs:435
 #, csharp-format
 msgid "Stack cheat detected. Remove armor {0} ({1}) and then rejoin."
 msgstr "Trampa de stack detectada. Quítate la armadura {0} ({1}) y luego vuelve a entrar."
 
-#: ../../TShockAPI/TSPlayer.cs:577
+#: ../../TShockAPI/TSPlayer.cs:578
 #, csharp-format
 msgid "Stack cheat detected. Remove Defender's Forge item {0} ({1}) and then rejoin."
 msgstr "Trampa de stack detectada. Quita el objeto {0} ({1}) de la Forja del Defensor y luego vuelve a entrar."
 
-#: ../../TShockAPI/TSPlayer.cs:454
+#: ../../TShockAPI/TSPlayer.cs:455
 #, csharp-format
 msgid "Stack cheat detected. Remove dye {0} ({1}) and then rejoin."
 msgstr "Trampa de stack detectada. Quítate el tinte {0} ({1}) y luego vuelve a entrar."
 
-#: ../../TShockAPI/TSPlayer.cs:414
-#: ../../TShockAPI/TSPlayer.cs:474
+#: ../../TShockAPI/TSPlayer.cs:415
+#: ../../TShockAPI/TSPlayer.cs:475
 #, csharp-format
 msgid "Stack cheat detected. Remove item {0} ({1}) and then rejoin."
 msgstr "Trampa de stack detectada. Quítate el objeto {0} ({1}) y luego vuelve a entrar."
 
-#: ../../TShockAPI/TSPlayer.cs:494
+#: ../../TShockAPI/TSPlayer.cs:495
 #, csharp-format
 msgid "Stack cheat detected. Remove item dye {0} ({1}) and then rejoin."
 msgstr "Trampa de stack detectada. Quítate el objeto de tinte {0} ({1}) y luego vuelve a entrar."
 
-#: ../../TShockAPI/TSPlayer.cs:618
-#: ../../TShockAPI/TSPlayer.cs:638
+#: ../../TShockAPI/TSPlayer.cs:619
+#: ../../TShockAPI/TSPlayer.cs:639
 #, csharp-format
 msgid "Stack cheat detected. Remove Loadout 1 item {0} ({1}) and then rejoin."
 msgstr "Trampa de stack detectada. Quítate el objeto {0} ({1}) del Equipamiento 1 y luego vuelve a entrar."
 
-#: ../../TShockAPI/TSPlayer.cs:658
-#: ../../TShockAPI/TSPlayer.cs:678
+#: ../../TShockAPI/TSPlayer.cs:659
+#: ../../TShockAPI/TSPlayer.cs:679
 #, csharp-format
 msgid "Stack cheat detected. Remove Loadout 2 item {0} ({1}) and then rejoin."
 msgstr "Trampa de stack detectada. Quítate el objeto {0} ({1}) del Equipamiento 2 y luego vuelve a entrar."
 
-#: ../../TShockAPI/TSPlayer.cs:698
-#: ../../TShockAPI/TSPlayer.cs:718
+#: ../../TShockAPI/TSPlayer.cs:699
+#: ../../TShockAPI/TSPlayer.cs:719
 #, csharp-format
 msgid "Stack cheat detected. Remove Loadout 3 item {0} ({1}) and then rejoin."
 msgstr "Trampa de stack detectada. Quítate el objeto {0} ({1}) del Equipamiento 3 y luego vuelve a entrar."
 
-#: ../../TShockAPI/TSPlayer.cs:515
+#: ../../TShockAPI/TSPlayer.cs:516
 #, csharp-format
 msgid "Stack cheat detected. Remove piggy-bank item {0} ({1}) and then rejoin."
 msgstr "Trampa de stack detectada. Quita el objeto {0} ({1}) de la Hucha y luego vuelve a entrar."
 
-#: ../../TShockAPI/TSPlayer.cs:536
+#: ../../TShockAPI/TSPlayer.cs:537
 #, csharp-format
 msgid "Stack cheat detected. Remove safe item {0} ({1}) and then rejoin."
 msgstr "Trampa de stack detectada. Quita el objeto {0} ({1}) de la Caja Fuerte y luego vuelve a entrar."
 
-#: ../../TShockAPI/TSPlayer.cs:556
+#: ../../TShockAPI/TSPlayer.cs:557
 #, csharp-format
 msgid "Stack cheat detected. Remove trash item {0} ({1}) and then rejoin."
 msgstr "Trampa de stack detectada. Quita el objeto {0} ({1}) de tu papelera y luego vuelve a entrar."
 
-#: ../../TShockAPI/TSPlayer.cs:598
+#: ../../TShockAPI/TSPlayer.cs:599
 #, csharp-format
 msgid "Stack cheat detected. Remove Void Vault item {0} ({1}) and then rejoin."
 msgstr "Trampa de stack detectada. Quita el objeto {0} ({1}) de tu Cámara del Vacío y luego vuelve a entrar."
@@ -5723,19 +5718,19 @@ msgstr "Iniciada una luna llena."
 msgid "Started an eclipse."
 msgstr "Iniciado un eclipse."
 
-#: ../../TShockAPI/TShock.cs:927
+#: ../../TShockAPI/TShock.cs:963
 msgid "Startup parameter overrode maximum player slot configuration value."
 msgstr "El parámetro de inicio impuso su propio valor máximo de jugadores sobre los de la configuración."
 
-#: ../../TShockAPI/TShock.cs:909
+#: ../../TShockAPI/TShock.cs:945
 msgid "Startup parameter overrode REST enable."
 msgstr "El parámetro de inicio anuló la activación de REST."
 
-#: ../../TShockAPI/TShock.cs:918
+#: ../../TShockAPI/TShock.cs:954
 msgid "Startup parameter overrode REST port."
 msgstr "El parámetro de inicio anuló el puerto REST."
 
-#: ../../TShockAPI/TShock.cs:901
+#: ../../TShockAPI/TShock.cs:937
 msgid "Startup parameter overrode REST token."
 msgstr "El parámetro de inicio anuló el tóken REST."
 
@@ -5899,7 +5894,7 @@ msgstr "No se encontró el warp de destino, {0}."
 msgid "the Destroyer"
 msgstr "el Destructor"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3427
+#: ../../TShockAPI/GetDataHandlers.cs:3468
 msgid "The Dungeon Guardian returned you to your spawn point."
 msgstr "El Guardián de la Mazmorra te devolvió a tu punto de aparición."
 
@@ -6122,8 +6117,8 @@ msgid_plural "These are the plugins you requested to install"
 msgstr[0] "Este es el plugin que solicitaste instalar."
 msgstr[1] "Estos son los plugins que solicitaste instalar."
 
-#: ../../TShockAPI/TShock.cs:1013
-#: ../../TShockAPI/TShock.cs:1023
+#: ../../TShockAPI/TShock.cs:1049
+#: ../../TShockAPI/TShock.cs:1059
 #, csharp-format
 msgid "This token will display until disabled by verification. ({0}setup)"
 msgstr "Este tóken se mostrará hasta que se deshabilite por verificación. ({0}setup)"
@@ -6173,8 +6168,8 @@ msgstr "Para deshacerte de los PNJ sin hacerlos soltar objetos, usa el comando {
 msgid "To mute a player without broadcasting to chat, use the command with {0} instead of {1}"
 msgstr "Para silenciar a un jugador sin mostrarlo en el chat, usa el comando con {0} en lugar de {1}"
 
-#: ../../TShockAPI/TShock.cs:1012
-#: ../../TShockAPI/TShock.cs:1022
+#: ../../TShockAPI/TShock.cs:1048
+#: ../../TShockAPI/TShock.cs:1058
 #, csharp-format
 msgid "To setup the server, join the game and type {0}setup {1}"
 msgstr "Para configurar el servidor, únete al juego y escribe {0}setup {1}"
@@ -6241,7 +6236,7 @@ msgstr "Tipos de árboles & misc disponibles para su uso. ({{0}}/{{1}}):"
 msgid "Tried to grow a {0}."
 msgstr "Se intentó hacer crecer {0}."
 
-#: ../../TShockAPI/TShock.cs:399
+#: ../../TShockAPI/TShock.cs:403
 #, csharp-format
 msgid "TShock {0} ({1}) now running."
 msgstr "TShock {0} ({1}) ahora en ejecución."
@@ -6250,23 +6245,23 @@ msgstr "TShock {0} ({1}) ahora en ejecución."
 msgid "TShock Ban Help"
 msgstr "Ayuda de TShock Ban"
 
-#: ../../TShockAPI/TShock.cs:449
+#: ../../TShockAPI/TShock.cs:480
 msgid "TShock comes with no warranty & is free software."
 msgstr "TShock es gratuito y viene sin garantía."
 
-#: ../../TShockAPI/TShock.cs:461
+#: ../../TShockAPI/TShock.cs:492
 msgid "TShock encountered a problem from which it cannot recover. The following message may help diagnose the problem."
 msgstr "TShock encontró un problema del que no puede recuperarse. El siguiente mensaje puede ayudar a diagnosticar el problema."
 
-#: ../../TShockAPI/TShock.cs:1021
+#: ../../TShockAPI/TShock.cs:1057
 msgid "TShock Notice: setup-code.txt is still present, and the code located in that file will be used."
 msgstr "Aviso de TShock: setup-code.txt todavía está presente, y el código ubicado en ese archivo será utilizado."
 
-#: ../../TShockAPI/TShock.cs:353
+#: ../../TShockAPI/TShock.cs:357
 msgid "TShock was improperly shut down. Please use the exit command in the future to prevent this."
 msgstr "TShock se cerró incorrectamente. Utilice el comando exit en el futuro para evitar esto."
 
-#: ../../TShockAPI/TShock.cs:997
+#: ../../TShockAPI/TShock.cs:1033
 msgid "TShock will now disable the initial setup system and remove setup-code.txt as it is no longer needed."
 msgstr "TShock desactivará ahora el sistema de configuración inicial y eliminará setup-code.txt pues ya no es necesario."
 
@@ -6419,11 +6414,11 @@ msgstr "No se puede hacer despegar a {0} porque no está conectado."
 msgid "Unable to launch {0} because she is not logged in."
 msgstr "No se puede hacer despegar a {0} porque no está conectada."
 
-#: ../../TShockAPI/TShock.cs:1484
+#: ../../TShockAPI/TShock.cs:1520
 msgid "Unable to parse command '{0}' from player {1}."
 msgstr "No se puede analizar el comando '{0}' del jugador {1}."
 
-#: ../../TShockAPI/TShock.cs:1483
+#: ../../TShockAPI/TShock.cs:1519
 msgid "Unable to parse command. Please contact an administrator for assistance."
 msgstr "No se puede analizar el comando. Por favor contacte a un administrador para obtener ayuda."
 
@@ -6464,7 +6459,7 @@ msgstr "¡Planta desconocida!"
 msgid "Unrecognized player direction"
 msgstr "Dirección del jugador no reconocida"
 
-#: ../../TShockAPI/TShock.cs:462
+#: ../../TShockAPI/TShock.cs:493
 msgid "Until the problem is resolved, TShock will not be able to start (and will crash on startup)."
 msgstr "Hasta que no se resuelva el problema, TShock no podrá iniciarse (y crasheará al cargar)."
 
@@ -6506,11 +6501,11 @@ msgstr "Uso: /uploadssc [nombreJugador]."
 msgid "Use \"{0}worldevent rain slime\" to start slime rain!"
 msgstr "¡Usa \"{0}worldevent rain slime\" para iniciar una lluvia de slimes!"
 
-#: ../../TShockAPI/TSPlayer.cs:1971
+#: ../../TShockAPI/TSPlayer.cs:2058
 msgid "Use \"my query\" for items with spaces."
 msgstr "Usa comillas (Ej. \"tal objeto\") para objetos con espacios."
 
-#: ../../TShockAPI/TSPlayer.cs:1972
+#: ../../TShockAPI/TSPlayer.cs:2059
 msgid "Use tsi:[number] or tsn:[username] to distinguish between user IDs and usernames."
 msgstr "Usa tsi:[number] o tsn:[username] para distinguir entre IDs y nombres de usuario."
 
@@ -6564,8 +6559,8 @@ msgstr "Ayuda del comando de gestión de usuario:"
 msgid "Username or password may be incorrect or this account may not have sufficient privileges."
 msgstr "El nombre de usuario o la contraseña pueden ser incorrectos o esta cuenta puede no tener suficientes privilegios."
 
-#: ../../TShockAPI/TShock.cs:390
 #: ../../TShockAPI/TShock.cs:394
+#: ../../TShockAPI/TShock.cs:398
 #, csharp-format
 msgid "Using {0} for tile implementation"
 msgstr "Usando {0} para la implementación de casillas"
@@ -6679,7 +6674,7 @@ msgstr "Te transportas a {0}."
 msgid "Warps ({{0}}/{{1}}):"
 msgstr "Warps ({{0}}/{{1}}):"
 
-#: ../../TShockAPI/TShock.cs:448
+#: ../../TShockAPI/TShock.cs:479
 msgid "Welcome to TShock for Terraria!"
 msgstr "¡Bienvenido a TShock para Terraria!"
 
@@ -6709,12 +6704,12 @@ msgstr "Mundo respaldado."
 msgid "World mode set to {0}."
 msgstr "Tipo de mundo cambiado a {0}."
 
-#: ../../TShockAPI/TShock.cs:818
+#: ../../TShockAPI/TShock.cs:854
 #, csharp-format
 msgid "World name will be overridden by: {0}"
 msgstr "El nombre del mundo será reemplazado por: {0}"
 
-#: ../../TShockAPI/TShock.cs:775
+#: ../../TShockAPI/TShock.cs:811
 #, csharp-format
 msgid "World path has been set to {0}"
 msgstr "La ruta del mundo se ha establecido en {0}"
@@ -6745,7 +6740,7 @@ msgstr "Tu sesión ya ha sido iniciada, por lo que no puedes volver a iniciarla.
 msgid "You are dead. Dead players can't go home."
 msgstr "Estás muerto(a). Los jugadores muertos no pueden ir a casa."
 
-#: ../../TShockAPI/TShock.cs:1501
+#: ../../TShockAPI/TShock.cs:1537
 msgid "You are muted!"
 msgstr "¡Estás silenciado!"
 
@@ -6756,7 +6751,7 @@ msgstr "¡Estás silenciado!"
 msgid "You are muted."
 msgstr "Estás silenciado."
 
-#: ../../TShockAPI/Commands.cs:6758
+#: ../../TShockAPI/Commands.cs:6754
 #, csharp-format
 msgid "You are no longer in god mode."
 msgstr "Ya no estás en modo dios."
@@ -6781,7 +6776,7 @@ msgstr "No estás en la lista blanca."
 msgid "You are now being annoyed."
 msgstr "Ahora estás siendo molestado."
 
-#: ../../TShockAPI/Commands.cs:6757
+#: ../../TShockAPI/Commands.cs:6753
 #, csharp-format
 msgid "You are now in god mode."
 msgstr "Ahora estas en modo dios."
@@ -6799,7 +6794,7 @@ msgid_plural "You butchered {0} NPCs."
 msgstr[0] "Mataste {0} PNJ."
 msgstr[1] "Mataste {0} PNJ."
 
-#: ../../TShockAPI/TShock.cs:450
+#: ../../TShockAPI/TShock.cs:481
 msgid "You can modify & distribute it under the terms of the GNU GPLv3."
 msgstr "Puedes modificar y distribuirlo bajo los términos de la GNU GPLv3."
 
@@ -6877,7 +6872,7 @@ msgstr "No puedes iniciar sesión mientras usas un objeto."
 msgid "You cannot spawn banned items."
 msgstr "No puedes generar objetos prohibidos."
 
-#: ../../TShockAPI/GetDataHandlers.cs:3445
+#: ../../TShockAPI/GetDataHandlers.cs:3486
 msgid "You cannot use the Enchanted Sundial because time is stopped."
 msgstr "No puedes usar el Reloj de Sol Encantado porque el tiempo está detenido."
 
@@ -6910,7 +6905,7 @@ msgstr[1] "Has eliminado {0} proyectiles en un radio de {1}."
 msgid "You didn't put a player name."
 msgstr "No has puesto un nombre de jugador."
 
-#: ../../TShockAPI/GetDataHandlers.cs:4211
+#: ../../TShockAPI/GetDataHandlers.cs:4256
 msgid "You died! Normally, you'd be banned."
 msgstr "¡Has muerto! Normalmente habrías sido baneado."
 
@@ -6919,15 +6914,15 @@ msgstr "¡Has muerto! Normalmente habrías sido baneado."
 msgid "You do not have access to this command."
 msgstr "No tienes acceso a este comando."
 
-#: ../../TShockAPI/TSPlayer.cs:828
+#: ../../TShockAPI/TSPlayer.cs:829
 msgid "You do not have permission to build in the spawn point."
 msgstr "No tienes permiso de construir en el punto de aparición."
 
-#: ../../TShockAPI/TSPlayer.cs:831
+#: ../../TShockAPI/TSPlayer.cs:832
 msgid "You do not have permission to build in this region."
 msgstr "No tienes permiso para construir dentro de esta región."
 
-#: ../../TShockAPI/TSPlayer.cs:825
+#: ../../TShockAPI/TSPlayer.cs:826
 msgid "You do not have permission to build on this server."
 msgstr "No tienes permiso para construir en este servidor."
 
@@ -6963,7 +6958,7 @@ msgstr "No tienes permiso para poner en modo dios a otro jugador."
 msgid "You do not have permission to grow this tree type"
 msgstr "No tienes permiso para hacer crecer este tipo de árbol."
 
-#: ../../TShockAPI/GetDataHandlers.cs:2960
+#: ../../TShockAPI/GetDataHandlers.cs:2999
 msgid "You do not have permission to hurt Town NPCs."
 msgstr "No tienes permiso para dañar a PNJ ciudadanos."
 
@@ -7021,7 +7016,7 @@ msgstr "No tienes permiso para realizar esta acción."
 msgid "You do not have permission to place actuators."
 msgstr "No tienes permiso para colocar actuadores."
 
-#: ../../TShockAPI/GetDataHandlers.cs:3967
+#: ../../TShockAPI/GetDataHandlers.cs:4011
 msgid "You do not have permission to place Logic Sensors."
 msgstr "No tienes permiso para colocar Sensores Lógicos."
 
@@ -7030,7 +7025,7 @@ msgstr "No tienes permiso para colocar Sensores Lógicos."
 msgid "You do not have permission to place this tile."
 msgstr "No tienes permiso para colocar este bloque."
 
-#: ../../TShockAPI/GetDataHandlers.cs:3493
+#: ../../TShockAPI/GetDataHandlers.cs:3534
 msgid "You do not have permission to relocate Town NPCs."
 msgstr "No tienes permiso para reubicar a los PNJ ciudadanos."
 
@@ -7046,15 +7041,15 @@ msgstr "No tienes permiso para ver las IDs de los jugadores."
 msgid "You do not have permission to send emotes!"
 msgstr "¡No tienes permiso para enviar emoticonos!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3532
+#: ../../TShockAPI/GetDataHandlers.cs:3573
 msgid "You do not have permission to spawn pets."
 msgstr "No tienes permiso para invocar mascotas."
 
-#: ../../TShockAPI/GetDataHandlers.cs:4127
+#: ../../TShockAPI/GetDataHandlers.cs:4171
 msgid "You do not have permission to start a party."
 msgstr "No tienes permiso para iniciar una fiesta."
 
-#: ../../TShockAPI/GetDataHandlers.cs:3525
+#: ../../TShockAPI/GetDataHandlers.cs:3566
 msgid "You do not have permission to start invasions."
 msgstr "No tienes permiso para iniciar invasiones."
 
@@ -7063,19 +7058,19 @@ msgstr "No tienes permiso para iniciar invasiones."
 msgid "You do not have permission to start the {0} event."
 msgstr "No tienes permiso para iniciar el evento {0}."
 
-#: ../../TShockAPI/GetDataHandlers.cs:4145
+#: ../../TShockAPI/GetDataHandlers.cs:4189
 msgid "You do not have permission to start the Old One's Army."
 msgstr "No tienes permiso para invocar el Ejército del Antiguo."
 
-#: ../../TShockAPI/GetDataHandlers.cs:3518
+#: ../../TShockAPI/GetDataHandlers.cs:3559
 msgid "You do not have permission to summon bosses."
 msgstr "No tienes permiso para invocar jefes."
 
-#: ../../TShockAPI/GetDataHandlers.cs:2970
+#: ../../TShockAPI/GetDataHandlers.cs:3009
 msgid "You do not have permission to summon the Empress of Light."
 msgstr "No tienes permiso para invocar a la Emperatriz de la Luz."
 
-#: ../../TShockAPI/GetDataHandlers.cs:2987
+#: ../../TShockAPI/GetDataHandlers.cs:3026
 msgid "You do not have permission to summon the Lunatic Cultist!"
 msgstr "¡No tienes permiso para invocar al Sectario Lunático!"
 
@@ -7091,12 +7086,12 @@ msgstr "No tienes permiso de teletransportar a todos los jugadores."
 msgid "You do not have permission to teleport other players."
 msgstr "No tienes permiso de teletransportar a otros jugadores."
 
-#: ../../TShockAPI/GetDataHandlers.cs:3833
+#: ../../TShockAPI/GetDataHandlers.cs:3876
 #, csharp-format
 msgid "You do not have permission to teleport using {0}."
 msgstr "No tienes permiso para teletransportarte usando {0}."
 
-#: ../../TShockAPI/GetDataHandlers.cs:3745
+#: ../../TShockAPI/GetDataHandlers.cs:3788
 msgid "You do not have permission to teleport using items."
 msgstr "No tienes permiso para teletransportarte usando objetos."
 
@@ -7104,7 +7099,7 @@ msgstr "No tienes permiso para teletransportarte usando objetos."
 msgid "You do not have permission to teleport using pylons."
 msgstr "No tienes permiso de teletransportarte usando pilones."
 
-#: ../../TShockAPI/GetDataHandlers.cs:3769
+#: ../../TShockAPI/GetDataHandlers.cs:3812
 msgid "You do not have permission to teleport using Wormhole Potions."
 msgstr "No tienes permiso para teletransportarte usando Pociones de Agujero de Gusano."
 
@@ -7120,7 +7115,7 @@ msgstr "No tienes permiso de activar el modo dios."
 msgid "You do not have permission to upload another player's character join-state server-side-character data."
 msgstr "No tienes permiso para subir datos de join-state de personaje exclusivo-de-servidor para otro jugador."
 
-#: ../../TShockAPI/GetDataHandlers.cs:3437
+#: ../../TShockAPI/GetDataHandlers.cs:3478
 msgid "You do not have permission to use the Enchanted Sundial."
 msgstr "No tienes permiso para usar el Reloj de Sol Encantado."
 
@@ -7133,7 +7128,7 @@ msgstr "Has introducido un espacio después de {0} en lugar de un comando. Escri
 msgid "You failed to change your password."
 msgstr "No pudiste cambiar tu contraseña."
 
-#: ../../TShockAPI/GetDataHandlers.cs:2458
+#: ../../TShockAPI/GetDataHandlers.cs:2493
 msgid "You have been Bounced."
 msgstr "Se te ha negado la entrada."
 
@@ -7164,7 +7159,7 @@ msgstr "Has cambiado el grupo de {0} a {1}"
 msgid "You have changed {0}'s group to {1} for {2}"
 msgstr "Has cambiado el grupo de {0} a {1} durante {2}"
 
-#: ../../TShockAPI/GetDataHandlers.cs:4226
+#: ../../TShockAPI/GetDataHandlers.cs:4271
 msgid "You have fallen in hardcore mode, and your items have been lost forever."
 msgstr "Has muerto en modo extremo y todos tus objetos se han perdido para siempre."
 
@@ -7232,11 +7227,11 @@ msgstr "Has lanzado fuegos artificiales sobre {0}."
 msgid "You launched fireworks on yourself."
 msgstr "Has lanzado fuegos artificiales sobre ti mismo."
 
-#: ../../TShockAPI/TShock.cs:608
+#: ../../TShockAPI/TShock.cs:648
 msgid "You logged in from another location."
 msgstr "Has iniciado sesión desde otra ubicación."
 
-#: ../../TShockAPI/TShock.cs:599
+#: ../../TShockAPI/TShock.cs:639
 msgid "You logged in from the same IP."
 msgstr "Has iniciado sesión desde la misma IP."
 
@@ -7244,7 +7239,7 @@ msgstr "Has iniciado sesión desde la misma IP."
 msgid "You may now receive whispers from other players."
 msgstr "Ahora podrás recibir susurros de otros jugadores."
 
-#: ../../TShockAPI/GetDataHandlers.cs:2621
+#: ../../TShockAPI/GetDataHandlers.cs:2656
 msgid "You may wish to consider removing the tshock.ignore.ssc permission or negating it for this player."
 msgstr "Deberías considerar el quitar o denegar el permiso tshock.ignore.ssc para este jugador."
 
@@ -7256,7 +7251,7 @@ msgstr "Debes estar conectado para poder aprovechar las regiones protegidas."
 msgid "You must provide a setup code!"
 msgstr "¡Debes proporcionar el código de configuración!"
 
-#: ../../TShockAPI/GetDataHandlers.cs:3448
+#: ../../TShockAPI/GetDataHandlers.cs:3489
 msgid "You must set ForceTime to normal via config to use the Enchanted Sundial."
 msgstr "Debes cambiar a normal la opción ForceTime en el archivo de configuración para usar el Reloj de Sol Encantado."
 
@@ -7268,15 +7263,15 @@ msgstr "Debes invocar al Muro Carnoso en el inframundo."
 msgid "You must use this command in-game."
 msgstr "Debes usar este comando dentro del juego."
 
-#: ../../TShockAPI/GetDataHandlers.cs:2523
+#: ../../TShockAPI/GetDataHandlers.cs:2558
 msgid "You need to join with a hardcore player."
 msgstr "Necesitas unirte con un jugador en modo extremo."
 
-#: ../../TShockAPI/GetDataHandlers.cs:2517
+#: ../../TShockAPI/GetDataHandlers.cs:2552
 msgid "You need to join with a mediumcore player or higher."
 msgstr "Necesitas unirte con un jugador en modo medio o superior."
 
-#: ../../TShockAPI/GetDataHandlers.cs:2511
+#: ../../TShockAPI/GetDataHandlers.cs:2546
 msgid "You need to join with a softcore player."
 msgstr "Necesitas unirte con un jugador en modo clásico."
 
@@ -7304,7 +7299,7 @@ msgstr "Transportas a {0} hacia {1}."
 msgid "You were teleported to {0}."
 msgstr "Te han teletransportado hacia {0}."
 
-#: ../../TShockAPI/TShock.cs:1706
+#: ../../TShockAPI/TShock.cs:1742
 msgid "You will be teleported to your last known location..."
 msgstr "Serás teletransportado a tu última ubicación conocida..."
 
@@ -7338,7 +7333,7 @@ msgstr "El grupo de tu cuenta no pudo ser cargado. Por favor informa de esto a l
 msgid "Your client sent a blank character name."
 msgstr "Tu cliente envió un nombre de personaje en blanco."
 
-#: ../../TShockAPI/TShock.cs:1351
+#: ../../TShockAPI/TShock.cs:1387
 msgid "Your client sent a blank UUID. Configure it to send one or use a different client."
 msgstr "Tu cliente envió un UUID en blanco. Configúralo para que envíe uno o usa un cliente distinto."
 
@@ -7369,7 +7364,7 @@ msgstr "Los datos locales de tu personaje, desde tu conexión inicial, se han su
 msgid "Your new account has been verified, and the {0}setup system has been turned off."
 msgstr "Tu nueva cuenta ha sido verificada y el sistema {0}setup ha sido desactivado."
 
-#: ../../TShockAPI/GetDataHandlers.cs:3217
+#: ../../TShockAPI/GetDataHandlers.cs:3257
 msgid "Your password did not match this character's password."
 msgstr "Tu contraseña no coincide con la contraseña de este personaje."
 
@@ -7390,7 +7385,7 @@ msgstr "Los volcados de referencia han sido creados en la carpeta del servidor."
 msgid "Your server-side character data has been saved."
 msgstr "Se han guardado los datos de SSC para tu personaje."
 
-#: ../../TShockAPI/TSPlayer.cs:1325
+#: ../../TShockAPI/TSPlayer.cs:1342
 msgid "Your temporary group access has expired."
 msgstr "Expiró tu acceso temporal al grupo."
 
@@ -7398,7 +7393,7 @@ msgstr "Expiró tu acceso temporal al grupo."
 msgid "z <name> <#> - Sets the z-order of the region."
 msgstr "z <name> <#> - Establece el orden Z de la región."
 
-#: ../../TShockAPI/GetDataHandlers.cs:3235
+#: ../../TShockAPI/GetDataHandlers.cs:3275
 msgctxt "Likely non-vanilla client send zero-length password"
 msgid "You have been Bounced for invalid password."
 msgstr "Se te ha negado la entrada por contraseña inválida."
