@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tshock\n"
 "POT-Creation-Date: 2025-06-15 18:04:23+0000\n"
-"PO-Revision-Date: 2025-06-15 18:14\n"
+"PO-Revision-Date: 2025-06-15 18:29\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -432,7 +432,7 @@ msgstr "{0}将怪物生成速率设置为600。"
 #: ../../TShockAPI/Commands.cs:4655
 #, csharp-format
 msgid "{0} changed the wind speed to {1}mph."
-msgstr ""
+msgstr "{0}将风速设置为{1}mph。"
 
 #: ../../TShockAPI/Commands.cs:5869
 #, csharp-format
@@ -1504,7 +1504,7 @@ msgstr "尝试登录失败。"
 #: ../../TShockAPI/Commands.cs:1385
 #, csharp-format
 msgid "ban {0}"
-msgstr "封禁{0}"
+msgstr "ban{0}"
 
 #: ../../TShockAPI/Commands.cs:1384
 #: ../../TShockAPI/Commands.cs:1386
@@ -3695,7 +3695,7 @@ msgstr "持有被封禁的物品{0}"
 
 #: ../../TShockAPI/Commands.cs:1208
 msgid "Hook blocked the attempt to change the user group."
-msgstr ""
+msgstr "一个插件阻止了你修改用户组。"
 
 #: ../../TShockAPI/Commands.cs:1249
 #, csharp-format
@@ -7119,7 +7119,7 @@ msgstr "你没有召唤拜月教徒的权限。"
 
 #: ../../TShockAPI/GetDataHandlers.cs:3508
 msgid "You do not have permission to summon the Skeletron."
-msgstr ""
+msgstr "你没有权限召唤骷髅王。"
 
 #: ../../TShockAPI/Commands.cs:3085
 msgid "You do not have permission to teleport all other players."
@@ -7164,11 +7164,11 @@ msgstr "您没有权限上传其他玩家的SSC云存档。"
 
 #: ../../TShockAPI/GetDataHandlers.cs:3664
 msgid "You do not have permission to use permanent boosters."
-msgstr ""
+msgstr "你没有权限使用永久性强化物品。"
 
 #: ../../TShockAPI/GetDataHandlers.cs:3555
 msgid "You do not have permission to use the Enchanted Moondial."
-msgstr ""
+msgstr "你没有权限使用附魔月晷。"
 
 #: ../../TShockAPI/GetDataHandlers.cs:3525
 msgid "You do not have permission to use the Enchanted Sundial."
@@ -7312,7 +7312,7 @@ msgstr "你必须提供一个setup！"
 
 #: ../../TShockAPI/GetDataHandlers.cs:3566
 msgid "You must set ForceTime to normal via config to use the Enchanted Moondial."
-msgstr ""
+msgstr "你必须将配置中的ForceTime设为normal才能使用附魔月晷"
 
 #: ../../TShockAPI/GetDataHandlers.cs:3536
 msgid "You must set ForceTime to normal via config to use the Enchanted Sundial."
@@ -7393,7 +7393,7 @@ msgstr "你的用户组无法被加载，请联系服务器管理员处理此错
 
 #: ../../TShockAPI/TShock.cs:1459
 msgid "Your client didn't send the right connection information."
-msgstr ""
+msgstr "你的客户端没有发送正确的连接信息。"
 
 #: ../../TShockAPI/Bouncer.cs:461
 msgid "Your client sent a blank character name."
