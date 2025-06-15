@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tshock\n"
 "POT-Creation-Date: 2025-06-15 18:04:23+0000\n"
-"PO-Revision-Date: 2025-06-15 18:29\n"
+"PO-Revision-Date: 2025-06-15 19:24\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -1200,7 +1200,7 @@ msgstr "已采用在config.json中设置的本服务器的密码。"
 
 #: ../../TShockAPI/Commands.cs:1330
 msgid "A player name must be provided to kick a player. Please provide one."
-msgstr "必须需要角色名才可踢出玩家，请您在指令后写上"
+msgstr "必须需要角色名才可踢出玩家，请你在指令后写上"
 
 #: ../../TShockAPI/GetDataHandlers.cs:2487
 msgid "A plugin on this server stopped your login."
@@ -1391,7 +1391,7 @@ msgstr "可以匹配IP地址，格式为用句点分隔的十进制，例如{0}�
 
 #: ../../TShockAPI/Commands.cs:2067
 msgid "An update check has been queued. If an update is available, you will be notified shortly."
-msgstr "已将更新检查加入到队列中，如果有更新，我们将很快通知您"
+msgstr "已将更新检查加入到队列中，如果有更新，我们将很快通知你"
 
 #: ../../TShockAPI/Commands.cs:5615
 msgid "Annoy Syntax"
@@ -1504,7 +1504,7 @@ msgstr "尝试登录失败。"
 #: ../../TShockAPI/Commands.cs:1385
 #, csharp-format
 msgid "ban {0}"
-msgstr "ban{0}"
+msgstr "ban {0}"
 
 #: ../../TShockAPI/Commands.cs:1384
 #: ../../TShockAPI/Commands.cs:1386
@@ -1583,7 +1583,7 @@ msgstr "已封禁: {0}"
 
 #: ../../TShockAPI/Commands.cs:1531
 msgid "Banned."
-msgstr "您已被封禁。"
+msgstr "你已被封禁。"
 
 #: ../../TShockAPI/Commands.cs:1684
 msgid "Bans ({{0}}/{{1}}):"
@@ -2764,7 +2764,7 @@ msgstr "无法找到领地{0}。"
 
 #: ../../TShockAPI/Commands.cs:1595
 msgid "Could not find the target specified. Check that you have the correct spelling."
-msgstr "找不到特定的目标，请检查您的拼写是否正确"
+msgstr "找不到特定的目标，请检查你的拼写是否正确"
 
 #: ../../TShockAPI/Commands.cs:6216
 #, csharp-format
@@ -2889,15 +2889,15 @@ msgstr "已将圣诞模式关闭。"
 #: ../../TShockAPI/Bouncer.cs:558
 #, csharp-format
 msgid "Disabled. You need to {0}login to load your saved data."
-msgstr "您已被禁止行动，因为您需要{0}登录以载入已保存的数据。"
+msgstr "你已被限制行动，因为你需要使用{0}login登录才能加载保存的数据。"
 
 #: ../../TShockAPI/Bouncer.cs:554
 msgid "Disabled. You went too far with banned armor."
-msgstr "无法行动，因为你穿着被禁用的装备。"
+msgstr "你已被限制行动，因为你穿着被禁用的装备。"
 
 #: ../../TShockAPI/Bouncer.cs:550
 msgid "Disabled. You went too far with hacked item stacks."
-msgstr "您已被限制行动，因为您的物品数量已超过堆叠上限。"
+msgstr "你已被限制行动，因为你的物品数量已超过堆叠上限。"
 
 #: ../../TShockAPI/Commands.cs:3989
 msgid "disallow <item> <group> - Disallows a group from using an item."
@@ -3068,7 +3068,7 @@ msgstr "更新用户组{0}失败。"
 
 #: ../../TShockAPI/Commands.cs:1878
 msgid "Failed to upload your character data to the server. Are you logged-in to an account?"
-msgstr "无法将您的角色数据上传至服务器。您是否登陆了账户？"
+msgstr "无法将你的角色数据上传至服务器。你是否登陆了账户？"
 
 #: ../../TShockAPI/Rest/Rest.cs:245
 msgid "Fatal Startup Exception"
@@ -3179,7 +3179,7 @@ msgstr "GetDataHandlers / HandleNpcStrike（NPC伤害检测）因保护城镇NPC
 #: ../../TShockAPI/GetDataHandlers.cs:3509
 #, csharp-format
 msgid "GetDataHandlers / HandleNpcStrike rejected Skeletron summon from {0}"
-msgstr ""
+msgstr "GetDataHandlers / HandleNpcStrike（NPC伤害检测）因没有召唤骷髅王的权限而阻止了{0}伤害地牢老人。"
 
 #: ../../TShockAPI/GetDataHandlers.cs:3329
 #, csharp-format
@@ -3249,7 +3249,7 @@ msgstr "GetDataHandlers / HandlePlayerBuffList（玩家Buff列表检测）正在
 #: ../../TShockAPI/GetDataHandlers.cs:3476
 #, csharp-format
 msgid "GetDataHandlers / HandlePlayerBuffList zeroed player buff due to below state awaiting player information {0} {1}"
-msgstr ""
+msgstr "GetDataHandlers / HandlePlayerBuffList（玩家Buff列表检测）因玩家未完整进入服务器而清除了{0}的{1}状态。"
 
 #: ../../TShockAPI/GetDataHandlers.cs:2843
 #, csharp-format
@@ -3344,7 +3344,7 @@ msgstr "GetDataHandlers / HandleSignRead（标牌内容获取检测）因目标�
 #: ../../TShockAPI/GetDataHandlers.cs:2786
 #, csharp-format
 msgid "GetDataHandlers / HandleSpawn force ssc teleport for {0} at ({1},{2})"
-msgstr ""
+msgstr "GetDataHandlers / HandleSpawn（回城检测）正在将{0}传送回位于{1}, {2}的复活点。"
 
 #: ../../TShockAPI/GetDataHandlers.cs:2720
 #, csharp-format
@@ -3374,7 +3374,7 @@ msgstr "GetDataHandlers / HandleSpawnBoss（召唤Boss与宠物检测）因没�
 #: ../../TShockAPI/GetDataHandlers.cs:3663
 #, csharp-format
 msgid "GetDataHandlers / HandleSpawnBoss rejected upgrade {0} {1}"
-msgstr ""
+msgstr "GetDataHandlers / HandleSpawnBoss（召唤Boss与宠物检测）因没有使用永久性强化物品的权限而阻止了{0}使用物品{1}。"
 
 #: ../../TShockAPI/GetDataHandlers.cs:3560
 #, csharp-format
@@ -3750,7 +3750,7 @@ msgstr "在没有指定时的默认持续时间为{0}秒。"
 
 #: ../../TShockAPI/Commands.cs:867
 msgid "If you forgot your password, contact the administrator for help."
-msgstr "如果您忘记了密码，请联系管理员以获取帮助。"
+msgstr "如果你忘记了密码，请联系管理员以获取帮助。"
 
 #: ../../TShockAPI/Commands.cs:6387
 #, csharp-format
@@ -3772,7 +3772,7 @@ msgstr "如果你想查看各个插件的依赖关系，请按E"
 
 #: ../../TShockAPI/Bouncer.cs:1010
 msgid "If you're seeing this message and you know what that player did, please report it to TShock for further investigation."
-msgstr "如果您看到此消息并且您知道该玩家做了什么，请报告TShock以便进一步调查。"
+msgstr "如果你看到此消息并且你知道该玩家做了什么，请报告TShock以便进一步调查。"
 
 #: ../../TShockAPI/Bouncer.cs:1397
 msgid "Ignoring shrapnel per config.."
@@ -3789,11 +3789,11 @@ msgstr "IllegalPerse: Emoji 数据包因伪装ID而被拒绝。预计 {0}将从 
 
 #: ../../TShockAPI/Commands.cs:3204
 msgid "Incoming teleports are now allowed."
-msgstr "现在传送（tp）是被允许的"
+msgstr "已允许其他玩家传送你"
 
 #: ../../TShockAPI/Commands.cs:3206
 msgid "Incoming teleports are now disabled."
-msgstr "现在传送是被禁止的"
+msgstr "已禁止其他玩家传送你"
 
 #: ../../TShockAPI/Commands.cs:5419
 msgid "Incorrect setup code. This incident has been logged."
@@ -3996,8 +3996,8 @@ msgid "Invalid REST configuration: \n"
 "Please adjust your configuration and restart the server. \n"
 "Press any key to exit."
 msgstr "REST 配置无效： \n"
-"您可能已经有绑定到端口 {0}的REST 服务。 \n"
-"请调整您的配置并重启服务器。 \n"
+"你可能已经有绑定到端口 {0}的REST 服务。 \n"
+"请调整你的配置并重启服务器。 \n"
 "按任意键退出。"
 
 #: ../../TShockAPI/GetDataHandlers.cs:3310
@@ -4345,7 +4345,7 @@ msgstr "格式错误! 正确格式: {0}warp send [角色名] [传送点名]"
 #: ../../TShockAPI/Commands.cs:4640
 #, csharp-format
 msgid "Invalid syntax. Proper syntax: {0}wind <speed in mph>."
-msgstr ""
+msgstr "格式错误。正确格式：{0}wind <风速>"
 
 #: ../../TShockAPI/Commands.cs:2161
 #, csharp-format
@@ -4412,7 +4412,7 @@ msgstr "传送点名无效。 'list', 'hide', 'del' 和 'add' 等已被保留。
 
 #: ../../TShockAPI/Commands.cs:4647
 msgid "Invalid wind speed (must be between -40 and 40)."
-msgstr ""
+msgstr "风速错误，应在正负40之间。"
 
 #: ../../TShockAPI/Commands.cs:2574
 #, csharp-format
@@ -4846,7 +4846,7 @@ msgstr "请稍候..."
 #: ../../TShockAPI/DB/RegionManager.cs:98
 #, csharp-format
 msgid "One of your UserIDs is not a usable integer: {0}"
-msgstr "您的一个用户ID不是可用整数： {0}"
+msgstr "你的一个用户ID不是可用整数： {0}"
 
 #: ../../TShockAPI/Commands.cs:5360
 #, csharp-format
@@ -5049,7 +5049,7 @@ msgstr "命令行参数指定的端口覆盖了配置文件中设置的端口，
 #: ../../TShockAPI/DB/ResearchDatastore.cs:53
 #: ../../TShockAPI/DB/BanManager.cs:81
 msgid "Possible problem with your database - is Sqlite3.dll present?"
-msgstr "您的数据库可能存在问题：Sqlite3.dll是否存在？"
+msgstr "你的数据库可能存在问题：Sqlite3.dll是否存在？"
 
 #: ../../TShockAPI/Commands.cs:3462
 msgid "prefix <group> <prefix> - Changes a group's prefix."
@@ -5395,7 +5395,7 @@ msgstr "地图种子：{0}"
 
 #: ../../TShockAPI/Commands.cs:567
 msgid "Sends a message to everyone on your team."
-msgstr "向您的团队中的每个人发送一条消息。"
+msgstr "向你的团队中的每个人发送一条消息。"
 
 #: ../../TShockAPI/Commands.cs:591
 msgid "Sends a PM to a player."
@@ -5457,7 +5457,7 @@ msgstr "正在关闭服务器。"
 
 #: ../../TShockAPI/Commands.cs:969
 msgid "Server side characters are enabled. You need to be logged-in to play."
-msgstr "服务器角色存档（ssc）已启用。您需要登录才能游玩。"
+msgstr "服务器角色存档（ssc）已启用。你需要登录才能游玩。"
 
 #: ../../TShockAPI/TShock.cs:1709
 #, csharp-format
@@ -5530,7 +5530,7 @@ msgstr "乌木树"
 
 #: ../../TShockAPI/Commands.cs:5402
 msgid "Share your server, talk with admins, and chill on GitHub & Discord. -- https://tshock.co/"
-msgstr "在GitHub & Discord上分享您的服务器，还可以与管理员沟通。 --https://tshock.co/"
+msgstr "在GitHub & Discord上分享你的服务器，还可以与管理员沟通。 --https://tshock.co/"
 
 #: ../../TShockAPI/Commands.cs:4991
 msgid "Shared with groups: "
@@ -5649,11 +5649,11 @@ msgstr "生成了血肉墙。"
 
 #: ../../TShockAPI/Commands.cs:411
 msgid "Spawns a number of bosses around you."
-msgstr "在您的周围生成一些Boss。"
+msgstr "在你的周围生成一些Boss。"
 
 #: ../../TShockAPI/Commands.cs:416
 msgid "Spawns a number of mobs around you."
-msgstr "在您的周围生成一些生物。"
+msgstr "在你的周围生成一些生物。"
 
 #: ../../TShockAPI/Commands.cs:351
 msgid "Spawns fireworks at a player."
@@ -5852,23 +5852,23 @@ msgstr "将一个玩家传送至另一个玩家。"
 
 #: ../../TShockAPI/Commands.cs:446
 msgid "Teleports a player to yourself."
-msgstr "将一个玩家传送到您。"
+msgstr "将一个玩家传送到你。"
 
 #: ../../TShockAPI/Commands.cs:587
 msgid "Teleports you to a warp point or manages warps."
-msgstr "将您传送到一个传送点或者管理传送点。"
+msgstr "将你传送到一个传送点或者管理传送点。"
 
 #: ../../TShockAPI/Commands.cs:451
 msgid "Teleports you to an npc."
-msgstr "将您传送到一个npc。"
+msgstr "将你传送到一个npc。"
 
 #: ../../TShockAPI/Commands.cs:456
 msgid "Teleports you to tile coordinates."
-msgstr "将您传送到一个图格坐标。"
+msgstr "将你传送到一个图格坐标。"
 
 #: ../../TShockAPI/Commands.cs:329
 msgid "Temporarily elevates you to Super Admin."
-msgstr "暂时将您提升为超级管理员。"
+msgstr "暂时将你提升为超级管理员。"
 
 #: ../../TShockAPI/Commands.cs:325
 msgid "Temporarily sets another player's group."
@@ -5905,7 +5905,7 @@ msgstr "克苏鲁之脑"
 #: ../../TShockAPI/Commands.cs:4537
 #, csharp-format
 msgid "The current time is {0}:{1:D2}."
-msgstr "当前时间是 {0}:{1:D2}。"
+msgstr "当前时间是{0}:{1:D2}。"
 
 #: ../../TShockAPI/DB/GroupManager.cs:251
 msgid "The default usergroup could not be found."
@@ -6234,7 +6234,7 @@ msgstr "开关是否接收他人的私聊。"
 
 #: ../../TShockAPI/Commands.cs:466
 msgid "Toggles whether other people can teleport you."
-msgstr "是否允许他人传送至您。"
+msgstr "是否允许他人传送至你。"
 
 #: ../../TShockAPI/Commands.cs:281
 msgid "Toggles whether you receive server logs."
@@ -6255,7 +6255,7 @@ msgstr "处理器运行总时间：{0}"
 
 #: ../../TShockAPI/Commands.cs:5218
 msgid "tp <region> - Teleports you to the given region's center."
-msgstr "tp <region> - 将您传送到指定的区域"
+msgstr "tp <region> - 将你传送到指定的区域"
 
 #: ../../TShockAPI/Commands.cs:6527
 msgid "Trees types & misc available to use. ({{0}}/{{1}}):"
@@ -6459,7 +6459,7 @@ msgstr "无法生成血肉墙，因为它已经存在或你不在地狱层。"
 #: ../../TShockAPI/DB/UserManager.cs:665
 #, csharp-format
 msgid "Unable to update group of user {0}."
-msgstr ""
+msgstr "无法更新 {0} 所在的用户组。"
 
 #: ../../TShockAPI/DB/UserManager.cs:477
 #, csharp-format
@@ -6496,11 +6496,11 @@ msgstr "无效的玩家方向"
 
 #: ../../TShockAPI/GetDataHandlers.cs:3573
 msgid "Unrecognized special effect (Packet 51). Please report this to the TShock developers."
-msgstr ""
+msgstr "遇到了无法识别的特殊效果（51号包），请向 TShock 开发者报告此事。"
 
 #: ../../TShockAPI/DB/GroupManager.cs:354
 msgid "Unsupported database type."
-msgstr ""
+msgstr "尚不支持这种数据库。"
 
 #: ../../TShockAPI/TShock.cs:465
 msgid "Until the problem is resolved, TShock will not be able to start (and will crash on startup)."
@@ -6916,7 +6916,7 @@ msgstr "你不能使用已经被禁用的物品"
 
 #: ../../TShockAPI/GetDataHandlers.cs:3563
 msgid "You cannot use the Enchanted Moondial because time is stopped."
-msgstr ""
+msgstr "时间被锁定停止流动，无法使用附魔月晷。"
 
 #: ../../TShockAPI/GetDataHandlers.cs:3533
 msgid "You cannot use the Enchanted Sundial because time is stopped."
@@ -6975,52 +6975,52 @@ msgstr "你没有权限来贡献物品研究。"
 
 #: ../../TShockAPI/Bouncer.cs:1240
 msgid "You do not have permission to create that projectile."
-msgstr "你没有权限创建此射弹。"
+msgstr "你没有权限发射此射弹。"
 
 #: ../../TShockAPI/Handlers/NetModules/CreativePowerHandler.cs:113
 msgid "You do not have permission to freeze the biome spread of the server."
-msgstr "你没有权限冻结服务器的感染蔓延。"
+msgstr "你没有权限冻结生物群系蔓延。"
 
 #: ../../TShockAPI/Handlers/NetModules/CreativePowerHandler.cs:109
 msgid "You do not have permission to freeze the rain strength of the server."
-msgstr "你没有权限冻结服务器的降雨强度。"
+msgstr "你没有权限冻结服务器降雨强度。"
 
 #: ../../TShockAPI/Handlers/NetModules/CreativePowerHandler.cs:103
 msgid "You do not have permission to freeze the time of the server."
-msgstr "你没有权限冻结服务器的时间。"
+msgstr "你没有权限冻结服务器时间。"
 
 #: ../../TShockAPI/Handlers/NetModules/CreativePowerHandler.cs:110
 msgid "You do not have permission to freeze the wind strength of the server."
-msgstr "你没有权限冻结服务器的风力强度。"
+msgstr "你没有权限冻结服务器风速。"
 
 #: ../../TShockAPI/Commands.cs:6727
 msgid "You do not have permission to god mode another player."
-msgstr "您没有权限为其他玩家开关无敌模式。"
+msgstr "你没有权限设置其他玩家的无敌模式。"
 
 #: ../../TShockAPI/Commands.cs:6538
 msgid "You do not have permission to grow this tree type"
-msgstr "你没有生成这种树木的权限。"
+msgstr "你没有权限生成这种树木。"
 
 #: ../../TShockAPI/GetDataHandlers.cs:3035
 msgid "You do not have permission to hurt Town NPCs."
-msgstr "你没有攻击城镇NPC的权限。"
+msgstr "你没有权限攻击城镇NPC。"
 
 #: ../../TShockAPI/Handlers/RequestTileEntityInteractionHandler.cs:22
 msgid "You do not have permission to modify a Hat Rack in a protected area!"
-msgstr "您没有权限修改受保护区域内的帽架。"
+msgstr "你没有权限修改受保护区域内的帽架。"
 
 #: ../../TShockAPI/Handlers/DisplayDollItemSyncHandler.cs:21
 #: ../../TShockAPI/Handlers/RequestTileEntityInteractionHandler.cs:28
 msgid "You do not have permission to modify a Mannequin in a protected area!"
-msgstr "您没有权限修改受保护区域内的人体模型。"
+msgstr "你没有权限修改受保护区域内的人体模型。"
 
 #: ../../TShockAPI/Handlers/RequestTileEntityInteractionHandler.cs:34
 msgid "You do not have permission to modify a TileEntity in a protected area!"
-msgstr "您没有权限修改受保护区域内的物块实体。"
+msgstr "你没有权限修改受保护区域内的物块实体。"
 
 #: ../../TShockAPI/Handlers/NetModules/CreativePowerHandler.cs:114
 msgid "You do not have permission to modify the NPC spawn rate of the server."
-msgstr "你没有权限更改服务器的NPC生成率。"
+msgstr "你没有权限更改服务器的生物生成率。"
 
 #: ../../TShockAPI/Handlers/NetModules/CreativePowerHandler.cs:107
 msgid "You do not have permission to modify the rain strength of the server."
@@ -7028,19 +7028,19 @@ msgstr "你没有权限更改服务器的降雨强度。"
 
 #: ../../TShockAPI/Handlers/NetModules/CreativePowerHandler.cs:111
 msgid "You do not have permission to modify the tile placement range of your character."
-msgstr "您没有权限修改您角色的放置范围。"
+msgstr "你没有权限修改放置范围。"
 
 #: ../../TShockAPI/Handlers/NetModules/CreativePowerHandler.cs:104
 msgid "You do not have permission to modify the time of the server."
-msgstr "你没有权限修改服务器的时间。"
+msgstr "你没有权限修改服务器时间。"
 
 #: ../../TShockAPI/Handlers/NetModules/CreativePowerHandler.cs:108
 msgid "You do not have permission to modify the time speed of the server."
-msgstr "你没有权限修改服务器的时间流速。"
+msgstr "你没有权限修改服务器时间流速。"
 
 #: ../../TShockAPI/Handlers/NetModules/CreativePowerHandler.cs:106
 msgid "You do not have permission to modify the wind strength of the server."
-msgstr "你没有权限修改服务器的风速。"
+msgstr "你没有权限修改服务器风速。"
 
 #: ../../TShockAPI/Handlers/NetModules/CreativePowerHandler.cs:112
 msgid "You do not have permission to modify the world difficulty of the server."
@@ -7049,7 +7049,7 @@ msgstr "你没有权限更改服务器的世界难度。"
 #: ../../TShockAPI/Commands.cs:5495
 #, csharp-format
 msgid "You do not have permission to mute {0}"
-msgstr "你没有禁言{0}的权限。"
+msgstr "你没有权限禁言{0}。"
 
 #: ../../TShockAPI/Bouncer.cs:1788
 msgid "You do not have permission to perform this action."
@@ -7057,7 +7057,7 @@ msgstr "你没有权限执行该操作。"
 
 #: ../../TShockAPI/ItemBans.cs:202
 msgid "You do not have permission to place actuators."
-msgstr "你没有放置促动器的权限。"
+msgstr "你没有权限放置促动器。"
 
 #: ../../TShockAPI/GetDataHandlers.cs:4107
 msgid "You do not have permission to place Logic Sensors."
@@ -7070,15 +7070,15 @@ msgstr "你没有权限放置此物块。"
 
 #: ../../TShockAPI/GetDataHandlers.cs:3617
 msgid "You do not have permission to relocate Town NPCs."
-msgstr "你没有移动城镇NPC的权限。"
+msgstr "你没有权限移动城镇NPC。"
 
 #: ../../TShockAPI/Commands.cs:5981
 msgid "You do not have permission to respawn another player."
-msgstr "您没有权限复活其他玩家。"
+msgstr "你没有权限复活其他玩家。"
 
 #: ../../TShockAPI/Commands.cs:5351
 msgid "You do not have permission to see player IDs."
-msgstr "你没有查看玩家序号的权限。"
+msgstr "你没有权限查看玩家的序号。"
 
 #: ../../TShockAPI/Handlers/EmojiHandler.cs:19
 msgid "You do not have permission to send emotes!"
@@ -7086,15 +7086,15 @@ msgstr "你没有权限发送表情！"
 
 #: ../../TShockAPI/GetDataHandlers.cs:3657
 msgid "You do not have permission to spawn pets."
-msgstr "你没有生成宠物的权限。"
+msgstr "你没有权限生成宠物。"
 
 #: ../../TShockAPI/GetDataHandlers.cs:4267
 msgid "You do not have permission to start a party."
-msgstr "你没有开启派对的权限。"
+msgstr "你没有权限开启派对。"
 
 #: ../../TShockAPI/GetDataHandlers.cs:3650
 msgid "You do not have permission to start invasions."
-msgstr "你没有召唤入侵的权限。"
+msgstr "你没有权限召唤入侵。"
 
 #: ../../TShockAPI/Commands.cs:2171
 #, csharp-format
@@ -7103,11 +7103,11 @@ msgstr "你没有权限开启 {0} 事件。"
 
 #: ../../TShockAPI/GetDataHandlers.cs:4285
 msgid "You do not have permission to start the Old One's Army."
-msgstr "你没有权限开启Old One`s Army。"
+msgstr "你没有权限召唤撒旦军队。"
 
 #: ../../TShockAPI/GetDataHandlers.cs:3643
 msgid "You do not have permission to summon bosses."
-msgstr "你没有召唤Boss的权限。"
+msgstr "你没有权限召唤Boss。"
 
 #: ../../TShockAPI/GetDataHandlers.cs:3045
 msgid "You do not have permission to summon the Empress of Light."
@@ -7115,7 +7115,7 @@ msgstr "你没有权限召唤光之女皇。"
 
 #: ../../TShockAPI/GetDataHandlers.cs:3062
 msgid "You do not have permission to summon the Lunatic Cultist!"
-msgstr "你没有召唤拜月教徒的权限。"
+msgstr "你没有权限召唤拜月教徒。"
 
 #: ../../TShockAPI/GetDataHandlers.cs:3508
 msgid "You do not have permission to summon the Skeletron."
@@ -7123,15 +7123,15 @@ msgstr "你没有权限召唤骷髅王。"
 
 #: ../../TShockAPI/Commands.cs:3085
 msgid "You do not have permission to teleport all other players."
-msgstr "您没有权限传送所有的其他玩家。"
+msgstr "你没有权限传送所有其他玩家。"
 
 #: ../../TShockAPI/Commands.cs:2996
 msgid "You do not have permission to teleport all players."
-msgstr "您没有权限传送所有玩家。"
+msgstr "你没有权限传送所有玩家。"
 
 #: ../../TShockAPI/Commands.cs:2979
 msgid "You do not have permission to teleport other players."
-msgstr "您没有权限传送其他玩家。"
+msgstr "你没有权限传送其他玩家。"
 
 #: ../../TShockAPI/GetDataHandlers.cs:3972
 #, csharp-format
@@ -7140,7 +7140,7 @@ msgstr "你没有使用{0}进行传送的权限。"
 
 #: ../../TShockAPI/GetDataHandlers.cs:3884
 msgid "You do not have permission to teleport using items."
-msgstr "你没有使用物品进行传送的权限。"
+msgstr "你没有权限使用物品进行传送。"
 
 #: ../../TShockAPI/Handlers/NetModules/PylonHandler.cs:54
 msgid "You do not have permission to teleport using pylons."
@@ -7148,11 +7148,11 @@ msgstr "你没有权限使用晶塔进行传送。"
 
 #: ../../TShockAPI/GetDataHandlers.cs:3908
 msgid "You do not have permission to teleport using Wormhole Potions."
-msgstr "你没有使用虫洞药水的权限。"
+msgstr "你没有权限使用虫洞药水。"
 
 #: ../../TShockAPI/Commands.cs:5170
 msgid "You do not have permission to teleport."
-msgstr "你没有传送的权限。"
+msgstr "你没有权限进行传送。"
 
 #: ../../TShockAPI/Handlers/NetModules/CreativePowerHandler.cs:105
 msgid "You do not have permission to toggle godmode."
@@ -7160,7 +7160,7 @@ msgstr "你没有权限切换“上帝模式”。"
 
 #: ../../TShockAPI/Commands.cs:1853
 msgid "You do not have permission to upload another player's character join-state server-side-character data."
-msgstr "您没有权限上传其他玩家的SSC云存档。"
+msgstr "你没有权限上传其他玩家加入状态的SSC云存档。"
 
 #: ../../TShockAPI/GetDataHandlers.cs:3664
 msgid "You do not have permission to use permanent boosters."
@@ -7172,11 +7172,11 @@ msgstr "你没有权限使用附魔月晷。"
 
 #: ../../TShockAPI/GetDataHandlers.cs:3525
 msgid "You do not have permission to use the Enchanted Sundial."
-msgstr "你没有使用附魔日晷的权限。"
+msgstr "你没有权限使用附魔日晷。"
 
 #: ../../TShockAPI/GetDataHandlers.cs:3572
 msgid "You do not have permission to use this effect."
-msgstr ""
+msgstr "你没有权限触发此效果。"
 
 #: ../../TShockAPI/Commands.cs:657
 #, csharp-format
@@ -7211,12 +7211,12 @@ msgstr "你给{1}({2})添加了{3}秒的buff{0}"
 #: ../../TShockAPI/Commands.cs:1973
 #, csharp-format
 msgid "You have changed {0}'s group to {1}"
-msgstr "您已将 {0}的用户组改为 {1}"
+msgstr "你已将 {0}的用户组改为 {1}"
 
 #: ../../TShockAPI/Commands.cs:1978
 #, csharp-format
 msgid "You have changed {0}'s group to {1} for {2}"
-msgstr "您已将 {0}的用户组从 {1}改为{2}"
+msgstr "你已将 {0}的用户组从 {1}改为{2}"
 
 #: ../../TShockAPI/GetDataHandlers.cs:4367
 msgid "You have fallen in hardcore mode, and your items have been lost forever."
@@ -7379,7 +7379,7 @@ msgstr "使用sync进行同步插件，但没有找到插件列表packages.json�
 
 #: ../../TShockAPI/Commands.cs:2001
 msgid "Your account has been elevated to superadmin for 10 minutes."
-msgstr "您的账户权限变更为超级管理员，有效期10分钟"
+msgstr "你的账户权限变更为超级管理员，有效期10分钟"
 
 #: ../../TShockAPI/Commands.cs:1056
 #, csharp-format
@@ -7410,12 +7410,12 @@ msgstr "你的数据库中有无效的用户ID（它们应该是整数）"
 #: ../../TShockAPI/Commands.cs:1980
 #, csharp-format
 msgid "Your group has been changed to {0} for {1}"
-msgstr "您的组别成功从{0}变到了{1}"
+msgstr "你的组别成功从{0}变到了{1}"
 
 #: ../../TShockAPI/Commands.cs:1974
 #, csharp-format
 msgid "Your group has temporarily been changed to {0}"
-msgstr "您的组别暂时更改至{0}"
+msgstr "你的组别暂时更改至{0}"
 
 #: ../../TShockAPI/Commands.cs:6165
 msgid "Your inventory seems full."
@@ -7441,7 +7441,7 @@ msgstr "你的密码是{0}。"
 
 #: ../../TShockAPI/Commands.cs:1992
 msgid "Your previous permission set has been restored."
-msgstr "您之前的权限已被恢复"
+msgstr "你之前的权限已被恢复"
 
 #: ../../TShockAPI/Commands.cs:5807
 msgid "Your reference dumps have been created in the server folder."
