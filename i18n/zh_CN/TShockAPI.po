@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tshock\n"
 "POT-Creation-Date: 2025-06-15 18:04:23+0000\n"
-"PO-Revision-Date: 2025-06-16 04:15\n"
+"PO-Revision-Date: 2025-06-16 05:21\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -1867,7 +1867,7 @@ msgstr "Bouncer / OnMassWireOperation（蓝图操作防护）因没有建筑权�
 #: ../../TShockAPI/Bouncer.cs:2627
 #, csharp-format
 msgid "Bouncer / OnMassWireOperation rejected disabled from {0}"
-msgstr "Bouncer / OnMassWireOperation（蓝图操作防护）因玩家被拘束阻止了{0}"
+msgstr "Bouncer / OnMassWireOperation（蓝图操作防护）因玩家被限制行动阻止了{0}"
 
 #: ../../TShockAPI/Bouncer.cs:2620
 #, csharp-format
@@ -1907,7 +1907,7 @@ msgstr "Bouncer / OnNewProjectile（弹幕防护）因限流阻止了{0}"
 #: ../../TShockAPI/Bouncer.cs:1257
 #, csharp-format
 msgid "Bouncer / OnNewProjectile rejected from disabled from {0}"
-msgstr "Bouncer / OnNewProjectile（弹幕防护）因玩家被拘束阻止了{0}"
+msgstr "Bouncer / OnNewProjectile（弹幕防护）因玩家被限制行动阻止了{0}"
 
 #: ../../TShockAPI/Bouncer.cs:1294
 #, csharp-format
@@ -1957,7 +1957,7 @@ msgstr "Bouncer / OnNPCAddBuff（NPC Buff防护）因种类{0}或时长{4}异常
 #: ../../TShockAPI/Bouncer.cs:2050
 #, csharp-format
 msgid "Bouncer / OnNPCAddBuff rejected disabled from {0}"
-msgstr "Bouncer / OnNPCAddBuff（NPCBuff防护）因玩家被拘束阻止了{0}"
+msgstr "Bouncer / OnNPCAddBuff（NPCBuff防护）因玩家被限制行动阻止了{0}"
 
 #: ../../TShockAPI/Bouncer.cs:2043
 #, csharp-format
@@ -1982,7 +1982,7 @@ msgstr "Bouncer / OnNPCStrike（攻击NPC防护）因伤害超过上限（{1}/{2
 #: ../../TShockAPI/Bouncer.cs:1455
 #, csharp-format
 msgid "Bouncer / OnNPCStrike rejected from disabled from {0}"
-msgstr "Bouncer / OnNPCStrike（攻击NPC防护）因玩家被拘束阻止了{0}"
+msgstr "Bouncer / OnNPCStrike（攻击NPC防护）因玩家被限制行动阻止了{0}"
 
 #: ../../TShockAPI/Bouncer.cs:1464
 #, csharp-format
@@ -2417,7 +2417,7 @@ msgstr "Bouncer / OnTileEdit（物块防护）阻止了{0}的建筑操作。{1}�
 #: ../../TShockAPI/Bouncer.cs:893
 #, csharp-format
 msgid "Bouncer / OnTileEdit rejected from disable from {0} {1} {2}"
-msgstr "Bouncer / OnTileEdit（物块防护）因玩家被拘束阻止了{0}的操作。{1}，{2} "
+msgstr "Bouncer / OnTileEdit（物块防护）因玩家被限制行动阻止了{0}的操作。{1}，{2} "
 
 #: ../../TShockAPI/Bouncer.cs:649
 #, csharp-format
@@ -5685,12 +5685,12 @@ msgstr "检测到物品堆叠作弊.请移除盔甲 {0}（{1}）,然后重新加
 #: ../../TShockAPI/TSPlayer.cs:628
 #, csharp-format
 msgid "Stack cheat detected. Remove Defender's Forge item {0} ({1}) and then rejoin."
-msgstr "检测到物品堆叠作弊.请移除护卫熔炉内物品 {0}（{1}）,然后重新加入."
+msgstr "检测到物品堆叠作弊。请移除护卫熔炉内物品 {0}（{1}）,然后重新加入。"
 
 #: ../../TShockAPI/TSPlayer.cs:505
 #, csharp-format
 msgid "Stack cheat detected. Remove dye {0} ({1}) and then rejoin."
-msgstr "检测到物品堆叠作弊.请移除染料 {0}（{1}）,然后重新加入."
+msgstr "检测到物品堆叠作弊。请移除染料 {0}（{1}）,然后重新加入。"
 
 #: ../../TShockAPI/TSPlayer.cs:465
 #: ../../TShockAPI/TSPlayer.cs:525
@@ -5713,28 +5713,28 @@ msgstr "检测到物品堆叠作弊。请移除装备栏1内物品 {0}（{1}）,
 #: ../../TShockAPI/TSPlayer.cs:729
 #, csharp-format
 msgid "Stack cheat detected. Remove Loadout 2 item {0} ({1}) and then rejoin."
-msgstr "检测到物品堆叠作弊.请移除装备栏2内物品 {0}（{1}）,然后重新加入."
+msgstr "检测到物品堆叠作弊。请移除装备栏2内物品 {0}（{1}）,然后重新加入."
 
 #: ../../TShockAPI/TSPlayer.cs:749
 #: ../../TShockAPI/TSPlayer.cs:769
 #, csharp-format
 msgid "Stack cheat detected. Remove Loadout 3 item {0} ({1}) and then rejoin."
-msgstr "检测到物品堆叠作弊.请移除装备栏3内物品 {0}（{1}）,然后重新加入."
+msgstr "检测到物品堆叠作弊。请移除装备栏3内物品 {0}（{1}）,然后重新加入."
 
 #: ../../TShockAPI/TSPlayer.cs:566
 #, csharp-format
 msgid "Stack cheat detected. Remove piggy-bank item {0} ({1}) and then rejoin."
-msgstr "检测到物品堆叠作弊.请移除存钱罐内物品 {0}（{1}）,然后重新加入."
+msgstr "检测到物品堆叠作弊。请移除存钱罐内物品 {0}（{1}）,然后重新加入."
 
 #: ../../TShockAPI/TSPlayer.cs:587
 #, csharp-format
 msgid "Stack cheat detected. Remove safe item {0} ({1}) and then rejoin."
-msgstr "检测到物品堆叠作弊.请移除保险箱内物品 {0}（{1}）,然后重新加入."
+msgstr "检测到物品堆叠作弊。请移除保险箱内物品 {0}（{1}）,然后重新加入."
 
 #: ../../TShockAPI/TSPlayer.cs:607
 #, csharp-format
 msgid "Stack cheat detected. Remove trash item {0} ({1}) and then rejoin."
-msgstr "检测到物品堆叠作弊.请移除垃圾桶内物品 {0}（{1}）,然后重新加入."
+msgstr "检测到物品堆叠作弊。请移除垃圾桶内物品 {0}（{1}）,然后重新加入."
 
 #: ../../TShockAPI/TSPlayer.cs:649
 #, csharp-format
@@ -5759,15 +5759,15 @@ msgstr "启动参数覆盖最大玩家数配置。"
 
 #: ../../TShockAPI/TShock.cs:915
 msgid "Startup parameter overrode REST enable."
-msgstr "启动参数覆盖 REST 启用状态。"
+msgstr "启动参数覆盖REST启用状态。"
 
 #: ../../TShockAPI/TShock.cs:924
 msgid "Startup parameter overrode REST port."
-msgstr "启动参数覆盖 REST 端口。"
+msgstr "启动参数覆盖REST端口。"
 
 #: ../../TShockAPI/TShock.cs:907
 msgid "Startup parameter overrode REST token."
-msgstr "启动参数覆盖 REST 令牌。"
+msgstr "启动参数覆盖REST令牌。"
 
 #: ../../TShockAPI/Commands.cs:2325
 msgid "Stopped an eclipse."
@@ -5797,7 +5797,7 @@ msgstr "组\"{0}\"的聊天后缀已被设为\"{1}\""
 
 #: ../../TShockAPI/Commands.cs:5814
 msgid "Sync'd!"
-msgstr "已同步！"
+msgstr "已同步周围图格！"
 
 #: ../../TShockAPI/Handlers/SyncTilePickingHandler.cs:23
 #, csharp-format
