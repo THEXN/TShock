@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tshock\n"
 "POT-Creation-Date: 2025-06-15 18:04:23+0000\n"
-"PO-Revision-Date: 2025-06-15 19:24\n"
+"PO-Revision-Date: 2025-06-16 03:15\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -480,12 +480,12 @@ msgstr "{0}开启了圣诞模式。"
 #: ../../TShockAPI/Commands.cs:2484
 #, csharp-format
 msgid "{0} ended the rain."
-msgstr "{0} 结束了这场雨。"
+msgstr "{0}结束了这场雨。"
 
 #: ../../TShockAPI/Commands.cs:2469
 #, csharp-format
 msgid "{0} ended the slime rain."
-msgstr "{0} 结束了这场史莱姆雨。"
+msgstr "{0}结束了这场史莱姆雨。"
 
 #: ../../TShockAPI/Commands.cs:711
 #, csharp-format
@@ -500,7 +500,7 @@ msgstr "{0}执行了{1}{2}。"
 #: ../../TShockAPI/Commands.cs:940
 #, csharp-format
 msgid "{0} failed to authenticate as user: {1}."
-msgstr "{0} 登录用户:  {1}  失败。"
+msgstr "{0}登录用户:  {1}  失败。"
 
 #: ../../TShockAPI/Commands.cs:6295
 #, csharp-format
@@ -603,7 +603,7 @@ msgstr "{0}禁言了{1}，原因是{2}。"
 #: ../../TShockAPI/Commands.cs:6015
 #, csharp-format
 msgid "{0} has respawned you."
-msgstr "{0} 将你复活了。"
+msgstr "{0}将你复活了。"
 
 #: ../../TShockAPI/GetDataHandlers.cs:3687
 #, csharp-format
@@ -644,22 +644,22 @@ msgstr "虽然数据库中有{0}的存档，但该玩家也拥有tshock.ignore.s
 #: ../../TShockAPI/Commands.cs:2357
 #, csharp-format
 msgid "{0} has started a goblin army invasion."
-msgstr "{0} 开始了哥布林军队入侵。"
+msgstr "{0}开始了哥布林军队入侵。"
 
 #: ../../TShockAPI/Commands.cs:2411
 #, csharp-format
 msgid "{0} has started a martian invasion."
-msgstr "{0} 开始了火星人入侵。"
+msgstr "{0}开始了火星人入侵。"
 
 #: ../../TShockAPI/Commands.cs:2369
 #, csharp-format
 msgid "{0} has started a pirate invasion."
-msgstr "{0} 开始了一场海盗入侵。"
+msgstr "{0}开始了一场海盗入侵。"
 
 #: ../../TShockAPI/Commands.cs:2363
 #, csharp-format
 msgid "{0} has started a snow legion invasion."
-msgstr "{0} 开始了一场雪人军团入侵。"
+msgstr "{0}开始了一场雪人军团入侵。"
 
 #: ../../TShockAPI/Commands.cs:5504
 #, csharp-format
@@ -684,7 +684,7 @@ msgstr "{0}为他自己恢复了{1}血量。"
 #: ../../TShockAPI/Commands.cs:4265
 #, csharp-format
 msgid "{0} is already allowed to place tile {1}."
-msgstr "{0} 已被允许放置图格 {1}。"
+msgstr "{0 已被允许放置图格{1}。"
 
 #: ../../TShockAPI/Commands.cs:3900
 #, csharp-format
@@ -694,12 +694,12 @@ msgstr "组 {0} 已被允许使用 {1}。"
 #: ../../TShockAPI/Commands.cs:4089
 #, csharp-format
 msgid "{0} is already allowed to use projectile {1}."
-msgstr "{0} 已被允许使用弹射物 {1}。"
+msgstr "{0}已被允许使用弹射物 {1}。"
 
 #: ../../TShockAPI/Commands.cs:5956
 #, csharp-format
 msgid "{0} is already dead!"
-msgstr "{0} 已经死亡！"
+msgstr "{0}已经死亡！"
 
 #: ../../TShockAPI/Commands.cs:3971
 #, csharp-format
@@ -709,17 +709,17 @@ msgstr "组 {0} 已被禁止使用 {1}。"
 #: ../../TShockAPI/Commands.cs:4324
 #, csharp-format
 msgid "{0} is already prevented from placing tile {1}."
-msgstr "{0} 已被禁止放置图格 {1}。"
+msgstr "{0}已被禁止放置图格 {1}。"
 
 #: ../../TShockAPI/Commands.cs:4148
 #, csharp-format
 msgid "{0} is already prevented from using projectile {1}."
-msgstr "{0} 已被禁止使用弹射物 {1}。"
+msgstr "{0}已被禁止使用弹射物 {1}。"
 
 #: ../../TShockAPI/ItemBans.cs:234
 #, csharp-format
 msgid "{0} is banned! Remove it!"
-msgstr "{0} 已被禁用！请移除它！"
+msgstr "{0}已被禁用！请移除它！"
 
 #: ../../TShockAPI/Commands.cs:6763
 #, csharp-format
@@ -736,17 +736,17 @@ msgstr "{0}不接受私聊。"
 #: ../../TShockAPI/Commands.cs:3961
 #, csharp-format
 msgid "{0} is not banned."
-msgstr "{0} 没有被禁用。"
+msgstr "{0}没有被禁用。"
 
 #: ../../TShockAPI/Commands.cs:6006
 #, csharp-format
 msgid "{0} is not dead!"
-msgstr "{0} 并未死亡！"
+msgstr "{0}并未死亡！"
 
 #: ../../TShockAPI/Commands.cs:6762
 #, csharp-format
 msgid "{0} is now in god mode."
-msgstr "{0} 现在已处于上帝模式。"
+msgstr "{0}现在已处于上帝模式。"
 
 #: ../../TShockAPI/Commands.cs:5602
 #, csharp-format
@@ -762,12 +762,12 @@ msgstr "{0}杀死了你！"
 #: ../../TShockAPI/TSPlayer.cs:2078
 #, csharp-format
 msgid "{0} kicked {1} for '{2}'"
-msgstr "{0} 以'{2}'为理由踢出了 {1}。"
+msgstr "{0}以'{2}'为理由踢出了 {1}。"
 
 #: ../../TShockAPI/Commands.cs:5762
 #, csharp-format
 msgid "{0} launched fireworks on you."
-msgstr "{0} 向您发射了烟花。"
+msgstr "{0}向你发射了烟花。"
 
 #: ../../TShockAPI/Rest/RestManager.cs:848
 #, csharp-format
@@ -798,28 +798,28 @@ msgstr "{0}设置时间为 {1}:{2:D2}。"
 #: ../../TShockAPI/Commands.cs:4557
 #, csharp-format
 msgid "{0} set the time to 00:00."
-msgstr "{0} 设置时间为 00:00。"
+msgstr "{0}设置时间为 00:00。"
 
 #: ../../TShockAPI/Commands.cs:4545
 #, csharp-format
 msgid "{0} set the time to 04:30."
-msgstr "{0} 设置时间为 04:30。"
+msgstr "{0}设置时间为 04:30。"
 
 #: ../../TShockAPI/Commands.cs:4553
 #, csharp-format
 msgid "{0} set the time to 12:00."
-msgstr "{0} 设置时间为 12:00。"
+msgstr "{0}设置时间为 12:00。"
 
 #: ../../TShockAPI/Commands.cs:4549
 #, csharp-format
 msgid "{0} set the time to 19:30."
-msgstr "{0} 设置时间为 19:30。"
+msgstr "{0}设置时间为 19:30。"
 
 #: ../../TShockAPI/Commands.cs:4631
 #: ../../TShockAPI/Commands.cs:4632
 #, csharp-format
 msgid "{0} slapped {1} for {2} damage."
-msgstr "{0} 打了 {1} 一巴掌，造成 {2} 点伤害。"
+msgstr "{0}打了{1}一巴掌，造成{2}点伤害。"
 
 #: ../../TShockAPI/Commands.cs:2846
 #, csharp-format
@@ -855,7 +855,7 @@ msgstr "{0} 开始了日食."
 #: ../../TShockAPI/Commands.cs:2406
 #, csharp-format
 msgid "{0} started the frost moon at wave {1}!"
-msgstr "{0} 开启了霜月（第{1}波）。"
+msgstr "{0}召唤了霜月（第{1}波）。"
 
 #: ../../TShockAPI/GetDataHandlers.cs:4290
 #: ../../TShockAPI/GetDataHandlers.cs:4292
@@ -866,22 +866,22 @@ msgstr "{0}开启了撒旦军团事件！"
 #: ../../TShockAPI/Commands.cs:2388
 #, csharp-format
 msgid "{0} started the pumpkin moon at wave {1}!"
-msgstr "{0} 开启了南瓜月（第{1}波）。"
+msgstr "{0}召唤了南瓜月（第{1}波）。"
 
 #: ../../TShockAPI/Commands.cs:2336
 #, csharp-format
 msgid "{0} stopped an eclipse."
-msgstr "{0} 结束了日食。"
+msgstr "{0}结束了日食。"
 
 #: ../../TShockAPI/Commands.cs:2309
 #, csharp-format
 msgid "{0} stopped the current blood moon."
-msgstr "{0} 结束了血月。"
+msgstr "{0}结束了血月。"
 
 #: ../../TShockAPI/Commands.cs:2437
 #, csharp-format
 msgid "{0} stopped the current sandstorm event."
-msgstr "{0} 结束了沙尘暴。"
+msgstr "{0}结束了沙尘暴。"
 
 #: ../../TShockAPI/Commands.cs:2519
 #, csharp-format
@@ -1319,7 +1319,7 @@ msgstr "下载完毕！: )"
 
 #: ../../TShockAPI/Commands.cs:2119
 msgid "All REST tokens have been destroyed."
-msgstr "所有临时Rest令牌已被销毁"
+msgstr "所有REST令牌已被销毁。"
 
 #: ../../TShockAPI/Commands.cs:1237
 #, csharp-format
@@ -6641,7 +6641,7 @@ msgstr "无法使用{0}来更改不明液体{1}。"
 #: ../../TShockAPI/Bouncer.cs:1796
 #, csharp-format
 msgid "Using banned {0} to manipulate liquid"
-msgstr "没有使用{0}的权限，无法更改地图上的液体。"
+msgstr "没有权限使用{0}，无法更改地图上的液体。"
 
 #: ../../TShockAPI/Bouncer.cs:1819
 msgid "Using banned honey bucket without permissions"
@@ -6946,7 +6946,7 @@ msgstr[0] "你清除了{1}范围内的{0}个射弹。"
 
 #: ../../TShockAPI/Commands.cs:6332
 msgid "You didn't put a player name."
-msgstr "你没有写玩家名。"
+msgstr "你没有输入玩家名。"
 
 #: ../../TShockAPI/GetDataHandlers.cs:4352
 msgid "You died! Normally, you'd be banned."
@@ -7363,7 +7363,7 @@ msgstr "你已被传送至 {0}。"
 
 #: ../../TShockAPI/TShock.cs:1724
 msgid "You will be teleported to your last known location..."
-msgstr "你将被传送到你最后一个记录点"
+msgstr "你将被传送至上次离开时的位置…"
 
 #: ../../TShockAPI/Commands.cs:5579
 msgid "You will no longer receive whispers from other players."
@@ -7441,7 +7441,7 @@ msgstr "你的密码是{0}。"
 
 #: ../../TShockAPI/Commands.cs:1992
 msgid "Your previous permission set has been restored."
-msgstr "你之前的权限已被恢复"
+msgstr "你已回复到原来的权限"
 
 #: ../../TShockAPI/Commands.cs:5807
 msgid "Your reference dumps have been created in the server folder."
