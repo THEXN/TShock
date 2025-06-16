@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tshock\n"
 "POT-Creation-Date: 2025-06-15 18:04:23+0000\n"
-"PO-Revision-Date: 2025-06-16 03:15\n"
+"PO-Revision-Date: 2025-06-16 04:15\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -381,13 +381,13 @@ msgstr "{0}已成功登录账号{1}。"
 #: ../../TShockAPI/TSPlayer.cs:2107
 #, csharp-format
 msgid "{0} banned {1} for '{2}'."
-msgstr "{0} 以'{2}'为理由封禁了'{1}'"
+msgstr "{0}以'{2}'为理由封禁了'{1}'"
 
 #: ../../TShockAPI/Commands.cs:6067
 #, csharp-format
 msgid "{0} butchered {1} NPC."
 msgid_plural "{0} butchered {1} NPCs."
-msgstr[0] "{0} 杀死了 {1} 个NPC"
+msgstr[0] "{0}杀死了{1}个NPC"
 
 #: ../../TShockAPI/Commands.cs:2477
 #, csharp-format
@@ -511,32 +511,32 @@ msgstr[0] "{0}给了你{1}个{2}。"
 #: ../../TShockAPI/Commands.cs:4262
 #, csharp-format
 msgid "{0} has been allowed to place tile {1}."
-msgstr "组 {0} 已被允许放置图格 {1}。"
+msgstr "组{0}已被允许放置图格 {1}。"
 
 #: ../../TShockAPI/Commands.cs:3896
 #, csharp-format
 msgid "{0} has been allowed to use {1}."
-msgstr "组 {0} 已被允许使用 {1}。"
+msgstr "组{0}已被允许使用 {1}。"
 
 #: ../../TShockAPI/Commands.cs:4086
 #, csharp-format
 msgid "{0} has been allowed to use projectile {1}."
-msgstr "组 {0} 已被允许使用射弹 {1}。"
+msgstr "组{0}已被允许使用射弹 {1}。"
 
 #: ../../TShockAPI/Commands.cs:4320
 #, csharp-format
 msgid "{0} has been disallowed from placing tile {1}."
-msgstr "{0} 已被禁止放置图格 {1}。"
+msgstr "{0}已被禁止放置图格 {1}。"
 
 #: ../../TShockAPI/Commands.cs:4144
 #, csharp-format
 msgid "{0} has been disallowed from using projectile {1}."
-msgstr "{0} 已被禁止使用弹射物 {1}"
+msgstr "{0}已被禁止使用弹射物 {1}"
 
 #: ../../TShockAPI/Commands.cs:3967
 #, csharp-format
 msgid "{0} has been disallowed to use {1}."
-msgstr "组 {0} 已被禁止使用 {1}。"
+msgstr "组{0}已被禁止使用{1}。"
 
 #: ../../TShockAPI/Commands.cs:6483
 #, csharp-format
@@ -553,17 +553,17 @@ msgstr "{0}已将你所属的用户组更改为{1}。"
 #: ../../TShockAPI/Commands.cs:3041
 #, csharp-format
 msgid "{0} has disabled incoming teleports."
-msgstr "{0} 禁止玩家对其使用传送。"
+msgstr "{0}禁止玩家对其使用传送。"
 
 #: ../../TShockAPI/Commands.cs:2427
 #, csharp-format
 msgid "{0} has ended the current invasion event."
-msgstr "{0} 结束了当前的入侵事件。"
+msgstr "{0}结束了当前的入侵事件。"
 
 #: ../../TShockAPI/Commands.cs:2423
 #, csharp-format
 msgid "{0} has ended the Old One's Army event."
-msgstr "{0} 结束了撒旦军队事件。"
+msgstr "{0}结束了撒旦军队事件。"
 
 #: ../../TShockAPI/TShock.cs:1688
 #, csharp-format
@@ -623,7 +623,7 @@ msgstr "{0}从递送站申领了新的狗狗！"
 #: ../../TShockAPI/GetDataHandlers.cs:3684
 #, csharp-format
 msgid "{0} has sent a request to the slime delivery service!"
-msgstr "{0} 从递送站申领了新的史莱姆！"
+msgstr "{0}从递送站申领了新的史莱姆！"
 
 #: ../../TShockAPI/Commands.cs:2893
 #, csharp-format
@@ -684,7 +684,7 @@ msgstr "{0}为他自己恢复了{1}血量。"
 #: ../../TShockAPI/Commands.cs:4265
 #, csharp-format
 msgid "{0} is already allowed to place tile {1}."
-msgstr "{0 已被允许放置图格{1}。"
+msgstr "{0}已被允许放置图格{1}。"
 
 #: ../../TShockAPI/Commands.cs:3900
 #, csharp-format
@@ -783,7 +783,7 @@ msgstr "{0}注册了一个账号：“{1}”。"
 #: ../../TShockAPI/Commands.cs:1492
 #, csharp-format
 msgid "{0} remaining."
-msgstr "剩余 {0}。"
+msgstr "剩余{0}。"
 
 #: ../../TShockAPI/Commands.cs:6212
 #, csharp-format
@@ -861,7 +861,7 @@ msgstr "{0}召唤了霜月（第{1}波）。"
 #: ../../TShockAPI/GetDataHandlers.cs:4292
 #, csharp-format
 msgid "{0} started the Old One's Army event!"
-msgstr "{0}开启了撒旦军团事件！"
+msgstr "{0}召唤了撒旦军团事件！"
 
 #: ../../TShockAPI/Commands.cs:2388
 #, csharp-format
@@ -984,7 +984,7 @@ msgstr "{0}试图执行{1}{2}。"
 #: ../../TShockAPI/Commands.cs:2270
 #, csharp-format
 msgid "{0} triggered a meteor."
-msgstr "{0} 触发了陨石。"
+msgstr "{0}触发了陨石。"
 
 #: ../../TShockAPI/Commands.cs:3343
 #, csharp-format
@@ -1136,7 +1136,7 @@ msgstr "<{0}> {1}"
 #: ../../TShockAPI/Commands.cs:5597
 #, csharp-format
 msgid "<From {0}> {1}"
-msgstr "<{0}的私聊消息> {1}"
+msgstr "<来自{0}的消息> {1}"
 
 #: ../../TShockPluginManager/NugetCLI.cs:187
 #, csharp-format
@@ -1400,7 +1400,7 @@ msgstr "指令annoy的用法"
 #: ../../TShockAPI/Commands.cs:5632
 #, csharp-format
 msgid "Annoying {0} for {1} seconds."
-msgstr "在{1}秒内骚扰 {0}。"
+msgstr "在{1}秒内骚扰{0}。"
 
 #: ../../TShockAPI/Commands.cs:343
 msgid "Annoys a player for an amount of time."
@@ -1409,7 +1409,7 @@ msgstr "骚扰一个玩家一段时间。"
 #: ../../TShockAPI/Rest/Rest.cs:451
 #, csharp-format
 msgid "Anonymous requested REST endpoint: {0}"
-msgstr "REST 端点{0}收到了匿名请求"
+msgstr "REST端点{0}收到了匿名请求"
 
 #: ../../TShockAPI/Commands.cs:5240
 msgid "Anti-build is now off."
@@ -1629,7 +1629,7 @@ msgstr "Bouncer / OnChestItemChange（箱子物品防护）因箱子不匹配阻
 #: ../../TShockAPI/Bouncer.cs:1528
 #, csharp-format
 msgid "Bouncer / OnChestItemChange rejected from disable from {0}"
-msgstr "Bouncer / OnChestItemChange（箱子物品防护）因玩家被拘束阻止了{0}"
+msgstr "Bouncer / OnChestItemChange（箱子物品防护）因玩家被限制行动阻止了{0}"
 
 #: ../../TShockAPI/Bouncer.cs:1543
 #, csharp-format
@@ -1644,7 +1644,7 @@ msgstr "Bouncer / OnChestItemChange（箱子物品防护）因区域保护阻止
 #: ../../TShockAPI/Bouncer.cs:1556
 #, csharp-format
 msgid "Bouncer / OnChestOpen rejected from disabled from {0}"
-msgstr "Bouncer / OnChestItemChange（开箱子防护）因玩家被拘束阻止了{0}"
+msgstr "Bouncer / OnChestItemChange（开箱子防护）因玩家被限制行动阻止了{0}"
 
 #: ../../TShockAPI/Bouncer.cs:1563
 #, csharp-format
@@ -1659,12 +1659,12 @@ msgstr "Bouncer / OnChestOpen（开箱子防护）因区域检测阻止了{0}"
 #: ../../TShockAPI/Bouncer.cs:2799
 #, csharp-format
 msgid "Bouncer / OnFishOutNPC rejected for not finding active bobber projectile! - From {0}"
-msgstr "Bouncer / OnFishOutNPC（钓出NPC防护）因没有有效的鱼饵阻止了{0}"
+msgstr "Bouncer / OnFishOutNPC（特殊渔获防护）因没有有效的鱼饵阻止了{0}"
 
 #: ../../TShockAPI/Bouncer.cs:2793
 #, csharp-format
 msgid "Bouncer / OnFishOutNPC rejected for not using a fishing rod! - From {0}"
-msgstr "Bouncer / OnFishOutNPC（钓出NPC防护）因没在使用鱼杆阻止了{0}"
+msgstr "Bouncer / OnFishOutNPC（特殊渔获防护）因没在使用鱼杆阻止了{0}"
 
 #: ../../TShockAPI/Bouncer.cs:2805
 #, csharp-format
@@ -1674,12 +1674,12 @@ msgstr "Bouncer / OnFishOutNPC（钓出NPC防护）因试图钓出不可被钓�
 #: ../../TShockAPI/Bouncer.cs:2817
 #, csharp-format
 msgid "Bouncer / OnFishOutNPC rejected range checks from {0}"
-msgstr "Bouncer / OnFishOutNPC（钓出NPC防护）因超出范围阻止了{0}"
+msgstr "Bouncer / OnFishOutNPC（特殊渔获防护）因超出范围阻止了{0}"
 
 #: ../../TShockAPI/Bouncer.cs:2811
 #, csharp-format
 msgid "Bouncer / OnFishOutNPC rejected summon boss permissions from {0}"
-msgstr "Bouncer / OnFishOutNPC（钓出NPC防护）因没有召唤Boss的权限而阻止了{0}"
+msgstr "Bouncer / OnFishOutNPC（特殊渔获防护）因没有召唤Boss的权限而阻止了{0}"
 
 #: ../../TShockAPI/Bouncer.cs:2845
 #, csharp-format
@@ -1719,7 +1719,7 @@ msgstr "Bouncer / OnGemLockToggle（宝石锁防护）因边界检查阻止了{0
 #: ../../TShockAPI/Bouncer.cs:2576
 #, csharp-format
 msgid "Bouncer / OnGemLockToggle rejected disabled from {0}"
-msgstr "Bouncer / OnGemLockToggle（宝石锁防护）因玩家被拘束阻止了{0}"
+msgstr "Bouncer / OnGemLockToggle（宝石锁防护）因玩家被限制行动阻止了{0}"
 
 #: ../../TShockAPI/Bouncer.cs:2585
 #, csharp-format
@@ -1832,7 +1832,7 @@ msgstr "Bouncer / OnLiquidSet（液体防护）因没有建筑权限阻止了{0}
 #: ../../TShockAPI/Bouncer.cs:1732
 #, csharp-format
 msgid "Bouncer / OnLiquidSet rejected disabled from {0}"
-msgstr "Bouncer / OnLiquidSet（液体防护）因玩家被拘束阻止了{0}"
+msgstr "Bouncer / OnLiquidSet（液体防护）因玩家被限制行动阻止了{0}"
 
 #: ../../TShockAPI/Bouncer.cs:1750
 #, csharp-format
@@ -3003,7 +3003,7 @@ msgstr "示例用法: {0} <{1}> <{2}>"
 
 #: ../../TShockAPI/Commands.cs:2016
 msgid "Example: /sudo /ban add particles 2d Hacking."
-msgstr "例如: /sudo /ban add 迅猛龙 30d SB"
+msgstr "例如: /sudo /ban add 迅猛龙 30d 玩舞萌玩的"
 
 #: ../../TShockAPI/Commands.cs:3221
 #, csharp-format
@@ -3104,13 +3104,13 @@ msgstr "立即强制更新所有液体。"
 #, csharp-format
 msgid "Gave {0} {1} {2}."
 msgid_plural "Gave {0} {1} {2}s."
-msgstr[0] "给与{0}{1}{2}"
+msgstr[0] "已将{1}个{2}给予{0}。"
 
 #: ../../TShockAPI/Commands.cs:6156
 #, csharp-format
 msgid "Gave {0} {1}."
 msgid_plural "Gave {0} {1}s."
-msgstr[0] "给与{0}{1}"
+msgstr[0] "已将{0}个{1}给予你。"
 
 #: ../../TShockAPI/GetDataHandlers.cs:3935
 #, csharp-format
