@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tshock\n"
 "POT-Creation-Date: 2025-06-15 18:04:23+0000\n"
-"PO-Revision-Date: 2025-06-16 05:51\n"
+"PO-Revision-Date: 2025-06-17 00:05\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -2558,7 +2558,7 @@ msgstr "向所有在线玩家广播一条消息。"
 
 #: ../../TShockAPI/Commands.cs:6383
 msgid "Buff Syntax and Example"
-msgstr "状态的用法和示例"
+msgstr "Buff的用法和示例"
 
 #: ../../TShockAPI/Commands.cs:6026
 msgid "Butcher Syntax and Example"
