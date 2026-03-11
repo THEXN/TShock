@@ -69,7 +69,12 @@ namespace TShockAPI.DB
 									 new SqlColumn("usedGummyWorm", MySqlDbType.Int32),
 									 new SqlColumn("usedAmbrosia", MySqlDbType.Int32),
 									 new SqlColumn("unlockedSuperCart", MySqlDbType.Int32),
-									 new SqlColumn("enabledSuperCart", MySqlDbType.Int32)
+									 new SqlColumn("enabledSuperCart", MySqlDbType.Int32),
+									 new SqlColumn("deathsPVE", MySqlDbType.Int32),
+									 new SqlColumn("deathsPVP", MySqlDbType.Int32),
+									 new SqlColumn("voiceVariant", MySqlDbType.Int32),
+									 new SqlColumn("voicePitchOffset", MySqlDbType.Float),
+									 new SqlColumn("team", MySqlDbType.Int32)
 				);
 
 			SqlTableCreator creator = new(db, db.GetSqlQueryBuilder());
@@ -132,6 +137,11 @@ namespace TShockAPI.DB
 					playerData.usedAmbrosia = reader.Get<int>("usedAmbrosia");
 					playerData.unlockedSuperCart = reader.Get<int>("unlockedSuperCart");
 					playerData.enabledSuperCart = reader.Get<int>("enabledSuperCart");
+					playerData.deathsPVE = reader.Get<int>("deathsPVE");
+					playerData.deathsPVP = reader.Get<int>("deathsPVP");
+					playerData.voiceVariant = reader.Get<int?>("voiceVariant");
+					playerData.voicePitchOffset = reader.Get<float?>("voicePitchOffset");
+					playerData.team = reader.Get<int>("team");
 					return playerData;
 				}
 			}
@@ -175,6 +185,69 @@ namespace TShockAPI.DB
 		}
 
 		/// <summary>
+		/// Checks whether an SSC row appears to be seeded without appearance fields.
+		/// </summary>
+		/// <param name="playerData">Loaded SSC data for an account.</param>
+		/// <returns>true when appearance fields are still missing.</returns>
+		public bool IsSeededAppearanceMissing(PlayerData playerData)
+		{
+			if (playerData == null || !playerData.exists)
+				return false;
+
+			return playerData.skinVariant == null
+				&& playerData.hair == null
+				&& playerData.hairColor == null
+				&& playerData.pantsColor == null
+				&& playerData.shirtColor == null
+				&& playerData.underShirtColor == null
+				&& playerData.shoeColor == null
+				&& playerData.skinColor == null
+				&& playerData.eyeColor == null
+				&& playerData.hideVisuals == null
+				&& playerData.voiceVariant == null
+				&& playerData.voicePitchOffset == null;
+		}
+
+		/// <summary>
+		/// Updates appearance-related SSC fields for accounts with seeded rows missing appearance data.
+		/// </summary>
+		/// <param name="account">The account owning the SSC row.</param>
+		/// <param name="player">The currently connected player source.</param>
+		/// <returns>true if update succeeded.</returns>
+		public bool SyncSeededAppearance(UserAccount account, TSPlayer player)
+		{
+			if (account == null || player == null)
+				return false;
+
+			try
+			{
+				return database.Query(
+					"UPDATE tsCharacter SET skinVariant = @0, hair = @1, hairDye = @2, hairColor = @3, pantsColor = @4, shirtColor = @5, underShirtColor = @6, shoeColor = @7, hideVisuals = @8, skinColor = @9, eyeColor = @10, voiceVariant = @11, voicePitchOffset = @12, team = @13 WHERE Account = @14;",
+					player.TPlayer.skinVariant,
+					player.TPlayer.hair,
+					player.TPlayer.hairDye,
+					TShock.Utils.EncodeColor(player.TPlayer.hairColor),
+					TShock.Utils.EncodeColor(player.TPlayer.pantsColor),
+					TShock.Utils.EncodeColor(player.TPlayer.shirtColor),
+					TShock.Utils.EncodeColor(player.TPlayer.underShirtColor),
+					TShock.Utils.EncodeColor(player.TPlayer.shoeColor),
+					TShock.Utils.EncodeBoolArray(player.TPlayer.hideVisibleAccessory),
+					TShock.Utils.EncodeColor(player.TPlayer.skinColor),
+					TShock.Utils.EncodeColor(player.TPlayer.eyeColor),
+					player.TPlayer.voiceVariant,
+					player.TPlayer.voicePitchOffset,
+					player.TPlayer.team,
+					account.ID) > 0;
+			}
+			catch (Exception ex)
+			{
+				TShock.Log.Error(ex.ToString());
+			}
+
+			return false;
+		}
+
+		/// <summary>
 		/// Inserts player data to the tsCharacter database table
 		/// </summary>
 		/// <param name="player">player to take data from</param>
@@ -200,8 +273,8 @@ namespace TShockAPI.DB
 				try
 				{
 					database.Query(
-						"INSERT INTO tsCharacter (Account, Health, MaxHealth, Mana, MaxMana, Inventory, extraSlot, spawnX, spawnY, skinVariant, hair, hairDye, hairColor, pantsColor, shirtColor, underShirtColor, shoeColor, hideVisuals, skinColor, eyeColor, questsCompleted, usingBiomeTorches, happyFunTorchTime, unlockedBiomeTorches, currentLoadoutIndex,ateArtisanBread, usedAegisCrystal, usedAegisFruit, usedArcaneCrystal, usedGalaxyPearl, usedGummyWorm, usedAmbrosia, unlockedSuperCart, enabledSuperCart) VALUES (@0, @1, @2, @3, @4, @5, @6, @7, @8, @9, @10, @11, @12, @13, @14, @15, @16, @17, @18, @19, @20, @21, @22, @23, @24, @25, @26, @27, @28, @29, @30, @31, @32, @33);",
-						player.Account.ID, playerData.health, playerData.maxHealth, playerData.mana, playerData.maxMana, string.Join("~", playerData.inventory), playerData.extraSlot, player.TPlayer.SpawnX, player.TPlayer.SpawnY, player.TPlayer.skinVariant, player.TPlayer.hair, player.TPlayer.hairDye, TShock.Utils.EncodeColor(player.TPlayer.hairColor), TShock.Utils.EncodeColor(player.TPlayer.pantsColor),TShock.Utils.EncodeColor(player.TPlayer.shirtColor), TShock.Utils.EncodeColor(player.TPlayer.underShirtColor), TShock.Utils.EncodeColor(player.TPlayer.shoeColor), TShock.Utils.EncodeBoolArray(player.TPlayer.hideVisibleAccessory), TShock.Utils.EncodeColor(player.TPlayer.skinColor),TShock.Utils.EncodeColor(player.TPlayer.eyeColor), player.TPlayer.anglerQuestsFinished, player.TPlayer.UsingBiomeTorches ? 1 : 0, player.TPlayer.happyFunTorchTime ? 1 : 0, player.TPlayer.unlockedBiomeTorches ? 1 : 0, player.TPlayer.CurrentLoadoutIndex, player.TPlayer.ateArtisanBread ? 1 : 0, player.TPlayer.usedAegisCrystal ? 1 : 0, player.TPlayer.usedAegisFruit ? 1 : 0, player.TPlayer.usedArcaneCrystal ? 1 : 0, player.TPlayer.usedGalaxyPearl ? 1 : 0, player.TPlayer.usedGummyWorm ? 1 : 0, player.TPlayer.usedAmbrosia ? 1 : 0, player.TPlayer.unlockedSuperCart ? 1 : 0, player.TPlayer.enabledSuperCart ? 1 : 0);
+						"INSERT INTO tsCharacter (Account, Health, MaxHealth, Mana, MaxMana, Inventory, extraSlot, spawnX, spawnY, skinVariant, hair, hairDye, hairColor, pantsColor, shirtColor, underShirtColor, shoeColor, hideVisuals, skinColor, eyeColor, questsCompleted, usingBiomeTorches, happyFunTorchTime, unlockedBiomeTorches, currentLoadoutIndex, ateArtisanBread, usedAegisCrystal, usedAegisFruit, usedArcaneCrystal, usedGalaxyPearl, usedGummyWorm, usedAmbrosia, unlockedSuperCart, enabledSuperCart, deathsPVE, deathsPVP, voiceVariant, voicePitchOffset, team) VALUES (@0, @1, @2, @3, @4, @5, @6, @7, @8, @9, @10, @11, @12, @13, @14, @15, @16, @17, @18, @19, @20, @21, @22, @23, @24, @25, @26, @27, @28, @29, @30, @31, @32, @33, @34, @35, @36, @37, @38);",
+						player.Account.ID, playerData.health, playerData.maxHealth, playerData.mana, playerData.maxMana, string.Join("~", playerData.inventory), playerData.extraSlot, player.TPlayer.SpawnX, player.TPlayer.SpawnY, player.TPlayer.skinVariant, player.TPlayer.hair, player.TPlayer.hairDye, TShock.Utils.EncodeColor(player.TPlayer.hairColor), TShock.Utils.EncodeColor(player.TPlayer.pantsColor),TShock.Utils.EncodeColor(player.TPlayer.shirtColor), TShock.Utils.EncodeColor(player.TPlayer.underShirtColor), TShock.Utils.EncodeColor(player.TPlayer.shoeColor), TShock.Utils.EncodeBoolArray(player.TPlayer.hideVisibleAccessory), TShock.Utils.EncodeColor(player.TPlayer.skinColor),TShock.Utils.EncodeColor(player.TPlayer.eyeColor), player.TPlayer.anglerQuestsFinished, player.TPlayer.UsingBiomeTorches ? 1 : 0, player.TPlayer.happyFunTorchTime ? 1 : 0, player.TPlayer.unlockedBiomeTorches ? 1 : 0, player.TPlayer.CurrentLoadoutIndex, player.TPlayer.ateArtisanBread ? 1 : 0, player.TPlayer.usedAegisCrystal ? 1 : 0, player.TPlayer.usedAegisFruit ? 1 : 0, player.TPlayer.usedArcaneCrystal ? 1 : 0, player.TPlayer.usedGalaxyPearl ? 1 : 0, player.TPlayer.usedGummyWorm ? 1 : 0, player.TPlayer.usedAmbrosia ? 1 : 0, player.TPlayer.unlockedSuperCart ? 1 : 0, player.TPlayer.enabledSuperCart ? 1 : 0, player.sscDeathsPVE, player.sscDeathsPVP, player.TPlayer.voiceVariant, player.TPlayer.voicePitchOffset, player.TPlayer.team);
 					return true;
 				}
 				catch (Exception ex)
@@ -214,8 +287,8 @@ namespace TShockAPI.DB
 				try
 				{
 					database.Query(
-						"UPDATE tsCharacter SET Health = @0, MaxHealth = @1, Mana = @2, MaxMana = @3, Inventory = @4, spawnX = @6, spawnY = @7, hair = @8, hairDye = @9, hairColor = @10, pantsColor = @11, shirtColor = @12, underShirtColor = @13, shoeColor = @14, hideVisuals = @15, skinColor = @16, eyeColor = @17, questsCompleted = @18, skinVariant = @19, extraSlot = @20, usingBiomeTorches = @21, happyFunTorchTime = @22, unlockedBiomeTorches = @23, currentLoadoutIndex = @24, ateArtisanBread = @25, usedAegisCrystal = @26, usedAegisFruit = @27, usedArcaneCrystal = @28, usedGalaxyPearl = @29, usedGummyWorm = @30, usedAmbrosia = @31, unlockedSuperCart = @32, enabledSuperCart = @33 WHERE Account = @5;",
-						playerData.health, playerData.maxHealth, playerData.mana, playerData.maxMana, string.Join("~", playerData.inventory), player.Account.ID, player.TPlayer.SpawnX, player.TPlayer.SpawnY, player.TPlayer.hair, player.TPlayer.hairDye, TShock.Utils.EncodeColor(player.TPlayer.hairColor), TShock.Utils.EncodeColor(player.TPlayer.pantsColor), TShock.Utils.EncodeColor(player.TPlayer.shirtColor), TShock.Utils.EncodeColor(player.TPlayer.underShirtColor), TShock.Utils.EncodeColor(player.TPlayer.shoeColor), TShock.Utils.EncodeBoolArray(player.TPlayer.hideVisibleAccessory), TShock.Utils.EncodeColor(player.TPlayer.skinColor), TShock.Utils.EncodeColor(player.TPlayer.eyeColor), player.TPlayer.anglerQuestsFinished, player.TPlayer.skinVariant, player.TPlayer.extraAccessory ? 1 : 0, player.TPlayer.UsingBiomeTorches ? 1 : 0, player.TPlayer.happyFunTorchTime ? 1 : 0, player.TPlayer.unlockedBiomeTorches ? 1 : 0, player.TPlayer.CurrentLoadoutIndex, player.TPlayer.ateArtisanBread ? 1 : 0, player.TPlayer.usedAegisCrystal ? 1 : 0, player.TPlayer.usedAegisFruit ? 1 : 0, player.TPlayer.usedArcaneCrystal ? 1 : 0, player.TPlayer.usedGalaxyPearl ? 1 : 0, player.TPlayer.usedGummyWorm ? 1 : 0, player.TPlayer.usedAmbrosia ? 1 : 0, player.TPlayer.unlockedSuperCart ? 1 : 0, player.TPlayer.enabledSuperCart ? 1 : 0);
+						"UPDATE tsCharacter SET Health = @0, MaxHealth = @1, Mana = @2, MaxMana = @3, Inventory = @4, spawnX = @6, spawnY = @7, hair = @8, hairDye = @9, hairColor = @10, pantsColor = @11, shirtColor = @12, underShirtColor = @13, shoeColor = @14, hideVisuals = @15, skinColor = @16, eyeColor = @17, questsCompleted = @18, skinVariant = @19, extraSlot = @20, usingBiomeTorches = @21, happyFunTorchTime = @22, unlockedBiomeTorches = @23, currentLoadoutIndex = @24, ateArtisanBread = @25, usedAegisCrystal = @26, usedAegisFruit = @27, usedArcaneCrystal = @28, usedGalaxyPearl = @29, usedGummyWorm = @30, usedAmbrosia = @31, unlockedSuperCart = @32, enabledSuperCart = @33, deathsPVE = @34, deathsPVP = @35, voiceVariant = @36, voicePitchOffset = @37, team = @38 WHERE Account = @5;",
+						playerData.health, playerData.maxHealth, playerData.mana, playerData.maxMana, string.Join("~", playerData.inventory), player.Account.ID, player.TPlayer.SpawnX, player.TPlayer.SpawnY, player.TPlayer.hair, player.TPlayer.hairDye, TShock.Utils.EncodeColor(player.TPlayer.hairColor), TShock.Utils.EncodeColor(player.TPlayer.pantsColor), TShock.Utils.EncodeColor(player.TPlayer.shirtColor), TShock.Utils.EncodeColor(player.TPlayer.underShirtColor), TShock.Utils.EncodeColor(player.TPlayer.shoeColor), TShock.Utils.EncodeBoolArray(player.TPlayer.hideVisibleAccessory), TShock.Utils.EncodeColor(player.TPlayer.skinColor), TShock.Utils.EncodeColor(player.TPlayer.eyeColor), player.TPlayer.anglerQuestsFinished, player.TPlayer.skinVariant, player.TPlayer.extraAccessory ? 1 : 0, player.TPlayer.UsingBiomeTorches ? 1 : 0, player.TPlayer.happyFunTorchTime ? 1 : 0, player.TPlayer.unlockedBiomeTorches ? 1 : 0, player.TPlayer.CurrentLoadoutIndex, player.TPlayer.ateArtisanBread ? 1 : 0, player.TPlayer.usedAegisCrystal ? 1 : 0, player.TPlayer.usedAegisFruit ? 1 : 0, player.TPlayer.usedArcaneCrystal ? 1 : 0, player.TPlayer.usedGalaxyPearl ? 1 : 0, player.TPlayer.usedGummyWorm ? 1 : 0, player.TPlayer.usedAmbrosia ? 1 : 0, player.TPlayer.unlockedSuperCart ? 1 : 0, player.TPlayer.enabledSuperCart ? 1 : 0, player.sscDeathsPVE, player.sscDeathsPVP, player.TPlayer.voiceVariant, player.TPlayer.voicePitchOffset, player.TPlayer.team);
 					return true;
 				}
 				catch (Exception ex)
@@ -270,7 +343,7 @@ namespace TShockAPI.DB
 				try
 				{
 					database.Query(
-						"INSERT INTO tsCharacter (Account, Health, MaxHealth, Mana, MaxMana, Inventory, extraSlot, spawnX, spawnY, skinVariant, hair, hairDye, hairColor, pantsColor, shirtColor, underShirtColor, shoeColor, hideVisuals, skinColor, eyeColor, questsCompleted, usingBiomeTorches, happyFunTorchTime, unlockedBiomeTorches, currentLoadoutIndex, ateArtisanBread, usedAegisCrystal, usedAegisFruit, usedArcaneCrystal, usedGalaxyPearl, usedGummyWorm, usedAmbrosia, unlockedSuperCart, enabledSuperCart) VALUES (@0, @1, @2, @3, @4, @5, @6, @7, @8, @9, @10, @11, @12, @13, @14, @15, @16, @17, @18, @19, @20, @21, @22, @23, @24, @25, @26, @27, @28, @29, @30, @31, @32, @33);",
+						"INSERT INTO tsCharacter (Account, Health, MaxHealth, Mana, MaxMana, Inventory, extraSlot, spawnX, spawnY, skinVariant, hair, hairDye, hairColor, pantsColor, shirtColor, underShirtColor, shoeColor, hideVisuals, skinColor, eyeColor, questsCompleted, usingBiomeTorches, happyFunTorchTime, unlockedBiomeTorches, currentLoadoutIndex, ateArtisanBread, usedAegisCrystal, usedAegisFruit, usedArcaneCrystal, usedGalaxyPearl, usedGummyWorm, usedAmbrosia, unlockedSuperCart, enabledSuperCart, deathsPVE, deathsPVP, voiceVariant, voicePitchOffset, team) VALUES (@0, @1, @2, @3, @4, @5, @6, @7, @8, @9, @10, @11, @12, @13, @14, @15, @16, @17, @18, @19, @20, @21, @22, @23, @24, @25, @26, @27, @28, @29, @30, @31, @32, @33, @34, @35, @36, @37, @38);",
 						player.Account.ID,
 						playerData.health,
 						playerData.maxHealth,
@@ -279,7 +352,7 @@ namespace TShockAPI.DB
 						string.Join("~", playerData.inventory),
 						playerData.extraSlot,
 						playerData.spawnX,
-						playerData.spawnX,
+						playerData.spawnY,
 						playerData.skinVariant,
 						playerData.hair,
 						playerData.hairDye,
@@ -304,7 +377,13 @@ namespace TShockAPI.DB
 						playerData.usedGummyWorm,
 						playerData.usedAmbrosia,
 						playerData.unlockedSuperCart,
-						playerData.enabledSuperCart);
+						playerData.enabledSuperCart,
+						playerData.deathsPVE,
+						playerData.deathsPVP,
+						playerData.voiceVariant,
+						playerData.voicePitchOffset,
+						playerData.team
+						);
 					return true;
 				}
 				catch (Exception ex)
@@ -317,7 +396,7 @@ namespace TShockAPI.DB
 				try
 				{
 					database.Query(
-						"UPDATE tsCharacter SET Health = @0, MaxHealth = @1, Mana = @2, MaxMana = @3, Inventory = @4, spawnX = @6, spawnY = @7, hair = @8, hairDye = @9, hairColor = @10, pantsColor = @11, shirtColor = @12, underShirtColor = @13, shoeColor = @14, hideVisuals = @15, skinColor = @16, eyeColor = @17, questsCompleted = @18, skinVariant = @19, extraSlot = @20, usingBiomeTorches = @21, happyFunTorchTime = @22, unlockedBiomeTorches = @23, currentLoadoutIndex = @24, ateArtisanBread = @25, usedAegisCrystal = @26, usedAegisFruit = @27, usedArcaneCrystal = @28, usedGalaxyPearl = @29, usedGummyWorm = @30, usedAmbrosia = @31, unlockedSuperCart = @32, enabledSuperCart = @33 WHERE Account = @5;",
+						"UPDATE tsCharacter SET Health = @0, MaxHealth = @1, Mana = @2, MaxMana = @3, Inventory = @4, spawnX = @6, spawnY = @7, hair = @8, hairDye = @9, hairColor = @10, pantsColor = @11, shirtColor = @12, underShirtColor = @13, shoeColor = @14, hideVisuals = @15, skinColor = @16, eyeColor = @17, questsCompleted = @18, skinVariant = @19, extraSlot = @20, usingBiomeTorches = @21, happyFunTorchTime = @22, unlockedBiomeTorches = @23, currentLoadoutIndex = @24, ateArtisanBread = @25, usedAegisCrystal = @26, usedAegisFruit = @27, usedArcaneCrystal = @28, usedGalaxyPearl = @29, usedGummyWorm = @30, usedAmbrosia = @31, unlockedSuperCart = @32, enabledSuperCart = @33, deathsPVE = @34, deathsPVP = @35, voiceVariant = @36, voicePitchOffset = @37, team = @38 WHERE Account = @5;",
 						playerData.health,
 						playerData.maxHealth,
 						playerData.mana,
@@ -325,8 +404,7 @@ namespace TShockAPI.DB
 						string.Join("~", playerData.inventory),
 						player.Account.ID,
 						playerData.spawnX,
-						playerData.spawnX,
-						playerData.skinVariant,
+						playerData.spawnY,
 						playerData.hair,
 						playerData.hairDye,
 						TShock.Utils.EncodeColor(playerData.hairColor),
@@ -338,6 +416,7 @@ namespace TShockAPI.DB
 						TShock.Utils.EncodeColor(playerData.skinColor),
 						TShock.Utils.EncodeColor(playerData.eyeColor),
 						playerData.questsCompleted,
+						playerData.skinVariant,
 						playerData.extraSlot ?? 0,
 						playerData.usingBiomeTorches,
 						playerData.happyFunTorchTime,
@@ -351,7 +430,13 @@ namespace TShockAPI.DB
 						playerData.usedGummyWorm,
 						playerData.usedAmbrosia,
 						playerData.unlockedSuperCart,
-						playerData.enabledSuperCart);
+						playerData.enabledSuperCart,
+						playerData.deathsPVE,
+						playerData.deathsPVP,
+						playerData.voiceVariant,
+						playerData.voicePitchOffset,
+						playerData.team
+						);
 					return true;
 				}
 				catch (Exception ex)

@@ -45,6 +45,7 @@ using TShockAPI.Localization;
 using TShockAPI.Configuration;
 using Terraria.GameContent.Creative;
 using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;
 using MonoMod.Cil;
 using Terraria.Achievements;
 using Terraria.Initializers;
@@ -63,7 +64,7 @@ namespace TShockAPI
 		/// <summary>VersionNum - The version number the TerrariaAPI will return back to the API. We just use the Assembly info.</summary>
 		public static readonly Version VersionNum = Assembly.GetExecutingAssembly().GetName().Version;
 		/// <summary>VersionCodename - The version codename is displayed when the server starts. Inspired by software codenames conventions.</summary>
-		public static readonly string VersionCodename = "Hopefully SSC works somewhat correctly now edition";
+		public static readonly string VersionCodename = "Profoundly Collaborative";
 
 		/// <summary>SavePath - This is the path TShock saves its data in. This path is relative to the TerrariaServer.exe (not in ServerPlugins).</summary>
 		public static string SavePath = "tshock";
@@ -128,6 +129,12 @@ namespace TShockAPI
 		public static ILog Log;
 		/// <summary>instance - Static reference to the TerrariaPlugin instance.</summary>
 		public static TerrariaPlugin instance;
+
+		/// <summary>
+		/// Whitelist - Static reference to the whitelist system, which allows whitelisting of IP addresses and networks.
+		/// </summary>
+		public static Whitelist Whitelist { get; set; }
+
 		/// <summary>
 		/// Static reference to a <see cref="CommandLineParser"/> used for simple command-line parsing
 		/// </summary>
@@ -308,7 +315,7 @@ namespace TShockAPI
 			catch (Exception ex)
 			{
 				// Will be handled by the server api and written to its crashlog.txt.
-				throw new Exception("Fatal TShock initialization exception. See inner exception for details.", ex);
+				throw new Exception(GetString("Fatal TShock initialization exception. See inner exception for details."), ex);
 			}
 
 			// Further exceptions are written to TShock's log from now on.
@@ -354,6 +361,7 @@ namespace TShockAPI
 				Bouncer = new Bouncer();
 				RegionSystem = new RegionHandler(Regions);
 				ItemBans = new ItemBans(this, DB);
+				Whitelist = new(FileTools.WhitelistPath);
 
 				var geoippath = "GeoIP.dat";
 				if (Config.Settings.EnableGeoIP && File.Exists(geoippath))
@@ -836,7 +844,7 @@ namespace TShockAPI
 						else
 						{
 							// The server should not start up if this argument is invalid.
-							throw new InvalidOperationException("Invalid value given for command line argument \"-ip\".");
+							throw new InvalidOperationException(GetString("Invalid value given for command line argument \"-ip\"."));
 						}
 					})
 
@@ -864,7 +872,7 @@ namespace TShockAPI
 							worldEvil = 1;
 							break;
 						default:
-							throw new InvalidOperationException("Invalid value given for command line argument \"-worldevil\".");
+							throw new InvalidOperationException(GetString("Invalid value given for command line argument \"-worldevil\"."));
 					}
 
 					ServerApi.LogWriter.PluginWriteLine(this, GetString("New worlds will be generated with the {0} world evil type!", value), TraceLevel.Verbose);
@@ -1139,6 +1147,8 @@ namespace TShockAPI
 					if (player.TilePlaceThreshold > 0)
 					{
 						player.TilePlaceThreshold = 0;
+						lock (player.TilesCreated)
+							player.TilesCreated.Clear();
 					}
 
 					if (player.RecentFuse > 0)
@@ -1154,6 +1164,34 @@ namespace TShockAPI
 
 						player.TeleportSpawnpoint();
 						TShock.Log.ConsoleDebug(GetString("OnSecondUpdate / initial ssc spawn for {0} at ({1}, {2})", player.Name, player.TPlayer.SpawnX, player.TPlayer.SpawnY));
+					}
+
+					// If a client didn't send a team change within 5 seconds of a pending team change from spawning, they're likely hacking.
+					// So we clear this flag to remove their one-time free team change.
+					if (player.InitialTeamChangePending && (DateTime.UtcNow - player.LastPvPTeamChange).TotalSeconds >= 5)
+						player.InitialTeamChangePending = false;
+
+					// We need to make sure the pvp mode is enforced properly. Maybe this should be moved elsewhere?
+					string pvpMode = Config.Settings.PvPMode.ToLowerInvariant();
+					if (pvpMode != PvPModes.Normal)
+					{
+						if (pvpMode == PvPModes.Disabled && player.TPlayer.hostile) // player shouldn't be in pvp
+						{
+							player.TPlayer.hostile = false;
+							NetMessage.SendData((int)PacketTypes.TogglePvp, -1, -1, null, player.Index);
+						}
+
+						if ((pvpMode == PvPModes.Always || pvpMode == PvPModes.PvPWithNoTeam) && !player.TPlayer.hostile) // player isn't in pvp when they should be
+						{
+							player.TPlayer.hostile = true;
+							NetMessage.SendData((int)PacketTypes.TogglePvp, -1, -1, null, player.Index);
+						}
+
+						if (pvpMode == PvPModes.PvPWithNoTeam && player.Team != PlayerTeamID.None) // player is on a team when they shouldn't be
+						{
+							player.TPlayer.team = PlayerTeamID.None;
+							NetMessage.SendData((int)PacketTypes.PlayerTeam, -1, -1, NetworkText.Empty, player.Index);
+						}
 					}
 
 					if (player.RPPending > 0)
@@ -1263,6 +1301,11 @@ namespace TShockAPI
 		/// <returns>True if allowed, otherwise false</returns>
 		private bool OnCreep(int tileType)
 		{
+			if (WorldGen.generatingWorld)
+			{
+				return true;
+			}
+
 			if (!Config.Settings.AllowCrimsonCreep && (tileType == TileID.Dirt || tileType == TileID.CrimsonGrass
 				|| TileID.Sets.Crimson[tileType]))
 			{
@@ -1317,7 +1360,7 @@ namespace TShockAPI
 				return;
 			}
 
-			if (!FileTools.OnWhitelist(player.IP))
+			if (!Whitelist.IsWhitelisted(player.IP))
 			{
 				player.Kick(Config.Settings.WhitelistKickReason, true, true, null, false);
 				args.Handled = true;
@@ -1456,36 +1499,49 @@ namespace TShockAPI
 
 			if (!tsplr.FinishedHandshake)
 			{
-				tsplr.Kick(GetString("Your client didn't send the right connection information."), true);
+				tsplr.Kick(GetString("Your client didn't send the right connection information."), true, true);
 				args.Handled = true;
 				return;
 			}
 
-			if (args.Text.Length > 500)
+			var maxLength = Math.Clamp(Config.Settings.MaximumChatMessageLength, 250, 2000);
+			if (args.Text.Length > maxLength && !Config.Settings.TruncateExcessiveChatMessages)
 			{
-				tsplr.Kick(GetString("Crash attempt via long chat packet."), true);
+				Log.ConsoleDebug(GetString("TShock / OnChat rejected due to length of {0}/{1} from {2}", args.Text.Length, maxLength, tsplr.Name));
+				tsplr.SendErrorMessage(GetString("Your chat message exceeds the maximum length of {1} characters. ({0}/{1}).", args.Text.Length, maxLength));
 				args.Handled = true;
 				return;
 			}
 
-			string text = args.Text;
+			string text = TruncateChatMessageIfNecessary(args);
+			// We should now use the truncated message instead of the original, we don't want anything to fire off on text that has been "removed"...
+			// Yes, double assignment like this looks bad...
+
+
+			// Filter out [ct:xxx] tags because they may crash the PE client
+			if (!Config.Settings.AllowCtTag)
+			{
+				text = Regex.Replace(text, @"\[ct:[^\]]*\]", "");
+			}
+
+			var chatText = text;
 
 			// Terraria now has chat commands on the client side.
 			// These commands remove the commands prefix (e.g. /me /playing) and send the command id instead
 			// In order for us to keep legacy code we must reverse this and get the prefix using the command id
-			foreach (var item in Terraria.UI.Chat.ChatManager.Commands._localizedCommands)
+			if (!string.IsNullOrEmpty(args.CommandId._name))
 			{
-				if (item.Value._name == args.CommandId._name)
+				var commandPrefix = EnglishLanguage.GetCommandPrefixByName(args.CommandId._name);
+				if (!string.IsNullOrEmpty(commandPrefix))
 				{
 					if (!String.IsNullOrEmpty(text))
 					{
-						text = EnglishLanguage.GetCommandPrefixByName(item.Value._name) + ' ' + text;
+						text = commandPrefix + ' ' + text;
 					}
 					else
 					{
-						text = EnglishLanguage.GetCommandPrefixByName(item.Value._name);
+						text = commandPrefix;
 					}
-					break;
 				}
 			}
 
@@ -1522,10 +1578,10 @@ namespace TShockAPI
 				else if (!TShock.Config.Settings.EnableChatAboveHeads)
 				{
 					text = String.Format(Config.Settings.ChatFormat, tsplr.Group.Name, tsplr.Group.Prefix, tsplr.Name, tsplr.Group.Suffix,
-											 args.Text);
+											 chatText);
 
 					//Invoke the PlayerChat hook. If this hook event is handled then we need to prevent sending the chat message
-					bool cancelChat = PlayerHooks.OnPlayerChat(tsplr, args.Text, ref text);
+					bool cancelChat = PlayerHooks.OnPlayerChat(tsplr, chatText, ref text);
 					args.Handled = true;
 
 					if (cancelChat)
@@ -1546,7 +1602,7 @@ namespace TShockAPI
 					//Give that poor player their name back :'c
 					ply.name = name;
 
-					bool cancelChat = PlayerHooks.OnPlayerChat(tsplr, args.Text, ref text);
+					bool cancelChat = PlayerHooks.OnPlayerChat(tsplr, chatText, ref text);
 					if (cancelChat)
 					{
 						args.Handled = true;
@@ -1572,7 +1628,7 @@ namespace TShockAPI
 					//Send the original sender their nicely formatted message, and do all the loggy things
 					tsplr.SendMessage(msg, tsplr.Group.R, tsplr.Group.G, tsplr.Group.B);
 					TSPlayer.Server.SendMessage(msg, tsplr.Group.R, tsplr.Group.G, tsplr.Group.B);
-					Log.Info("Broadcast: {0}", msg);
+					Log.Info(GetString("Broadcast: {0}", msg));
 					args.Handled = true;
 				}
 			}
@@ -1618,6 +1674,40 @@ namespace TShockAPI
 			args.Handled = true;
 		}
 
+		/// <summary>
+		/// Truncates a chat message if it exceeds the <see cref="TShockSettings.MaximumChatMessageLength"/>.
+		/// </summary>
+		/// <param name="args">args - The ServerChatEventArgs object.</param>
+		/// <returns></returns>
+		private string TruncateChatMessageIfNecessary(ServerChatEventArgs args)
+		{
+			string chatMsg = args.Text;
+			var maxLength = Math.Clamp(Config.Settings.MaximumChatMessageLength, 250, 2000);
+			if (chatMsg.Length > maxLength)
+			{
+				Log.ConsoleDebug(GetString("TShock / TruncateChatMessageIfNecessary truncating excessive chat message length of {0}/{1} from {2}", args.Text.Length, maxLength, Players[args.Who].Name));
+				chatMsg = chatMsg.Substring(0, maxLength) + "...";
+			}
+			return chatMsg;
+		}
+
+		private static readonly HashSet<PacketTypes> AllowedEarlyPackets =
+		[
+			PacketTypes.ConnectRequest,
+			PacketTypes.PlayerInfo,
+			PacketTypes.PlayerSlot,
+			PacketTypes.ContinueConnecting2,
+			PacketTypes.TileGetSection,
+			PacketTypes.PlayerSpawn,
+			PacketTypes.PlayerHp,
+			PacketTypes.PlayerMana,
+			PacketTypes.PlayerBuff,
+			PacketTypes.PasswordSend,
+			PacketTypes.ItemDrop,
+			PacketTypes.ItemOwner,
+			PacketTypes.SyncLoadout
+		];
+
 		/// <summary>OnGetData - Called when the server gets raw data packets.</summary>
 		/// <param name="e">e - The GetDataEventArgs object.</param>
 		private void OnGetData(GetDataEventArgs e)
@@ -1640,19 +1730,14 @@ namespace TShockAPI
 				return;
 			}
 
-			if ((player.State < (int)ConnectionState.Complete || player.Dead) && (int)type > 12 && (int)type != 16 && (int)type != 42 && (int)type != 50 &&
-				(int)type != 38 && (int)type != 21 && (int)type != 22 && type != PacketTypes.SyncLoadout)
+			if (player.State < (int)ConnectionState.Complete && !AllowedEarlyPackets.Contains(type))
 			{
 				e.Handled = true;
 				return;
 			}
 
-			int length = e.Length - 1;
-			if (length < 0)
-			{
-				length = 0;
-			}
-			using (var data = new MemoryStream(e.Msg.readBuffer, e.Index, e.Length - 1))
+			int length = Math.Max(e.Length - 1, 0);
+			using (var data = new MemoryStream(e.Msg.readBuffer, e.Index, length))
 			{
 				// Exceptions are already handled
 				e.Handled = GetDataHandlers.HandlerGetData(type, player, data);
@@ -1694,7 +1779,7 @@ namespace TShockAPI
 			player.SendFileTextAsMessage(FileTools.MotdPath);
 
 			string pvpMode = Config.Settings.PvPMode.ToLowerInvariant();
-			if (pvpMode == "always" || pvpMode == "pvpwithnoteam")
+			if (pvpMode is PvPModes.Always or PvPModes.PvPWithNoTeam)
 			{
 				player.TPlayer.hostile = true;
 				player.SendData(PacketTypes.TogglePvp, "", player.Index);

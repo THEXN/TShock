@@ -113,9 +113,9 @@ namespace TShockAPI.Configuration
 		[Description("Enables never ending invasion events. You still need to start the event, such as with the /invade command.")]
 		public bool InfiniteInvasion;
 
-		/// <summary>Sets the PvP mode. Valid types are: "normal", "always", "pvpwithnoteam", "disabled".</summary>
-		[Description("Sets the PvP mode. Valid types are: \"normal\", \"always\", \"pvpwithnoteam\" and \"disabled\".")]
-		public string PvPMode = "normal";
+		/// <summary>Sets the PvP mode. Valid types are <see cref="TShockSettings.PvPMode"/>.</summary>
+		[Description($"Sets the PvP mode. Valid types are: \"{PvPModes.Normal}\", \"{PvPModes.Always}\", \"{PvPModes.PvPWithNoTeam}\" and \"{PvPModes.Disabled}\".")]
+		public string PvPMode = PvPModes.Normal;
 
 		/// <summary>Prevents tiles from being placed within SpawnProtectionRadius of the default spawn.</summary>
 		[Description("Prevents tiles from being placed within SpawnProtectionRadius of the default spawn.")]
@@ -468,6 +468,10 @@ namespace TShockAPI.Configuration
 		/// <summary>Allows you to disable or enable protection against creating custom messages with death. Created for developers who came up with a more original solution to this problem.</summary>
 		[Description("Allows you to disable or enable protection against creating custom messages with death. Created for developers who came up with a more original solution to this problem.")]
 		public bool DisableCustomDeathMessages = true;
+
+		/// <summary>Allows players to use [ct:] tags in chat.</summary>
+		[Description("Allows players to use [ct:] tags in chat. Note: invalid [ct:] tags can crash mobile clients.")]
+		public bool AllowCtTag = false;
 		#endregion
 
 
@@ -482,6 +486,14 @@ namespace TShockAPI.Configuration
 		/// Note: Will not function properly if the string length is bigger than 1.</summary>
 		[Description("Specifies which string starts a command silently.\nNote: Will not function properly if the string length is bigger than 1.")]
 		public string CommandSilentSpecifier = ".";
+
+		/// <summary>The maximum allowed length for chat messages. Valid range: 250 characters to 2000 characters.</summary>
+		[Description("The maximum allowed length for chat messages. Valid range: 250 characters to 2000 characters.")]
+		public int MaximumChatMessageLength = 500;
+
+		/// <summary>If a chat message that exceeds MaximumChatMessageLength should be truncated or rejected.</summary>
+		[Description("If a chat message that exceeds MaximumChatMessageLength should be truncated or rejected.")]
+		public bool TruncateExcessiveChatMessages = false;
 
 		/// <summary>Disables sending logs as messages to players with the log permission.</summary>
 		[Description("Disables sending logs as messages to players with the log permission.")]
@@ -536,9 +548,34 @@ namespace TShockAPI.Configuration
 		[Description("The type of database to use when storing data (either \"sqlite\", \"mysql\" or \"postgres\").")]
 		public string StorageType = "sqlite";
 
+		/// <summary>
+		/// The connection string to use when connecting to a SQLite database.
+		/// </summary>
+		/// <remarks>This property will override the <see cref="SqliteDBPath"/> property, if used.</remarks>
+		/// <seealso href="https://www.connectionstrings.com/sqlite-net-provider/">Example SQLite connection strings (connectionstrings.com)</seealso>
+		[Description("The connection string to use when connecting to a SQLite database. This property will override the SqliteDBPath property, if used.")]
+		public string SqliteConnectionString = "";
+
 		/// <summary>The path of sqlite db.</summary>
 		[Description("The path of sqlite db.")]
 		public string SqliteDBPath = "tshock.sqlite";
+
+		/// <summary>
+		/// The connection string to use when connecting to a MySQL database.
+		/// </summary>
+		/// <remarks>
+		/// This property will override the
+		/// <see cref="MySqlHost"/>,
+		/// <see cref="MySqlDbName"/>,
+		/// <see cref="MySqlUsername"/>,
+		/// and <see cref="MySqlPassword"/> properties, if used.
+		/// </remarks>
+		/// <seealso href="https://www.connectionstrings.com/mysql-connector-net-mysqlconnection/">
+		/// Example MySQL connection strings (connectionstrings.com)
+		/// </seealso>
+		[Description("The connection string to use when connecting to a MySQL database. " +
+		             "This property will override the MySqlHost, MySqlDbName, MySqlUsername and MySqlPassword properties, if used.")]
+		public string MySqlConnectionString = "";
 
 		/// <summary>The MySQL hostname and port to direct connections to.</summary>
 		[Description("The MySQL hostname and port to direct connections to.")]
@@ -555,6 +592,21 @@ namespace TShockAPI.Configuration
 		/// <summary>The password used when connecting to a MySQL database.</summary>
 		[Description("The password used when connecting to a MySQL database.")]
 		public string MySqlPassword = "";
+
+		/// <summary>
+		/// The connection string to use when connecting to a Postgres database.
+		/// </summary>
+		/// <remarks>
+		/// This property will override the
+		/// <see cref="PostgresHost"/>,
+		/// <see cref="PostgresDbName"/>,
+		/// <see cref="PostgresUsername"/>,
+		/// and <see cref="PostgresPassword"/> properties, if used.
+		/// </remarks>
+		/// <seealso href="https://www.connectionstrings.com/npgsql/">Example Npgsql connection strings (connectionstrings.com)</seealso>
+		[Description("The connection string to use when connecting to a Postgres database. " +
+		             "This property will override the PostgresHost, PostgresDbName, PostgresUsername and PostgresPassword properties, if used.")]
+		public string PostgresConnectionString = "";
 
 		///<summary>The Postgres hostname and port to direct connections to.</summary>
 		[Description("The Postgres hostname and port to direct connections to.")]
@@ -668,5 +720,23 @@ namespace TShockAPI.Configuration
 
 			File.WriteAllText("docs/config-file-descriptions.md", sb.ToString());
 		}
+	}
+
+	/// <summary>
+	/// Constants for valid PvP mode strings used with <see cref="TShockSettings.PvPMode"/>.
+	/// </summary>
+	public static class PvPModes
+	{
+		/// <summary>Default mode – players choose whether to enable PvP.</summary>
+		public const string Normal = "normal";
+
+		/// <summary>PvP is permanently forced on for all players.</summary>
+		public const string Always = "always";
+
+		/// <summary>PvP is forced on, but only for players who are not on a team.</summary>
+		public const string PvPWithNoTeam = "pvpwithnoteam";
+
+		/// <summary>PvP is permanently disabled for all players.</summary>
+		public const string Disabled = "disabled";
 	}
 }

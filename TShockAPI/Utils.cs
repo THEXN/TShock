@@ -1,4 +1,4 @@
-﻿/*
+/*
 TShock, a server mod for Terraria
 Copyright (C) 2011-2019 Pryaxis & TShock Contributors
 
@@ -608,6 +608,7 @@ namespace TShockAPI
 			TShock.ProjectileBans.UpdateBans();
 			TShock.TileBans.UpdateBans();
 			TShock.Bans.UpdateBans();
+			TShock.Whitelist.ReloadFromFile();
 		}
 
 		/// <summary>
@@ -931,7 +932,7 @@ namespace TShockAPI
 		/// <returns>The <paramref name="item"/> NetID surrounded by the item tag with proper stack/prefix data.</returns>
 		public string ItemTag(Item item)
 		{
-			int netID = item.netID;
+			int netID = item.type;
 			int stack = item.stack;
 			int prefix = item.prefix;
 			string options = stack > 1 ? "/s" + stack : prefix != 0 ? "/p" + prefix : "";
@@ -1057,7 +1058,7 @@ namespace TShockAPI
 		internal void DumpPermissionMatrix(string path)
 		{
 			StringBuilder output = new StringBuilder();
-			output.Append("|Permission|");
+			output.Append(GetString("|Permission|"));
 
 			// Traverse to build group name list
 			foreach (Group g in TShock.Groups.groups)

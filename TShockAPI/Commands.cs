@@ -36,6 +36,7 @@ using Microsoft.Xna.Framework;
 using TShockAPI.Localization;
 using System.Text.RegularExpressions;
 using Terraria.DataStructures;
+using Terraria.GameContent;
 using Terraria.GameContent.Creative;
 
 namespace TShockAPI
@@ -496,6 +497,10 @@ namespace TShockAPI
 			{
 				HelpText = GetString("Toggles the world's hardmode status.")
 			});
+			add(new Command(Permissions.switchevil, SwitchEvil, "evil")
+			{
+				HelpText = GetString("Switches the world's evil.")
+			});
 			add(new Command(Permissions.editspawn, ProtectSpawn, "protectspawn")
 			{
 				HelpText = GetString("Toggles spawn protection.")
@@ -628,6 +633,28 @@ namespace TShockAPI
 			add(new Command(Rules, "rules")
 			{
 				HelpText = GetString("Shows the server's rules.")
+			});
+			add(new Command(ShowDeath, "death")
+			{
+				HelpText = GetString("Shows your number of deaths."),
+				AllowServer = false
+			});
+			add(new Command(ShowPVPDeath, "pvpdeath")
+			{
+				HelpText = GetString("Shows your number of PVP deaths."),
+				AllowServer = false
+			});
+			add(new Command(ShowAllDeath, "alldeath")
+			{
+				HelpText = GetString("Shows the number of deaths for all online players."),
+			});
+			add(new Command(ShowAllPVPDeath, "allpvpdeath")
+			{
+				HelpText = GetString("Shows the number of PVP deaths for all online players."),
+			});
+			add(new Command(BossDamage, "bossdamage")
+			{
+				HelpText = GetString("Shows recent boss kill contribution."),
 			});
 
 			TShockCommands = new ReadOnlyCollection<Command>(tshockCommands);
@@ -886,6 +913,11 @@ namespace TShockAPI
 					}
 
 					args.Player.PlayerData = TShock.CharacterDB.GetPlayerData(args.Player, account.ID);
+					if (Main.ServerSideCharacter && TShock.CharacterDB.IsSeededAppearanceMissing(args.Player.PlayerData))
+					{
+						TShock.CharacterDB.SyncSeededAppearance(account, args.Player);
+						args.Player.PlayerData = TShock.CharacterDB.GetPlayerData(args.Player, account.ID);
+					}
 
 					args.Player.Group = group;
 					args.Player.tempGroup = null;
@@ -1247,7 +1279,7 @@ namespace TShockAPI
 			args.Player.SendInfoMessage(GetString($"Name: {(TShock.Config.Settings.UseServerName ? TShock.Config.Settings.ServerName : Main.worldName)}"));
 			args.Player.SendInfoMessage(GetString("Size: {0}x{1}", Main.maxTilesX, Main.maxTilesY));
 			args.Player.SendInfoMessage(GetString($"ID: {Main.worldID}"));
-			args.Player.SendInfoMessage(GetString($"Seed: {WorldGen.currentWorldSeed}"));
+			args.Player.SendInfoMessage(GetString($"Seed: {Main.ActiveWorldFileData.Seed}"));
 			args.Player.SendInfoMessage(GetString($"Mode: {Main.GameMode}"));
 			args.Player.SendInfoMessage(GetString($"Path: {Main.worldPathName}"));
 		}
@@ -1742,13 +1774,28 @@ namespace TShockAPI
 
 		private static void Whitelist(CommandArgs args)
 		{
-			if (args.Parameters.Count == 1)
+			if (args.Parameters is [{ } ip])
 			{
-				using (var tw = new StreamWriter(FileTools.WhitelistPath, true))
+				// Warn if IP addr/net is v6
+				if (ip.Contains(':'))
 				{
-					tw.WriteLine(args.Parameters[0]);
+					args.Player.SendWarningMessage(GetString(
+						"IPv6 addresses are not supported as of yet by TShock. This rule will have no effect for now. Adding anyways."
+					));
 				}
-				args.Player.SendSuccessMessage(GetString($"Added {args.Parameters[0]} to the whitelist."));
+
+				if (TShock.Whitelist.AddToWhitelist(ip))
+				{
+					args.Player.SendSuccessMessage(GetString($"Added {ip} to the whitelist."));
+				}
+				else
+				{
+					args.Player.SendErrorMessage(GetString($"Failed to add {ip} to the whitelist. Perhaps it is already whitelisted?"));
+				}
+			}
+			else
+			{
+				args.Player.SendErrorMessage(GetString($"Invalid Whitelist syntax. Usage: {Specifier}whitelist <ip[/range]>"));
 			}
 		}
 
@@ -2142,7 +2189,8 @@ namespace TShockAPI
 			"invasion",
 			"sandstorm",
 			"rain",
-			"lanternsnight"
+			"lanternsnight",
+			"meteorshower"
 		};
 		static readonly List<string> _validInvasions = new List<string>()
 		{
@@ -2249,6 +2297,15 @@ namespace TShockAPI
 						return;
 					}
 					LanternsNight(args);
+					return;
+
+				case "meteorshower":
+					if (!args.Player.HasPermission(Permissions.managemeteorshowerevent))
+					{
+						FailedPermissionCheck();
+						return;
+					}
+					MeteorShower(args);
 					return;
 
 				default:
@@ -2445,52 +2502,67 @@ namespace TShockAPI
 
 		private static void Rain(CommandArgs args)
 		{
-			bool slime = false;
-			if (args.Parameters.Count > 1 && args.Parameters[1].ToLowerInvariant() == "slime")
+			var type = args.Parameters.Count > 1 ? args.Parameters[1].ToLowerInvariant() : "normal";
+			switch (type)
 			{
-				slime = true;
-			}
+				case "slime":
+					if (Main.raining)
+					{
+						args.Player.SendErrorMessage(GetString(
+							"Slime rain cannot be activated during normal rain. Stop the normal rainstorm and try again."));
+						return;
+					}
 
-			if (!slime)
-			{
-				args.Player.SendInfoMessage(GetString("Use \"{0}worldevent rain slime\" to start slime rain!", Specifier));
-			}
+					if (Main.slimeRain)
+					{
+						Main.StopSlimeRain(false);
+						TSPlayer.All.SendData(PacketTypes.WorldInfo);
+						TSPlayer.All.SendInfoMessage(GetString("{0} ended the slime rain.", args.Player.Name));
+					}
+					else
+					{
+						Main.StartSlimeRain(false);
+						TSPlayer.All.SendData(PacketTypes.WorldInfo);
+						TSPlayer.All.SendInfoMessage(GetString("{0} caused it to rain slime.", args.Player.Name));
+					}
 
-			if (slime && Main.raining) //Slime rain cannot be activated during normal rain
-			{
-				args.Player.SendErrorMessage(GetString("Slime rain cannot be activated during normal rain. Stop the normal rainstorm and try again."));
-				return;
-			}
+					break;
 
-			if (slime && Main.slimeRain) //Toggle slime rain off
-			{
-				Main.StopSlimeRain(false);
-				TSPlayer.All.SendData(PacketTypes.WorldInfo);
-				TSPlayer.All.SendInfoMessage(GetString("{0} ended the slime rain.", args.Player.Name));
-				return;
-			}
+				case "coin":
+					if (Main.coinRain != 0)
+					{
+						Main.StopRain();
+						TSPlayer.All.SendData(PacketTypes.WorldInfo);
+						TSPlayer.All.SendInfoMessage(GetString("{0} ended the coin rain.", args.Player.Name));
+					}
+					else
+					{
+						Main.StartRain(garenteeCoinRain: true);
+						TSPlayer.All.SendData(PacketTypes.WorldInfo);
+						TSPlayer.All.SendInfoMessage(GetString("{0} caused it to coin rain.", args.Player.Name));
+					}
 
-			if (slime && !Main.slimeRain) //Toggle slime rain on
-			{
-				Main.StartSlimeRain(false);
-				TSPlayer.All.SendData(PacketTypes.WorldInfo);
-				TSPlayer.All.SendInfoMessage(GetString("{0} caused it to rain slime.", args.Player.Name));
-			}
+					break;
 
-			if (Main.raining && !slime) //Toggle rain off
-			{
-				Main.StopRain();
-				TSPlayer.All.SendData(PacketTypes.WorldInfo);
-				TSPlayer.All.SendInfoMessage(GetString("{0} ended the rain.", args.Player.Name));
-				return;
-			}
+				default:
+					if (Main.raining)
+					{
+						Main.StopRain();
+						TSPlayer.All.SendData(PacketTypes.WorldInfo);
+						TSPlayer.All.SendInfoMessage(GetString("{0} ended the rain.", args.Player.Name));
+					}
+					else
+					{
+						Main.StartRain();
+						TSPlayer.All.SendData(PacketTypes.WorldInfo);
+						TSPlayer.All.SendInfoMessage(GetString("{0} caused it to rain.", args.Player.Name));
+					}
 
-			if (!Main.raining && !slime) //Toggle rain on
-			{
-				Main.StartRain();
-				TSPlayer.All.SendData(PacketTypes.WorldInfo);
-				TSPlayer.All.SendInfoMessage(GetString("{0} caused it to rain.", args.Player.Name));
-				return;
+					args.Player.SendInfoMessage(GetString("Use \"{0}worldevent rain slime\" to start slime rain!",
+						Specifier));
+					args.Player.SendInfoMessage(GetString("Use \"{0}worldevent rain coin\" to start coin rain!",
+						Specifier));
+					break;
 			}
 		}
 
@@ -2518,6 +2590,20 @@ namespace TShockAPI
 				{
 					TSPlayer.All.SendInfoMessage(GetString("{0} stopped the lantern night.", args.Player.Name));
 				}
+			}
+		}
+
+		private static void MeteorShower(CommandArgs args)
+		{
+			if (WorldGen.meteorShowerCount > 0)
+			{
+				WorldGen.meteorShowerCount = 0;
+				TSPlayer.All.SendInfoMessage(GetString("{0} stopped the meteor shower.", args.Player.Name));
+			}
+			else
+			{
+				WorldGen.StartMeteorShower();
+				TSPlayer.All.SendInfoMessage(GetString("{0} started a meteor shower.", args.Player.Name));
 			}
 		}
 
@@ -2607,6 +2693,15 @@ namespace TShockAPI
 			{
 				args.Player.SendErrorMessage(GetString("Hardmode is disabled in the server configuration file."));
 			}
+		}
+
+		static string _crimsonOrCorruption => WorldGen.crimson ? "crimson" : "corruption";
+
+		private static void SwitchEvil(CommandArgs args)
+		{
+			WorldGen.crimson = !WorldGen.crimson;
+			TSPlayer.All.SendData(PacketTypes.WorldInfo);
+			args.Player.SendSuccessMessage(GetString("World evil switched to {0}.", _crimsonOrCorruption));
 		}
 
 		private static void SpawnBoss(CommandArgs args)
@@ -2934,7 +3029,7 @@ namespace TShockAPI
 
 		private static void Spawn(CommandArgs args)
 		{
-			if (args.Player.Teleport(Main.spawnTileX * 16, (Main.spawnTileY * 16) - 48))
+			if (args.Player.TeleportToWorldSpawn())
 				args.Player.SendSuccessMessage(GetString("Teleported to the map's spawn point."));
 		}
 
@@ -2964,7 +3059,7 @@ namespace TShockAPI
 						args.Player.SendErrorMessage(GetString("{0} has disabled incoming teleports.", target.Name));
 						return;
 					}
-					if (args.Player.Teleport(target.TPlayer.position.X, target.TPlayer.position.Y))
+					if (args.Player.Teleport(target.TPlayer.Bottom, true))
 					{
 						args.Player.SendSuccessMessage(GetString("Teleported to {0}.", target.Name));
 						if (!args.Player.HasPermission(Permissions.tpsilent))
@@ -3002,7 +3097,7 @@ namespace TShockAPI
 						{
 							if (!target.TPAllow && !args.Player.HasPermission(Permissions.tpoverride))
 								continue;
-							if (source.Teleport(target.TPlayer.position.X, target.TPlayer.position.Y))
+							if (source.Teleport(target.TPlayer.Bottom, true))
 							{
 								if (args.Player != source)
 								{
@@ -3042,7 +3137,7 @@ namespace TShockAPI
 						return;
 					}
 					args.Player.SendSuccessMessage(GetString("Teleported {0} to {1}.", source.Name, target.Name));
-					if (source.Teleport(target.TPlayer.position.X, target.TPlayer.position.Y))
+					if (source.Teleport(target.TPlayer.Bottom, true))
 					{
 						if (args.Player != source)
 						{
@@ -3089,7 +3184,7 @@ namespace TShockAPI
 					{
 						if (player != null && player.Active && player.Index != args.Player.Index)
 						{
-							if (player.Teleport(args.TPlayer.position.X, args.TPlayer.position.Y))
+							if (player.Teleport(args.Player.TPlayer.Bottom, true))
 								player.SendSuccessMessage(GetString("You were teleported to {0}.", args.Player.Name));
 						}
 					}
@@ -3103,7 +3198,7 @@ namespace TShockAPI
 			else
 			{
 				var plr = players[0];
-				if (plr.Teleport(args.TPlayer.position.X, args.TPlayer.position.Y))
+				if (plr.Teleport(args.Player.TPlayer.Bottom, true))
 				{
 					plr.SendInfoMessage(GetString("You were teleported to {0}.", args.Player.Name));
 					args.Player.SendSuccessMessage(GetString("Teleported {0} to yourself.", plr.Name));
@@ -3148,7 +3243,7 @@ namespace TShockAPI
 			}
 
 			var target = matches[0];
-			args.Player.Teleport(target.position.X, target.position.Y);
+			args.Player.Teleport(target.Bottom, true);
 			args.Player.SendSuccessMessage(GetString("Teleported to the '{0}'.", target.FullName));
 		}
 
@@ -3256,7 +3351,8 @@ namespace TShockAPI
 					{
 						args.Player.SendErrorMessage(GetString("Invalid warp name. The names 'list', 'hide', 'del' and 'add' are reserved for commands."));
 					}
-					else if (TShock.Warps.Add(args.Player.TileX, args.Player.TileY, warpName))
+					// For compatibility, warps are technically floating, so we have to add it at the player's Y position without any mount influence.
+					else if (TShock.Warps.Add(args.Player.CenterTileX, args.Player.UnmountedTileY, warpName))
 					{
 						args.Player.SendSuccessMessage(GetString($"Warp added: {warpName}."));
 					}
@@ -3338,7 +3434,8 @@ namespace TShockAPI
 				var plr = foundplr[0];
 				if (warp != null)
 				{
-					if (plr.Teleport(warp.Position.X * 16, warp.Position.Y * 16))
+					// For compatibility, warps are technically floating, so we have to move the target position down by 3 blocks.
+					if (plr.Teleport(new Vector2(warp.Position.X * 16 + (plr.TPlayer.width / 2), (warp.Position.Y + 3) * 16), true))
 					{
 						plr.SendSuccessMessage(GetString("{0} warped you to {1}.", args.Player.Name, warpName));
 						args.Player.SendSuccessMessage(GetString("You warped {0} to {1}.", plr.Name, warpName));
@@ -3356,7 +3453,8 @@ namespace TShockAPI
 				var warp = TShock.Warps.Find(warpName);
 				if (warp != null)
 				{
-					if (args.Player.Teleport(warp.Position.X * 16, warp.Position.Y * 16))
+					// For compatibility, warps are technically floating, so we have to move the target position down by 3 blocks.
+					if (args.Player.Teleport(new Vector2(warp.Position.X * 16 + (args.Player.TPlayer.width / 2), (warp.Position.Y + 3) * 16), true))
 						args.Player.SendSuccessMessage(GetString($"Warped to {warpName}."));
 				}
 				else
@@ -3823,7 +3921,7 @@ namespace TShockAPI
 						}
 						else if (items.Count > 1)
 						{
-							args.Player.SendMultipleMatchError(items.Select(i => $"{i.Name}({i.netID})"));
+							args.Player.SendMultipleMatchError(items.Select(i => $"{i.Name}({i.type})"));
 						}
 						else
 						{
@@ -3874,7 +3972,7 @@ namespace TShockAPI
 						}
 						else if (items.Count > 1)
 						{
-							args.Player.SendMultipleMatchError(items.Select(i => $"{i.Name}({i.netID})"));
+							args.Player.SendMultipleMatchError(items.Select(i => $"{i.Name}({i.type})"));
 						}
 						else
 						{
@@ -3919,7 +4017,7 @@ namespace TShockAPI
 						}
 						else if (items.Count > 1)
 						{
-							args.Player.SendMultipleMatchError(items.Select(i => $"{i.Name}({i.netID})"));
+							args.Player.SendMultipleMatchError(items.Select(i => $"{i.Name}({i.type})"));
 						}
 						else
 						{
@@ -3945,7 +4043,7 @@ namespace TShockAPI
 						}
 						else if (items.Count > 1)
 						{
-							args.Player.SendMultipleMatchError(items.Select(i => $"{i.Name}({i.netID})"));
+							args.Player.SendMultipleMatchError(items.Select(i => $"{i.Name}({i.type})"));
 						}
 						else
 						{
@@ -5184,7 +5282,7 @@ namespace TShockAPI
 							break;
 						}
 
-						args.Player.Teleport(region.Area.Center.X * 16, region.Area.Center.Y * 16);
+						args.Player.TeleportCentered(region.Area.Center.ToWorldCoordinates());
 						break;
 					}
 				case "help":
@@ -5391,7 +5489,7 @@ namespace TShockAPI
 			{
 				args.Player.SendWarningMessage(GetString("The initial setup system is disabled. This incident has been logged."));
 				args.Player.SendWarningMessage(GetString("If you are locked out of all admin accounts, ask for help on https://tshock.co/"));
-				TShock.Log.Warn("{0} attempted to use the initial setup system even though it's disabled.", args.Player.IP);
+				TShock.Log.Warn(GetString("{0} attempted to use the initial setup system even though it's disabled.", args.Player.IP));
 				return;
 			}
 
@@ -5417,7 +5515,7 @@ namespace TShockAPI
 			if (!Int32.TryParse(args.Parameters[0], out givenCode) || givenCode != TShock.SetupToken)
 			{
 				args.Player.SendErrorMessage(GetString("Incorrect setup code. This incident has been logged."));
-				TShock.Log.Warn(args.Player.IP + " attempted to use an incorrect setup code.");
+				TShock.Log.Warn(GetString($"{args.Player.IP} attempted to use an incorrect setup code."));
 				return;
 			}
 
@@ -5815,6 +5913,70 @@ namespace TShockAPI
 			return;
 		}
 
+		private static void ShowDeath(CommandArgs args)
+		{
+			args.Player.SendErrorMessage(GetString($"*You were slain {args.Player.DeathsPVE} times."));
+		}
+
+		private static void ShowPVPDeath(CommandArgs args)
+		{
+			args.Player.SendErrorMessage(GetString($"*You were slain by other players {args.Player.DeathsPVP} times."));
+		}
+
+		private static void ShowAllDeath(CommandArgs args)
+		{
+			if (TShock.Utils.GetActivePlayerCount() == 0)
+			{
+				args.Player.SendErrorMessage(GetString("There are currently no players online."));
+				return;
+			}
+
+			var deathsRank = TShock.Players
+				.Where(p => p is { Active: true })
+				.OrderByDescending(x => x.DeathsPVE)
+				.Select(x => GetString($"*{x.Name} was slain {x.DeathsPVE} times."));
+
+			args.Player.SendErrorMessage(string.Join('\n',deathsRank));
+		}
+
+		private static void ShowAllPVPDeath(CommandArgs args)
+		{
+			if (TShock.Utils.GetActivePlayerCount() == 0)
+			{
+				args.Player.SendErrorMessage(GetString("There are currently no players online."));
+				return;
+			}
+
+			var deathsRank = TShock.Players
+				.Where(p => p is { Active: true })
+				.OrderByDescending(x => x.DeathsPVP)
+				.Select(x => GetString($"*{x.Name} was slain by other players {x.DeathsPVP} times."));
+
+			args.Player.SendErrorMessage(string.Join('\n',deathsRank));
+		}
+
+		private static void BossDamage(CommandArgs args)
+		{
+			var attempts = NPCDamageTracker.RecentAttempts().ToList();
+
+			if (attempts.Count == 0)
+			{
+				args.Player.SendWarningMessage(GetString("No recent boss kill data found."));
+				return;
+			}
+			foreach (var recentAttempt in attempts)
+			{
+				for (var playerId = 0; playerId < byte.MaxValue; ++playerId)
+				{
+					if (Main.player[playerId].active)
+					{
+						args.Player.SendSuccessMessage(recentAttempt.GetReport(Main.player[playerId]).ToString());
+					}
+				}
+			}
+		}
+
+
 		#endregion General Commands
 
 		#region Game Commands
@@ -5858,8 +6020,8 @@ namespace TShockAPI
 
 							if (Main.item[i].active && dX * dX + dY * dY <= radius * radius * 256f)
 							{
-								Main.item[i].active = false;
-								everyone.SendData(PacketTypes.ItemDrop, "", i);
+								Main.item[i].TurnToAir();
+								everyone.SendData(PacketTypes.SyncItemDespawn, "", i);
 								cleared++;
 							}
 						}
@@ -6101,7 +6263,7 @@ namespace TShockAPI
 			}
 			else if (matchedItems.Count > 1)
 			{
-				args.Player.SendMultipleMatchError(matchedItems.Select(i => $"{i.Name}({i.netID})"));
+				args.Player.SendMultipleMatchError(matchedItems.Select(i => $"{i.Name}({i.type})"));
 				return;
 			}
 			else
@@ -6222,7 +6384,9 @@ namespace TShockAPI
 			if (args.Parameters.Count < 2)
 			{
 				args.Player.SendErrorMessage(
-					"Invalid syntax. Proper syntax: {0}give <item type/id> <player> [item amount] [prefix id/name]", Specifier);
+					GetString(
+						"Invalid syntax. Proper syntax: {0}give <item type/id> <player> [item amount] [prefix id/name]",
+						Specifier));
 				return;
 			}
 			if (args.Parameters[0].Length == 0)
@@ -6249,7 +6413,7 @@ namespace TShockAPI
 			}
 			else if (items.Count > 1)
 			{
-				args.Player.SendMultipleMatchError(items.Select(i => $"{i.Name}({i.netID})"));
+				args.Player.SendMultipleMatchError(items.Select(i => $"{i.Name}({i.type})"));
 			}
 			else
 			{

@@ -19,7 +19,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Terraria.ID;
-using TShockAPI.Net;
 using Terraria;
 using Microsoft.Xna.Framework;
 using TShockAPI.Localization;
@@ -29,6 +28,7 @@ using Terraria.DataStructures;
 using Terraria.Localization;
 using TShockAPI.Models.PlayerUpdate;
 using System.Threading.Tasks;
+using OTAPI;
 using Terraria.GameContent.Tile_Entities;
 
 namespace TShockAPI
@@ -137,6 +137,10 @@ namespace TShockAPI
 			GetDataHandlers.KillMe += OnKillMe;
 			GetDataHandlers.FishOutNPC += OnFishOutNPC;
 			GetDataHandlers.FoodPlatterTryPlacing += OnFoodPlatterTryPlacing;
+			GetDataHandlers.DisplayJarTryPlacing += OnDisplayJarTryPlacing;
+			OTAPI.Hooks.Chest.QuickStack += OnQuickStack;
+			HookEvents.Terraria.Projectile.Kill_DirtAndFluidProjectiles_RunDelegateMethodPushUpForHalfBricks += OnProjectileDirtFluidKill;
+			HookEvents.Terraria.GameContent.CraftingRequests.CanCraftFromChest += OnChestCraftRequest;
 
 
 			// The following section is based off Player.PlaceThing_Tiles_PlaceIt and Player.PlaceThing_Tiles_PlaceIt_GetLegacyTileStyle.
@@ -164,7 +168,12 @@ namespace TShockAPI
 						var usingBiomeTorches = player.UsingBiomeTorches;
 						player.UsingBiomeTorches = true;
 						// BiomeTorchPlaceStyle returns the place style of the player's current biome's biome torch
-						var biomeTorchPlaceStyle = player.BiomeTorchPlaceStyle(actualItemPlaceStyle);
+						int biomeTorchPlaceStyle = actualItemPlaceStyle;
+						{
+							// Prevent modification of original variable because it is passed by reference
+							var placeStyle = actualItemPlaceStyle;
+							player.BiomeTorchPlaceStyle(ref placeStyle, ref biomeTorchPlaceStyle);
+						}
 						// Reset UsingBiomeTorches value
 						player.UsingBiomeTorches = usingBiomeTorches;
 
@@ -252,6 +261,19 @@ namespace TShockAPI
 						// Not a booster track, return as-is.
 						return actualItemPlaceStyle;
 					}
+				});
+
+			PlaceStyleCorrectors.Add(TileID.Grass, // it's TileID.ImmatureHerbs actually...
+				(player, requestedPlaceStyle, actualItemPlaceStyle) =>
+				{
+					if (player.selectedItem is (ItemID.AcornAxe or ItemID.StaffofRegrowth) &&
+					    actualItemPlaceStyle is <= 6 and >= 0)
+					{
+						return actualItemPlaceStyle;
+					}
+
+					return requestedPlaceStyle;
+
 				});
 
 			#region PlayerAddBuff Whitelist
@@ -529,9 +551,9 @@ namespace TShockAPI
 
 			if (args.Player.LastNetPosition == Vector2.Zero)
 			{
-				TShock.Log.ConsoleInfo(GetString("Bouncer / OnPlayerUpdate *would have rejected* from (last network position zero) {0}", args.Player.Name));
-				// args.Handled = true;
-				// return;
+				// Initialize movement baseline on the first valid update packet.
+				args.Player.LastNetPosition = pos;
+				return;
 			}
 
 			if (!pos.Equals(args.Player.LastNetPosition))
@@ -553,11 +575,7 @@ namespace TShockAPI
 						{
 							args.Player.SendErrorMessage(GetString("Disabled. You went too far with banned armor."));
 						}
-						else if (args.Player.IsDisabledForSSC)
-						{
-							args.Player.SendErrorMessage(GetString("Disabled. You need to {0}login to load your saved data.", TShock.Config.Settings.CommandSpecifier));
-						}
-						else if (TShock.Config.Settings.RequireLogin && !args.Player.IsLoggedIn)
+						else if (args.Player.IsDisabledForSSC || (TShock.Config.Settings.RequireLogin && !args.Player.IsLoggedIn))
 						{
 							args.Player.SendErrorMessage(GetString("Account needed! Please {0}register or {0}login to play!", TShock.Config.Settings.CommandSpecifier));
 						}
@@ -567,9 +585,7 @@ namespace TShockAPI
 						}
 
 						// ??
-						var lastTileX = args.Player.LastNetPosition.X;
-						var lastTileY = args.Player.LastNetPosition.Y - 48;
-						if (!args.Player.Teleport(lastTileX, lastTileY))
+						if (!args.Player.Teleport(args.Player.LastNetPosition))
 						{
 							args.Player.Spawn(PlayerSpawnContext.RecallFromItem);
 						}
@@ -582,8 +598,8 @@ namespace TShockAPI
 					return;
 				}
 
-				// Corpses don't move
-				if (args.Player.Dead)
+				// Corpses don't move, but ghost
+				if (args.Player.Dead && !args.Player.TPlayer.ghost)
 				{
 					TShock.Log.ConsoleDebug(GetString("Bouncer / OnPlayerUpdate rejected from (corpses don't move) {0}", args.Player.Name));
 					args.Handled = true;
@@ -636,6 +652,15 @@ namespace TShockAPI
 						}
 					}
 
+					if (tile.type == TileID.DeadCellsDisplayJar)
+					{
+						var displayJar = TEDeadCellsDisplayJar.Find(tileX - tile.frameX % 18 / 18, tileY - tile.frameY % 32 / 18);
+						if (displayJar != -1)
+						{
+							NetMessage.SendData((int)PacketTypes.UpdateTileEntity, -1, -1, NetworkText.Empty, displayJar, 0, 1);
+						}
+					}
+
 					GetRollbackRectSize(tileX, tileY, out byte width, out byte length, out int offsetY);
 					args.Player.SendTileRect((short)(tileX - width), (short)(tileY + offsetY), (byte)(width * 2), (byte)(length + 1));
 					args.Handled = true;
@@ -657,6 +682,25 @@ namespace TShockAPI
 					TShock.Log.ConsoleDebug(GetString("Bouncer / OnTileEdit super accepted from (ice block) {0} {1} {2}", args.Player.Name, action, editData));
 					args.Handled = false;
 					return;
+				}
+
+				{
+					// Check if this tile is a Plantera Bulb or a support tile beneath one
+					bool isPlanteraBulb = Main.tile[tileX, tileY].active() && Main.tile[tileX, tileY].type == TileID.PlanteraBulb;
+					bool isSupportTile = tileY - 1 >= 0
+						&& Main.tile[tileX, tileY - 1].active() && Main.tile[tileX, tileY - 1].type == TileID.PlanteraBulb;
+
+					if (isPlanteraBulb || isSupportTile)
+					{
+						if (!args.Player.HasPermission(Permissions.summonboss))
+						{
+							TShock.Log.ConsoleDebug(GetString("Bouncer / OnTileEdit rejected Plantera bulb destroy from {0}", args.Player.Name));
+							args.Player.SendErrorMessage(GetString("You do not have permission to summon Plantera."));
+							args.Player.SendTileSquareCentered(tileX, tileY, 4);
+							args.Handled = true;
+							return;
+						}
+					}
 				}
 
 				if (args.Player.Dead && TShock.Config.Settings.PreventDeadModification)
@@ -719,7 +763,7 @@ namespace TShockAPI
 				if (action == EditAction.KillTile && !Main.tileCut[tile.type] && !breakableTiles.Contains(tile.type) && args.Player.RecentFuse == 0)
 				{
 					// If the tile is an axe tile and they aren't selecting an axe, they're hacking.
-					if (Main.tileAxe[tile.type] && ((args.Player.TPlayer.mount.Type != MountID.Drill && selectedItem.axe == 0) && !ItemID.Sets.Explosives[selectedItem.netID]))
+					if (Main.tileAxe[tile.type] && ((args.Player.TPlayer.mount.Type != MountID.Drill && selectedItem.axe == 0) && !ItemID.Sets.Explosives[selectedItem.type]))
 					{
 						TShock.Log.ConsoleDebug(GetString("Bouncer / OnTileEdit rejected from (axe) {0} {1} {2}", args.Player.Name, action, editData));
 						args.Player.SendTileSquareCentered(tileX, tileY, 4);
@@ -727,7 +771,7 @@ namespace TShockAPI
 						return;
 					}
 					// If the tile is a hammer tile and they aren't selecting a hammer, they're hacking.
-					else if (Main.tileHammer[tile.type] && ((args.Player.TPlayer.mount.Type != MountID.Drill && selectedItem.hammer == 0) && !ItemID.Sets.Explosives[selectedItem.netID]))
+					else if (Main.tileHammer[tile.type] && ((args.Player.TPlayer.mount.Type != MountID.Drill && selectedItem.hammer == 0) && !ItemID.Sets.Explosives[selectedItem.type]))
 					{
 						TShock.Log.ConsoleDebug(GetString("Bouncer / OnTileEdit rejected from (hammer) {0} {1} {2}", args.Player.Name, action, editData));
 						args.Player.SendTileSquareCentered(tileX, tileY, 4);
@@ -738,14 +782,30 @@ namespace TShockAPI
 					// Item frames can be modified without pickaxe tile.
 					// also add an exception for snake coils, they can be removed when the player places a new one or after x amount of time
 					// If the tile is part of the breakable when placing set, it might be getting broken by a placement.
-					else if (tile.type != TileID.ItemFrame && tile.type != TileID.MysticSnakeRope
-														   && !ItemID.Sets.Explosives[selectedItem.netID]
-														   && !TileID.Sets.BreakableWhenPlacing[tile.type]
-														   && !Main.tileAxe[tile.type] && !Main.tileHammer[tile.type] && tile.wall == 0
-														   && selectedItem.pick == 0 && selectedItem.type != ItemID.GravediggerShovel
-														   && args.Player.TPlayer.mount.Type != MountID.Drill
-														   && args.Player.TPlayer.mount.Type != MountID.DiggingMoleMinecart)
+					else if (tile.type != TileID.ItemFrame &&
+					         tile.type != TileID.DeadCellsDisplayJar &&
+					         tile.type != TileID.MysticSnakeRope &&
+					         !ItemID.Sets.Explosives[selectedItem.type] &&
+					         !TileID.Sets.BreakableWhenPlacing[tile.type] &&
+					         !Main.tileAxe[tile.type] && !Main.tileHammer[tile.type] && tile.wall == 0 &&
+					         selectedItem.pick == 0 && selectedItem.type != ItemID.GravediggerShovel &&
+					         args.Player.TPlayer.mount.Type != MountID.Drill &&
+					         args.Player.TPlayer.mount.Type != MountID.DiggingMoleMinecart)
 					{
+						if (args.Player.TPlayer.ownedProjectileCounts[ProjectileID.PalworldDigtoise] > 0)
+						{
+							var digtoiseProjectile = Main.projectile
+								.FirstOrDefault(p =>
+									p is { active: true, type: ProjectileID.PalworldDigtoise } && p.owner == args.Player.Index);
+
+							// Digtoise starts digging
+							if (digtoiseProjectile?.ai[0] is 1f or 2f or 3f
+							    && digtoiseProjectile.ai[1] > 40f)
+							{
+								return;
+							}
+						}
+
 						TShock.Log.ConsoleDebug(GetString("Bouncer / OnTileEdit rejected from (pick) {0} {1} {2}", args.Player.Name, action,
 							editData));
 						args.Player.SendTileSquareCentered(tileX, tileY, 4);
@@ -756,7 +816,7 @@ namespace TShockAPI
 				else if (action == EditAction.KillWall)
 				{
 					// If they aren't selecting a hammer, they could be hacking.
-					if (selectedItem.hammer == 0 && !ItemID.Sets.Explosives[selectedItem.netID] && args.Player.RecentFuse == 0 && selectedItem.createWall == 0)
+					if (selectedItem.hammer == 0 && !ItemID.Sets.Explosives[selectedItem.type] && args.Player.RecentFuse == 0 && selectedItem.createWall == 0)
 					{
 						TShock.Log.ConsoleDebug(GetString("Bouncer / OnTileEdit rejected from (hammer2) {0} {1} {2}", args.Player.Name, action, editData));
 						args.Player.SendTileSquareCentered(tileX, tileY, 1);
@@ -773,11 +833,11 @@ namespace TShockAPI
 					// Handle placement if the user is placing rope that comes from a ropecoil,
 					// but have not created the ropecoil projectile recently or the projectile was not at the correct coordinate, or the tile that the projectile places does not match the rope it is suposed to place
 					// projectile should be the same X coordinate as all tile places (Note by @Olink)
-					if (ropeCoilPlacements.ContainsKey(selectedItem.netID) &&
+					if (ropeCoilPlacements.ContainsKey(selectedItem.type) &&
 						!args.Player.RecentlyCreatedProjectiles.Any(p => GetDataHandlers.projectileCreatesTile.ContainsKey(p.Type) && GetDataHandlers.projectileCreatesTile[p.Type] == editData &&
 						!p.Killed && Math.Abs((int)(Main.projectile[p.Index].position.X / 16f) - tileX) <= Math.Abs(Main.projectile[p.Index].velocity.X)))
 					{
-						TShock.Log.ConsoleDebug(GetString("Bouncer / OnTileEdit rejected from (inconceivable rope coil) {0} {1} {2} selectedItem:{3} itemCreateTile:{4}", args.Player.Name, action, editData, selectedItem.netID, selectedItem.createTile));
+						TShock.Log.ConsoleDebug(GetString("Bouncer / OnTileEdit rejected from (inconceivable rope coil) {0} {1} {2} selectedItem:{3} itemCreateTile:{4}", args.Player.Name, action, editData, selectedItem.type, selectedItem.createTile));
 						args.Player.SendTileSquareCentered(tileX, tileY, 1);
 						args.Handled = true;
 						return;
@@ -793,30 +853,71 @@ namespace TShockAPI
 						args.Handled = true;
 						return;
 					}
+					// Handle placement action for Regrowth tools to ensure they only replant herbs on valid containers.
+					if (selectedItem.type is ItemID.AcornAxe or ItemID.StaffofRegrowth)
+					{
+						if ((int)editData is not (TileID.Grass or TileID.HallowedGrass or TileID.CorruptGrass
+						    or TileID.CrimsonGrass or TileID.JungleGrass or TileID.MushroomGrass
+						    or TileID.CorruptJungleGrass or TileID.CrimsonJungleGrass or TileID.AshGrass)
+						    && !TileID.Sets.Conversion.Moss[editData])
+						{
+							if (editData != TileID.ImmatureHerbs)
+							{
+								TShock.Log.ConsoleDebug(GetString(
+									"Bouncer / OnTileEdit rejected {0} from placing non-herb tile {1} using {2}",
+									args.Player.Name, editData, selectedItem.Name));
+								args.Player.SendTileSquareCentered(tileX, tileY, 4);
+								args.Handled = true;
+							}
 
-					/// Handle placement action if the player is using an Ice Rod but not placing the iceblock.
-					if (selectedItem.netID == ItemID.IceRod && editData != TileID.MagicalIceBlock)
+							var containerTile = Main.tile[tileX, tileY + 1];
+							if (!containerTile.active() ||
+							    containerTile.type is not (TileID.ClayPot or TileID.RockGolemHead or TileID.PlanterBox))
+							{
+								TShock.Log.ConsoleDebug(GetString(
+									"Bouncer / OnTileEdit rejected {0} from planting herb on invalid tile {1} using {2}",
+									args.Player.Name, containerTile.type, selectedItem.Name));
+								args.Player.SendTileSquareCentered(tileX, tileY, 4);
+								args.Handled = true;
+							}
+						}
+					}
+					// Handle placement action if the player is using an Ice Rod but not placing the iceblock.
+					if (selectedItem.type == ItemID.IceRod && editData != TileID.MagicalIceBlock)
 					{
 						TShock.Log.ConsoleDebug(GetString("Bouncer / OnTileEdit rejected from using ice rod but not placing ice block {0} {1} {2}", args.Player.Name, action, editData));
 						args.Player.SendTileSquareCentered(tileX, tileY, 4);
 						args.Handled = true;
 					}
-					/// If they aren't selecting the item which creates the tile, they're hacking.
+					// If they aren't selecting the item which creates the tile, they're hacking.
 					if ((action == EditAction.PlaceTile || action == EditAction.ReplaceTile) && editData != selectedItem.createTile)
 					{
-						/// These would get caught up in the below check because Terraria does not set their createTile field.
-						if (selectedItem.netID != ItemID.IceRod && selectedItem.netID != ItemID.DirtBomb && selectedItem.netID != ItemID.StickyBomb && (args.Player.TPlayer.mount.Type != MountID.DiggingMoleMinecart || editData != TileID.MinecartTrack))
+						// These would get caught up in the below check because Terraria does not set their createTile field.
+						if (selectedItem.type != ItemID.IceRod &&
+						    selectedItem.type != ItemID.DirtBomb &&
+						    selectedItem.type != ItemID.StickyBomb &&
+						    selectedItem.type != ItemID.MudBallPlayer &&
+						    selectedItem.type != ItemID.AcornAxe &&
+						    selectedItem.type != ItemID.StaffofRegrowth &&
+						    !(args.Player.RecentlyCreatedProjectiles.Any(x =>
+							      x.Type == ProjectileID.AcornSlingshotAcorn) &&
+						      editData == TileID.Saplings) &&
+						    !(args.Player.TPlayer.mount.Type == MountID.DiggingMoleMinecart &&
+						      editData == TileID.MinecartTrack)
+						   )
 						{
-							TShock.Log.ConsoleDebug(GetString("Bouncer / OnTileEdit rejected from tile placement not matching selected item createTile {0} {1} {2} selectedItemID:{3} createTile:{4}", args.Player.Name, action, editData, selectedItem.netID, selectedItem.createTile));
+							TShock.Log.ConsoleDebug(GetString(
+								"Bouncer / OnTileEdit rejected from tile placement not matching selected item createTile {0} {1} {2} selectedItemID:{3} createTile:{4}",
+								args.Player.Name, action, editData, selectedItem.type, selectedItem.createTile));
 							args.Player.SendTileSquareCentered(tileX, tileY, 4);
 							args.Handled = true;
 							return;
 						}
 					}
-					/// If they aren't selecting the item which creates the wall, they're hacking.
+					// If they aren't selecting the item which creates the wall, they're hacking.
 					if ((action == EditAction.PlaceWall || action == EditAction.ReplaceWall) && editData != selectedItem.createWall)
 					{
-						TShock.Log.ConsoleDebug(GetString("Bouncer / OnTileEdit rejected from wall placement not matching selected item createWall {0} {1} {2} selectedItemID:{3} createWall:{4}", args.Player.Name, action, editData, selectedItem.netID, selectedItem.createWall));
+						TShock.Log.ConsoleDebug(GetString("Bouncer / OnTileEdit rejected from wall placement not matching selected item createWall {0} {1} {2} selectedItemID:{3} createWall:{4}", args.Player.Name, action, editData, selectedItem.type, selectedItem.createWall));
 						args.Player.SendTileSquareCentered(tileX, tileY, 4);
 						args.Handled = true;
 						return;
@@ -916,7 +1017,7 @@ namespace TShockAPI
 						return;
 					}
 
-					if (action == EditAction.KillTile || action == EditAction.KillWall && ItemID.Sets.Explosives[selectedItem.netID] && args.Player.RecentFuse == 0)
+					if (action == EditAction.KillTile || action == EditAction.KillWall && ItemID.Sets.Explosives[selectedItem.type] && args.Player.RecentFuse == 0)
 					{
 						args.Handled = false;
 						return;
@@ -1109,27 +1210,21 @@ namespace TShockAPI
 			// player is attempting to crash clients
 			if (type < -48 || type >= Terraria.ID.ItemID.Count)
 			{
-				// Causes item duplications. Will be re added later if necessary
-				//args.Player.SendData(PacketTypes.ItemDrop, "", id);
 				TShock.Log.ConsoleDebug(GetString("Bouncer / OnItemDrop rejected from attempt crash from {0}", args.Player.Name));
 				args.Handled = true;
 				return;
 			}
 
 			// make sure the prefix is a legit value
-			// Note: Not checking if prefix is less than 1 because if it is, this check
-			// will break item pickups on the client.
 			if (prefix > PrefixID.Count)
 			{
 				TShock.Log.ConsoleDebug(GetString("Bouncer / OnItemDrop rejected from prefix check from {0}", args.Player.Name));
 
-				args.Player.SendData(PacketTypes.ItemDrop, "", id);
+				args.Player.SendData(PacketTypes.SyncItemDespawn, "", id);
 				args.Handled = true;
 				return;
 			}
 
-			//Item removed, let client do this to prevent item duplication
-			// client side (but only if it passed the range check) (i.e., return false)
 			if (type == 0)
 			{
 				if (!args.Player.IsInRange((int)(Main.item[id].position.X / 16f), (int)(Main.item[id].position.Y / 16f)))
@@ -1145,19 +1240,19 @@ namespace TShockAPI
 				return;
 			}
 
-			if (!args.Player.IsInRange((int)(pos.X / 16f), (int)(pos.Y / 16f)))
+			if (!args.Player.IsInRange((int)(pos.X / 16f), (int)(pos.Y / 16f), 128))
 			{
 				TShock.Log.ConsoleDebug(GetString("Bouncer / OnItemDrop rejected from range check from {0}", args.Player.Name));
-				args.Player.SendData(PacketTypes.ItemDrop, "", id);
+				args.Player.SendData(PacketTypes.SyncItemDespawn, "", id);
 				args.Handled = true;
 				return;
 			}
 
-			// stop the client from changing the item type of a drop but
-			// only if the client isn't picking up the item
-			if (Main.item[id].active && Main.item[id].netID != type)
+			// stop the client from changing the item type of a drop
+			if (Main.item[id].active && Main.item[id].type != type &&
+			    !(Main.item[id].type == ItemID.EmptyBucket && type == ItemID.WaterBucket)) // Empty bucket turns into Water Bucket on rainy days
 			{
-				TShock.Log.ConsoleDebug(GetString("Bouncer / OnItemDrop rejected from item drop/pickup check from {0}", args.Player.Name));
+				TShock.Log.ConsoleDebug(GetString("Bouncer / OnItemDrop rejected from item drop check from {0}", args.Player.Name));
 				args.Player.SendData(PacketTypes.ItemDrop, "", id);
 				args.Handled = true;
 				return;
@@ -1168,7 +1263,7 @@ namespace TShockAPI
 			if ((stacks > item.maxStack || stacks <= 0) || (TShock.ItemBans.DataModel.ItemIsBanned(EnglishLanguage.GetItemNameById(item.type), args.Player) && !args.Player.HasPermission(Permissions.allowdroppingbanneditems)))
 			{
 				TShock.Log.ConsoleDebug(GetString("Bouncer / OnItemDrop rejected from drop item ban check / max stack check / min stack check from {0}", args.Player.Name));
-				args.Player.SendData(PacketTypes.ItemDrop, "", id);
+				args.Player.SendData(PacketTypes.SyncItemDespawn, "", id);
 				args.Handled = true;
 				return;
 			}
@@ -1179,7 +1274,7 @@ namespace TShockAPI
 				//Player is probably trying to sneak items onto the server in their hands!!!
 				TShock.Log.ConsoleInfo(GetString("Player {0} tried to sneak {1} onto the server!", args.Player.Name, item.Name));
 				TShock.Log.ConsoleDebug(GetString("Bouncer / OnItemDrop rejected from sneaky from {0}", args.Player.Name));
-				args.Player.SendData(PacketTypes.ItemDrop, "", id);
+				args.Player.SendData(PacketTypes.SyncItemDespawn, "", id);
 				args.Handled = true;
 				return;
 
@@ -1188,7 +1283,16 @@ namespace TShockAPI
 			if (args.Player.IsBeingDisabled())
 			{
 				TShock.Log.ConsoleDebug(GetString("Bouncer / OnItemDrop rejected from disabled from {0}", args.Player.Name));
-				args.Player.SendData(PacketTypes.ItemDrop, "", id);
+				args.Player.SendData(PacketTypes.SyncItemDespawn, "", id);
+				args.Handled = true;
+				return;
+			}
+
+			if (type == ItemID.GuideVoodooDoll && args.Player.TPlayer.ZoneUnderworldHeight && !args.Player.HasPermission(Permissions.summonboss))
+			{
+				TShock.Log.ConsoleDebug(GetString("Bouncer / OnItemDrop rejected Guide Voodoo Doll drop from {0}", args.Player.Name));
+				args.Player.SendErrorMessage(GetString("You do not have permission to summon the Wall of Flesh."));
+				args.Player.SendData(PacketTypes.SyncItemDespawn, "", id);
 				args.Handled = true;
 				return;
 			}
@@ -1233,6 +1337,30 @@ namespace TShockAPI
 				return;
 			}
 
+			if (args.Player.IsBeingDisabled())
+			{
+				TShock.Log.ConsoleDebug(GetString("Bouncer / OnNewProjectile rejected from disabled from {0}", args.Player.Name));
+
+				// Client will fight the server if we remove pets, silently reject instead
+				if (!Main.projPet[type] && !ProjectileID.Sets.LightPet[type])
+					args.Player.RemoveProjectile(ident, owner);
+
+				args.Handled = true;
+				return;
+			}
+
+			if (args.Player.IsBouncerThrottled())
+			{
+				TShock.Log.ConsoleDebug(GetString("Bouncer / OnNewProjectile rejected from bouncer throttle from {0}", args.Player.Name));
+
+				// Client will fight the server if we remove pets, silently reject instead
+				if (!Main.projPet[type] && !ProjectileID.Sets.LightPet[type])
+					args.Player.RemoveProjectile(ident, owner);
+
+				args.Handled = true;
+				return;
+			}
+
 			if (TShock.ProjectileBans.ProjectileIsBanned(type, args.Player))
 			{
 				args.Player.Disable(GetString("Player does not have permission to create projectile {0}.", type), DisableFlags.WriteToLogAndConsole);
@@ -1247,14 +1375,6 @@ namespace TShockAPI
 			{
 				args.Player.Disable(GetString("Projectile damage is higher than {0}.", TShock.Config.Settings.MaxProjDamage), DisableFlags.WriteToLogAndConsole);
 				TShock.Log.ConsoleDebug(GetString("Bouncer / OnNewProjectile rejected from projectile damage limit from {0} {1}/{2}", args.Player.Name, damage, TShock.Config.Settings.MaxProjDamage));
-				args.Player.RemoveProjectile(ident, owner);
-				args.Handled = true;
-				return;
-			}
-
-			if (args.Player.IsBeingDisabled())
-			{
-				TShock.Log.ConsoleDebug(GetString("Bouncer / OnNewProjectile rejected from disabled from {0}", args.Player.Name));
 				args.Player.RemoveProjectile(ident, owner);
 				args.Handled = true;
 				return;
@@ -1308,6 +1428,35 @@ namespace TShockAPI
 				return;
 			}
 
+			// Portal Gun Gate projectiles must meet several validation criteria:
+			// 1. The angle must be within valid discrete directions (45 degree increments)
+			// 2. Must have an active PortalGunBolt projectile associated
+			if (type == ProjectileID.PortalGunGate)
+			{
+			    // Validate the gate angle is one of 8 possible cardinal directions (every 45 degrees)
+			    var wrappedAngle = MathHelper.WrapAngle(ai[0]);
+			    var discreteDirection = (int)Math.Round(wrappedAngle / (MathF.PI / 4f));
+			    if (discreteDirection is < -3 or > 4)
+			    {
+				    TShock.Log.ConsoleDebug(GetString("Bouncer / OnNewProjectile rejected from portal gate from {0} (invalid angle: {1})", args.Player.Name, discreteDirection));
+			        args.Player.RemoveProjectile(ident, owner);
+			        args.Handled = true;
+			        return;
+			    }
+
+			    // Validate we found an active bolt projectile
+			    var boltProjectileData = args.Player.RecentlyCreatedProjectiles.FirstOrDefault(p => Main.projectile[p.Index].type == ProjectileID.PortalGunBolt);
+			    if (boltProjectileData.Type == 0 || boltProjectileData.Killed)
+			    {
+				    TShock.Log.ConsoleDebug(GetString("Bouncer / OnNewProjectile rejected from portal gate from {0} (missing active Portal Gun bolt)", args.Player.Name, discreteDirection));
+			        args.Player.RemoveProjectile(ident, owner);
+			        args.Handled = true;
+			        return;
+			    }
+
+			    boltProjectileData.Killed = true;
+			}
+
 			if (!TShock.Config.Settings.IgnoreProjUpdate && !args.Player.HasPermission(Permissions.ignoreprojectiledetection))
 			{
 				if (type == ProjectileID.BlowupSmokeMoonlord
@@ -1349,14 +1498,6 @@ namespace TShockAPI
 
 				TShock.Log.ConsoleDebug(GetString("Bouncer / OnNewProjectile rejected from projectile create threshold from {0} {1}/{2}", args.Player.Name, args.Player.ProjectileThreshold, TShock.Config.Settings.ProjectileThreshold));
 				TShock.Log.ConsoleDebug(GetString("If this player wasn't hacking, please report the projectile create threshold they were disabled for to TShock so we can improve this!"));
-				args.Handled = true;
-				return;
-			}
-
-			if (args.Player.IsBouncerThrottled())
-			{
-				TShock.Log.ConsoleDebug(GetString("Bouncer / OnNewProjectile rejected from bouncer throttle from {0}", args.Player.Name));
-				args.Player.RemoveProjectile(ident, owner);
 				args.Handled = true;
 				return;
 			}
@@ -2228,21 +2369,7 @@ namespace TShockAPI
 				// Explosive Bunny projectile.
 				if (type == NPCID.ExplosiveBunny)
 				{
-					bool areAnyBunnyProjectilesInRange;
-
-					lock (args.Player.RecentlyCreatedProjectiles)
-					{
-						areAnyBunnyProjectilesInRange = args.Player.RecentlyCreatedProjectiles.Any(projectile =>
-						{
-							if (projectile.Type != ProjectileID.ExplosiveBunny)
-								return false;
-
-							var projectileInstance = Main.projectile[projectile.Index];
-							return projectileInstance.active && projectileInstance.WithinRange(new Vector2(args.X, args.Y), 32.0f);
-						});
-					}
-
-					if (!areAnyBunnyProjectilesInRange)
+					if (args.Player.TPlayer.ownedProjectileCounts[ProjectileID.ExplosiveBunny] == 0)
 					{
 						rejectForCritterNotReleasedFromItem();
 						return;
@@ -2359,26 +2486,74 @@ namespace TShockAPI
 					return;
 				}
 			}
-			else
+			else if (type == TileID.KiteAnchor)
 			{
-				// This is necessary to check in order to prevent special tiles such as
-				// queen bee larva, paintings etc that use this packet from being placed
-				// without selecting the right item.
-				if (type != args.Player.TPlayer.inventory[args.Player.TPlayer.selectedItem].createTile)
+				if (style != 0)
 				{
-					TShock.Log.ConsoleDebug(GetString("Bouncer / OnPlaceObject rejected awkward tile creation/selection from {0}", args.Player.Name));
+					TShock.Log.ConsoleDebug(GetString("Bouncer / OnPlaceObject rejected {0} due to invalid kite anchor style {1}", args.Player.Name, style));
 					args.Player.SendTileSquareCentered(x, y, 4);
 					args.Handled = true;
 					return;
 				}
-
-				if (args.Player.SelectedItem.placeStyle != style)
+			}
+			else if (type == TileID.CritterAnchor)
+			{
+				if (style is > 4 or < 0)
 				{
-					var validTorch = args.Player.SelectedItem.createTile == TileID.Torches && args.Player.TPlayer.BiomeTorchPlaceStyle(args.Player.SelectedItem.placeStyle) == style;
-					var validCampfire = args.Player.SelectedItem.createTile == TileID.Campfire && args.Player.TPlayer.BiomeCampfirePlaceStyle(args.Player.SelectedItem.placeStyle) == style;
+					TShock.Log.ConsoleDebug(GetString("Bouncer / OnPlaceObject rejected {0} due to invalid critter anchor style {1}", args.Player.Name, style));
+					args.Player.SendTileSquareCentered(x, y, 4);
+					args.Handled = true;
+					return;
+				}
+			}
+			else
+			{
+				List<int> allowTypes = [args.Player.TPlayer.inventory[args.Player.TPlayer.selectedItem].createTile];
+				List<int> allowStyles = [args.Player.TPlayer.inventory[args.Player.TPlayer.selectedItem].placeStyle];
+				var flexibleTileWand = args.Player.SelectedItem.GetFlexibleTileWand();
+				if (flexibleTileWand != null)
+				{
+					var flexibleTypes = flexibleTileWand._options
+						.SelectMany(kvp => kvp.Value.Options)
+						.Select(option => option.TileIdToPlace);
+
+					allowTypes.AddRange(flexibleTypes);
+
+					var flexibleStyles = flexibleTileWand._options
+						.SelectMany(kvp => kvp.Value.Options)
+						.Select(option => option.TileStyleToPlace);
+
+					allowStyles.AddRange(flexibleStyles);
+				}
+				// This is necessary to check in order to prevent special tiles such as
+				// queen bee larva, paintings etc that use this packet from being placed
+				// without selecting the right item.
+				if (!allowTypes.Contains(type))
+				{
+					TShock.Log.ConsoleError(GetString("Bouncer / OnPlaceObject rejected object placement with invalid tile type {1} (expected {2}) from {0}", args.Player.Name, type, string.Join(',', allowTypes)));
+					args.Player.SendTileSquareCentered(x, y, 4);
+					args.Handled = true;
+					return;
+				}
+				if (!allowStyles.Contains(style))
+				{
+					int biomeTorchPlaceStyle = args.Player.SelectedItem.placeStyle;
+					{
+						// Prevent modification of original variable because it is passed by reference
+						int typeCopy = biomeTorchPlaceStyle;
+						args.Player.TPlayer.BiomeTorchPlaceStyle(ref typeCopy, ref biomeTorchPlaceStyle);
+					}
+					int biomeCampfirePlaceStyle = args.Player.SelectedItem.placeStyle;
+					{
+						// Prevent modification of original variable because it is passed by reference
+						int typeCopy = biomeCampfirePlaceStyle;
+						args.Player.TPlayer.BiomeCampfirePlaceStyle(ref typeCopy, ref biomeCampfirePlaceStyle);
+					}
+					var validTorch = args.Player.SelectedItem.createTile == TileID.Torches && biomeTorchPlaceStyle == style;
+					var validCampfire = args.Player.SelectedItem.createTile == TileID.Campfire && biomeCampfirePlaceStyle == style;
 					if (!args.Player.TPlayer.unlockedBiomeTorches || (!validTorch && !validCampfire))
 					{
-						TShock.Log.ConsoleError(GetString("Bouncer / OnPlaceObject rejected object placement with invalid style {1} (expected {2}) from {0}", args.Player.Name, style, args.Player.SelectedItem.placeStyle));
+						TShock.Log.ConsoleError(GetString("Bouncer / OnPlaceObject rejected object placement with invalid style {1} (expected {2}) from {0}", args.Player.Name, style, string.Join(',', allowStyles)));
 						args.Player.SendTileSquareCentered(x, y, 4);
 						args.Handled = true;
 						return;
@@ -2505,7 +2680,7 @@ namespace TShockAPI
 				Main.item[num].playerIndexTheItemIsReservedFor = args.Player.Index;
 				NetMessage.SendData((int)PacketTypes.ItemDrop, args.Player.Index, -1, NetworkText.Empty, num, 1f);
 				NetMessage.SendData((int)PacketTypes.ItemOwner, args.Player.Index, -1, NetworkText.Empty, num);
-				
+
 				TShock.Log.ConsoleDebug(GetString("Bouncer / OnPlaceItemFrame rejected permissions from {0}", args.Player.Name));
 				NetMessage.SendData((int)PacketTypes.UpdateTileEntity, -1, -1, NetworkText.Empty, args.ItemFrame.ID, 0, 1);
 				args.Handled = true;
@@ -2535,8 +2710,8 @@ namespace TShockAPI
 			}
 
 			//Generic bounds checking, though I'm not sure if anyone would willingly hack themselves outside the map?
-			if (args.NewPosition.X > Main.maxTilesX || args.NewPosition.X < 0
-				|| args.NewPosition.Y > Main.maxTilesY || args.NewPosition.Y < 0)
+			if (args.NewPosition.X > Main.maxTilesX *16 || args.NewPosition.X < 0
+				|| args.NewPosition.Y > Main.maxTilesY *16 || args.NewPosition.Y < 0)
 			{
 				TShock.Log.ConsoleDebug(GetString("Bouncer / OnPlayerPortalTeleport rejected teleport out of bounds from {0}", args.Player.Name));
 				args.Handled = true;
@@ -2762,19 +2937,28 @@ namespace TShockAPI
 			// This was formerly marked as a crash check; does not actually crash on this specific packet.
 			if (playerDeathReason != null)
 			{
-				if (playerDeathReason.GetDeathText(TShock.Players[id].Name).ToString().Length > 500)
-				{
-					TShock.Log.ConsoleDebug(GetString("Bouncer / OnKillMe rejected bad length death text from {0}", args.Player.Name));
-					TShock.Players[id].Kick(GetString("Death reason outside of normal bounds."), true);
-					args.Handled = true;
-					return;
-				}
 				if (TShock.Config.Settings.DisableCustomDeathMessages && playerDeathReason._sourceCustomReason != null)
 				{
 					TShock.Log.ConsoleDebug(GetString("Bouncer / OnKillMe rejected custom death message from {0}", args.Player.Name));
-					args.Handled = true;
+					Reject();
 					return;
 				}
+
+				if (playerDeathReason.GetDeathText(TShock.Players[id].Name).ToString().Length > Math.Clamp(TShock.Config.Settings.MaximumChatMessageLength, 250, 2000))
+				{
+					TShock.Log.ConsoleDebug(GetString("Bouncer / OnKillMe rejected excessive length death text from {0}", args.Player.Name));
+					Reject();
+					return;
+				}
+			}
+
+			// Would be nice to handle all logic, should we move handling of custom death messages and excessive length to GetDataHandlers?
+			void Reject()
+			{
+				args.Player.TPlayer.KillMe(PlayerDeathReason.LegacyDefault(), damage, args.Direction, args.Pvp);
+				args.Player.Dead = true;
+				args.Player.RespawnTimer = TShock.Config.Settings.RespawnSeconds;
+				args.Handled = true;
 			}
 		}
 
@@ -2862,11 +3046,142 @@ namespace TShockAPI
 				return;
 			}
 
-			if (!args.Player.IsInRange(args.TileX, args.TileY, range: 13)) // To my knowledge, max legit tile reach with accessories.
+			if (!args.Player.IsInRange(args.TileX, args.TileY))
 			{
 				TShock.Log.ConsoleDebug(GetString("Bouncer / OnFoodPlatterTryPlacing rejected range checks from {0}", args.Player.Name));
 				args.Player.SendTileSquareCentered(args.TileX, args.TileY, 1);
 				args.Handled = true;
+				return;
+			}
+		}
+
+		/// <summary>
+		/// Called when dirt/fluid projectiles (dirt bombs, liquid bombs, liquid rockets) are killed and attempt to place tiles or liquids.
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="args"></param>
+		internal void OnProjectileDirtFluidKill(Terraria.Projectile sender, HookEvents.Terraria.Projectile.Kill_DirtAndFluidProjectiles_RunDelegateMethodPushUpForHalfBricksEventArgs args)
+		{
+			if (sender.owner < 0 || sender.owner >= Main.maxPlayers)
+				return;
+
+			var player = TShock.Players[sender.owner];
+			if (player == null || !player.Active)
+				return;
+
+			var originalPlot = args.plot;
+			args.plot = (x, y) => player.HasBuildPermission(x, y) && originalPlot(x, y);
+		}
+
+		/// <summary>
+		/// Called when a player is trying to place an item into a display jar.
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="args"></param>
+		internal void OnDisplayJarTryPlacing(object sender, GetDataHandlers.DisplayJarTryPlacingEventArgs args)
+		{
+			if (!TShock.Utils.TilePlacementValid(args.TileX, args.TileY))
+			{
+				TShock.Log.ConsoleDebug(GetString("Bouncer / OnDisplayJarTryPlacing rejected tile placement valid from {0}", args.Player.Name));
+				args.Handled = true;
+				return;
+			}
+
+			if ((args.Player.SelectedItem.type != args.ItemID && args.Player.ItemInHand.type != args.ItemID))
+			{
+				TShock.Log.ConsoleDebug(GetString("Bouncer / OnDisplayJarTryPlacing rejected item not placed by hand from {0}", args.Player.Name));
+				args.Player.SendTileSquareCentered(args.TileX, args.TileY, 1);
+				args.Handled = true;
+				return;
+			}
+			if (args.Player.IsBeingDisabled())
+			{
+				TShock.Log.ConsoleDebug(GetString("Bouncer / OnDisplayJarTryPlacing rejected disabled from {0}", args.Player.Name));
+				Item item = new Item();
+				item.netDefaults(args.ItemID);
+				args.Player.GiveItemCheck(args.ItemID, item.Name, args.Stack, args.Prefix);
+				args.Player.SendTileSquareCentered(args.TileX, args.TileY, 1);
+				args.Handled = true;
+				return;
+			}
+
+			if (!args.Player.HasBuildPermission(args.TileX, args.TileY))
+			{
+				TShock.Log.ConsoleDebug(GetString("Bouncer / OnDisplayJarTryPlacing rejected permissions from {0}", args.Player.Name));
+				Item item = new Item();
+				item.netDefaults(args.ItemID);
+				args.Player.GiveItemCheck(args.ItemID, item.Name, args.Stack, args.Prefix);
+				args.Player.SendTileSquareCentered(args.TileX, args.TileY, 1);
+				args.Handled = true;
+				return;
+			}
+
+			if (!args.Player.IsInRange(args.TileX, args.TileY))
+			{
+				TShock.Log.ConsoleDebug(GetString("Bouncer / OnDisplayJarTryPlacing rejected range checks from {0}", args.Player.Name));
+				args.Player.SendTileSquareCentered(args.TileX, args.TileY, 1);
+				args.Handled = true;
+				return;
+			}
+		}
+
+		/// <summary>
+		/// Called when a player is trying to put an item into chest through Quick Stack.
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="args"></param>
+		internal void OnQuickStack(object sender, OTAPI.Hooks.Chest.QuickStackEventArgs args)
+		{
+			var id = args.ChestIndex;
+			var plr = TShock.Players[args.PlayerId];
+
+			if (plr is not { Active: true })
+			{
+				args.Result = HookResult.Cancel;
+				return;
+			}
+
+			if (plr.IsBeingDisabled())
+			{
+				TShock.Log.ConsoleDebug(GetString("Bouncer / OnQuickStack rejected from disable from {0}", plr.Name));
+				args.Result = HookResult.Cancel;
+				return;
+			}
+
+			if (!plr.HasBuildPermission(Main.chest[id].x, Main.chest[id].y) && TShock.Config.Settings.RegionProtectChests)
+			{
+				TShock.Log.ConsoleDebug(GetString("Bouncer / OnQuickStack rejected from region protection? from {0}", plr.Name));
+				args.Result = HookResult.Cancel;
+				return;
+			}
+		}
+
+		/// <summary>
+		/// Called when a player is trying to use items of a chest to craft something.
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="args"></param>
+		private static void OnChestCraftRequest(object sender, HookEvents.Terraria.GameContent.CraftingRequests.CanCraftFromChestEventArgs args)
+		{
+			var plr = TShock.Players[args.whoAmI];
+
+			if (plr is not { Active: true })
+			{
+				args.ContinueExecution = false;
+				return;
+			}
+
+			if (plr.IsBeingDisabled())
+			{
+				TShock.Log.ConsoleDebug(GetString("Bouncer / OnChestCraftRequest rejected from disable from {0}", plr.Name));
+				args.ContinueExecution = false;
+				return;
+			}
+
+			if (!plr.HasBuildPermission(args.chest.x, args.chest.y) && TShock.Config.Settings.RegionProtectChests)
+			{
+				TShock.Log.ConsoleDebug(GetString("Bouncer / OnChestCraftRequest rejected from region protection? from {0}", plr.Name));
+				args.ContinueExecution = false;
 				return;
 			}
 		}
@@ -2912,42 +3227,39 @@ namespace TShockAPI
 		// Moved to Projectile.StatusNPC(int i).
 		private static Dictionary<int, short> NPCAddBuffTimeMax = new Dictionary<int, short>()
 		{
-			{ BuffID.Poisoned, 3600 },              // BuffID: 20
-			{ BuffID.OnFire, 1200 },                // BuffID: 24
-			{ BuffID.Confused, short.MaxValue },    // BuffID: 31 Brain of Confusion Internal Item ID: 3223
-			{ BuffID.CursedInferno, 600 },          // BuffID: 39
-			{ BuffID.Frostburn, 900 },              // BuffID: 44
-			{ BuffID.Ichor, 1200 },                 // BuffID: 69
-			{ BuffID.Venom, 1800 },                 // BuffID: 70
-			{ BuffID.Midas, 120 },                  // BuffID: 72
-			{ BuffID.Wet, 1500 },                   // BuffID: 103
-			{ BuffID.Lovestruck, 1800 },            // BuffID: 119
-			{ BuffID.Stinky, 1800 },                // BuffID: 120
-			{ BuffID.Slimed, 1500 },                // BuffID: 137
-			{ BuffID.SoulDrain, 30 },               // BuffID: 151
-			{ BuffID.ShadowFlame, 660 },            // BuffID: 153
-			{ BuffID.DryadsWard, 120 },             // BuffID: 165
-			{ BuffID.BoneJavelin, 900 },            // BuffID: 169
-			{ BuffID.StardustMinionBleed, 900 },    // BuffID: 183
-			{ BuffID.DryadsWardDebuff, 120 },       // BuffID: 186
-			{ BuffID.Daybreak, 300 },               // BuffID: 189 Solar Eruption Item ID: 3473, Daybreak Item ID: 3543
-			{ BuffID.BetsysCurse, 600 },            // BuffID: 203
-			{ BuffID.Oiled, 540 },                  // BuffID: 204
-			{ BuffID.BlandWhipEnemyDebuff, 240  },  // BuffID: 307
-			{ BuffID.SwordWhipNPCDebuff, 240  },    // BuffID: 309
-			{ BuffID.ScytheWhipEnemyDebuff, 240  }, // BuffID: 310
-			{ BuffID.FlameWhipEnemyDebuff, 240  },  // BuffID: 313
-			{ BuffID.ThornWhipNPCDebuff, 240  },    // BuffID: 315
-			{ BuffID.RainbowWhipNPCDebuff, 240  },  // BuffID: 316
-			{ BuffID.MaceWhipNPCDebuff, 240  },     // BuffID: 319
-			{ BuffID.GelBalloonBuff, 1800  },       // BuffID: 320
-			{ BuffID.OnFire3, 1200 },               // BuffID: 323
-			{ BuffID.Frostburn2, 1200 },            // BuffID: 324
-			{ BuffID.BoneWhipNPCDebuff, 240 },      // BuffID: 326
-			{ BuffID.TentacleSpike, 540 },          // BuffID: 337
-			{ BuffID.CoolWhipNPCDebuff, 240 },      // BuffID: 340
-			{ BuffID.BloodButcherer, 540 },         // BuffID: 344
-			{ BuffID.Shimmer, 100 },		        // BuffID: 353
+			{ BuffID.Shimmer, 100 },
+			{ BuffID.Venom, 1800 },
+			{ BuffID.CursedInferno, 600 },
+			{ BuffID.OnFire, 19392 }, // FTW world: 216000 overflows to ushort -> 19392 for torch slime
+			{ BuffID.Ichor, 1140 },
+			{ BuffID.Confused, short.MaxValue },
+			{ BuffID.Poisoned, 3600 },
+			{ BuffID.Midas, 120 },
+			{ BuffID.Bleeding, 720 },
+			{ BuffID.Frostburn2, 1200 },
+			{ BuffID.OnFire3, 1200 },
+			{ BuffID.Stinky, 1800 },
+			{ BuffID.Slimed, 180 },
+			{ BuffID.Hemorrhage, 720 },
+			{ BuffID.BrokenArmor, 1200 },
+			{ BuffID.BoneJavelin, 900 },
+			{ BuffID.Daybreak, 300 },
+			{ BuffID.TentacleSpike, 540 },
+			{ BuffID.BloodButcherer, 540 },
+			{ BuffID.BetsysCurse, 600 },
+			{ BuffID.StardustMinionBleed, 900 },
+			{ BuffID.ShadowFlame, 600 },
+			{ BuffID.Frostburn, 239 },
+			{ BuffID.Oiled, 510 },
+			{ BuffID.SoulDrain, 30 },
+			{ BuffID.EelWhipNPCDebuff, 240 },
+			{ BuffID.ScytheWhipEnemyDebuff, 240 },
+			{ BuffID.Wet, 1500 },
+			{ BuffID.DryadsWard, 120 },
+			{ BuffID.DryadsWardDebuff, 120 },
+			{ BuffID.Tipsy, 3659 },
+			{ BuffID.Lovestruck, 1800 },
+			{ BuffID.GelBalloonBuff, 1800 },
 		};
 
 		/// <summary>
@@ -3031,12 +3343,14 @@ namespace TShockAPI
 		private Dictionary<short, float> Projectile_MinValuesAI = new Dictionary<short, float> {
 			{ 611, -1 },
 
-			{ 950, 0 }
+			{ 950, 0 },
+			{ 502, 0 } // Used as bounce count, can never be less than 0 as it always starts as such.
 		};
 		private Dictionary<short, float> Projectile_MaxValuesAI = new Dictionary<short, float> {
 			{ 611, 1 },
 
-			{ 950, 0 }
+			{ 950, 0 },
+			{ 502, 5 } // Used as bounce count, is alwys killed once reaching this treshold, so it can never exceed this.
 		};
 
 		private Dictionary<short, float> Projectile_MinValuesAI2 = new Dictionary<short, float> {
@@ -3051,7 +3365,8 @@ namespace TShockAPI
 			{ 953, 0.85f },
 
 			{ 756, 0.5f },
-			{ 522, 0 }
+			{ 522, 0 },
+			{ 459, 0.7f } // Is used for scale, can only ever be 0.7f, 1.0f, and 1.3f (unused).
 		};
 		private Dictionary<short, float> Projectile_MaxValuesAI2 = new Dictionary<short, float> {
 			{ 405, 1.2f },
@@ -3065,7 +3380,8 @@ namespace TShockAPI
 			{ 953, 2 },
 
 			{ 756, 1 },
-			{ 522, 40f }
+			{ 522, 40f },
+			{ 459, 1.3f } // Is used for scale, can only ever be 0.7f, 1.0f, and 1.3f (unused).
 		};
 	}
 }
